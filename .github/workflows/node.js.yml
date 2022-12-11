@@ -27,11 +27,22 @@ jobs:
         cache: 'npm'
     - run: npm i --force
     - run: npm run build
+    - name: Archive production artifact
+      uses: actions/upload-artifact@main
+      with:
+        name: dist
+        path: dist
+          
   deploy-via-sftp:
     needs : build
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with: 
+          name: dist
+          path: dist
       - uses: actions/checkout@v2
       - name: SFTP Deploy
         uses: wlixcc/SFTP-Deploy-Action@v1.2.1
@@ -40,10 +51,9 @@ jobs:
           server: 102.219.179.152
           port: 22 # default is 22
           ssh_private_key: ${{ secrets.SSH_KEY }}
- 
           
           # will put all file under this path
-          local_path: ./* # default is ./*
+          local_path: ./dist # default is ./*
           # files will copy to under remote_path
           remote_path: /var/www/html/heart-of-carthage-dubai.com
     
