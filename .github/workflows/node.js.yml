@@ -1,41 +1,33 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-name: Node.js CI
+name: Deploy prod site on push
 
-on:
+on: 
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+    branches: 
+      - master
+      
 jobs:
-  build:
+  web-deploy:
 
+    name: Deploy Angular App 🚀
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+    - name: Get latest code
+      uses: actions/checkout@v2.3.2
+
+    - name: Use Node.js 16 LTS
+      uses: actions/setup-node@v2
       with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm i --force
-    - run: npm run build
-  deploy-via-sftp:
-    needs : build
-    runs-on: ubuntu-latest
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - name: SFTP Deploy
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.1
-        with:
+        node-version: '16'
+      
+    - name: Install NPM Modules
+      run: npm install --force
+
+    - name: Build Project ⛏
+      run: npm run build
+    
+    - name: Sync Files 🚀
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.1
+      with:
           username: root
           server: 102.219.179.152
           port: 22 # default is 22
@@ -43,7 +35,54 @@ jobs:
  
           
           # will put all file under this path
-          local_path: /dist # default is ./*
+          local_path: ./dist/iheb-progect-soa # default is ./*
           # files will copy to under remote_path
-          remote_path: /var/www/html/
-          
+          remote_path: /var/www/html/heart-of-carthage-dubai.com/src
+#       uses: SamKirkland/FTP-Deploy-Action@4.0.0
+#       with:
+#         server: 102.219.179.152
+#         username: root
+#         password: DxK17976L7Oq?
+#         local-dir: ./dist/
+#         server-dir: ./
+#         dangerous-clean-slate: true
+# name: Build and deploy
+# on:
+#   push:
+#     branches: [master]
+#   workflow_dispatch:
+
+# jobs:
+#   build:
+#     name: Build ⛏
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@main
+#       - name: Install dependencies
+#         run: npm i --force
+#       - name: Build dependencies
+#         run: npm run build
+#       - name: Archive production artifact
+#         uses: actions/upload-artifact@main
+#         with:
+#           name: dist
+#           path: dist
+#   deploy:
+#     name: Deploy 🚀 - sabri
+#     needs: build
+#     runs-on: ubuntu-latest
+#     steps: 
+#       - name: Checkout repository
+#         uses: actions/checkout@main
+#       - name: Download artifact
+#         uses: actions/download-artifact@main
+#         with: 
+#           name: dist
+#           path: dist
+#       - name: Sync files to hosting
+#         uses: SamKirkland/FTP-Deploy-Action@4.0.0
+#         with: 
+#           server: 102.219.179.152
+#           username: root
+#           password: DxK17976L7Oq?
