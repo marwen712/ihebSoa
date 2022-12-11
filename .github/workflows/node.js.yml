@@ -1,40 +1,80 @@
-name: Build and deploy
-on:
-  push:
-    branches: [master]
-  workflow_dispatch:
+name: Deploy prod site on push
 
+on: 
+  push:
+    branches: 
+      - main
+      
 jobs:
-  build:
-    name: Build ⛏
+  web-deploy:
+
+    name: Deploy Angular App
     runs-on: ubuntu-latest
+
+    env:
+      SERVER: waws-prod-ln1-025.ftp.azurewebsites.windows.net
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Install dependencies
-        run: npm i --force
-      - name: Build dependencies
-        run: npm run build
-      - name: Archive production artifact
-        uses: actions/upload-artifact@main
-        with:
-          name: dist
-          path: dist
-  deploy:
-    name: Deploy 🚀 - sabri
-    needs: build
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Download artifact
-        uses: actions/download-artifact@main
-        with: 
-          name: dist
-          path: dist
-      - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with: 
-          server: 102.219.179.152
-          username: root
-          password: DxK17976L7Oq?
+    - name: Get latest code
+      uses: actions/checkout@v2.3.2
+
+    - name: Use Node.js 14 LTS
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+      
+    - name: Install NPM Modules
+      run: npm install
+
+    - name: Build Project
+      run: npm run build
+    
+    - name: Sync Files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: 102.219.179.1552
+        username: root
+        password: DxK17976L7Oq?
+        local-dir: ./dist/
+        server-dir: ./
+        dangerous-clean-slate: true
+# name: Build and deploy
+# on:
+#   push:
+#     branches: [master]
+#   workflow_dispatch:
+
+# jobs:
+#   build:
+#     name: Build ⛏
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@main
+#       - name: Install dependencies
+#         run: npm i --force
+#       - name: Build dependencies
+#         run: npm run build
+#       - name: Archive production artifact
+#         uses: actions/upload-artifact@main
+#         with:
+#           name: dist
+#           path: dist
+#   deploy:
+#     name: Deploy 🚀 - sabri
+#     needs: build
+#     runs-on: ubuntu-latest
+#     steps: 
+#       - name: Checkout repository
+#         uses: actions/checkout@main
+#       - name: Download artifact
+#         uses: actions/download-artifact@main
+#         with: 
+#           name: dist
+#           path: dist
+#       - name: Sync files to hosting
+#         uses: SamKirkland/FTP-Deploy-Action@4.0.0
+#         with: 
+#           server: 102.219.179.152
+#           username: root
+#           password: DxK17976L7Oq?
