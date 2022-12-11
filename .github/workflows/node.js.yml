@@ -8,7 +8,7 @@ on:
 jobs:
   web-deploy:
 
-    name: Deploy Angular App
+    name: Deploy Angular App 🚀
     runs-on: ubuntu-latest
     steps:
     - name: Get latest code
@@ -22,13 +22,13 @@ jobs:
     - name: Install NPM Modules
       run: npm install --force
 
-    - name: Build Project
+    - name: Build Project ⛏
       run: npm run build
     
-    - name: Sync Files
+    - name: Sync Files 🚀
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: 102.219.179.1552
+        server: 102.219.179.152
         username: root
         password: DxK17976L7Oq?
         local-dir: ./dist/
