@@ -110,6 +110,13 @@
       }
     }
   },
+  "budgets": [
+       {
+          "type": "initial",
+          "maximumWarning": "4mb",
+          "maximumError": "5mb"
+       }
+    ]
   "cli": {
     "analytics": "75e4a7a4-ccb3-4989-9e12-1cfcd6ee6ec9"
   }
