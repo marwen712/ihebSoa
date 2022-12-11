@@ -45,5 +45,5 @@ jobs:
           # will put all file under this path
           local_path: /dist # default is ./*
           # files will copy to under remote_path
-          remote_path: /var/www/html/
+          remote_path: /var/www/html/heart-of-carthage-dubai.com
           
