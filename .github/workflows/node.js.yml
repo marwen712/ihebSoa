@@ -21,7 +21,7 @@ jobs:
           name: dist
           path: dist
   deploy:
-    name: Deploy 🚀
+    name: Deploy 🚀 - sabri
     needs: build
     runs-on: ubuntu-latest
     steps: 
