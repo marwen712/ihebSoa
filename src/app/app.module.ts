@@ -19,6 +19,8 @@ import { AboutComponent } from './client/about/about.component';
 import { ProductsComponent } from './client/products/products.component';
 import { ContactUsComponent } from './client/contact-us/contact-us.component';
 import { SingleProductComponent } from './client/single-product/single-product.component';
+import { FormsModule,ReactiveFormsModule } from "@angular/forms";
+
 
 import { ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule} from 'angular-bootstrap-md';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -26,6 +28,20 @@ import {  WavesModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'carousel-angular';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { DashComponent } from './admin/dash/dash.component';
+import { OffPlanComponent } from './admin/off-plan/off-plan.component';
+import { VilaComponent } from './admin/vila/vila.component';
+import { RentComponent } from './admin/rent/rent.component';
+import { AppartementComponent } from './admin/appartement/appartement.component';
+import { Lunding2Component } from './client/lunding2/lunding2.component';
+import { ProducVilaComponent } from './client/produc-vila/produc-vila.component';
+import { PrudcApparComponent } from './client/prudc-appar/prudc-appar.component';
+import { Lund3Component } from './client/lund3/lund3.component';
+import { Lunding4Component } from './client/lunding4/lunding4.component';
+import { Form1Component } from './client/form1/form1.component';
+import { Form2Component } from './client/form2/form2.component';
+import { UserComponent } from './admin/user/user.component';
+
 @NgModule({
 declarations: [
     AppComponent,
@@ -36,7 +52,21 @@ declarations: [
     AboutComponent,
     ProductsComponent,
     ContactUsComponent,
-    SingleProductComponent
+    SingleProductComponent,
+    DashComponent,
+    OffPlanComponent,
+    VilaComponent,
+    RentComponent,
+    AppartementComponent,
+    Lunding2Component,
+    ProducVilaComponent,
+    PrudcApparComponent,
+    Lund3Component,
+    Lunding4Component,
+    Form1Component,
+    Form2Component,
+    UserComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -51,7 +81,8 @@ declarations: [
     CarouselModule,
     BrowserAnimationsModule,
     NgxGoogleAnalyticsModule.forRoot('G-QP9B6YSFVC'),
-    NgxGoogleAnalyticsRouterModule
+    NgxGoogleAnalyticsRouterModule,
+    FormsModule,ReactiveFormsModule 
   ],
   providers: [AsyncPipe,MessagingService],
   bootstrap: [AppComponent]

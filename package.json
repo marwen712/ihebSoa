@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@fortawesome/fontawesome-free": "^5.6.3",
     "angular-bootstrap-md": "^12.2.0",
     "animate.css": "^3.7.2",
     "carousel-angular": "^1.5.3",

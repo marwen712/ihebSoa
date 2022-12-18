@@ -1,11 +1,11 @@
-<div [ngClass]="statusClass" id="myTopnav">
+<div [ngClass]="statusClass" id="myTopnav" >
   <a href="#home"  ><img src="assets/images/logo1.png" style="height:auto;width:auto;max-width: 40px;max-height: 40px;" alt="heart-of-carthage-dubai"></a>
-  <a routerLink="/about">About</a>
-                               <a  routerLink="/products">vilas</a>
-                               <a  routerLink="/products">vilas</a>
-                               <a  routerLink="/products">project Off-plan</a>
-                                <a  routerLink="/products">Appartement & Marketrs </a>
-                                <a  routerLink="/single-product">Lunding page</a>
+                                <a routerLink="/about" (click)="myFunction()">About</a>
+                               <a  routerLink="/vila" (click)="myFunction()">vilas</a>
+                               <a  routerLink="/rent" (click)="myFunction()">Rent</a>
+      
+                                <a  routerLink="/appr">Appartement & Marketrs </a>
+                                
                                 <a  routerLink="/contact-us">Contact Us</a>
   <a href="javascript:void(0);" class="icon" (click)="myFunction()">
     <i class="fa fa-bars"></i>

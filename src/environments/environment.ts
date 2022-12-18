@@ -11,13 +11,14 @@ export const environment = {
     storageBucket: "ihebfront.appspot.com",
     messagingSenderId: "215501404523",
     appId: "1:215501404523:web:663b034a8fdf455daef42e"
-}
+},
+baseURL:'http://localhost:5900'
 };
 
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
+ 
  * This import should be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
