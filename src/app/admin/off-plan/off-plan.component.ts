@@ -55,6 +55,8 @@ export class OffPlanComponent implements OnInit {
       imageProfil:"",
       prixFinal:"",
       video:"",
+        lat:  24.619185472680048 ,
+       lng:  55.3883916685736,
       imgs:[]
      }
   }
@@ -69,6 +71,8 @@ export class OffPlanComponent implements OnInit {
   
   console.log(this.off)
   this.off.imgs=this.serIm.tabImages
+    this.off.lng=this.crud.lng
+    this.off.lat=this.crud.lat
    this.off.imageProfil=this.serIm.tabImages[0]
    this.crud.ajout(this.off,this.urlCreat)
 

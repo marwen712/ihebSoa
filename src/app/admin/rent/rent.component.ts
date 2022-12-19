@@ -57,6 +57,8 @@ export class RentComponent implements OnInit {
       imageProfil:"",
       prixFinal:"",
       video:"",
+      lat:  24.619185472680048 ,
+      lng:  55.3883916685736,
       imgs:[]
      }
   }
@@ -70,6 +72,8 @@ export class RentComponent implements OnInit {
  ajout(){
   
   console.log(this.rent)
+  this.rent.lng=this.crud.lng
+  this.rent.lat=this.crud.lat
   this.rent.imgs=this.serIm.tabImages
    this.rent.imageProfil=this.serIm.tabImages[0]
    this.crud.ajout(this.rent,this.urlCreat)

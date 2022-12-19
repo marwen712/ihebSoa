@@ -41,6 +41,11 @@ import { Lunding4Component } from './client/lunding4/lunding4.component';
 import { Form1Component } from './client/form1/form1.component';
 import { Form2Component } from './client/form2/form2.component';
 import { UserComponent } from './admin/user/user.component';
+import { AccordComponent } from './client/accord/accord.component';
+import { Map1Component } from './client/map1/map1.component';
+import { AgmCoreModule } from '@agm/core';
+import { Map4Component } from './client/map4/map4.component';
+import { Map3Component } from './admin/map3/map3.component';
 
 @NgModule({
 declarations: [
@@ -66,6 +71,11 @@ declarations: [
     Form1Component,
     Form2Component,
     UserComponent,
+    AccordComponent,
+    Map1Component,
+    Map3Component,
+    Map4Component,
+   
    
   ],
   imports: [
@@ -82,7 +92,8 @@ declarations: [
     BrowserAnimationsModule,
     NgxGoogleAnalyticsModule.forRoot('G-QP9B6YSFVC'),
     NgxGoogleAnalyticsRouterModule,
-    FormsModule,ReactiveFormsModule 
+    FormsModule,ReactiveFormsModule ,
+    AgmCoreModule.forRoot({ apiKey:""  })
   ],
   providers: [AsyncPipe,MessagingService],
   bootstrap: [AppComponent]

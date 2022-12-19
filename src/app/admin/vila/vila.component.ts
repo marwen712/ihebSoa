@@ -54,6 +54,8 @@ export class VilaComponent implements OnInit {
       prix:"",
       imageProfil:"",
       prixFinal:"",
+      lat:  24.619185472680048 ,
+      lng:  55.3883916685736,
       video:"",
       imgs:[]
      }
@@ -68,6 +70,8 @@ export class VilaComponent implements OnInit {
  ajout(){
   
   console.log(this.vila)
+  this.vila.lng=this.crud.lng
+  this.vila.lat=this.crud.lat
   this.vila.imgs=this.serIm.tabImages
    this.vila.imageProfil=this.serIm.tabImages[0]
    this.crud.ajout(this.vila,this.urlCreat)

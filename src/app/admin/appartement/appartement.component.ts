@@ -55,6 +55,8 @@ export class AppartementComponent implements OnInit {
       prix:"",
       imageProfil:"",
       prixFinal:"",
+      lat:  24.619185472680048 ,
+      lng:  55.3883916685736,
       video:"",
       imgs:[]
      }
@@ -70,6 +72,8 @@ export class AppartementComponent implements OnInit {
   
   console.log(this.appr)
   this.appr.imgs=this.serIm.tabImages
+  this.appr.lng=this.crud.lng
+  this.appr.lat=this.crud.lat
    this.appr.imageProfil=this.serIm.tabImages[0]
    this.crud.ajout(this.appr,this.urlCreat)
 

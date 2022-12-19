@@ -65,7 +65,12 @@ export class Lunding4Component implements OnInit {
            this.prix=ob.prix
            this.prixFinal=ob.prixFinal
            this.imgs=ob.imgs
+           this.crud.lat=ob.lat
+           this.crud.lng=ob.lng
+           this.crud.lat=ob.lat
+           this.crud.lng=ob.lng
            this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
+
         //     this.off=ob          
         ////console.log(imgs)
         console.log(this.video)

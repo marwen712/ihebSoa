@@ -60,6 +60,8 @@ export class SingleProductComponent implements OnInit {
            this.stitle=ob.stitle
            this.video=ob.video
            this.prix=ob.prix
+           this.crud.lat=ob.lat
+           this.crud.lng=ob.lng
            this.prixFinal=ob.prixFinal
            this.imgs=ob.imgs
            this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
