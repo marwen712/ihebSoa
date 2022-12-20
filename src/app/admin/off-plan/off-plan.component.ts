@@ -17,7 +17,8 @@ export class OffPlanComponent implements OnInit {
   taher="habib"
  urlCreat="/off/creat/"
   urlDelet="/off/Delet/"
-
+  tabCarc:string[]=[]
+  carc=''
  tabOff:any[]=[]
   off:any
    
@@ -45,7 +46,12 @@ export class OffPlanComponent implements OnInit {
   
  })
   }
-
+  ajoutCarc(){
+    this.tabCarc.push(this.carc)
+  }
+  supCarc(i:any){
+    this.tabCarc.splice(i,1);
+  }
   ngOnInit(): void {
     this.off={
       title:"",
@@ -55,6 +61,7 @@ export class OffPlanComponent implements OnInit {
       imageProfil:"",
       prixFinal:"",
       video:"",
+        carc:[],
         lat:  24.619185472680048 ,
        lng:  55.3883916685736,
       imgs:[]
@@ -73,6 +80,7 @@ export class OffPlanComponent implements OnInit {
   this.off.imgs=this.serIm.tabImages
     this.off.lng=this.crud.lng
     this.off.lat=this.crud.lat
+    this.off.carc=this.tabCarc
    this.off.imageProfil=this.serIm.tabImages[0]
    this.crud.ajout(this.off,this.urlCreat)
 

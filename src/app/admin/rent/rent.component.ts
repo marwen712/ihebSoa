@@ -19,6 +19,8 @@ export class RentComponent implements OnInit {
   taher="habib"
  urlCreat="/rent/creat/"
   urlDelet="/rent/Delet/"
+  tabCarc:string[]=[]
+  carc=''
 
  tabrent:any[]=[]
   rent:any
@@ -57,10 +59,17 @@ export class RentComponent implements OnInit {
       imageProfil:"",
       prixFinal:"",
       video:"",
+      carc:[],
       lat:  24.619185472680048 ,
       lng:  55.3883916685736,
       imgs:[]
      }
+  }
+  ajoutCarc(){
+    this.tabCarc.push(this.carc)
+  }
+  supCarc(i:any){
+    this.tabCarc.splice(i,1);
   }
   selectFile(e:any){
      console.log("aaa")
@@ -75,6 +84,7 @@ export class RentComponent implements OnInit {
   this.rent.lng=this.crud.lng
   this.rent.lat=this.crud.lat
   this.rent.imgs=this.serIm.tabImages
+  this.rent.carc=this.tabCarc
    this.rent.imageProfil=this.serIm.tabImages[0]
    this.crud.ajout(this.rent,this.urlCreat)
 

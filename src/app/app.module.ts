@@ -46,6 +46,7 @@ import { Map1Component } from './client/map1/map1.component';
 import { AgmCoreModule } from '@agm/core';
 import { Map4Component } from './client/map4/map4.component';
 import { Map3Component } from './admin/map3/map3.component';
+import { CarcComponent } from './client/carc/carc.component';
 
 @NgModule({
 declarations: [
@@ -75,6 +76,7 @@ declarations: [
     Map1Component,
     Map3Component,
     Map4Component,
+    CarcComponent,
    
    
   ],

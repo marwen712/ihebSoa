@@ -12,7 +12,7 @@ export const environment = {
     messagingSenderId: "215501404523",
     appId: "1:215501404523:web:663b034a8fdf455daef42e"
 },
-baseURL:'http://localhost:5900'
+baseURL:'https://heart-of-carthage-dubai.com/backend'
 };
 
 /*

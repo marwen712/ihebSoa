@@ -32,7 +32,7 @@ export class SingleProductComponent implements OnInit {
     autoWidth: true,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
       },
       600: {
         items: 2,
@@ -49,33 +49,37 @@ export class SingleProductComponent implements OnInit {
     {path: 'assets/images/IMG-20221107-WA0015.jpg'},
   ]
   constructor(private route:ActivatedRoute,private http:HttpClient,public crud:CrudService , private sanitizer: DomSanitizer) { 
-    this.crud.loadingOff=true  
-      this.http.get(environment.baseURL+"/off/"+this.route.snapshot.paramMap.get('id')+"/").subscribe(res=>{
-       if(res.valueOf()){
-          var ob:any         
-           ob=res.valueOf()  
-           this.title=ob.title
-           this.crud.project=ob.title
-           this.desc=ob.desc
-           this.stitle=ob.stitle
-           this.video=ob.video
-           this.prix=ob.prix
-           this.crud.lat=ob.lat
-           this.crud.lng=ob.lng
-           this.prixFinal=ob.prixFinal
-           this.imgs=ob.imgs
-           this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
-        //     this.off=ob          
-        ////console.log(imgs)
-        console.log(this.video)
-        // this.tabim=this.off.imgs
-         this.loadingOff=false
-       }
-  })
+   
   }
 
   ngOnInit(): void {
-  
+    this.loadingOff=true  
+    this.http.get(environment.baseURL+"/off/"+this.route.snapshot.paramMap.get('id')+"/").subscribe(res=>{
+     if(res.valueOf()){
+        var ob:any         
+         ob=res.valueOf()  
+         this.title=ob.title
+         this.crud.project=ob.title
+         this.desc=ob.desc
+         this.stitle=ob.stitle
+         this.video=ob.video
+         this.prix=ob.prix
+         this.crud.lat=ob.lat
+         this.crud.lng=ob.lng
+         this.prixFinal=ob.prixFinal
+         this.imgs=ob.imgs
+         this.crud.tabCarc=ob.carc
+         this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
+      //     this.off=ob          
+      ////console.log(imgs)
+      console.log(this.video)
+      // this.tabim=this.off.imgs
+      console.log( this.title)
+      console.log(ob,'aabb')
+      console.log(this.crud.tabCarc,'eeeee')
+       this.loadingOff=false
+     }
+})
   }
 
 }

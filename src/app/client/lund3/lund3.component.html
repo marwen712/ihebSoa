@@ -79,7 +79,7 @@
 <section *ngIf="!loadingOff">
 <section class="section" id="explore" style="margin-top: 40px;">
     <div class="container" >
-        <div class="row"  > 
+        <div class="row"  style="margin-bottom: 50px;" > 
 
             <div class="col-lg-6" *ngIf="!loadingOff">
                 <div class="left-content">
@@ -112,6 +112,9 @@
         </div>
     </div>
 </section>
+<section style="margin-top: 40px;" >
+  <app-carc></app-carc>
+</section>
 <div class="container-fluid" style="margin-top: 40px;">
   <owl-carousel-o [options]="customOptions">
 
@@ -128,9 +131,10 @@
         
   </owl-carousel-o>
 </div>
+
 <section>
-  <div class="container">
-      <div class="col">
+  <div class="container" >
+      <div class="col" style="margin-top: 40px;">
           <app-map1></app-map1>
       </div>
   </div>

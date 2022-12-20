@@ -1,6 +1,6 @@
 <agm-map 
-  [latitude]="lat"
-  [longitude]="lng"
+  [latitude]="crud.lat"
+  [longitude]="crud.lng"
   [zoom]="zoom"
   [disableDefaultUI]="false"
   [zoomControl]="true"
@@ -18,7 +18,7 @@
     
   </agm-marker>
   
-  <agm-circle [latitude]="lat" [longitude]="lng" 
+  <agm-circle [latitude]="crud.lat + 0.3" [longitude]="crud.lng" 
       [radius]="5000"
       [fillColor]="'red'"
       [circleDraggable]="true"

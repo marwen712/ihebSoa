@@ -18,6 +18,8 @@ export class AppartementComponent implements OnInit {
   taher="habib"
  urlCreat="/appr/creat/"
   urlDelet="/appr/Delet/"
+  tabCarc:string[]=[]
+  carc=''
 
  tabappr:any[]=[]
   appr:any
@@ -46,7 +48,12 @@ export class AppartementComponent implements OnInit {
   
  })
   }
-
+  ajoutCarc(){
+    this.tabCarc.push(this.carc)
+  }
+  supCarc(i:any){
+    this.tabCarc.splice(i,1);
+  }
   ngOnInit(): void {
     this.appr={
       title:"",
@@ -58,6 +65,7 @@ export class AppartementComponent implements OnInit {
       lat:  24.619185472680048 ,
       lng:  55.3883916685736,
       video:"",
+      carc:[],
       imgs:[]
      }
   }
@@ -74,6 +82,8 @@ export class AppartementComponent implements OnInit {
   this.appr.imgs=this.serIm.tabImages
   this.appr.lng=this.crud.lng
   this.appr.lat=this.crud.lat
+  this.appr.carc=this.tabCarc
+
    this.appr.imageProfil=this.serIm.tabImages[0]
    this.crud.ajout(this.appr,this.urlCreat)
 

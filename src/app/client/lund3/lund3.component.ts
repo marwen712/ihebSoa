@@ -35,7 +35,7 @@ export class Lund3Component implements OnInit {
     autoWidth: true,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
       },
       600: {
         items: 2,
@@ -66,6 +66,7 @@ export class Lund3Component implements OnInit {
            this.crud.lat=ob.lat
            this.crud.lng=ob.lng
            this.prixFinal=ob.prixFinal
+           this.crud.tabCarc=ob.carc
            this.imgs=ob.imgs
            this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
         //     this.off=ob          

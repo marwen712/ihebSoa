@@ -69,6 +69,7 @@ export class Lunding4Component implements OnInit {
            this.crud.lng=ob.lng
            this.crud.lat=ob.lat
            this.crud.lng=ob.lng
+           this.crud.tabCarc=ob.carc
            this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
 
         //     this.off=ob          

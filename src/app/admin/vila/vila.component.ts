@@ -17,7 +17,8 @@ export class VilaComponent implements OnInit {
   taher="habib"
  urlCreat="/vila/creat/"
   urlDelet="/vila/Delet/"
-
+  tabCarc:string[]=[]
+  carc=''
  tabvila:any[]=[]
   vila:any
    
@@ -54,6 +55,7 @@ export class VilaComponent implements OnInit {
       prix:"",
       imageProfil:"",
       prixFinal:"",
+      carc:[],
       lat:  24.619185472680048 ,
       lng:  55.3883916685736,
       video:"",
@@ -67,12 +69,19 @@ export class VilaComponent implements OnInit {
     this.serIm.registreImage(this.selectF)
     
   }
+  ajoutCarc(){
+    this.tabCarc.push(this.carc)
+  }
+  supCarc(i:any){
+    this.tabCarc.splice(i,1);
+  }
  ajout(){
   
   console.log(this.vila)
   this.vila.lng=this.crud.lng
   this.vila.lat=this.crud.lat
   this.vila.imgs=this.serIm.tabImages
+  this.vila.carc=this.tabCarc
    this.vila.imageProfil=this.serIm.tabImages[0]
    this.crud.ajout(this.vila,this.urlCreat)
 
