@@ -34,7 +34,7 @@ export class ProducVilaComponent implements OnInit {
   })
 }
 navRent(i:any){
-  this.route.navigate(["/single-product4",this.tab[i]._id])
+  this.route.navigate(["/Rent",this.tab[i]._id])
 }
 
 }

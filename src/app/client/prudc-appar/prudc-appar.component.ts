@@ -34,6 +34,6 @@ export class PrudcApparComponent implements OnInit {
   })
 }
 navAppr(i:any){
-  this.route.navigate(["/single-product3",this.tab[i]._id])
+  this.route.navigate(["/Appr",this.tab[i]._id])
 }
 }

@@ -59,10 +59,12 @@ export class Lunding2Component implements OnInit {
            ob=res.valueOf()  
            this.title=ob.title
            this.crud.project=ob.title
+          
            this.desc=ob.desc
            this.stitle=ob.stitle
            this.video=ob.video
            this.prix=ob.prix
+
            this.crud.lat=ob.lat
            this.crud.lng=ob.lng
            this.prixFinal=ob.prixFinal
@@ -71,7 +73,8 @@ export class Lunding2Component implements OnInit {
            this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
         //     this.off=ob          
         ////console.log(imgs)
-        console.log(this.video)
+        console.log(ob)
+      
         // this.tabim=this.off.imgs
          this.loadingOff=false
        }
@@ -79,6 +82,7 @@ export class Lunding2Component implements OnInit {
   }
 
   ngOnInit(): void {
+    
   
   }
 

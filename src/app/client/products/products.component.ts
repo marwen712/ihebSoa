@@ -35,7 +35,7 @@ export class ProductsComponent implements OnInit {
   })
 }
 nav2(i:any){
-  this.route.navigate(["/single-product2",this.tab[i]._id])
+  this.route.navigate(["/Vila",this.tab[i]._id])
 }
 
 }

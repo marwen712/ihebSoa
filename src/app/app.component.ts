@@ -9,8 +9,10 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ihebProgectSOA';
+  title = 'Heart of Carthage';
   message:any
+  public phone = "+971 58 218 9263"
+ public messg = "ارسل الآن طلبك";
   constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta){
 
   }

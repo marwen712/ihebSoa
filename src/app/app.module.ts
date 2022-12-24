@@ -28,6 +28,7 @@ import {  WavesModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'carousel-angular';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { NgxWhastappButtonModule } from "ngx-whatsapp-button";
 import { DashComponent } from './admin/dash/dash.component';
 import { OffPlanComponent } from './admin/off-plan/off-plan.component';
 import { VilaComponent } from './admin/vila/vila.component';
@@ -95,7 +96,8 @@ declarations: [
     NgxGoogleAnalyticsModule.forRoot('G-QP9B6YSFVC'),
     NgxGoogleAnalyticsRouterModule,
     FormsModule,ReactiveFormsModule ,
-    AgmCoreModule.forRoot({ apiKey:""  })
+    AgmCoreModule.forRoot({ apiKey:""  }),
+    NgxWhastappButtonModule
   ],
   providers: [AsyncPipe,MessagingService],
   bootstrap: [AppComponent]

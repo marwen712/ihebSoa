@@ -13,6 +13,8 @@ import { Lunding2Component } from './client/lunding2/lunding2.component';
 import { Lund3Component } from './client/lund3/lund3.component'
 import { ProducVilaComponent } from './client/produc-vila/produc-vila.component';
 import { PrudcApparComponent } from './client/prudc-appar/prudc-appar.component';
+import { Lunding4Component } from './client/lunding4/lunding4.component';
+import { Form2Component } from './client/form2/form2.component';
 
 const routes: Routes = [
   { path:"", component:HomeComponent },
@@ -20,17 +22,21 @@ const routes: Routes = [
   { path:"vila", component:ProductsComponent },
   { path:"rent", component:ProducVilaComponent },
   { path:"appr", component:PrudcApparComponent },
-  { path:"single-product/:id", component:SingleProductComponent },
+  { path:"Off-Plan/:id", component:SingleProductComponent },
   { path:"contact-us", component:ContactUsComponent },
   { path:"admin", component: DashComponent },
   { path:"off", component: OffPlanComponent },
-  { path:"single-product2/:id", component:Lunding2Component },
-  { path:"single-product3/:id", component:Lund3Component },
+  { path:"Vila/:id", component:Lunding2Component },
+  { path:"Appr/:id", component:Lund3Component },
+  { path:"Rent/:id", component:Lunding4Component },
+  { path:"form", component:Form2Component }
 ];
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [ RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled', // Add options right here
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

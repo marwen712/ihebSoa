@@ -82,7 +82,7 @@ export class Lunding4Component implements OnInit {
   }
 
   ngOnInit(): void {
+ 
   
   }
-
 }

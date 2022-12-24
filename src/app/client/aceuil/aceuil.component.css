@@ -3,7 +3,7 @@
   overflow: hidden;
   background-color: #333;
   position: fixed;
-  z-index: 100;
+  z-index: 1000  !important;
   opacity: 0.8;
   min-width: 100%;
 

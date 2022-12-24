@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   tabVila:any[]=[]
   tabRent:any[]=[]
   tabAppr:any[]=[]
-
+  public phone = "+971 58 218 9263"
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -132,12 +132,12 @@ export class HomeComponent implements OnInit {
   })
   }
  nav1(i:any){
- this.route.navigate(["/single-product",this.tabOff[i]._id])
+ this.route.navigate(["/Off-Plan",this.tabOff[i]._id])
  }
  nav2(i:any){
-  this.route.navigate(["/single-product2",this.tabVila[i]._id])
+  this.route.navigate(["/Vila",this.tabVila[i]._id])
  }
  nav3(i:any){
-  this.route.navigate(["/single-product3",this.tabAppr[i]._id])
+  this.route.navigate(["/Appr",this.tabAppr[i]._id])
  }
 }

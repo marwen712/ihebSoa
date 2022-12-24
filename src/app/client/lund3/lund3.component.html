@@ -1,191 +1,72 @@
  <!-- ***** Main Banner Area Start ***** -->
- <div style=" background:url('assets/images/2.png') center center;
- background-size: cover ;background-attachment: fixed ;margin-bottom: 50px;" >
 
-        <div class="container h-100" style="z-index:100;margin-bottom: 50px !important ;padding-top: 100px !important ;opacity: 0.7; padding-bottom: 20px;"  >
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-lg-12 col-xl-11">
-              <div class="card text-black" style="border-radius: 25px;">
-                <div class="card-body p-md-5">
-                  <div class="row justify-content-center">
-                    <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-
-                      <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
-
-                      <form class="mx-1 mx-md-4">
-
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fa fa-user fa-lg me-3 fa-fw"></i>
-                          <div class="form-outline flex-fill mb-0">
-                            <input type="text" id="form3Example1c" class="form-control" />
-                            <label class="form-label" for="form3Example1c">Your Name</label>
-                          </div>
-                        </div>
-
-                        <div class="d-flex flex-row align-items-center mb-4">
-                          <i class="fa fa-envelope fa-lg me-3 fa-fw"></i>
-                          <div class="form-outline flex-fill mb-0">
-                            <input type="email" id="form3Example3c" class="form-control" />
-                            <label class="form-label" for="form3Example3c">Your Email</label>
-                          </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center mb-4">
-                            <i class="fa fa-phone fa-lg me-3 fa-fw"></i>
-                            <div class="form-outline flex-fill mb-0">
-                              <input type="email" id="form3Example3c" class="form-control" />
-                              <label class="form-label" for="form3Example3c">Your phone</label>
-                            </div>
-                          </div>
-
-
-                        <div class="form-check d-flex justify-content-center mb-5">
-                          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                          <label class="form-check-label" for="form2Example3">
-                            I agree all statements in <a href="#!">Terms of service</a>
-                          </label>
-                        </div>
-
-                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="button" class="btn btn-primary btn-lg">Register</button>
-                        </div>
-
-                      </form>
-
-                    </div>
-                    <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                      <img src="assets/images/logo1.png"
-                        class="img-fluid" alt="Sample image">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-    </div>
 <!-- ***** Main Banner Area End ***** -->
-<div class="container">
-  <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="loadingOff">
-    <div class="col-12">
-        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-            <span class="visually-hidden"> Loading...</span>
+
+
+<!-- ***** Product Area Starts ***** -->
+ <!-- ***** Main Banner Area Start ***** -->
+
+<!-- ***** Main Banner Area End ***** -->
+
+
+<!-- ***** Product Area Starts ***** -->
+
+<div class="container" style=" pointer-events: auto ;" id="top" >
+    <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="loadingOff">
+      <div class="col-12">
+          <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+              <span class="visually-hidden"> Loading...</span>
+            </div>
+      </div>
+  </div>
+  </div>
+
+<section class="section" id="product" style="margin-top: 0px;"  *ngIf="!loadingOff">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+          <div class="left-images"><carousel style="z-index: 1 !important ;margin-top:70px;">
+            <div class="carousel-cell" *ngFor="let im of imgs">
+                <img [src]="im" >
+                </div>
+                </carousel>
           </div>
-    </div>
-</div>
-</div>
-<section *ngIf="!loadingOff">
-<section class="section" id="explore" style="margin-top: 40px;">
-    <div class="container" >
-        <div class="row"  style="margin-bottom: 50px;" > 
-
-            <div class="col-lg-6" *ngIf="!loadingOff">
-                <div class="left-content">
-                    <h2>{{title}}</h2>
-                    <span>{{stitle}} </span>
-                    <div class="quote">
-
-                    </div>
-                    <p>{{prix}}
-                      </p>
-                    <p> {{desc}}</p>
-                    <div class="main-border-button">
-                        <a href="products.html" >location</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="right-content">
-                    <div class="row">
-
-                        <div class="col-lg-12">
-                            <div class="embed-responsive embed-responsive-21by9" >
-                                <iframe [src]="video"  class="embed-responsive-item"  title="YouTube video" allowfullscreen></iframe>
-                              </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section style="margin-top: 40px;" >
-  <app-carc></app-carc>
-</section>
-<div class="container-fluid" style="margin-top: 40px;">
-  <owl-carousel-o [options]="customOptions">
-
-      <ng-container *ngFor="let im of imgs" >
-          <ng-template carouselSlide >
-
-<img [src]= "im" alt="heart-of-carthage-dubai"/>
-
-
-
-          </ng-template>
-        </ng-container>
-
-        
-  </owl-carousel-o>
-</div>
-
-<section>
-  <div class="container" >
-      <div class="col" style="margin-top: 40px;">
-          <app-map1></app-map1>
+      </div>
+      <div class="col-lg-4">
+          <div class="right-content">
+              <h4>{{title}}</h4>
+              <span class="price">{{prixFinal}}</span>
+              <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+              </ul>
+              <span>{{stitle}}</span>
+              <div class="quote">
+                  <i class="fa fa-quote-left"></i><p>{{desc}}</p>
+              </div>
+              <div class="quantity-content">
+                  <div class="left-content">
+                      <h6>No. of Orders</h6>
+                  </div>
+                  <div class="right-content">
+                      <div class="quantity buttons_added">
+                          <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                      </div>
+                  </div>
+              </div>
+              <div class="total">
+                  <h4>{{prixFinal}}</h4>
+                  <div class="main-border-button"><a routerLink="/form" >Book now</a></div>
+              </div>
+          </div>
+      </div>
       </div>
   </div>
 </section>
-</section>
-<!-- ***** Product Area Starts ***** -->
-<!--<section class="section" id="product">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
+<!-- ***** Product Area Ends ***** -->
 
-                <div class="embed-responsive embed-responsive-21by9" >
-                    <iframe  src="https://www.youtube.com/embed/gdcPBpASd7Q"  class="embed-responsive-item"  title="YouTube video" allowfullscreen></iframe>
-                  </div>
-            <div class="left-images">
-
-                <img src="assets/images/single-product-02.jpg" alt="">
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="right-content">
-                <h4>New Green Jacket</h4>
-                <span class="price">$75.00</span>
-                <ul class="stars">
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                    <li><i class="fa fa-star"></i></li>
-                </ul>
-                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod kon tempor incididunt ut labore.</span>
-                <div class="quote">
-                    <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
-                </div>
-                <div class="quantity-content">
-                    <div class="left-content">
-                        <h6>No. of Orders</h6>
-                    </div>
-                    <div class="right-content">
-                        <div class="quantity buttons_added">
-                            <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-                        </div>
-                    </div>
-                </div>
-                <div class="total">
-                    <h4>Total: $210.00</h4>
-                    <div class="main-border-button"><a href="#">Add To Cart</a></div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-</section>-->
+ 
 <!-- ***** Product Area Ends ***** -->
