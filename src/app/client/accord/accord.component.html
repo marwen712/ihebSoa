@@ -1,4 +1,4 @@
-<body  style="margin-top: 20px;" style=" background:url('assets/images/head2.png') center center;
+<body  style="margin-top: 30px;" style=" background:url('assets/images/head2.png') center center;
 background-size: cover ;background-attachment: fixed ;margin-bottom: 20px;">
   <div class="container">
     <div class="row">
@@ -67,45 +67,53 @@ background-size: cover ;background-attachment: fixed ;margin-bottom: 20px;">
     </div>
     <div class="row">
       <div class="col-12"  style="margin-top:20px;margin-bottom:20px;height: 100%; ">
-        <carousel>
-          <div class="carousel-cell">
-            <div class="card opacity-70">
-              <img src="assets/images/visa.png" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-              <div class="card-body">
-                <h3 class="card-title">Visas in Dubai</h3>
-                <p class="card-text">
-                  The residency visas in Dubai vary in type, validity period, requirements, as well as cost, as some can be valid for 2–3 years while others for 3–10 years
-                </p>
-              </div>
-            </div>
-          </div>
-        
-          <div class="carousel-cell">
-            <div class="card opacity-70">
-              <img src="assets/images/gold.png" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-              <div class="card-body">
-                <h3 class="card-title">Golden Visa</h3>
-                <p class="card-text">
-                  Changes made by UAE in residency, entry and golden visas.
-The UAE Government Media Office posted a couple of circulars with new information regarding the visa scheme of the country
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-cell ">
-            <div class="card opacity-75" >
-              <img src="assets/images/bit.jpg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
-              <div class="card-body" >
-                <h3 class="card-title">accept cryptomonnaies</h3>
-                <p class="card-text">
-                  Advances in computing and cryptography have led to radical innovations, allowing transactions to be validated outside of traditional networks.
-                </p>
-              </div>
-            </div>
-          </div>
-      </carousel>
+        <owl-carousel-o [options]="customOptions">
+          <ng-container >
+               <ng-template carouselSlide >
+                 <div class="card opacity-70">
+                   <img src="assets/images/visa.png" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                   <div class="card-body">
+                     <h3 class="card-title">Visas in Dubai</h3>
+                     <p class="card-text">
+                       The residency visas in Dubai vary in type, validity period, requirements, as well as cost, as some can be valid for 2–3 years while others for 3–10 years
+                     </p>
+                   </div>
+                 </div>
+               </ng-template>
+             </ng-container>
+             
+             <ng-container >
+               <ng-template carouselSlide >
+                 <div class="card opacity-70">
+                   <img src="assets/images/gold.png" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                   <div class="card-body">
+                     <h3 class="card-title">Golden Visa</h3>
+                     <p class="card-text">
+                       Changes made by UAE in residency, entry and golden visas.
+     The UAE Government Media Office posted a couple of circulars with new information regarding the visa scheme of the country
+                     </p>
+                   </div>
+                 </div>
+               </ng-template>
+             </ng-container>
+             
+             <ng-container >
+               <ng-template carouselSlide >
+                 <div class="card opacity-75" >
+                   <img src="assets/images/bit.jpg" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                   <div class="card-body" >
+                     <h3 class="card-title">accept cryptomonnaies</h3>
+                     <p class="card-text">
+                       Advances in computing and cryptography have led to radical innovations, allowing transactions to be validated outside of traditional networks.
+                     </p>
+                   </div>
+                 </div>
+               </ng-template>
+             </ng-container>
+       </owl-carousel-o>
       </div>
     </div>
 </div>
   
 </body>
+

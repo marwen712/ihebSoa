@@ -15,7 +15,7 @@ import { ProducVilaComponent } from './client/produc-vila/produc-vila.component'
 import { PrudcApparComponent } from './client/prudc-appar/prudc-appar.component';
 import { Lunding4Component } from './client/lunding4/lunding4.component';
 import { Form2Component } from './client/form2/form2.component';
-
+import { ProductOffPlanComponent } from './client/product-off-plan/product-off-plan.component';
 const routes: Routes = [
   { path:"", component:HomeComponent },
   { path:"about", component:AboutComponent },
@@ -29,7 +29,8 @@ const routes: Routes = [
   { path:"Vila/:id", component:Lunding2Component },
   { path:"Appr/:id", component:Lund3Component },
   { path:"Rent/:id", component:Lunding4Component },
-  { path:"form", component:Form2Component }
+  { path:"form", component:Form2Component },
+  { path:"offs", component:ProductOffPlanComponent },
 ];
 
 

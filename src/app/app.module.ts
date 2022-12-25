@@ -25,7 +25,7 @@ import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule} from 'angular-bootstrap-md';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {  WavesModule } from 'angular-bootstrap-md';
-import {IvyCarouselModule} from 'carousel-angular';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { NgxWhastappButtonModule } from "ngx-whatsapp-button";
@@ -48,6 +48,7 @@ import { AgmCoreModule } from '@agm/core';
 import { Map4Component } from './client/map4/map4.component';
 import { Map3Component } from './admin/map3/map3.component';
 import { CarcComponent } from './client/carc/carc.component';
+import { ProductOffPlanComponent } from './client/product-off-plan/product-off-plan.component';
 
 @NgModule({
 declarations: [
@@ -78,6 +79,7 @@ declarations: [
     Map3Component,
     Map4Component,
     CarcComponent,
+    ProductOffPlanComponent,
    
    
   ],

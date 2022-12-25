@@ -15,10 +15,10 @@ export class SingleProductComponent implements OnInit {
   public title=""
   public stitle=""
   public desc=""
-  public imgs=""
+  public imgs:any[]=[]
   public prix=""
   video: any;
-
+  public phone = "+971 58 218 9263"
   public prixFinal=""
 
 
@@ -67,7 +67,13 @@ export class SingleProductComponent implements OnInit {
          this.crud.lat=ob.lat
          this.crud.lng=ob.lng
          this.prixFinal=ob.prixFinal
-         this.imgs=ob.imgs
+        
+         for (let i = 0; i < ob.imgs.length; i++) {
+        var img ={
+          path: ob.imgs[i]
+        }
+        this.imgs.push(img)
+        }
          this.crud.tabCarc=ob.carc
          this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
       //     this.off=ob          
