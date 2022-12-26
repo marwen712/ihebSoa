@@ -20,7 +20,7 @@ import { ProductsComponent } from './client/products/products.component';
 import { ContactUsComponent } from './client/contact-us/contact-us.component';
 import { SingleProductComponent } from './client/single-product/single-product.component';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
-
+import {Ng2TelInputModule} from 'ng2-tel-input';
 
 import { ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule} from 'angular-bootstrap-md';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -99,7 +99,8 @@ declarations: [
     NgxGoogleAnalyticsRouterModule,
     FormsModule,ReactiveFormsModule ,
     AgmCoreModule.forRoot({ apiKey:""  }),
-    NgxWhastappButtonModule
+    NgxWhastappButtonModule,
+    Ng2TelInputModule
   ],
   providers: [AsyncPipe,MessagingService],
   bootstrap: [AppComponent]
