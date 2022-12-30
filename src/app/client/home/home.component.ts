@@ -6,24 +6,29 @@ import { ImgService } from 'src/app/services/img.service';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { ngxLightOptions } from  'ngx-light-carousel/public-api'
+import { MatCarousel, MatCarouselComponent } from 'ng-mat-carousel'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  options:any
   urlOff= '/off/home/'
   urlRent= '/rent/'
   urlVila= '/vila/'
   urlAppr= '/appr/'
   tabOff:any[]=[]
+  tabOfff:any[]=[1,2,3,4]
   tabVila:any[]=[]
   tabRent:any[]=[]
   tabAppr:any[]=[]
   public phone = "+971 58 218 9263"
+ 
   customOptions: OwlOptions = {
     loop: true,
-    autoplay: true,
+    autoplay:false,
     center: true,
     dots: false,
     autoHeight: true,
@@ -59,7 +64,7 @@ export class HomeComponent implements OnInit {
     }
   }
   constructor(public crud:CrudService , public serIm:ImgService,private http:HttpClient,private route:Router ) {
-    
+  
     
 
    }

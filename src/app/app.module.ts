@@ -28,6 +28,8 @@ import {  WavesModule } from 'angular-bootstrap-md';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
+import { MatCarouselModule } from 'ng-mat-carousel';
+
 import { NgxWhastappButtonModule } from "ngx-whatsapp-button";
 import { DashComponent } from './admin/dash/dash.component';
 import { OffPlanComponent } from './admin/off-plan/off-plan.component';
@@ -49,6 +51,8 @@ import { Map4Component } from './client/map4/map4.component';
 import { Map3Component } from './admin/map3/map3.component';
 import { CarcComponent } from './client/carc/carc.component';
 import { ProductOffPlanComponent } from './client/product-off-plan/product-off-plan.component';
+import { Home1Component } from './client/home1/home1.component';
+import { NgxCarouselModule } from 'ngx-light-carousel'
 
 @NgModule({
 declarations: [
@@ -80,6 +84,7 @@ declarations: [
     Map4Component,
     CarcComponent,
     ProductOffPlanComponent,
+    Home1Component,
    
    
   ],
@@ -100,7 +105,9 @@ declarations: [
     FormsModule,ReactiveFormsModule ,
     AgmCoreModule.forRoot({ apiKey:""  }),
     NgxWhastappButtonModule,
-    Ng2TelInputModule
+    Ng2TelInputModule,
+    MatCarouselModule.forRoot(),
+    NgxCarouselModule 
   ],
   providers: [AsyncPipe,MessagingService],
   bootstrap: [AppComponent]
