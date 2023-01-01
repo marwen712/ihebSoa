@@ -61,6 +61,7 @@ export class OffPlanComponent implements OnInit {
       imageProfil:"",
       prixFinal:"",
       video:"",
+      dev:"",
         carc:[],
         lat:  24.619185472680048 ,
        lng:  55.3883916685736,

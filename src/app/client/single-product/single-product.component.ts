@@ -12,6 +12,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class SingleProductComponent implements OnInit {
   public  loadingOff=false
+  public dev=""
   public title=""
   public stitle=""
   public desc=""
@@ -65,6 +66,7 @@ export class SingleProductComponent implements OnInit {
          this.video=ob.video
          this.prix=ob.prix
          this.crud.lat=ob.lat
+         this.dev=ob.dev
          this.crud.lng=ob.lng
          this.prixFinal=ob.prixFinal
         

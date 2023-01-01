@@ -86,10 +86,17 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-2">
+              <div class="col-md-4">
                 <div class="aa-single-advance-search">
                   <select>
-                   <option value="0" selected>Category</option>
+                   <option value="0" selected>Vila or  Apartment ..</option>
+                    <option value="1">Vila</option>
+                    <option value="2">Apartment</option>
+                    <option value="3">Duplex</option>
+                    <option value="3">Office space</option>
+                    <option value="3">Shop</option>
+                    <option value="3">Show Room</option>
+          
                     <option value="1">Flat</option>
                     <option value="2">Land</option>
                     <option value="3">Plot</option>
@@ -97,25 +104,17 @@
                   </select>
                 </div>
               </div>
+             
               <div class="col-md-2">
                  <div class="aa-single-advance-search">
                   <select>
-                    <option value="0" selected>Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
-                  </select>
-              </div>
-              </div>
-              <div class="col-md-2">
-                 <div class="aa-single-advance-search">
-                  <select>
-                    <option value="0" selected>Type</option>
-                    <option value="1">Flat</option>
-                    <option value="2">Land</option>
-                    <option value="3">Plot</option>
-                    <option value="4">Commercial</option>
+                    <option value="0" selected>Min bedrooms</option>
+                    <option value="1">Studio</option>
+                    <option value="2">1</option>
+                    <option value="3">2</option>
+                    <option value="4">3</option>
+                    <option value="4">4</option>
+                    <option value="4">5</option>
                   </select>
               </div>
               </div>
@@ -286,7 +285,7 @@
                 <img [src]="off.imageProfil" alt="off-plan">
               </a>
               <div class="aa-tag for-sale">
-                Azizi
+                {{off.dev}}
               </div>
               <div class="aa-properties-item-content">
               
@@ -407,10 +406,10 @@
                 </div>
                 <div class="aa-properties-item-content">
                   <div class="aa-properties-info">
-                    <span>5 Rooms</span>
-                    <span>2 Beds</span>
-                    <span>3 Baths</span>
-                    <span>1100 SQ FT</span>
+                    <span>{{vila.room}} Rooms</span>
+                    <span>{{vila.bed}} Beds</span>
+                    <span>{{vila.bath}} Baths</span>
+                    <span>{{vila.surface}} SQ FT</span>
                   </div>
                   <div class="aa-properties-about">
                     <h3><a style="color: #C9A770;">{{vila.title}}</a></h3>
@@ -439,14 +438,14 @@
                  <img [src]="vila.imageProfil" alt="img">
                </a>
                <div class="aa-tag for-rent">
-                 For Rent
+                Apartement
                </div>
                <div class="aa-properties-item-content">
                  <div class="aa-properties-info">
-                   <span>5 Rooms</span>
-                   <span>2 Beds</span>
-                   <span>3 Baths</span>
-                   <span>1100 SQ FT</span>
+                   <span>{{vila.room}} Room</span>
+                   <span>{{vila.bed}} Beds</span>
+                   <span>{{vila.bath}} Baths</span>
+                   <span>{{vila.surface}} SQ FT</span>
                  </div>
                  <div class="aa-properties-about">
                    <h3><a style="color: #C9A770;">{{vila.title}}</a></h3>
@@ -505,15 +504,15 @@
                 <a  class="aa-properties-item-img">
                   <img [src]="vila.imageProfil" alt="img">
                 </a>                
-                <div class="aa-tag for-sale">
-                 rent
+                <div class="aa-tag for-rent">
+                Rent
                 </div>
                 <div class="aa-properties-item-content">
                   <div class="aa-properties-info">
-                    <span>5 Rooms</span>
-                    <span>2 Beds</span>
-                    <span>3 Baths</span>
-                    <span>1100 SQ FT</span>
+                    <span>{{vila.room}} Rooms</span>
+                    <span>{{vila.bed}} Beds</span>
+                    <span>{{vila.bath}} Baths</span>
+                    <span>{{vila.surface}} SQ FT</span>
                   </div>
                   <div class="aa-properties-about">
                     <h3><a style="color: #C9A770;">{{vila.title}}</a></h3>
@@ -533,39 +532,7 @@
         
         </div>
         <!--2-->
-        <div class="aa-latest-properties-content">
-          
-           <div class="row">
-           <div class="col" *ngFor="let vila of tabAppr ;index as i">
-             <article class="aa-properties-item">
-               <a class="aa-properties-item-img">
-                 <img [src]="vila.imageProfil" alt="img">
-               </a>
-               <div class="aa-tag for-rent">
-                 For Rent
-               </div>
-               <div class="aa-properties-item-content">
-                 <div class="aa-properties-info">
-                   <span>5 Rooms</span>
-                   <span>2 Beds</span>
-                   <span>3 Baths</span>
-                   <span>1100 SQ FT</span>
-                 </div>
-                 <div class="aa-properties-about">
-                   <h3><a >{{vila.title}}</a></h3>
-                   <p>{{vila. stitle}} {{vila. prix}}</p>                      
-                 </div>
-                 <div class="aa-properties-detial">
-                   <span class="aa-price">
-                     ${{vila.prix}}
-                   </span>
-                   <a  class="aa-secondary-btn" (click)="nav3(i)">View Details</a>
-                 </div>
-               </div>
-             </article>
-           </div>
-          </div>
-         </div>
+        
         <!--fin 2-->
       </div>
     </div>
@@ -648,6 +615,7 @@
       </div>
     </div>
   </section>
+ 
   <!-- / Service section -->
   <section id="aa-promo-banner" style="margin-top: 50px;margin-bottom: 30px;">
     <div class="container">

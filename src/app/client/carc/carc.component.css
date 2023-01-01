@@ -24,7 +24,7 @@ section {
   height: 100%;
   padding: 2em 1.5em;
   opacity: 0.7;
-  background: linear-gradient(#ffffff 50%, #C9A770 50%);
+
   background-size: 100% 200%;
   background-position: 0 2.5%;
   border-radius: 5px;
@@ -45,7 +45,7 @@ p {
   letter-spacing: 0.03em;
 }
 .icon-wrapper {
-  background-color: #C9A770;
+
   position: relative;
   margin: auto;
   font-size: 30px;

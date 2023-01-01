@@ -24,7 +24,7 @@
                     <h2>{{title}}</h2>
                     <span>{{stitle}} </span>
                     <div class="quote">
-
+                         <p>{{dev}}</p>
                     </div>
                     <p>{{prix}}
                       </p>
@@ -38,11 +38,10 @@
                 <div class="right-content">
                     <div class="row">
 
-                        <div class="col-lg-12">
-                            <div class="embed-responsive embed-responsive-21by9" >
-                                <iframe  [src]="video"  class="embed-responsive-item"  title="YouTube video" allowfullscreen></iframe>
-                              </div>
-                        </div>
+                            <div class="col-lg-12 video-responsive">
+                                <iframe width="560" height="315" [src]="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            
 
                     </div>
                 </div>
@@ -53,6 +52,17 @@
 <section style="margin-top: 20px;">
     <app-carc></app-carc>
 </section>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="aa-promo-banner-area">
+          <h3>Vision</h3>
+          <p> HEART OF CARTHAGE is determined to provide the most professional, honest, informative, and personalized service, thus establishing ourselves as the most preferred real estate brokerage in the UAE. Continuing with our tradition of excellence and integrity, we constantly work to fulfill the objectives of our clients and building a long-term relationship based on trust.</p>
+          <a href="#" class="aa-view-btn">View DetLails</a>
+        </div>
+      </div>
+    </div>
+  </div>
 <div class="container-fluid" style="margin-top: 20px;">
     <carousel
     [images]="imgs"
@@ -70,7 +80,8 @@
     </div>
 </section>
 </section>
-<app-accord></app-accord>
+<!-- 21:9 aspect ratio -->
+
 
 <!-- ***** Product Area Starts ***** -->
 <!--<section class="section" id="product">
