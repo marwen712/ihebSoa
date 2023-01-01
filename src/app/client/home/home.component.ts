@@ -145,4 +145,7 @@ export class HomeComponent implements OnInit {
  nav3(i:any){
   this.route.navigate(["/Appr",this.tabAppr[i]._id])
  }
+ nav4(i:any){
+  this.route.navigate(["/Rent",this.tabRent[i]._id])
+ }
 }

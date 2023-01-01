@@ -651,7 +651,7 @@ banner
 */
 
 .main-banner {
-  border-bottom: 3px dotted #eee;
+  border-bottom: 3px ;
  
   padding-bottom: 30px;
 }
