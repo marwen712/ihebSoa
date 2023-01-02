@@ -19,11 +19,20 @@ export class HomeComponent implements OnInit {
   urlRent= '/rent/'
   urlVila= '/vila/'
   urlAppr= '/appr/'
+  testChercher=false
+  testChercheAv=false
   tabOff:any[]=[]
   tabOfff:any[]=[1,2,3,4]
   tabVila:any[]=[]
   tabRent:any[]=[]
   tabAppr:any[]=[]
+  tabVilaChercher:any[]=[]
+  tabRentChercher:any[]=[]
+  tabApprChercher:any[]=[]
+  role="buy"
+  VilaOrAppr="vila"
+  min="0"
+  max="0"
   public phone = "+971 58 218 9263"
  
   customOptions: OwlOptions = {
@@ -68,6 +77,56 @@ export class HomeComponent implements OnInit {
     
 
    }
+   Navigate(elem: HTMLElement ) {
+    elem.scrollIntoView({ behavior: 'smooth' });
+    }
+   //chercher
+  selectRole(e:any){
+  this.role=e.target.value
+  }
+  selectVila(e:any){
+    this.VilaOrAppr=e.target.value
+    }
+    chercher(){
+      var min=Number(this.min)
+      var max=Number(this.max)
+      this.testChercher=false
+      this.testChercheAv=false
+      if(this.role=="buy"){
+        if(max==0){
+         this.tabApprChercher=this.tabAppr
+         this.tabVilaChercher=this.tabVila
+         this.testChercher=true
+        }
+        if(max > 0){
+          this.tabApprChercher=this.tabAppr.filter(ele=>Number(ele.prixFinal) >= min && Number(ele.prixFinal) <= max)
+          this.tabVilaChercher=this.tabVila.filter(ele=>Number(ele.prixFinal) >= min && Number(ele.prixFinal) <= max)
+          console.log(this.tabVilaChercher)
+          if(this.tabApprChercher.length > 0 || this.tabVilaChercher.length > 0){
+            this.testChercher=true
+          }
+          if(this.tabApprChercher.length ==0  && this.tabVilaChercher.length == 0){
+            this.testChercheAv=true
+          }
+        }
+      }
+      if(this.role=="rent"){
+        if(max==0){
+          this.tabRentChercher=this.tabRent
+          this.tabVilaChercher=this.tabVila
+         }
+         if(max != 0){
+           this.tabRentChercher=this.tabRent.filter(ele=>Number(ele.prixFinal) >= min && Number(ele.prixFinal) <= max)
+           if(this.tabRentChercher.length > 0 ) {
+            this.testChercher=true
+          }
+          if(this.tabRentChercher.length == 0 ) {
+            this.testChercheAv=true
+          }
+         }
+      }
+    }
+   //Fchercher
    funcOff(url:string,tab:any,test:boolean){
     
    }
