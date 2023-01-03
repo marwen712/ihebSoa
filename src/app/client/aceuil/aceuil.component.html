@@ -1,6 +1,8 @@
 
 
+<!-- Navbar -->
 
+<!-- Navbar -->
 <div [ngClass]="statusClass" id="myTopnav" >
   <a href="#home"  ><img src="assets/images/logo1.png" style="height:auto;width:auto;max-width: 40px;max-height: 40px;" alt="heart-of-carthage-dubai"></a>
                                 <a routerLink="/about" (click)="myFunction()">About</a>
@@ -12,9 +14,16 @@
                                 <a  routerLink="/appr" (click)="myFunction()">Appartement & Marketrs </a>
                                 
                                 <a  routerLink="/contact-us" (click)="myFunction()">Contact Us</a>
-  <a href="javascript:void(0);" class="icon" (click)="myFunction()">
+                                
+                                
+ 
+  <a href="javascript:void(0);" class="icon" (click)="myFunction()" >
+   
     <i class="fa fa-bars"></i>
+
   </a>
+   <a href="tel:{{phone}}" class="icon" *ngIf="affTel" >     <i class="fa fa-phone" style="color:#009688"></i></a>
+   <a href="https://www.facebook.com/realestatedubaihoc/" class="icon" *ngIf="affTel" >     <i class="fab fa-facebook-f" style="color:#3b5998"></i></a>
 </div>
 
 

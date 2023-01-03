@@ -9,7 +9,7 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Heart of Carthage';
+  title = 'Heart Of Carthage Real Estate Dubai';
   message:any
   public phone = "+971 58 218 9263"
  public messg = "ارسل الآن طلبك";
