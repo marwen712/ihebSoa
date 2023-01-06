@@ -18,12 +18,7 @@
   text-decoration: none;
   font-size: 17px;
 }
-.imgClass{
-  min-width: 80px;
-  min-height: 80px;
-  max-width: 100px;
-  min-hei: 100px;
-}
+
 .topnav a:hover {
   background-color: #ddd;
   color: black;
