@@ -31,7 +31,7 @@ jobs:
           username: root
           server: 102.219.179.139
           port: 22 # default is 22
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY_SERVER }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
 
           # will put all file under this path
           local_path: ./dist/iheb-progect-soa/* # default is ./*
