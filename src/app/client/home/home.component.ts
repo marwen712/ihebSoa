@@ -113,9 +113,10 @@ export class HomeComponent implements OnInit {
       if(this.role=="rent"){
         if(max==0){
           this.tabRentChercher=this.tabRent
-          this.tabVilaChercher=this.tabVila
+          this.testChercher=true
+          
          }
-         if(max != 0){
+         if(max > 0){
            this.tabRentChercher=this.tabRent.filter(ele=>Number(ele.prixFinal) >= min && Number(ele.prixFinal) <= max)
            if(this.tabRentChercher.length > 0 ) {
             this.testChercher=true

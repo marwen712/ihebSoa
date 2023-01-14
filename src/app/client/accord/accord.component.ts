@@ -6,7 +6,8 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./accord.component.css']
 })
 export class AccordComponent implements OnInit {
-  
+  pass=""
+  log=""
  public  customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -30,5 +31,5 @@ export class AccordComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

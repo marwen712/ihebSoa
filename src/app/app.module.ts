@@ -52,7 +52,9 @@ import { Map3Component } from './admin/map3/map3.component';
 import { CarcComponent } from './client/carc/carc.component';
 import { ProductOffPlanComponent } from './client/product-off-plan/product-off-plan.component';
 import { Home1Component } from './client/home1/home1.component';
-import { NgxCarouselModule } from 'ngx-light-carousel'
+import { NgxCarouselModule } from 'ngx-light-carousel';
+import { LoginComponent } from './admin/login/login.component';
+
 
 @NgModule({
 declarations: [
@@ -85,6 +87,8 @@ declarations: [
     CarcComponent,
     ProductOffPlanComponent,
     Home1Component,
+    LoginComponent,
+   
    
    
   ],
