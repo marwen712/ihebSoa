@@ -24,7 +24,7 @@
                     <h2>{{title}}</h2>
                     <span>{{stitle}} </span>
                     <div class="quote">
-                         <p>{{dev}}</p>
+                         <p style="width: 30%;"><img [src]="getLogoDevp(this.dev)" style="width: 100%;" /></p>
                     </div>
                     <p>{{prix}}
                       </p>
@@ -37,12 +37,9 @@
             <div class="col-lg-6">
                 <div class="right-content">
                     <div class="row">
-
                             <div class="col-lg-12 video-responsive">
                                 <iframe width="560" height="315" [src]="video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            
-
+                            </div>
                     </div>
                 </div>
             </div>
@@ -55,8 +52,8 @@
 <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <div class="aa-promo-banner-area">
-          <h3>Vision</h3>
+        <div class="aa-promo-banner-area vision-section">
+          <p class="title-section">Vision</p>
           <p> HEART OF CARTHAGE is determined to provide the most professional, honest, informative, and personalized service, thus establishing ourselves as the most preferred real estate brokerage in the UAE. Continuing with our tradition of excellence and integrity, we constantly work to fulfill the objectives of our clients and building a long-term relationship based on trust.</p>
           <a href="#" class="aa-view-btn">View DetLails</a>
         </div>
@@ -73,8 +70,9 @@
     ></carousel>
 </div>
 <section>
-    <div class="container" style="margin-top: 20px;margin-bottom: 20px;">
-        <div class="col">
+    <div class="container map-section">
+        <p>Localisation</p>
+        <div class="col" style="margin-left:-4%;width: 98%;">
             <app-map1></app-map1>
         </div>
     </div>

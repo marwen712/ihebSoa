@@ -129,6 +129,43 @@ export class Form1Component implements OnInit {
           console.log(res)})
         
     }
+
+
+  step_counter = 1
+
+  btnSteps:any
+  step1:any
+  step2:any
+  step3:any
+  
+  nextStep(){
+
+    this.btnSteps = document.getElementById("btn-next-step")
+    this.step1 = document.getElementById("step-1")
+    this.step2 = document.getElementById("step-2")
+    this.step3 = document.getElementById("step-3")
+
+    if(this.step_counter === 3){
+      alert("saved")
+    }
+
+    if(this.step_counter === 2){
+      this.btnSteps.style.innerText = "submit"
+      this.step2.style.transform = "translateX(-200%)"
+      this.step3.style.transform = "translateX(-200%)"
+      this.step_counter++
+    }
+
+    if(this.step_counter === 1){
+      this.step1.style.transform = "translateX(-100%)"
+      this.step2.style.transform = "translateX(-100%)"
+      this.step_counter++
+    }
+  
+
+  }
+
+
     funcaffichEtape2(){
       this.affichEtape2=true
     }

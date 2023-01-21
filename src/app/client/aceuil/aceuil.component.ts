@@ -13,14 +13,43 @@ export class AceuilComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  dropListLangActive = false
+
+  dropList:any
+
+  langDropDown(){
+
+    this.dropList = document.getElementById("dropList")
+
+    if(this.dropListLangActive){
+
+      this.dropList.style.top = "-700px"
+
+    }else{
+
+      this.dropList.style.top = "35px"
+
+    }
+
+    this.dropListLangActive = !this.dropListLangActive
+
+  }
+
+  btnIcon:any
+
   myFunction(){
+
+    this.btnIcon = document.getElementById("btnIcons")
+
     if (this.statusClass === "topnav") {
       this.statusClass= "topnav responsive";
+      this.btnIcon.style.top = "13px"
       this.affTel=false
     } else {
       this.statusClass  = "topnav";
       this.affTel=true
+      this.btnIcon.style.top = "42px"
     }
-    console.log(this.statusClass)
   }
 }

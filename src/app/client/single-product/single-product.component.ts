@@ -53,6 +53,15 @@ export class SingleProductComponent implements OnInit {
    
   }
 
+
+  getLogoDevp(dev){
+
+    const devp_name = dev.toLowerCase()
+
+    return "/assets/images/developers/"+devp_name+".png" 
+
+  }
+
   ngOnInit(): void {
     this.loadingOff=true  
     this.http.get(environment.baseURL+"/off/"+this.route.snapshot.paramMap.get('id')+"/").subscribe(res=>{

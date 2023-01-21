@@ -132,7 +132,171 @@ export class HomeComponent implements OnInit {
     
    }
 
+
+   developers = [
+    "logo-dev1.png",
+    "logo-dev2.png",
+    "logo-dev3.png",
+    "logo-dev4.png",
+    "logo-dev5.png",
+    "logo-dev6.png",
+    "logo-dev7.png",
+    "logo-dev8.png",
+    "logo-dev9.png"]
+
+  // create developer item
+  createSlide({devp}){
+
+    var container = document.createElement("div")
+    var content = document.createElement("img")
+
+    container.setAttribute("class","sd-img")
+
+    content.src = "/assets/images/developers/"+devp
+
+    content.style.width = "85%"
+
+    container.appendChild(content)
+
+    return container
+
+  }
+
+  slideContainer:any
+
+  // create slide
+  createContainerSlide({slides,id}){
+
+    this.slideContainer = document.getElementById("sliderContainer")
+
+    var container = document.createElement("div")
+
+    container.setAttribute("class","slide")
+
+    container.style.width = "100%"
+    container.style.height = "100%"
+    container.style.display = "flex"
+    container.style.alignItems = "center"
+    container.style.justifyContent = "space-around"
+
+    container.id = id
+
+    this.groupes_slide.push(id)
+
+    this.slides.map(sl=>{
+
+      container.appendChild(sl)
+
+    })
+
+    this.slideContainer.appendChild(container)
+
+  }
+
+  slides_counter = 0
+
+  slides:any = []
+
+  groupes_counter = 0
+
+  slide:any
+
+  phoneScreen:any
+
+  logoOffPlan(devName){
+
+    const devp_name = devName.toLowerCase() 
+
+    return "/assets/images/developers/"+devp_name+".png"
+
+  }
+
+  groupes_slide:any = []
+
+  direction = "left"
+
+  counter_slide_auto = 0
+
+  slideWidth:any
+
   ngOnInit(): void {
+
+
+    //slider developers : scrolling auto
+
+    this.phoneScreen = window.matchMedia('(max-width: 480px)')
+
+    if(!(this.phoneScreen.matches)){
+
+      setInterval(()=>{
+
+        this.slide = document.getElementById("sliderContainer")
+
+        this.slideWidth = document.getElementById(this.groupes_slide[0])
+
+        if(this.counter_slide_auto === 0){
+
+          this.direction = "left"
+
+        }else if(this.counter_slide_auto === (this.groupes_slide.length-1)){
+
+          this.direction = "right"
+
+        } 
+
+        if(this.direction === "left"){
+
+          this.slide.scrollBy({
+            left: this.slide.scrollLeft + this.slideWidth.offsetWidth,
+            behavior: 'smooth'
+          });
+          this.counter_slide_auto++
+          
+        }else if(this.direction === "right"){
+
+          this.slide.scrollBy({
+            left: this.slide.scrollLeft - (this.slideWidth.offsetWidth*this.groupes_slide.length),
+            behavior: 'smooth'
+          });
+          this.counter_slide_auto--
+
+        }
+
+    },5000)
+
+    }
+
+    // create slides devevlopers
+  for (var i = 0 ; i < this.developers.length; i++) {
+    
+    if(this.slides_counter === 3){
+
+
+      this.createContainerSlide({slides:this.slides,id:"group"+this.groupes_counter})
+      this.slides = []
+      this.groupes_counter++
+      this.slides_counter = 0
+    }
+
+    if(i === this.developers.length-1){
+
+      var slide = this.createSlide({devp:this.developers[i]})
+
+      this.slides.push(slide)
+
+      this.createContainerSlide({slides:this.slides,id:"group"+this.groupes_counter})
+      this.slides = []
+      this.groupes_counter++
+      this.slides_counter = 0
+
+    }
+    var slide = this.createSlide({devp:this.developers[i]})
+
+    this.slides.push(slide)
+
+    this.slides_counter++
+
+  }
     this.crud.loadingOff=true
     this.crud.loadingRent=true
     this.crud.loadingAppr=true
@@ -208,4 +372,7 @@ export class HomeComponent implements OnInit {
  nav4(i:any){
   this.route.navigate(["/Rent",this.tabRent[i]._id])
  }
+
+
+ 
 }
