@@ -24,11 +24,11 @@ export class AceuilComponent implements OnInit {
 
     if(this.dropListLangActive){
 
-      this.dropList.style.top = "-700px"
+      this.dropList.style.top = "-500%"
 
     }else{
 
-      this.dropList.style.top = "35px"
+      this.dropList.style.top = "5.3%"
 
     }
 
