@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, Ng
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { CrudService } from 'src/app/services/crud.service';
-
+import * as  AOS from 'aos';
 //import * as  AOS from 'aos';
 
 @Component({
@@ -38,6 +38,7 @@ export class Form1Component implements OnInit {
       country:new FormControl(""),
     
     })
+    Title_off=''
     disable=false
     affichEtape2=false
     countrySelcted="dubai"
@@ -61,7 +62,7 @@ export class Form1Component implements OnInit {
       tabBudjet:string[]=["your budget","AED 500000-> AED 1000000","AED 1000000 -> AED 2000000","more than AED 2000000"]
       tabDate:string[]=["When do you want to buy",'now ','after 1 month',"after 3 months","after 3 months"]
   
-  constructor(private http:HttpClient , private crud:CrudService) { }
+  constructor(private http:HttpClient , public crud:CrudService) {  AOS.init();}
     
       ngOnInit(): void {
   //       const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8',"aut":""});

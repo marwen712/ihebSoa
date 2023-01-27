@@ -21,7 +21,7 @@ import { ContactUsComponent } from './client/contact-us/contact-us.component';
 import { SingleProductComponent } from './client/single-product/single-product.component';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import {Ng2TelInputModule} from 'ng2-tel-input';
-
+import { NgImageSliderModule } from 'ng-image-slider';
 import { ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule} from 'angular-bootstrap-md';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {  WavesModule } from 'angular-bootstrap-md';
@@ -111,6 +111,7 @@ declarations: [
     NgxWhastappButtonModule,
     Ng2TelInputModule,
     MatCarouselModule.forRoot(),
+    NgImageSliderModule,
     NgxCarouselModule 
   ],
   providers: [AsyncPipe,MessagingService],

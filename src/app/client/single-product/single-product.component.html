@@ -1,12 +1,13 @@
- <!-- ***** Main Banner Area Start ***** -->
- <div style=" background:url('assets/images/2.png') center center;
- background-size: cover ;background-attachment: fixed ;margin-bottom: 50px;" >
+
+<!-- ***** Main Banner Area Start ***** -->
+<div class="main-bg-cover" *ngIf="!loadingOff">
+<div class="bg-off-plan-lunding"  [style.background-image]="'url(' + imageProfil + ')'"></div>
 <app-form1></app-form1>
 
-    </div>
+</div>
 <!-- ***** Main Banner Area End ***** -->
-<div class="container">
-  <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="loadingOff">
+<div class="container" *ngIf="loadingOff">
+  <div class="row" style="text-align: center;margin-top: 20%; " >
     <div class="col-12">
         <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
             <span class="visually-hidden"> Loading...</span>
@@ -15,22 +16,22 @@
 </div>
 </div>
 <section *ngIf="!loadingOff">
-<section class="section" id="explore" style="margin-top: 20px;">
-    <div class="container" >
+<section class="section" id="explore" >
+    <div class="container" style="margin-top: 10%;">
         <div class="row"  > 
 
             <div class="col-lg-6" *ngIf="!loadingOff">
                 <div class="left-content">
-                    <h2>{{title}}</h2>
-                    <span>{{stitle}} </span>
+                    <h2 data-aos="fade-up">{{title}}</h2>
+                    <span data-aos="fade-up">{{stitle}} </span>
                     <div class="quote">
-                         <p style="width: 30%;"><img [src]="getLogoDevp(this.dev)" style="width: 100%;" /></p>
+                         <p style="width: 30%;"><img data-aos="fade-up" [src]="getLogoDevp(this.dev)" style="width: 100%;" /></p>
                     </div>
-                    <p>{{prix}}
+                    <p data-aos="fade-up">{{prix}}
                       </p>
                     <p> {{desc}}</p>
-                    <div class="main-border-button">
-                        <a  href="tel:{{phone}}">call us</a>
+                    <div data-aos="fade-up" class="main-border-button">
+                        <a data-aos="fade-up" href="tel:{{phone}}">call us</a>
                     </div>
                 </div>
             </div>
@@ -53,21 +54,29 @@
     <div class="row">
       <div class="col-md-12">
         <div class="aa-promo-banner-area vision-section">
-          <p class="title-section">Vision</p>
-          <p> HEART OF CARTHAGE is determined to provide the most professional, honest, informative, and personalized service, thus establishing ourselves as the most preferred real estate brokerage in the UAE. Continuing with our tradition of excellence and integrity, we constantly work to fulfill the objectives of our clients and building a long-term relationship based on trust.</p>
-          <a href="#" class="aa-view-btn">View DetLails</a>
+          <p class="title-section" >Vision</p>
+          <p data-aos="fade-up"> HEART OF CARTHAGE is determined to provide the most professional, honest, informative, and personalized service, thus establishing ourselves as the most preferred real estate brokerage in the UAE. Continuing with our tradition of excellence and integrity, we constantly work to fulfill the objectives of our clients and building a long-term relationship based on trust.</p>
+          <a href="#" class="aa-view-btn" data-aos="fade-up">View DetLails</a>
         </div>
       </div>
     </div>
   </div>
-<div class="container-fluid" style="margin-top: 20px;">
-    <carousel
-    [images]="imgs"
-    [cellsToShow]="2"
-    [loop]="true"
-    [autoplay]="true"
-    [autoplayInterval]="3000"
-    ></carousel>
+<div class="container-fluid">
+        
+    <div
+    style="width: 100%; height: auto; text-align:center;margin-top:10%; padding:0;"
+  >
+    <ng-image-slider
+    style="text-align: center;"
+      #nav
+      [images]="imgs"
+      [infinite]="false"
+      [autoSlide]="1"
+      [imageSize]="{ width: '50%'}"
+      slideImage="1"
+    ></ng-image-slider>
+  </div>
+
 </div>
 <section>
     <div class="container map-section">
@@ -130,7 +139,7 @@
     </div>
 </section>-->
 <!-- ***** Product Area Ends ***** -->
-<section id="aa-promo-banner" style="margin-top: 50px;margin-bottom: 30px;">
+<section id="aa-promo-banner" class="promo-banner-section" style="margin-top: 50px;margin-bottom: 30px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -218,4 +227,4 @@
         </div>
       </div>
     </div>
-  </section>
+</section>
