@@ -54,6 +54,12 @@ import { ProductOffPlanComponent } from './client/product-off-plan/product-off-p
 import { Home1Component } from './client/home1/home1.component';
 import { NgxCarouselModule } from 'ngx-light-carousel';
 import { LoginComponent } from './admin/login/login.component';
+import { LundingPageAziziComponent } from './azizi/lunding-page-azizi/lunding-page-azizi.component';
+import { CourbeCercleComponent } from './azizi/courbe-cercle/courbe-cercle.component';
+import { AvantageComponent } from './azizi/avantage/avantage.component';
+import { Avantage2Component } from './azizi/avantage2/avantage2.component';
+import { HomeAziziComponent } from './azizi/home-azizi/home-azizi.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 
 @NgModule({
@@ -88,6 +94,11 @@ declarations: [
     ProductOffPlanComponent,
     Home1Component,
     LoginComponent,
+    LundingPageAziziComponent,
+    CourbeCercleComponent,
+    AvantageComponent,
+    Avantage2Component,
+    HomeAziziComponent,
    
    
    
@@ -112,7 +123,18 @@ declarations: [
     Ng2TelInputModule,
     MatCarouselModule.forRoot(),
     NgImageSliderModule,
-    NgxCarouselModule 
+    NgxCarouselModule ,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+      /*kkk*/ 
+     
+    }),
   ],
   providers: [AsyncPipe,MessagingService],
   bootstrap: [AppComponent]

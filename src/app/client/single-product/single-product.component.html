@@ -1,8 +1,45 @@
+<div class="full-screen" *ngIf="isSliderFullScreen">
+        
+        <div class="close-btn" ><i class="fa-solid fa-xmark" (click)="closeFullScreen()"></i></div>
 
+        <div class="slider-container" [style.background-image]="'url('+ this.bgFullScreenSlider + ')'"></div>
+
+        <div class="btn-slider left" (click)="prevSlide()"><i class="fa-solid fa-arrow-left"></i></div>
+        <div class="btn-slider right" (click)="nextSlide()"><i class="fa-solid fa-arrow-right"></i></div>
+
+</div>
 <!-- ***** Main Banner Area Start ***** -->
 <div class="main-bg-cover" *ngIf="!loadingOff">
-<div class="bg-off-plan-lunding"  [style.background-image]="'url(' + imageProfil + ')'"></div>
+<div class="bg-off-plan-lunding"  [style.background-image]="'url('+ imageProfil + ')'"></div>
 <app-form1></app-form1>
+
+</div>
+<!--    new nav section    -->
+<div class="fixed-sc-nav">
+        
+        <div class="menu left">
+            <button>Overview</button>
+            <button>Galerie</button>
+        </div>
+        
+        <div class="menu right">
+            <div class="btn"><i class="fa-solid fa-download"></i>Brochure</div>
+            <div class="btn"><i class="fa-solid fa-money-bill-1"></i>Buy</div>
+        </div>
+
+</div>
+
+<div class="fixed-sc-nav top-page" [class.selected]="scroll < 250">
+        
+        <div class="menu left">
+            <button>Overview</button>
+            <button>Galerie</button>
+        </div>
+        
+        <div class="menu right">
+            <div class="btn"><i class="fa-solid fa-download"></i>Brochure</div>
+            <div class="btn"><i class="fa-solid fa-money-bill-1"></i>Buy</div>
+        </div>
 
 </div>
 <!-- ***** Main Banner Area End ***** -->
@@ -16,22 +53,22 @@
 </div>
 </div>
 <section *ngIf="!loadingOff">
-<section class="section" id="explore" >
-    <div class="container" style="margin-top: 10%;">
+<section class="section" id="explore" style="margin-top: 20px;">
+    <div class="container" >
         <div class="row"  > 
 
             <div class="col-lg-6" *ngIf="!loadingOff">
                 <div class="left-content">
-                    <h2 data-aos="fade-up">{{title}}</h2>
-                    <span data-aos="fade-up">{{stitle}} </span>
+                    <h2>{{title}}</h2>
+                    <span>{{stitle}} </span>
                     <div class="quote">
-                         <p style="width: 30%;"><img data-aos="fade-up" [src]="getLogoDevp(this.dev)" style="width: 100%;" /></p>
+                         <p style="width: 30%;"><img [src]="getLogoDevp(this.dev)" style="width: 100%;" /></p>
                     </div>
-                    <p data-aos="fade-up">{{prix}}
+                    <p>{{prix}}
                       </p>
                     <p> {{desc}}</p>
-                    <div data-aos="fade-up" class="main-border-button">
-                        <a data-aos="fade-up" href="tel:{{phone}}">call us</a>
+                    <div class="main-border-button">
+                        <a  href="tel:{{phone}}">call us</a>
                     </div>
                 </div>
             </div>
@@ -47,6 +84,23 @@
         </div>
     </div>
 </section>
+<div class="container-fluid">
+        
+    <div class="slider-images">
+        
+        <div class="image-selected" (click)="openFullScreen()" [style.background-image]="'url('+ this.bgImageSelected + ')'"></div>
+        <div class="images">
+            <div class="img" *ngFor="let img of imgs" id="img" (click)="selectImage(img.path)" 
+            [style.background-image]="'url('+ img.path + ')'">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<section   style="background: #f7f7f7!important;margin-top: 10%;margin-bottom: 10%;margin-left: 20%;margin-right: 20%;">
+  <app-home-azizi style="text-align:center ;"></app-home-azizi>
+</section>
 <section style="margin-top: 20px;">
     <app-carc></app-carc>
 </section>
@@ -55,33 +109,17 @@
       <div class="col-md-12">
         <div class="aa-promo-banner-area vision-section">
           <p class="title-section" >Vision</p>
-          <p data-aos="fade-up"> HEART OF CARTHAGE is determined to provide the most professional, honest, informative, and personalized service, thus establishing ourselves as the most preferred real estate brokerage in the UAE. Continuing with our tradition of excellence and integrity, we constantly work to fulfill the objectives of our clients and building a long-term relationship based on trust.</p>
-          <a href="#" class="aa-view-btn" data-aos="fade-up">View DetLails</a>
+          <p> HEART OF CARTHAGE is determined to provide the most professional, honest, informative, and personalized service, thus establishing ourselves as the most preferred real estate brokerage in the UAE. Continuing with our tradition of excellence and integrity, we constantly work to fulfill the objectives of our clients and building a long-term relationship based on trust.</p>
+          <a href="#" class="aa-view-btn">View DetLails</a>
         </div>
       </div>
     </div>
   </div>
-<div class="container-fluid">
-        
-    <div
-    style="width: 100%; height: auto; text-align:center;margin-top:10%; padding:0;"
-  >
-    <ng-image-slider
-    style="text-align: center;"
-      #nav
-      [images]="imgs"
-      [infinite]="false"
-      [autoSlide]="1"
-      [imageSize]="{ width: '50%'}"
-      slideImage="1"
-    ></ng-image-slider>
-  </div>
 
-</div>
 <section>
     <div class="container map-section">
         <p>Localisation</p>
-        <div class="col" style="margin-left:-4%;width: 98%;">
+        <div class="col" style="margin-left:0;width: 100%;">
             <app-map1></app-map1>
         </div>
     </div>
@@ -139,7 +177,7 @@
     </div>
 </section>-->
 <!-- ***** Product Area Ends ***** -->
-<section id="aa-promo-banner" class="promo-banner-section" style="margin-top: 50px;margin-bottom: 30px;">
+<section id="aa-promo-banner" class="promo-banner-section" style="margin-top: 10%;margin-bottom: 30px;">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -152,7 +190,7 @@
                       <div class="col-12">
                           <div class="right-content" >
                               
-                              <div class="row" >
+                              <div class="row other-services-boxs">
                                  
                                   <div class="col-lg-4"   >
                                       <div class="right-first-image">
