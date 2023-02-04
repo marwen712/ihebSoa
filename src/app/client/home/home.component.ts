@@ -206,7 +206,7 @@ export class HomeComponent implements OnInit {
 
   logoOffPlan(devName){
 
-    const devp_name = devName.toLowerCase() 
+    const devp_name = devName.toLowerCase().split(' ').join('') 
 
     return "/assets/images/developers/"+devp_name+".png"
 

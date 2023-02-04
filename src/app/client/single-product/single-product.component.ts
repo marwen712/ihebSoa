@@ -110,7 +110,7 @@ export class SingleProductComponent implements OnInit {
 
   getLogoDevp(dev){
 
-    const devp_name = dev.toLowerCase()
+    const devp_name = dev.toLowerCase().split(' ').join('') 
 
     return "/assets/images/developers/"+devp_name+".png" 
 

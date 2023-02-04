@@ -17,7 +17,7 @@ export class OffPlanComponent implements OnInit {
   taher="habib"
  urlCreat="/off/creat/"
   urlDelet="/off/Delet/"
-  tabCarc:string[]=[]
+  tabCarc:any[]=[]
   carc=''
  tabOff:any[]=[]
   off:any
@@ -47,8 +47,19 @@ export class OffPlanComponent implements OnInit {
  })
   }
   ajoutCarc(){
-    this.tabCarc.push(this.carc)
+    
+    var carc={
+      carc:this.carc,
+      imageCarac:this.serIm.imageNameSingle
+    }
+    this.tabCarc.push(carc)
   }
+  selectFileSingle(e:any){
+    this.serIm.loadingImagSingle=true
+    this.selectF=<File>e.target.files[0]
+    this.serIm.registreImageSingle(this.selectF)
+  }
+
   supCarc(i:any){
     this.tabCarc.splice(i,1);
   }
