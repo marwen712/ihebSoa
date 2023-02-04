@@ -56,7 +56,7 @@ export class Form1Component implements OnInit {
       typRef='صالة وغرفة'
       typM='كاش' 
       typB="AED 1000000 -> AED 2000000"
-      tabMony:string[]=["Payment method ",'Cash ','Financement bancaire']
+      tabMony:string[]=["Payment method ",'Cash ','Financement bancaire',"cryptocurrency"]
       tabsaken:string[]=["Property Type ","bedroom with living room ","2 bedroom with living room","3 bedroom with living room ","sales office"] 
       //tabIsthmar:string[]=["محل تجاري","شركة","عمارة " ] 
       tabBudjet:string[]=["your budget","AED 500000-> AED 1000000","AED 1000000 -> AED 2000000","more than AED 2000000"]
