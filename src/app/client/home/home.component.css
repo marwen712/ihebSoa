@@ -190,7 +190,6 @@
 
     width: 100%;
     height: 37%;
-    background-color: green;
 
 }
 
@@ -204,24 +203,34 @@
 
 .off-plan .title{
 
-    width: 100%;
+    width: 75%;
     padding: 4% 3% 2%;
     font-size: 1.6vw;
     color:  #c38f3c;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
 }
 
 .off-plan .description{
 
     width: 95%;
-    height: 34%;
+    height: 30%;
     padding: 0% 4% 4%;
     line-height: 2.5vw;
     font-size: 1.2vw;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
+    margin: -5% 0 4% 0;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 
 }
 
@@ -229,7 +238,7 @@
 .off-plan .footer-box{
 
     width: 100%;
-    height: 16%;
+    height: 14%;
     border-top: .1vw solid gray;
     display: flex;
     align-items: center;
@@ -239,31 +248,59 @@
 
 .off-plan .footer-box .view-btn{
 
-    width: 11%;
-    height: 50%;
+    width: 12%;
+    height: 60%;
     background-color: #c38f3c;
-    margin-right: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: .3vw;
     cursor: pointer;
     transition: .4s;
+    margin: 0;
+    margin-right: 3%;
+
+}
+
+.off-plan .logo-site{
+
+    width: 16%;
+    position: absolute;
+    right: 2%;
+    top: 39%;
 
 }
 
 .off-plan .footer-box .logo-devp{
 
-    width: 30%;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    pointer-events: none;
+    user-select: none;
 }
 
-.off-plan .footer-box .logo-devp img{
+.off-plan .footer-box .logo-devp p{
 
-    width: 90%;
+    margin: 0;
+    font-size: 2vw;
+    color: #c9a770;
+    text-shadow: 1px 2px 0px #000000;
+    z-index: 50000000000000000000;
+    font-family: 'Cookie', cursive;
+    margin-left: 3%;
+
+}
+
+.off-plan .stars-rating{
+
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+    color: #c38f3c;
+    margin-left: 3%;
+    margin-top: 3%;
 
 }
 
@@ -578,6 +615,18 @@
         width: 425px;
         background: black;
         margin-left: -11%;
+
+    }
+
+    .off-plan .stars-rating{
+
+        font-size: 13px;
+
+    }
+
+    .off-plan .footer-box .logo-devp p{
+
+        font-size: 32px;
 
     }
 
