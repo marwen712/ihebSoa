@@ -21,7 +21,7 @@ export class OffPlanComponent implements OnInit {
   carc=''
  tabOff:any[]=[]
   off:any
-   
+  affModif=false
   constructor(public crud:CrudService , public serIm:ImgService,private http:HttpClient) { 
     this.crud.loading=true
     
@@ -112,4 +112,9 @@ export class OffPlanComponent implements OnInit {
   }
  })
  }
+ modif(i:any){
+  this.crud.offPlanModif =this.tabOff[i]
+  this.affModif=true
+ }
+
 }

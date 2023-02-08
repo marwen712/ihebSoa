@@ -60,6 +60,7 @@ import { AvantageComponent } from './azizi/avantage/avantage.component';
 import { Avantage2Component } from './azizi/avantage2/avantage2.component';
 import { HomeAziziComponent } from './azizi/home-azizi/home-azizi.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { UpdateOffplanComponent } from './admin/update-offplan/update-offplan.component';
 
 
 @NgModule({
@@ -99,6 +100,7 @@ declarations: [
     AvantageComponent,
     Avantage2Component,
     HomeAziziComponent,
+    UpdateOffplanComponent,
    
    
    

@@ -36,6 +36,7 @@ export class Form1Component implements OnInit {
       date:new FormControl(""),
       DateN:new FormControl(""),
       country:new FormControl(""),
+      
     
     })
     Title_off=''

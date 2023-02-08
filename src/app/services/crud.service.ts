@@ -10,6 +10,7 @@ export class CrudService {
 //affiche Global
 public  lat: number = 51.673858;
   public lng: number = 7.815982;
+  offPlanModif:any
 project=""
 baseUrl=environment.baseURL
 affUser=false
