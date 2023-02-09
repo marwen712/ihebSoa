@@ -2,15 +2,8 @@
   <span class="visually-hidden">Loading...</span>
 </div>
 <section *ngIf="crud.aj">
-    <h1>Ajout off-plan</h1>
-<!-- As a link -->
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><button style="width: 100%;" class="btn btn-primary btn-lg" type="button" (click)="ajout()">ajout off-plan</button></a>
-  </div>
-</nav>
-
-<!-- As a heading -->
+ 
+  <h1>Ajouter off plan</h1>  
 
 <div class="container">
 
@@ -105,11 +98,19 @@
         </div>
          
     </div>
-   
+    <div class="col-6" style="margin-top: 10%;">
+      <app-map3></app-map3>
+    </div>
+    
   </div>
 </div>
-   
-          
+<nav class="navbar navbar-light bg-light">
+  <form class="container-fluid justify-content-start">
+    <button class="btn btn-outline-success me-2" type="button" (click)="ajout()"> Ajouter off PLAN</button>
+    <button class="btn btn-sm btn-outline-secondary" type="button">Annuler</button>
+  </form>
+</nav> 
+     
           
 </section>
 
@@ -129,7 +130,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let off of tabOff; index as i">
-          <th scope="row">{{i+1}}</th>
+          <th scope="row">1</th>
           <td>{{off.title}}</td>
           <td>{{off.stitle}}</td>
           <td (click)="sup(i)"><button class="btn btn-primary" type="button"  >
@@ -144,5 +145,5 @@
         
       </tbody>
     </table>
-    <app-update-offplan *ngIf="affModif" style="margin-top: 50px;"></app-update-offplan>
+    <app-update-offplan *ngIf="affModif" style="margin-top: 20px;"></app-update-offplan>
 </section>

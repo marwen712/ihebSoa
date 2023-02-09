@@ -3,6 +3,7 @@ import { MessagingService } from './services/messaging.service';
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
 //import { SeoService } from './services/seo.service';
 import { Meta, Title } from '@angular/platform-browser';
+import { CrudService } from './services/crud.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,7 +14,7 @@ export class AppComponent {
   message:any
   public phone = "+971 58 218 9263"
  public messg = "ارسل الآن طلبك";
-  constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta){
+  constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public crud:CrudService ){
 
   }
   ngOnInit() {
