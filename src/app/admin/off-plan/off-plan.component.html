@@ -130,7 +130,7 @@
       </thead>
       <tbody>
         <tr *ngFor="let off of tabOff; index as i">
-          <th scope="row">1</th>
+          <th scope="row">{{i+1}}</th>
           <td>{{off.title}}</td>
           <td>{{off.stitle}}</td>
           <td (click)="sup(i)"><button class="btn btn-primary" type="button"  >
