@@ -1,10 +1,12 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef,ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, NgForm, FormArray } from '@angular/forms';
 import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { CrudService } from 'src/app/services/crud.service';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-lunding-page-azizi',
   templateUrl: './lunding-page-azizi.component.html',
   styleUrls: ['./lunding-page-azizi.component.css']
@@ -43,7 +45,7 @@ images = [
     date:new FormControl(""),
     DateN:new FormControl(""),
     country:new FormControl(""),
-  
+    project :new FormControl("azizi")
   })
   disable=false
   affichEtape2=false
@@ -68,9 +70,18 @@ images = [
     tabBudjet:string[]=["ميزانية الممكنة لشراء","AED 500000-> AED 1000000","AED 1000000 -> AED 2000000","more than AED 2000000"]
     tabDate:string[]=["متى تريد الشراء",'حاليا',' من شهر الى ثلاثة اشهر ','  غير ذالك']
 
-constructor(private http:HttpClient ) { }
+constructor(private http:HttpClient , public crud:CrudService ,private cdref: ChangeDetectorRef ) { }
+ngAfterContentChecked() {
+
+  this.crud.affNoteArabe=true
+      this.crud.affNoteEnglish=false
+      this.crud.affForm=false
+      this.cdref.detectChanges()
+ 
   
+   }
     ngOnInit(): void {
+     
       console.log("sadraoui habib")
       
   /*const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8',"aut":""});
@@ -129,10 +140,10 @@ this.http
       /*this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
        
         console.log(res.valueOf())
-      })
+      })*/
      
       this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
-        console.log(res)})*/
+        console.log(res)})
       
   }
   funcaffichEtape2(){

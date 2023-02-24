@@ -19,8 +19,12 @@ import { ProductOffPlanComponent } from './client/product-off-plan/product-off-p
 import { Home1Component } from './client/home1/home1.component';
 import { LoginComponent } from './admin/login/login.component';
 import { LundingPageAziziComponent } from './azizi/lunding-page-azizi/lunding-page-azizi.component';
+import { HomeModule } from './client/home/home.module';
+import { AziziModule } from './azizi/azizi/azizi.module';
 const routes: Routes = [
-  { path:"", component:HomeComponent },
+ 
+  { path:"" , loadChildren:() => import('./client/home/home.module').then(x => x.HomeModule) },
+  {path:'Azizi' , loadChildren:() => import('./azizi/azizi/azizi.module').then(x => x.AziziModule) },
   { path:"about", component:AboutComponent },
   { path:"vila", component:ProductsComponent },
   { path:"rent", component:ProducVilaComponent },
@@ -36,7 +40,7 @@ const routes: Routes = [
   { path:"offs", component:ProductOffPlanComponent },
   { path:"home1", component:Home1Component },
   { path:"login", component: LoginComponent },
-  { path:"Azizi", component: LundingPageAziziComponent },
+ 
 ];
 
 

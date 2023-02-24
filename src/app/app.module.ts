@@ -14,7 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AceuilComponent } from './client/aceuil/aceuil.component';
 import { HeaderComponent } from './client/header/header.component';
 import { FooterComponent } from './client/footer/footer.component';
-import { HomeComponent } from './client/home/home.component';
+
 import { AboutComponent } from './client/about/about.component';
 import { ProductsComponent } from './client/products/products.component';
 import { ContactUsComponent } from './client/contact-us/contact-us.component';
@@ -25,8 +25,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
 import { ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule} from 'angular-bootstrap-md';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {  WavesModule } from 'angular-bootstrap-md';
-import {IvyCarouselModule} from 'angular-responsive-carousel';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { MatCarouselModule } from 'ng-mat-carousel';
 
@@ -54,13 +53,15 @@ import { ProductOffPlanComponent } from './client/product-off-plan/product-off-p
 import { Home1Component } from './client/home1/home1.component';
 import { NgxCarouselModule } from 'ngx-light-carousel';
 import { LoginComponent } from './admin/login/login.component';
-import { LundingPageAziziComponent } from './azizi/lunding-page-azizi/lunding-page-azizi.component';
-import { CourbeCercleComponent } from './azizi/courbe-cercle/courbe-cercle.component';
-import { AvantageComponent } from './azizi/avantage/avantage.component';
-import { Avantage2Component } from './azizi/avantage2/avantage2.component';
-import { HomeAziziComponent } from './azizi/home-azizi/home-azizi.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+import { CarouselModule } from 'ngx-owl-carousel-o';;
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { UpdateOffplanComponent } from './admin/update-offplan/update-offplan.component';
+
+import { SurveyAppComponent } from './survey-app/survey-app.component';
+import { NotBoxArabeComponent } from './not-box-arabe/not-box-arabe.component';
+import { NotBoxEnglishComponent } from './not-box-english/not-box-english.component';
+import { HomeModule } from './client/home/home.module';
 
 
 @NgModule({
@@ -69,7 +70,7 @@ declarations: [
     AceuilComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
+   
     AboutComponent,
     ProductsComponent,
     ContactUsComponent,
@@ -95,15 +96,11 @@ declarations: [
     ProductOffPlanComponent,
     Home1Component,
     LoginComponent,
-    LundingPageAziziComponent,
-    CourbeCercleComponent,
-    AvantageComponent,
-    Avantage2Component,
-    HomeAziziComponent,
+   
     UpdateOffplanComponent,
-   
-   
-   
+    SurveyAppComponent,
+    NotBoxArabeComponent,
+    NotBoxEnglishComponent
   ],
   imports: [
     BrowserModule,
@@ -137,6 +134,7 @@ declarations: [
       /*kkk*/ 
      
     }),
+    HomeModule
   ],
   providers: [AsyncPipe,MessagingService],
   bootstrap: [AppComponent]

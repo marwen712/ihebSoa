@@ -7,6 +7,10 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CrudService {
+  affNoteArabe=false
+  affNoteEnglish=true
+   affForm=true
+
 //affiche Global
 public  lat: number = 51.673858;
   public lng: number = 7.815982;
