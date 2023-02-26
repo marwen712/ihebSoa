@@ -79,6 +79,10 @@
     color: #f0f0f0;
   }
   @media screen and (min-width: 768px) {
+    .card:hover {
+      
+      background-color:#333
+    }
     section {
       padding: 0 2em;
     }
