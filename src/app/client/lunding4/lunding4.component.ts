@@ -16,7 +16,7 @@ export class Lunding4Component implements OnInit {
   public title=""
   public stitle=""
   public desc=""
-  public imgs=""
+  public imgs:any[]=[]
   public prix=""
   video: any;
 
@@ -64,7 +64,15 @@ export class Lunding4Component implements OnInit {
            this.video=ob.video
            this.prix=ob.prix
            this.prixFinal=ob.prixFinal
-           this.imgs=ob.imgs
+           for (let i = 0; i < ob.imgs.length; i++) {
+            var img ={
+            
+              image: ob.imgs[i],
+              thumbImage: ob.imgs[i],
+              title: this.crud.project
+            }
+            this.imgs.push(img)
+            }
            this.crud.lat=ob.lat
            this.crud.lng=ob.lng
            this.crud.lat=ob.lat

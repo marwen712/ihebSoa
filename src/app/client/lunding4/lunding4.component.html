@@ -21,15 +21,17 @@
 </div>
 </div>
 
-<section class="section" id="product" style="margin-top: 0px;"  *ngIf="!loadingOff">
-<div class="container">
+<section class="section" id="product"  *ngIf="!loadingOff">
+<div class="container" style="margin-top: 20px;" >
     <div class="row">
         <div class="col-lg-8">
-        <div class="left-images"><carousel style="z-index: 1 !important ;margin-top:70px;">
-          <div class="carousel-cell" *ngFor="let im of imgs">
-              <img [src]="im" >
-              </div>
-              </carousel>
+        <div class="left-images">
+            <ng-image-slider #nav
+            [images]="imgs"
+            [infinite]="false"
+            [autoSlide]="1"
+            [imageSize]="{width: '25%', height: 200}"
+            slideImage="1"></ng-image-slider>
         </div>
     </div>
     <div class="col-lg-4">

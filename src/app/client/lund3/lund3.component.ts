@@ -16,7 +16,7 @@ export class Lund3Component implements OnInit {
   public title=""
   public stitle=""
   public desc=""
-  public imgs=""
+  public imgs:any[]=[]
   public prix=""
   video: any;
 
@@ -67,7 +67,15 @@ export class Lund3Component implements OnInit {
            this.crud.lng=ob.lng
            this.prixFinal=ob.prixFinal
            this.crud.tabCarc=ob.carc
-           this.imgs=ob.imgs
+           for (let i = 0; i < ob.imgs.length; i++) {
+            var img ={
+            
+              image: ob.imgs[i],
+              thumbImage: ob.imgs[i],
+              title: this.crud.project
+            }
+            this.imgs.push(img)
+            }
            this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
         //     this.off=ob          
         ////console.log(imgs)

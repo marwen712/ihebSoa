@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 import { AsyncPipe } from '@angular/common';
 import { HttpClientModule } from "@angular/common/http";
 import { AceuilComponent } from './client/aceuil/aceuil.component';
-import { HeaderComponent } from './client/header/header.component';
+
 import { FooterComponent } from './client/footer/footer.component';
 
 import { AboutComponent } from './client/about/about.component';
@@ -68,7 +68,7 @@ import { HomeModule } from './client/home/home.module';
 declarations: [
     AppComponent,
     AceuilComponent,
-    HeaderComponent,
+    
     FooterComponent,
    
     AboutComponent,

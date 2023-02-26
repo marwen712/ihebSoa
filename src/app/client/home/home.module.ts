@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+   import {HeaderComponent} from "../header/header.component"
+
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,14 +33,12 @@ import { AgmCoreModule } from '@agm/core';
 import { NgxCarouselModule } from 'ngx-light-carousel';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 @NgModule({
-  declarations: [ HomeComponent],
+  declarations: [ HomeComponent,HeaderComponent ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-   
-   
-
-    FormsModule,ReactiveFormsModule ,
+ FormsModule,
+ ReactiveFormsModule 
     
   ]
 })
