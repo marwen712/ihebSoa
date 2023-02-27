@@ -37,7 +37,7 @@
                                 <div class="d-flex flex-row align-items-center mb-4" >
                                    <i class="fas fa-phone fa-lg me-3 fa-fw" style="color:  #C9A770;"></i>
                                   <div class="form-outline flex-fill mb-0">
-                                    <input type="text" ng2TelInput style="width:100% !important" id="form3Example4c" class="form-control" placeholder=" your phone"  formControlName='phone'/>
+                                    <input type="text" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'AE'}" style="width:100% !important" id="form3Example4c" class="form-control" placeholder=" your phone"  formControlName='phone'/>
                                     
                                     <label class="form-label" *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched" style="color: #C9A770;" for="form3Example1c">phone is require</label>
                                   </div>

@@ -21,6 +21,7 @@ export class SingleProductComponent implements OnInit {
   public desc=""
   public imgs:any[]=[]
   public prix=""
+  public tabImg2:any=[]
   video: any;
   public phone = "+971 58 218 9263"
   public prixFinal=""
@@ -143,8 +144,16 @@ export class SingleProductComponent implements OnInit {
         var img ={
           path: ob.imgs[i]
         }
-        this.imgs.push(img)
+        var img2 ={
+            
+          image: ob.imgs[i],
+          thumbImage: ob.imgs[i],
+          title: this.crud.project
         }
+        this.imgs.push(img)
+        this.tabImg2.push(img2)
+        }
+        this.imgs=this.imgs.slice(0,4)
 
         this.bgImageSelected = this.imgs[0].path
         this.bgFullScreenSlider = this.imgs[0].path
