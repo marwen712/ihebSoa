@@ -29,11 +29,13 @@ import { MatCarouselModule } from 'ng-mat-carousel';
 
 import { NgxWhastappButtonModule } from "ngx-whatsapp-button";
 
+
 import { AgmCoreModule } from '@agm/core';
 import { NgxCarouselModule } from 'ngx-light-carousel';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ChooseClientComponent } from '../choose-client/choose-client.component';
 @NgModule({
-  declarations: [ HomeComponent,HeaderComponent ],
+  declarations: [ HomeComponent,ChooseClientComponent ],
   imports: [
     CommonModule,
     HomeRoutingModule,

@@ -10,7 +10,7 @@ export class CrudService {
   affNoteArabe=false
   affNoteEnglish=true
    affForm=true
-
+  affChoose=true
 //affiche Global
 public  lat: number = 51.673858;
   public lng: number = 7.815982;

@@ -145,9 +145,10 @@
     </div>
   </section>
   <!-- / Advance Search -->
-  <section >
-    <app-header style="margin-bottom:20px ;margin-top:20px"></app-header>
-  </section>
+  <!-- <section >
+    <app-header style="margin-bottom:20px ;margin-top:20px" *ngIf="crud.affChoose"></app-header>
+    <app-choose-client *ngIf="!crud.affChoose"></app-choose-client>
+  </section> -->
   <section id="aa-latest-property" >
       <div class="container" #adv>
         <div class="aa-latest-property-area" *ngIf="testChercher">

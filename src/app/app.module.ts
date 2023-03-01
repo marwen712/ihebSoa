@@ -62,6 +62,8 @@ import { SurveyAppComponent } from './survey-app/survey-app.component';
 import { NotBoxArabeComponent } from './not-box-arabe/not-box-arabe.component';
 import { NotBoxEnglishComponent } from './not-box-english/not-box-english.component';
 import { HomeModule } from './client/home/home.module';
+import { HeaderComponent } from './client/header/header.component';
+
 
 
 @NgModule({
@@ -96,11 +98,12 @@ declarations: [
     ProductOffPlanComponent,
     Home1Component,
     LoginComponent,
-   
+    HeaderComponent,
     UpdateOffplanComponent,
     SurveyAppComponent,
     NotBoxArabeComponent,
-    NotBoxEnglishComponent
+    NotBoxEnglishComponent,
+   
   ],
   imports: [
     BrowserModule,

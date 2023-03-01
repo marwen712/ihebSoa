@@ -1,3 +1,5 @@
+/* @import url('https://www.w3schools.com/w3css/4/w3.css'); */
+
 * {
     padding: 0;
     margin: 0;
@@ -6,9 +8,21 @@
   }
   .res{
     text-align:center !important;
-    margin-left:5%;
-    margin-top:30px
+   
+    margin-top:20px;
+    animation: surveyContentContainerAnim .5s;
+
   }
+  @keyframes surveyContentContainerAnim{
+
+	0%{
+
+		opacity: 0;
+		transform: translateY(-20%) rotateX(60deg);
+
+	}
+
+}
   section {
     height: 100vh;
     width: 100%;
@@ -23,27 +37,27 @@
     width: 100%;
     padding: 0 1em 1em 1em;
     text-align: center;
+    
   }
   .card {
     width: 100%;
-    
+    height: 100%;
     padding: 2em 1.5em;
    
    
-  background-color: #333;
+  background-color:#333 ;
   
     /*border: 5px solid   #B19842;*/
     padding: 10px;
     /*border-radius: 50px 20px;*/
-    /* box-shadow: 0 0 35px rgba(0, 0, 0, 0.12); */
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
     cursor: pointer;
     transition: 0.5s;
-    font-family: "Poppins", sans-serif;
   }
   h2 {
-    font-size: 20px;
-    font-weight: 300;
-   color:#ECD672;
+    font-size: 30px;
+    font-weight: 600;
+    color:  #B19842;
     margin: 1em 0;
   }
   p {
@@ -65,7 +79,6 @@
     place-items: center;
     transition: 0.5s;
   }
- 
   .card:hover {
     background-position: 0 100%;
     background-color:  #dfdbdb
@@ -80,39 +93,10 @@
   .card:hover p {
     color: #f0f0f0;
   }
-  .im {
-    height: 80px; 
-    display: block;
-              
-    margin-left: auto;
-                
-    margin-right: auto;
-               
-    width: 100%;
-  }
   @media screen and (min-width: 768px) {
-    h2{
-      font-size: 30px;
-    }
-    .im {
-      height: 150px; 
-      display: block;
-                
-      margin-left: auto;
-                  
-      margin-right: auto;
-                 
-      width: 100%;
-    }
-    .card{
-      height: 400px;
-    
-      background-color:  #333
-
-    }
     .card:hover {
       
-      background-color:  #333
+        background-color:  #dfdbdb
     }
     section {
       padding: 0 2em;
@@ -122,9 +106,8 @@
       max-width: 50%;
     }
     .res{
-        margin-left:1% !important;
+        margin-left:20% !important;
     }
-    
   }
   @media screen and (min-width: 992px) {
     section {

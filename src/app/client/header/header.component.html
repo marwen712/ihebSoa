@@ -1,8 +1,8 @@
 
    <div class="container" class="res">
       
-         <h2 class="section-heading" style="text-align: center;color:#C9A770; margin-bottom: 10px;">  CHOOSE   </h2>
-   
+         <h1 class="section-heading" style="text-align: center;color:#ECD672; margin-bottom: 10px;font-size: 40px;"> Buy a property   </h1>
+       
          
         
 
@@ -10,34 +10,35 @@
 
       
       <div class="row" style="margin-bottom: 10px;margin-top: 30px;text-align:center">
-        <div class="column"  >
+        <div class="column" value="vila"  >
           <div class="card" >
-            <div class="icon-wrapper">
-                <img  src="assets/images/images-survey/ch1.png" style="height:auto;width:auto;max-width: 80px;max-height: 80px;" >
+            <div class="icon-wrapper"  style="text-align: center;">
+                <img  src="assets/images/b12.png" class="im"  >
             </div >
-            <h2 routerLink="/vila" >  Vila
+            <h2 (click)="aff('vila')" style="color: #ECD672" > Payment With
+              Cryptocurrency
 
             </h2>
             
           </div>
         </div>
-        <div class="column"  >
+        <div class="column" value="Market" >
           <div class="card" >
             <div class="icon-wrapper" >
-                <img  src="assets/images/images-survey/ch2.png" style="height:auto;width:auto;max-width: 80px;max-height: 80px;" >
+                <img  src="assets/images/images-survey/comm.png" class="im"  >
             </div>
-            <h2 routerLink="/offs"> Off-Plan
+            <h2 (click)="aff('Market')"> Commission Fee
 
             </h2>
             
           </div>
         </div>
-        <div class="column"  >
+        <div class="column" value="Appartment "  >
           <div class="card" >
             <div class="icon-wrapper">
-                <img   src="assets/images/images-survey/ch3.png" style="height:auto;width:auto;max-width: 80px;max-height: 80px;" >
+                <img   src="assets/images/images-survey/gold10.png" class="im"  >
             </div>
-            <h2 routerLink="/appr">  Appartment 
+            <h2 (click)="aff('Appartment ')">  10 years golden visa
 
     
 
@@ -47,5 +48,8 @@
         </div>
        
       </div>
+   
+     
+
     </div>
    

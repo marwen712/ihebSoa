@@ -10,8 +10,23 @@
 	background-color: #0000006e;
 	perspective: 10000px;
 	animation: surveyContainerAnim .6s;
-}
 
+}
+.video-responsive { 
+    overflow:hidden; 
+    padding-bottom:56.25%; 
+    position:relative; 
+    height:0;
+    }
+    
+    .video-responsive iframe {
+    left:0; 
+    top:0; 
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
+  
 @keyframes surveyContainerAnim{
 
 	0%{
@@ -30,6 +45,7 @@
 	padding: 3% 0;
 	padding-bottom: 6%;
 	position: relative;
+	transform: scale(0.6);
 
 }
 
