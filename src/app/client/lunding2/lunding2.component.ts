@@ -77,6 +77,7 @@ export class Lunding2Component implements OnInit {
                 title: this.crud.project
               }
               this.imgs.push(img)
+              this.imgs.push( this.imgs[0])
               }
            this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
         //     this.off=ob          

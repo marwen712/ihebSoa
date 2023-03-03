@@ -6,9 +6,8 @@
 	position: fixed;
     top: 5%;
     right: 3%;
-    width: 80%;
-	height: 700px;
-    background-color: #333;
+    width: 45%;
+    background-color: white;
     padding: 1.4%;
     z-index: 800000000;
     box-shadow: 0 0 0.6vw 0 #0000007a;
@@ -16,8 +15,6 @@
     animation: notifArabe .5s;
     transition: 1s;
     display: none;
-	transform: scale(0.6);
-	
 
 }
 
@@ -45,7 +42,7 @@
 	width: 23%;
 	padding: 1% 0;
 	background-color: #b8a17b;
-	color: transparent;
+	color: white;
 	font-size: 1.3vw;
 	border: none;
 	cursor: pointer;
@@ -69,7 +66,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #ECD672;
+    background-color: #b8a17b;
     animation: animProgressNotEnglish 7s;
 
 }
@@ -89,15 +86,14 @@
 	    top: 8%;
 	    right: 3%;
 	    width: 94%;
-	    background-color: #333;
+	    background-color: white;
 	    padding: 4% 3%;
 	    z-index: 800000000;
 	    box-shadow: 0 0 0.6vw 0 #0000007a;
 	    text-align: left;
 	    animation: notifArabe .5s;
 	    transition: 1s;
-		transform: scale(0.8);
-		
+	
 	}
 
 
@@ -124,7 +120,7 @@
 		width: 90%;
 	    padding: 1% 0;
 	    background-color: #b8a17b;
-	    color: transparent;
+	    color: white;
 	    font-size: 16px;
 	    border: none;
 	    cursor: pointer;

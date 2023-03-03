@@ -42,6 +42,7 @@ import { ChooseClientComponent } from '../choose-client/choose-client.component'
  FormsModule,
  ReactiveFormsModule 
     
-  ]
+  ],
+  exports: [ChooseClientComponent]
 })
 export class HomeModule { }

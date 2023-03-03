@@ -21,6 +21,7 @@ import { ContactUsComponent } from './client/contact-us/contact-us.component';
 import { SingleProductComponent } from './client/single-product/single-product.component';
 import { FormsModule,ReactiveFormsModule } from "@angular/forms";
 import {Ng2TelInputModule} from 'ng2-tel-input';
+import { PixelModule } from 'ngx-pixel'
 import { NgImageSliderModule } from 'ng-image-slider';
 import { ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule} from 'angular-bootstrap-md';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -112,6 +113,8 @@ declarations: [
     AngularFireAuthModule,
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    PixelModule.forRoot({ enabled: true, pixelId: '240397195096154' }),
+
     HttpClientModule,
     ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule,  MDBBootstrapModule.forRoot(),CarouselModule, WavesModule,
     IvyCarouselModule,

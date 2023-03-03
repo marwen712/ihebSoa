@@ -72,6 +72,7 @@ export class Lunding4Component implements OnInit {
               title: this.crud.project
             }
             this.imgs.push(img)
+            this.imgs.push( this.imgs[0])
             }
            this.crud.lat=ob.lat
            this.crud.lng=ob.lng
