@@ -113,6 +113,8 @@ export class OffPlanComponent implements OnInit {
  })
  }
  modif(i:any){
+
+  this.crud.testUpdate=""
   this.crud.offPlanModif =this.tabOff[i]
   this.affModif=true
  }

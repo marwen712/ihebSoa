@@ -21,7 +21,7 @@ export class VilaComponent implements OnInit {
   carc=''
  tabvila:any[]=[]
   vila:any
-   
+  affModif=false
   constructor(public crud:CrudService , public serIm:ImgService,private http:HttpClient) { 
     this.crud.loading=true
     
@@ -104,5 +104,10 @@ export class VilaComponent implements OnInit {
     alert("secssful delet")
   }
  })
+ }
+ modif(i:any){
+  this.crud.testUpdate="vila"
+  this.crud.offPlanModif =this.tabvila[i]
+  this.affModif=true
  }
 }

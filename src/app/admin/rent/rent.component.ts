@@ -21,7 +21,7 @@ export class RentComponent implements OnInit {
   urlDelet="/rent/Delet/"
   tabCarc:string[]=[]
   carc=''
-
+  affModif=false
  tabrent:any[]=[]
   rent:any
    
@@ -107,6 +107,12 @@ export class RentComponent implements OnInit {
     alert("secssful delet")
   }
  })
+ }
+
+ modif(i:any){
+  this.crud.testUpdate="rent"
+  this.crud.offPlanModif =this.tabrent[i]
+  this.affModif=true
  }
 
 }

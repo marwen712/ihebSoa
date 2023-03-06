@@ -23,6 +23,7 @@ export class AppartementComponent implements OnInit {
 
  tabappr:any[]=[]
   appr:any
+  affModif=false
    
   constructor(public crud:CrudService , public serIm:ImgService,private http:HttpClient) { 
     this.crud.loading=true
@@ -107,5 +108,10 @@ export class AppartementComponent implements OnInit {
     alert("secssful delet")
   }
  })
+ }
+ modif(i:any){
+  this.crud.testUpdate="appr"
+  this.crud.offPlanModif =this.tabappr[i]
+  this.affModif=true
  }
 }

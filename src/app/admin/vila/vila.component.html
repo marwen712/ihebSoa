@@ -61,6 +61,7 @@
                         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
                        suprimer
                       </button></td>
+                     
                     </tr>
                     
                   </tbody>
@@ -137,8 +138,13 @@
               <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
              suprimer
             </button></td>
+            <td (click)="modif(i)"><button class="btn btn-primary" type="button"  >
+              <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
+             modifier
+            </button></td>
           </tr>
           
         </tbody>
       </table>
+      <app-update-offplan *ngIf="affModif" style="margin-top: 20px;"></app-update-offplan>
   </section>

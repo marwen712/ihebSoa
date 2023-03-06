@@ -113,7 +113,7 @@ declarations: [
     AngularFireAuthModule,
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    PixelModule.forRoot({ enabled: true, pixelId: '240397195096154' }),
+    PixelModule.forRoot({ enabled: true, pixelId: '19505330983308' }),
 
     HttpClientModule,
     ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule,  MDBBootstrapModule.forRoot(),CarouselModule, WavesModule,

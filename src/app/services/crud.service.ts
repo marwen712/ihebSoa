@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CrudService {
+  testUpdate=""
   affNoteArabe=false
   affNoteEnglish=true
    affForm=true

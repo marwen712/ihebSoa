@@ -18,11 +18,34 @@ export class UpdateOffplanComponent implements OnInit {
   }
   modifier(){
     this.crud.offPlanModif.imgs=this.image.tabImages
-    this.http.put(this.api+'/off/'+this.crud.offPlanModif._id+"/" , this.crud.offPlanModif).subscribe((res:any)=>{
-   if(res.message==true){
-     alert("modif secsseful")
-   }
-    })
+    if(this.crud.testUpdate==""){
+      this.http.put(this.api+'/off/'+this.crud.offPlanModif._id+"/" , this.crud.offPlanModif).subscribe((res:any)=>{
+        if(res.message==true){
+          alert("modif secsseful")
+        }
+         })
+    }
+    if(this.crud.testUpdate=="vila"){
+      this.http.put(this.api+'/vila/'+this.crud.offPlanModif._id+"/" , this.crud.offPlanModif).subscribe((res:any)=>{
+        if(res.message==true){
+          alert("modif secsseful")
+        }
+         })
+    }
+    if(this.crud.testUpdate=="appr"){
+      this.http.put(this.api+'/appr/'+this.crud.offPlanModif._id+"/" , this.crud.offPlanModif).subscribe((res:any)=>{
+        if(res.message==true){
+          alert("modif secsseful")
+        }
+         })
+    }
+    if(this.crud.testUpdate=="rent"){
+      this.http.put(this.api+'/rent/'+this.crud.offPlanModif._id+"/" , this.crud.offPlanModif).subscribe((res:any)=>{
+        if(res.message==true){
+          alert("modif secsseful")
+        }
+         })
+    }
     }
     supCarc(i){
       this.image.tabImages.splice(i,1);
