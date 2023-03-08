@@ -3,11 +3,11 @@
 <app-footer></app-footer>-->
 
 <app-aceuil *ngIf="crud.affAd"></app-aceuil>
-<section *ngIf="crud.affAd">
-	<app-not-box-arabe *ngIf="crud.affNoteArabe" ></app-not-box-arabe>
+
+	<app-not-box-arabe *ngIf="crud.affNoteArabe  " ></app-not-box-arabe>
 	<app-not-box-english *ngIf="crud.affNoteEnglish"></app-not-box-english>
 	<app-survey-app *ngIf="crud.affForm"></app-survey-app>
-</section>
+
 
 <router-outlet></router-outlet>
 <div style="z-index:5000 ; margin-top: 500px;margin-bottom: 200px;" *ngIf="crud.affAd">     

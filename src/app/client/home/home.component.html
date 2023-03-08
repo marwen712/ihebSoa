@@ -483,7 +483,7 @@
          <div class="row" *ngIf="!crud.loadingVila">
             
 
-            <div class="ft-ctn" *ngFor="let vila of tabVila; index as i">
+            <div class="ft-ctn off-plan" *ngFor="let vila of tabVila; index as i">
               <div class="title-box" style="background-color: red;">Vila</div>
               <div class="cover-image">
                 <img [src]="vila.imageProfil" />
@@ -493,12 +493,12 @@
                 <p class="item-details-ctn"><i class="fa-solid fa-bed"></i> {{vila.bed}} Beds</p>
                 <p class="item-details-ctn"><i class="fa-regular fa-square"></i> {{vila.surface}} SQ FT</p>
               </div>
-              <p class="title">{{vila.title}}</p>
-              <div class="description">
+              <p class="title" >{{vila.title}}</p>
+              <div class="description" >
                 {{vila. stitle}} {{vila. prix}}
               </div>
               <div class="footer-box">
-                <div class="price"><span>AED</span><p>{{vila.prixFinal}}</p></div>
+                <div class="logo-devp"><p  class="priceHabib"> {{vila.prixFinal}}  </p></div>
                 <p class="view-btn" (click)="nav2(i)"><i class="fa-regular fa-eye"></i></p>
               </div>
             </div>
@@ -550,13 +550,13 @@
                 <p class="item-details-ctn"><i class="fa-solid fa-bed"></i> {{vila.bed}} Beds</p>
                 <p class="item-details-ctn"><i class="fa-regular fa-square"></i> {{vila.surface}} SQ FT</p>
               </div>
-              <p class="title">{{vila.title}}</p>
-              <div class="description">
+              <p class="title" >{{vila.title}}</p>
+              <div class="description" >
                 {{vila. stitle}} {{vila. prix}}
               </div>
               <div class="footer-box">
-                <div class="price"><span>AED</span><p>{{vila.prixFinal}}</p></div>
-                <p class="view-btn" (click)="nav2(i)"><i class="fa-regular fa-eye"></i></p>
+                <div class="logo-devp"><p  class="priceHabib"> {{vila.prixFinal}}</p></div>
+                <p class="view-btn" (click)="nav3(i)"><i class="fa-regular fa-eye"></i></p>
               </div>
             </div>
 
@@ -643,7 +643,7 @@
                 {{vila. stitle}} {{vila. prix}}
               </div>
               <div class="footer-box">
-                <div class="price"><span>AED</span><p>{{vila.prixFinal}}</p></div>
+                <div class="logo-devp"><p class="priceHabib"> {{vila.prixFinal}} </p></div>
                 <p class="view-btn" (click)="nav4(i)"><i class="fa-regular fa-eye"></i></p>
               </div>
             </div>

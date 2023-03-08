@@ -200,7 +200,17 @@
     height: 100%;
 
 }
-
+.ft-ctn.title{
+    width: 75%;
+    padding: 4% 3% 2%;
+    font-size: 1.6vw;
+    color:  #c38f3c;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;   
+}
 .off-plan .title{
 
     width: 75%;
@@ -382,15 +392,31 @@
     height: 100%;
 
 }
-
+.priceHabib{
+    margin: 0;
+                  font-size: 2vw;
+                  color: #c9a770;
+                  text-shadow: 1px 2px 0px #000000;
+                  z-index: 0;
+                  font-family: 'Cookie', cursive;
+                  margin-left: 3%;
+}
 .ft-ctn .title{
 
     width: 100%;
     padding: 4% 3%;
-    font-size: 1.6vw;
+    font-size: 1vw;
     color:  #c38f3c;
     font-family: 'Quicksand', sans-serif;
     font-weight: 500;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    /* -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; */
 }
 
 .ft-ctn .description{
@@ -399,9 +425,15 @@
     height: 29%;
     padding: 1% 4% 4%;
     line-height: 2.6vw;
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-family: 'Quicksand', sans-serif;
     font-weight: 300;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 
@@ -507,7 +539,15 @@
 
 
 @media only screen and (max-width: 480px){
-
+      .priceHabib{
+ margin: 0;
+                  font-size: 30px;
+                  color: #c9a770;
+                  text-shadow: 1px 2px 0px #000000;
+                  z-index: 0;
+                  font-family: 'Cookie', cursive;
+                  margin-left: 3%;
+      }
     .slider-devs .ctn-slider-devs .slider-dots{
 
         display: none;

@@ -15,6 +15,9 @@ export class DashComponent implements OnInit {
   constructor(public crud:CrudService ,private ht:HttpClient ,private route:Router) { }
 
   ngOnInit(): void {
+    this.crud.affNoteArabe=false
+    this.crud.affForm=false
+ 
   }
   funcAffOff(){
    this.crud.afficheOff()
