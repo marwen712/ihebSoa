@@ -164,9 +164,9 @@
               
 
               <div class="ft-ctn" *ngFor="let vila of tabVilaChercher; index as i">
-                <div class="title-box" style="background-color: red;">Vila</div>
+                <div class="title-box" style="background-color: red;">Villa</div>
                 <div class="cover-image">
-                  <img [src]="vila.imageProfil" />
+                  <img [src]="vila.imgs[0]" />
                 </div>
                 <div class="details-ctn">
                   <p class="item-details-ctn"><i class="fa-solid fa-sink"></i> {{vila.bath}} Baths</p>
@@ -187,7 +187,7 @@
               <!--div class="col-md-4"  *ngFor="let vila of tabVilaChercher; index as i">
                 <article class="aa-properties-item">
                   <a  class="aa-properties-item-img">
-                    <img [src]="vila.imageProfil" alt="img">
+                    <img [src]="vila.imgs[0]" alt="img">
                   </a>                
                   <div class="aa-tag sold-out">
                     Vila
@@ -224,7 +224,7 @@
               <div class="ft-ctn" *ngFor="let vila of tabApprChercher ;index as i">
                 <div class="title-box" style="background-color: rgb(32, 206, 179);">Apartement</div>
                 <div class="cover-image">
-                  <img [src]="vila.imageProfil" />
+                  <img [src]="vila.imgs[0]" />
                 </div>
                 <div class="details-ctn">
                   <p class="item-details-ctn"><i class="fa-solid fa-sink"></i> {{vila.bath}} Baths</p>
@@ -243,7 +243,7 @@
              <!--div class="col-md-4" *ngFor="let vila of tabApprChercher ;index as i">
                <article class="aa-properties-item">
                  <a class="aa-properties-item-img">
-                   <img [src]="vila.imageProfil" alt="img">
+                   <img [src]="vila.imgs[0]" alt="img">
                  </a>
                  <div class="aa-tag for-rent">
                   Apartement
@@ -278,7 +278,7 @@
             <div class="col-md-4" *ngFor="let vila of tabRentChercher ;index as i">
               <article class="aa-properties-item">
                 <a class="aa-properties-item-img">
-                  <img [src]="vila.imageProfil" alt="img">
+                  <img [src]="vila.imgs[0]" alt="img">
                 </a>
                 <div class="aa-tag for-rent">
                 Rent
@@ -405,7 +405,7 @@
             <img class="logo-site" src="assets/images/logoPh.png" alt="logo">
             <div class="title-box">OFF PLAN</div>
             <div class="cover-image">
-              <img [src]="off.imageProfil" alt="off-plan" />
+              <img [src]="off.imgs[0]" alt="off-plan" />
             </div>
             <div class="stars-rating">
               <i class="fa-solid fa-star"></i>
@@ -429,7 +429,7 @@
           <!--div class="col-md-4" *ngFor="let off of tabOff ; index as i">
             <article class="aa-properties-item">
               <a  class="aa-properties-item-img" >
-                <img [src]="off.imageProfil" alt="off-plan">
+                <img [src]="off.imgs[0]" alt="off-plan">
               </a>
               <div class="aa-tag for-sale">
                 {{off.dev}}
@@ -484,9 +484,9 @@
             
 
             <div class="ft-ctn off-plan" *ngFor="let vila of tabVila; index as i">
-              <div class="title-box" style="background-color: red;">Vila</div>
+              <div class="title-box" style="background-color: red;">Villa</div>
               <div class="cover-image">
-                <img [src]="vila.imageProfil" />
+                <img [src]="vila.imgs[0]" />
               </div>
               <div class="details-ctn">
                 <p class="item-details-ctn"><i class="fa-solid fa-sink"></i> {{vila.bath}} Baths</p>
@@ -506,7 +506,7 @@
             <!--div class="col-md-4"  *ngFor="let vila of tabVila; index as i">
               <article class="aa-properties-item">
                 <a  class="aa-properties-item-img">
-                  <img [src]="vila.imageProfil" alt="img">
+                  <img [src]="vila.imgs[0]" alt="img">
                 </a>                
                 <div class="aa-tag sold-out">
                   Vila
@@ -541,9 +541,10 @@
            <div class="row">
 
             <div class="ft-ctn" *ngFor="let vila of tabAppr ;index as i">
-              <div class="title-box" style="background-color: rgb(32, 206, 179);">Appartment</div>
+              <div class="title-box" style="background-color: rgb(32, 206, 179);">
+                Apartment</div>
               <div class="cover-image">
-                <img [src]="vila.imageProfil" />
+                <img [src]="vila.imgs[0]" />
               </div>
               <div class="details-ctn">
                 <p class="item-details-ctn"><i class="fa-solid fa-sink"></i> {{vila.bath}} Baths</p>
@@ -563,7 +564,7 @@
            <!--div class="col-md-4" *ngFor="let vila of tabAppr ;index as i">
              <article class="aa-properties-item">
                <a class="aa-properties-item-img">
-                 <img [src]="vila.imageProfil" alt="img">
+                 <img [src]="vila.imgs[0]" alt="img">
                </a>
                <div class="aa-tag for-rent">
                 Apartement
@@ -631,7 +632,7 @@
             <div class="ft-ctn" *ngFor="let vila of tabRent; index as i">
               <div class="title-box" style="background-color: rgb(32, 206, 179);">Rent</div>
               <div class="cover-image">
-                <img [src]="vila.imageProfil" />
+                <img [src]="vila.imgs[0]" />
               </div>
               <div class="details-ctn">
                 <p class="item-details-ctn"><i class="fa-solid fa-sink"></i> {{vila.bath}} Baths</p>
@@ -650,7 +651,7 @@
             <!--div class="col-md-4"  *ngFor="let vila of tabRent; index as i">
               <article class="aa-properties-item">
                 <a  class="aa-properties-item-img">
-                  <img [src]="vila.imageProfil" alt="img">
+                  <img [src]="vila.imgs[0]" alt="img">
                 </a>                
                 <div class="aa-tag for-rent">
                 Rent

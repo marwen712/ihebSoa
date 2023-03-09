@@ -41,7 +41,7 @@
             <div class="col-md-4"  *ngFor="let vila of tab; index as i">
               <article class="aa-properties-item">
                 <a  class="aa-properties-item-img">
-                  <img [src]="vila.imageProfil" alt="img">
+                  <img [src]="vila.imgs[0]" alt="img">
                 </a>                
                 <div class="aa-tag for-rent">
                 Rent
@@ -59,7 +59,7 @@
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
-                      {{vila.prixFinal}} <img src="assets/images/2857905-200.png" style="height: 30px;width: 50px;" alt="Heart of carthage Dubai">
+                      {{vila.prixFinal}}
                     </span>
                     <a  class="aa-secondary-btn" (click)="navRent(i)">View Details</a>
                   </div>

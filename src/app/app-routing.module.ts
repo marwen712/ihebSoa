@@ -19,6 +19,7 @@ import { ProductOffPlanComponent } from './client/product-off-plan/product-off-p
 import { Home1Component } from './client/home1/home1.component';
 import { LoginComponent } from './admin/login/login.component';
 import { LundingPageAziziComponent } from './azizi/lunding-page-azizi/lunding-page-azizi.component';
+
 import { HomeModule } from './client/home/home.module';
 import { AziziModule } from './azizi/azizi/azizi.module';
 const routes: Routes = [
@@ -40,9 +41,8 @@ const routes: Routes = [
   { path:"offs", component:ProductOffPlanComponent },
   { path:"home1", component:Home1Component },
   { path:"login", component: LoginComponent },
- 
-];
-
+  { path:"l", component:HeaderComponent },
+]
 
 @NgModule({
   imports: [ RouterModule.forRoot(routes, {

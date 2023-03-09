@@ -130,7 +130,7 @@ export class SingleProductComponent implements OnInit {
          ob=res.valueOf()  
          this.title=ob.title
          this.crud.project=ob.title
-         this.imageProfil=ob.imageProfil
+         this.imageProfil=ob.imgs[0]
          this.desc=ob.desc
          this.stitle=ob.stitle
          this.video=ob.video
