@@ -811,8 +811,10 @@ img {
 }
 .aa-properties-item .aa-properties-item-content .aa-properties-detial .aa-price {
   float: left;
-  font-size: 18px;
+  font-size: 22px;
   padding: 3px 0;
+  color:red
+  
 }
 .aa-properties-item .aa-properties-item-content .aa-properties-detial a {
   float: right;
