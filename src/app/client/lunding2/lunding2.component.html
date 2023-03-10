@@ -26,30 +26,32 @@
       <div class="row">
           <div class="col-lg-8">
           <div class="left-images">
-            <div class="left-images">
-                <ng-image-slider #nav
-                [images]="imgs"
-                [infinite]="true"
-                [autoSlide]="1"
-                [imageSize]="{width: '100%', height: 300}"
-                slideImage="1"></ng-image-slider>
-              </div>
+            <ng-image-slider #nav
+            [images]="imgs"
+            [infinite]="true"
+            [autoSlide]="1"
+            [imageSize]="{width: '100%', height: 400}"
+            slideImage="1"></ng-image-slider>
           </div>
+          <ul class="stars" style="display: flex;">
+            <li><i class="fa fa-star" style="color: #c9a770;"></i></li>
+            <li><i class="fa fa-star" style="color: #c9a770;"></i></li>
+            <li><i class="fa fa-star"style="color: #c9a770;"></i></li>
+            <li><i class="fa fa-star" style="color: #c9a770;"></i></li>
+            <li><i class="fa fa-star"style="color: #c9a770;" ></i></li>
+        </ul>
+          <h4>{{title}}</h4>
+              <br>
+              <br>
+          <span class="price " style="color: red;" >{{prixFinal}} AED</span>
+          
           <div class="quote">
             <i class="fa fa-quote-left"></i><p>{{desc}}</p>
         </div>
       </div>
       <div class="col-lg-4">
           <div class="right-content">
-              <h4>{{title}}</h4>
-              <span class="price ">{{prixFinal}}</span>
-              <ul class="stars">
-                <li><i class="fa fa-star" style="color: #c9a770;"></i></li>
-                <li><i class="fa fa-star" style="color: #c9a770;"></i></li>
-                <li><i class="fa fa-star"style="color: #c9a770;"></i></li>
-                <li><i class="fa fa-star" style="color: #c9a770;"></i></li>
-                <li><i class="fa fa-star"style="color: #c9a770;" ></i></li>
-              </ul>
+             
               <span>{{stitle}}</span>
              
               <div class="quantity-content">
@@ -63,7 +65,7 @@
                   </div>
               </div>
               <div class="total">
-                  <h4>{{prixFinal}}</h4>
+                  <h4 style="color: red;">{{prixFinal}}</h4>
                   <div class="main-border-button"><a routerLink="/form" >Book now</a></div>
               </div>
           </div>
