@@ -34,8 +34,9 @@ import { AgmCoreModule } from '@agm/core';
 import { NgxCarouselModule } from 'ngx-light-carousel';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ChooseClientComponent } from '../choose-client/choose-client.component';
+import { CustomHeaderComponent } from 'src/app/custom-header/custom-header.component';
 @NgModule({
-  declarations: [ HomeComponent,ChooseClientComponent ],
+  declarations: [ HomeComponent,ChooseClientComponent, CustomHeaderComponent  ],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -43,6 +44,6 @@ import { ChooseClientComponent } from '../choose-client/choose-client.component'
  ReactiveFormsModule 
     
   ],
-  exports: [ChooseClientComponent]
+  exports: [ChooseClientComponent,CustomHeaderComponent ]
 })
 export class HomeModule { }

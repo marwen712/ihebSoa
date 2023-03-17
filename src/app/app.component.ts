@@ -19,7 +19,20 @@ export class AppComponent {
   constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public crud:CrudService, private pixel: PixelService ){
 
   }
+  customNavBar:any
+
   ngOnInit() {
+
+
+    if(!(window.location.pathname === "/")){
+
+      this.crud.isCustomNavBar = true
+
+    }else{
+      this.crud.isCustomNavBar = false
+    }
+
+    this.customNavBar = this.crud.isCustomNavBar
     this.pixel.initialize();
     this.meta.addTags([
       {

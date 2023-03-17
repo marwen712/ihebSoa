@@ -64,6 +64,8 @@ import { NotBoxArabeComponent } from './not-box-arabe/not-box-arabe.component';
 import { NotBoxEnglishComponent } from './not-box-english/not-box-english.component';
 import { HomeModule } from './client/home/home.module';
 import { HeaderComponent } from './client/header/header.component';
+import { CustomNavBarComponent } from './custom-nav-bar/custom-nav-bar.component';
+//import { CustomHeaderComponent } from './custom-header/custom-header.component';
 
 
 
@@ -104,7 +106,8 @@ declarations: [
     SurveyAppComponent,
     NotBoxArabeComponent,
     NotBoxEnglishComponent,
-   
+    CustomNavBarComponent,
+ 
   ],
   imports: [
     BrowserModule,
