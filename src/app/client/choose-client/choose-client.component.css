@@ -1,120 +1,164 @@
-/* @import url('https://www.w3schools.com/w3css/4/w3.css'); */
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  .res{
-    text-align:center !important;
-   
-    margin-top:20px;
-    animation: surveyContentContainerAnim .5s;
-
-  }
-  @keyframes surveyContentContainerAnim{
-
-	0%{
-
-		opacity: 0;
-		transform: translateY(-20%) rotateX(60deg);
-
-	}
-
+body {
+  color: #333;
+  font-family: Arial, Helvetica, serif;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  background: url(https://josetxu.com/img/fondo_blanco.png) repeat 0 0 #fff;
 }
-  section {
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    place-items: center;
+
+h1 {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  margin: 0 0 5% 0;
+  padding: 0.5em;
+  margin: 0 0 5% 0;
+ 
+}
+
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.card {
+  background: #222;
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .front strong {
+  background: #fff;
+  border-radius: 100%;
+  color: #222;
+  font-size: 1.5em;
+  line-height: 30px;
+  padding: 0 7px 4px 6px;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+}
+
+.card .back a {
+  padding: 0.3em 0.5em;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 1px;
+  font-size: 0.9em;
+  transition: all 0.2s ease 0s;
+}
+
+.card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+
+.cardBox:nth-child(1) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background: orange;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
   }
-  .row {
-    display: flex;
-    flex-wrap: wrap;
+  to {
+    transform: rotateY( 0deg);
   }
-  .column {
-    width: 100%;
-    padding: 0 1em 1em 1em;
-    text-align: center;
-    
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
   }
   .card {
-    width: 100%;
-    height: 100%;
-    padding: 2em 1.5em;
-   
-   
-  background-color:#333 ;
-  
-    /*border: 5px solid   #B19842;*/
-    padding: 10px;
-    /*border-radius: 50px 20px;*/
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    transition: 0.5s;
+    height: 285px;
   }
-  h2 {
-    font-size: 30px;
-    font-weight: 600;
-    color:  #B19842;
-    margin: 1em 0;
+  .cardBox:last-child {
+    margin-bottom: 3%;
   }
-  p {
-    color: #575a7b;
-    font-size: 15px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
+}
+
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 94.5%;
   }
-  .icon-wrapper {
-   
-    position: relative;
-    margin: auto;
-    font-size: 30px;
-    height: 2.5em;
-    width: 2.5em;
-    color: #B19842;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    transition: 0.5s;
+  .card {
+    height: 260px;
   }
-  .card:hover {
-    background-position: 0 100%;
-    background-color:  #dfdbdb
-  }
-  .card:hover .icon-wrapper {
-  
-    color:  #B19842;
-  }
-  .card:hover h3 {
-    color: #ffffff;
-  }
-  .card:hover p {
-    color: #f0f0f0;
-  }
-  @media screen and (min-width: 768px) {
-    .card:hover {
-      
-        background-color:  #dfdbdb
-    }
-    section {
-      padding: 0 2em;
-    }
-    .column {
-      flex: 0 50%;
-      max-width: 50%;
-    }
-    .res{
-        margin-left:20% !important;
-    }
-  }
-  @media screen and (min-width: 992px) {
-    section {
-      padding: 1em 3em;
-    }
-    .column {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
-  }
+}

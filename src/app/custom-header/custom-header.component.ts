@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { CrudService } from '../services/crud.service';
 @Component({
   selector: 'app-custom-header',
   templateUrl: './custom-header.component.html',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomHeaderComponent implements OnInit {
 
-  constructor( ) { }
+  constructor( private route:Router ,private crud:CrudService) { }
 
   element:any
-
+  
+  nav(e){
+    this.crud.isCustomNavBar = true
+    this.route.navigate([e])
+    console.log(5)
+  }
   searchAllDropList = {
     sale:["Sale","Rent"],
     propertyType:["Property Type","Appartment","Villa","Townhouse","Penthouse","Office space","Shop"],

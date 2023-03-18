@@ -2,63 +2,60 @@
 	<div class="nav-bar-on-scroll-event">
 		<div class="logo"><img src="assets/images/logoHOCD.png" style="width: 20%;" alt="logo"></div>
 		<div class="menu-list">
+			<div class="item"><span>Home</span>
+				
+			</div>
 			<div class="item"><span>Buy</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item" >Appartements for sale</div>
-						<div class="drop-item" >Villas for sale</div>
+						<div class="drop-item" (click)="nav('/appr')" >Appartements for sale</div>
+						<div class="drop-item"  (click)="nav('/vila')">Villas for sale</div>
+						
 						<div class="drop-item">Townhouses for sale</div>
-						<div class="drop-item">Appartements for sale</div>
+								<div class="drop-item">Retail for sale</div>
 					</div>
 				</div>
 			</div>
 			<div class="item"><span>Rent</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item">Appartements for sale</div>
-						<div class="drop-item">Villas for sale</div>
+						<div class="drop-item" (click)="nav('/rent')">Appartements for rent</div>
+						<div class="drop-item" (click)="nav('/rent')">Villas for rent</div>
 						<div class="drop-item">Townhouses for sale</div>
-						<div class="drop-item">Appartements for sale</div>
+								<div class="drop-item">Retail for sale</div>
+						
 					</div>
 				</div>
 			</div>
 			<div class="item"><span>Off plan</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item">Appartements for sale</div>
-						<div class="drop-item">Villas for sale</div>
-						<div class="drop-item">Townhouses for sale</div>
-						<div class="drop-item">Appartements for sale</div>
+						<div class="drop-item">THE SANCTUARY</div>
+						<div class="drop-item">SPORTS CITY</div>
+						
+						<div class="drop-item">Germany Villas</div>
+						<div class="drop-item">STARZ By Danube</div>
 					</div>
 				</div>
 			</div>
-			<div class="item"><span>Market Trends</span><i class="fa-solid fa-angle-down"></i>
+			<div class="item"><span>devloppers</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item">Appartements for sale</div>
-						<div class="drop-item">Villas for sale</div>
-						<div class="drop-item">Townhouses for sale</div>
-						<div class="drop-item">Appartements for sale</div>
+						<div class="drop-item">Azizi</div>
+						<div class="drop-item">Danube</div>
+						<div class="drop-item">Dammac</div>
+						<div class="drop-item">Heart of europe</div>
 					</div>
 				</div>
 			</div>
-			<div class="item"><span>Services</span><i class="fa-solid fa-angle-down"></i>
-				<div class="drop-down-item">
-					<div class="drop-content">
-						<div class="drop-item">Appartements for sale</div>
-						<div class="drop-item">Villas for sale</div>
-						<div class="drop-item">Townhouses for sale</div>
-						<div class="drop-item">Appartements for sale</div>
-					</div>
-				</div>
-			</div>
+			
 			<div class="item"><span>Who we are</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item end">
 					<div class="drop-content">
-						<div class="drop-item">Appartements for sale</div>
-						<div class="drop-item">Villas for sale</div>
-						<div class="drop-item">Townhouses for sale</div>
-						<div class="drop-item">Appartements for sale</div>
+						<div class="drop-item">About us</div>
+						<div class="drop-item">Contact us</div>
+						<div class="drop-item">Blog</div>
+						
 					</div>
 				</div>
 			</div>
@@ -77,63 +74,58 @@
 					<div class="item"><span>Buy</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item">Appartements for sale</div>
-								<div class="drop-item">Villas for sale</div>
-								<div class="drop-item">Townhouses for sale</div>
-								<div class="drop-item">Appartements for sale</div>
+								<div class="drop-item" (click)="nav('/appr')" >Appartements for sale</div>
+						<div class="drop-item"  (click)="nav('/vila')">Villas for sale</div>
+						
+						<div class="drop-item">Townhouses for sale</div>
+								<div class="drop-item">Retail for sale</div>
+
 							</div>
 						</div>
 					</div>
 					<div class="item"><span>Rent</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item">Appartements for sale</div>
-								<div class="drop-item">Villas for sale</div>
-								<div class="drop-item">Townhouses for sale</div>
-								<div class="drop-item">Appartements for sale</div>
+								<div class="drop-item" (click)="nav('/rent')" >Appartements for rent</div>
+						<div class="drop-item"  (click)="nav('/rent')">Villas for rent</div>
+						
+						<div class="drop-item">Townhouses for rent</div>
+								<div class="drop-item">Retail for rent</div>
 							</div>
 						</div>
 					</div>
 					<div class="item"><span>Off plan</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item">Appartements for sale</div>
-								<div class="drop-item">Villas for sale</div>
-								<div class="drop-item">Townhouses for sale</div>
-								<div class="drop-item">Appartements for sale</div>
+								<div class="drop-item">THE SANCTUARY</div>
+						<div class="drop-item">SPORTS CITY</div>
+						
+						<div class="drop-item">Germany Villas</div>
+						<div class="drop-item">STARZ By Danube</div>
 							</div>
 						</div>
 					</div>
-					<div class="item"><span>Market Trends</span><i class="fa-solid fa-angle-down"></i>
+					<div class="item"><span>devloppers</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item">Appartements for sale</div>
-								<div class="drop-item">Villas for sale</div>
-								<div class="drop-item">Townhouses for sale</div>
-								<div class="drop-item">Appartements for sale</div>
+								<div class="drop-item">Azizi</div>
+						<div class="drop-item">Danube</div>
+						<div class="drop-item">Dammac</div>
+						<div class="drop-item">Heart of europe</div>
 							</div>
 						</div>
 					</div>
 					<div class="item"><span>Services</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item">Appartements for sale</div>
-								<div class="drop-item">Villas for sale</div>
-								<div class="drop-item">Townhouses for sale</div>
-								<div class="drop-item">Appartements for sale</div>
+								<div class="drop-item"> Sale</div>
+								<div class="drop-item">Rent</div>
+								<div class="drop-item">Cryptocurrency</div>
+								<div class="drop-item">Golden visa</div>
 							</div>
 						</div>
 					</div>
-					<div class="item"><span>Who we are</span><i class="fa-solid fa-angle-down"></i>
-						<div class="drop-down-item end">
-							<div class="drop-content">
-								<div class="drop-item">Appartements for sale</div>
-								<div class="drop-item">Villas for sale</div>
-								<div class="drop-item">Townhouses for sale</div>
-								<div class="drop-item">Appartements for sale</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<div class="title" >
@@ -218,63 +210,66 @@
 			</div>
 			<div class="menu-list">
 				<div class="item">
-					<input type="text" readonly name="">
+					<input type="text" >
 					<div class="item-title"><div>Buy</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list">
-						<div class="drop-item"><div>Appartements for sale</div></div>
-						<div class="drop-item"><div>Villas for sale</div></div>
-						<div class="drop-item"><div>Townhouses for sale</div></div>
-						<div class="drop-item"><div>Appartements for sale</div></div>
+						<div class="drop-item" (click)="nav('/appr')" >Appartements for sale</div>
+						<div class="drop-item"  (click)="nav('/vila')">Villas for sale</div>
+						
+						<div class="drop-item">Townhouses for sale</div>
+								<div class="drop-item">Retail for sale</div>
 					</div>
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
 					<div class="item-title"><div>Rent</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list">
-						<div class="drop-item"><div>Appartements for sale</div></div>
-						<div class="drop-item"><div>Villas for sale</div></div>
-						<div class="drop-item"><div>Townhouses for sale</div></div>
-						<div class="drop-item"><div>Appartements for sale</div></div>
+						<div class="drop-item" (click)="nav('/rent')" >Appartements for rent</div>
+						<div class="drop-item"  (click)="nav('/rent')">Villas forrent</div>
+						
+						<div class="drop-item">Townhouses for rent</div>
+								<div class="drop-item">Retail for rent</div>
 					</div>
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
 					<div class="item-title"><div>Off Plan</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list">
-						<div class="drop-item"><div>Appartements for sale</div></div>
-						<div class="drop-item"><div>Villas for sale</div></div>
-						<div class="drop-item"><div>Townhouses for sale</div></div>
-						<div class="drop-item"><div>Appartements for sale</div></div>
+						<div class="drop-item">THE SANCTUARY</div>
+						<div class="drop-item">SPORTS CITY</div>
+						
+						<div class="drop-item">Germany Villas</div>
+						<div class="drop-item">STARZ By Danube</div>
 					</div>
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
-					<div class="item-title"><div>Market Trends</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="item-title"><div>devloppers</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list">
-						<div class="drop-item"><div>Appartements for sale</div></div>
-						<div class="drop-item"><div>Villas for sale</div></div>
-						<div class="drop-item"><div>Townhouses for sale</div></div>
-						<div class="drop-item"><div>Appartements for sale</div></div>
+						<div class="drop-item"><div>Azizi</div></div>
+						<div class="drop-item"><div>Damac</div></div>
+						<div class="drop-item"><div>Danube</div></div>
+						<div class="drop-item"><div>Heart of europe</div></div>
 					</div>
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
 					<div class="item-title"><div>Services</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list">
-						<div class="drop-item"><div>Appartements for sale</div></div>
-						<div class="drop-item"><div>Villas for sale</div></div>
-						<div class="drop-item"><div>Townhouses for sale</div></div>
-						<div class="drop-item"><div>Appartements for sale</div></div>
+						<div class="drop-item"><div>Sales</div></div>
+						<div class="drop-item"><div>Rent</div></div>
+						<div class="drop-item"><div>Cryptocurrency</div></div>
+						<div class="drop-item"><div>Golden visa</div></div>
 					</div>
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
 					<div class="item-title"><div>Who we are</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list">
-						<div class="drop-item"><div>Appartements for sale</div></div>
-						<div class="drop-item"><div>Villas for sale</div></div>
-						<div class="drop-item"><div>Townhouses for sale</div></div>
-						<div class="drop-item"><div>Appartements for sale</div></div>
+						<div class="drop-item"><div>About us </div></div>
+						<div class="drop-item"><div>Contact us </div></div>
+						<div class="drop-item"><div>Blog</div></div>
+						<div class="drop-item"><div>Meeting</div></div>
 					</div>
 				</div>
 			</div>

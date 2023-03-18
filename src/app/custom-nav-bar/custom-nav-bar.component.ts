@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-custom-nav-bar',
   templateUrl: './custom-nav-bar.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomNavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
   element:any
 
   navBarScroll:any
