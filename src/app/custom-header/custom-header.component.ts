@@ -11,7 +11,9 @@ export class CustomHeaderComponent implements OnInit {
   constructor( private route:Router ,private crud:CrudService) { }
 
   element:any
-  
+  saa:any
+  sale="Sale"
+  prop="Property Type"
   nav(e){
     this.crud.isCustomNavBar = true
     this.route.navigate([e])
@@ -20,28 +22,63 @@ export class CustomHeaderComponent implements OnInit {
   searchAllDropList = {
     sale:["Sale","Rent"],
     propertyType:["Property Type","Appartment","Villa","Townhouse","Penthouse","Office space","Shop"],
-    minArea:["Min area","300 sqft","500 sqft","700 sqft","800 sqft","1000 sqft"],
-    maxArea:["Max area","300 sqft","500 sqft","700 sqft","800 sqft","1000 sqft"]
+    minArea: ["Max budget","300k AED","500K AED","1M AED","2M AED","3M+ AED"],
+    maxArea:["Max budget","300k AED","500K AED","1M AED","2M AED","3M+ AED"]
   }
 
   formSearch = {
     saleRent:"Sale",
     propertyType:"Property Type",
-    minArea:"Min area",
-    maxArea:"Max area"
+    minArea:"Min budget",
+    maxArea:"Max budjet"
   }
 
-  selectItem(dp:any,key:any,value:any){
+  selectItemSale(dp:any,key:any,value:any){
 
     this.formSearch[key] = value
+   this.sale=value
+    this.saa.value= value
+    console.log(this.formSearch[key])
 
-    console.log(value)
+    this.openCloseDrop(dp)
+
+  }
+  selectItemP(dp:any,key:any,value:any){
+
+    this.formSearch[key] = value
+   this.prop=value
+    console.log(this.prop,5555)
     console.log(this.formSearch[key])
 
     this.openCloseDrop(dp)
 
   }
 
+  selectItem(dp:any,key:any,value:any){
+
+    this.formSearch[key] = value
+   
+    console.log(this.formSearch[key])
+
+    this.openCloseDrop(dp)
+
+  }
+search(){
+  console.log(this.sale ,"aaaa")
+  this.crud.isCustomNavBar = true
+  if(this.sale=="Sale"){
+    if(this.prop=="Appartment" || this.prop=="Property Type"){
+      this.route.navigate(['/appr'])
+    }
+    if(this.prop=="Villa" || this.prop=="Property Type"){
+      this.route.navigate(['/vila'])
+    }
+  }
+  if(this.sale =="Rent"){
+    console.log("eee")
+    this.route.navigate(["/rent"])
+  }
+}
   dropOpen = false
 
   openCloseDrop(drop:any){
@@ -74,7 +111,8 @@ export class CustomHeaderComponent implements OnInit {
   navBarScroll:any
 
   ngOnInit(): void {
-
+    this.crud.isCustomNavBar=false
+ this.saa= document.getElementById('sale')
     window.addEventListener("scroll",()=>{
 
       if(window.scrollY > 70){

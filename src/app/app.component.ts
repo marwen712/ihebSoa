@@ -16,8 +16,12 @@ export class AppComponent {
   message:any
   public phone = "+971 58 218 9263"
  public messg = "ارسل الآن طلبك";
+ 
   constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public crud:CrudService, private pixel: PixelService ){
 
+  }
+  openForm(){
+    this.crud.affForm=true
   }
   customNavBar:any
 
@@ -31,8 +35,7 @@ export class AppComponent {
     }else{
       this.crud.isCustomNavBar = false
     }
-
-    this.customNavBar = this.crud.isCustomNavBar
+ 
     this.pixel.initialize();
     this.meta.addTags([
       {

@@ -137,20 +137,20 @@
 						<div class="input">
 							<div class="header-input">
 								<div class="item-selected">{{formSearch.saleRent}}</div>
-								<input type="text" readonly (click)="openCloseDrop(dropSale)">
+								<input type="text"  readonly (click)="openCloseDrop(dropSale)">
 								<i class="fa-solid fa-angle-down"></i>
 								<div class="drop-input" #dropSale>
-									<div class="item" *ngFor="let item of searchAllDropList.sale" (click)="selectItem(dropSale,'saleRent',item)">{{item}}</div>
+									<div class="item" *ngFor="let item of searchAllDropList.sale" (click)="selectItemSale(dropSaleMb,'saleRent',item)">{{item}}</div>
 								</div>
 							</div>
 						</div>
 						<div class="input">
 							<div class="header-input">
 								<div class="item-selected">{{formSearch.propertyType}}</div>
-								<input type="text"  readonly (click)="openCloseDrop(dropProp)">
+								<input type="text" readonly (click)="openCloseDrop(dropProp)">
 								<i class="fa-solid fa-angle-down"></i>
 								<div class="drop-input" #dropProp>
-									<div class="item"*ngFor="let item of searchAllDropList.propertyType" (click)="selectItem(dropProp,'propertyType',item)">{{item}}</div>
+									<div class="item"*ngFor="let item of searchAllDropList.propertyType" (click)="selectItemP(dropProp,'propertyType',item)">{{item}}</div>
 								</div>
 							</div>
 						</div>
@@ -168,7 +168,7 @@
 							<div class="input">
 								<div class="header-input">
 									<div class="item-selected">{{formSearch.maxArea}}</div>
-									<input type="text" readonly (click)="openCloseDrop(dropMaxArea)">
+									<input type="text" id="max" readonly (click)="openCloseDrop(dropMaxArea)">
 									<i class="fa-solid fa-angle-down"></i>
 									<div class="drop-input" #dropMaxArea>
 										<div class="item" *ngFor="let item of searchAllDropList.maxArea" (click)="selectItem(dropMaxArea,'maxArea',item)">{{item}}</div>
@@ -180,9 +180,9 @@
 					<div class="section right">
 						<div class="search-header">
 							<div class="input">
-								<input type="text" placeholder="City / Community / Building">
+								<input type="text"  placeholder="City / Community / Building">
 							</div>
-							<button><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
+							<button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
 						</div>
 						<div class="input-search">
 							<input type="text" placeholder="Amenities" />
@@ -296,7 +296,7 @@
 								<input type="text" readonly (click)="openCloseDrop(dropSaleMb)">
 								<i class="fa-solid fa-angle-down"></i>
 								<div class="drop-input" #dropSaleMb>
-									<div class="item" *ngFor="let item of searchAllDropList.sale" (click)="selectItem(dropSaleMb,'saleRent',item)">{{item}}</div>
+									<div class="item" *ngFor="let item of searchAllDropList.sale" (click)="selectItemSale(dropSaleMb,'saleRent',item)">{{item}}</div>
 								</div>
 							</div>
 						</div>
@@ -306,7 +306,7 @@
 								<input type="text"  readonly (click)="openCloseDrop(dropPropMb)">
 								<i class="fa-solid fa-angle-down"></i>
 								<div class="drop-input" #dropPropMb>
-									<div class="item"*ngFor="let item of searchAllDropList.propertyType" (click)="selectItem(dropPropMb,'propertyType',item)">{{item}}</div>
+									<div class="item"*ngFor="let item of searchAllDropList.propertyType" (click)="selectItemP(dropPropMb,'propertyType',item)">{{item}}</div>
 								</div>
 							</div>
 						</div>
@@ -324,7 +324,7 @@
 							<div class="input">
 								<div class="header-input">
 									<div class="item-selected">{{formSearch.maxArea}}</div>
-									<input type="text" readonly (click)="openCloseDrop(dropMaxAreaMb)">
+									<input type="text" readonly (click)="openCloseDrop(dropMaxAreaMb)" >
 									<i class="fa-solid fa-angle-down"></i>
 									<div class="drop-input" #dropMaxAreaMb>
 										<div class="item" *ngFor="let item of searchAllDropList.maxArea" (click)="selectItem(dropMaxAreaMb,'maxArea',item)">{{item}}</div>
@@ -338,7 +338,7 @@
 							<div class="input">
 								<input type="text" placeholder="City / Community / Building">
 							</div>
-							<button><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
+							<button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
 						</div>
 						<div class="input-search">
 							<input type="text" placeholder="Amenities" />

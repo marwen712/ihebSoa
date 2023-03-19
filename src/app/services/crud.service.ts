@@ -11,7 +11,7 @@ export class CrudService {
   testUpdate=""
   affNoteArabe=false
   affNoteEnglish=true
-   affForm=true
+   affForm=false
   affChoose=true
 //affiche Global
 public  lat: number = 51.673858;

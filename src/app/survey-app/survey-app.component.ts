@@ -403,13 +403,13 @@ export class SurveyAppComponent implements OnInit {
     if(this.phoneScreen.matches){  
       setTimeout(()=>{
         this.animationEleSurvey()
-      },10000)
+      },10)
 
     }else{
 
       setTimeout(()=>{
         this.surveyCLOpen()   
-      },20000)
+      },20)
 
     }
   }
