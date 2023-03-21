@@ -209,10 +209,10 @@
 				<i class="fa-solid fa-xmark" (click)="closeSide()"></i>
 			</div>
 			<div class="menu-list">
-				<div class="item">
-					<input type="text" >
-					<div class="item-title"><div>Buy</div><i class="fa-solid fa-angle-down"></i></div>
-					<div class="list">
+				<div class="item" >
+					
+					<div class="item-title" (click)="openCloseDropSide(BuyListe,RentListe,off)" ><div >Buy</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="list" #BuyListe>
 						<div class="drop-item" (click)="nav('/appr')" >Appartements for sale</div>
 						<div class="drop-item"  (click)="nav('/vila')">Villas for sale</div>
 						
@@ -220,10 +220,10 @@
 								<div class="drop-item">Retail for sale</div>
 					</div>
 				</div>
-				<div class="item">
-					<input type="text" readonly name="">
-					<div class="item-title"><div>Rent</div><i class="fa-solid fa-angle-down"></i></div>
-					<div class="list">
+				<div class="item" >
+					
+					<div class="item-title" (click)="openCloseDropSide(RentListe,BuyListe,off)"><div >Rent</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="list" #RentListe>
 						<div class="drop-item" (click)="nav('/rent')" >Appartements for rent</div>
 						<div class="drop-item"  (click)="nav('/rent')">Villas forrent</div>
 						
@@ -232,9 +232,9 @@
 					</div>
 				</div>
 				<div class="item">
-					<input type="text" readonly name="">
-					<div class="item-title"><div>Off Plan</div><i class="fa-solid fa-angle-down"></i></div>
-					<div class="list">
+					
+					<div class="item-title"  (click)="openCloseDropSide(off,RentListe,BuyListe)"><div>Off Plan</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="list" #off >
 						<div class="drop-item">THE SANCTUARY</div>
 						<div class="drop-item">SPORTS CITY</div>
 						
@@ -317,7 +317,7 @@
 									<input type="text" readonly (click)="openCloseDrop(dropMinAreaMb)">
 									<i class="fa-solid fa-angle-down"></i>
 									<div class="drop-input" #dropMinAreaMb>
-										<div class="item" *ngFor="let item of searchAllDropList.minArea" (click)="selectItem(dropMinAreaMb,'minArea',item)">{{item}}</div>
+										<div class="item" *ngFor="let item of searchAllDropList.minArea" (click)="selectItemMin(dropMinAreaMb,'minArea',item)">{{item}}</div>
 									</div>
 								</div>
 							</div>
@@ -327,7 +327,7 @@
 									<input type="text" readonly (click)="openCloseDrop(dropMaxAreaMb)" >
 									<i class="fa-solid fa-angle-down"></i>
 									<div class="drop-input" #dropMaxAreaMb>
-										<div class="item" *ngFor="let item of searchAllDropList.maxArea" (click)="selectItem(dropMaxAreaMb,'maxArea',item)">{{item}}</div>
+										<div class="item" *ngFor="let item of searchAllDropList.maxArea" (click)="selectItemMax(dropMaxAreaMb,'maxArea',item)">{{item}}</div>
 									</div>
 								</div>
 							</div>

@@ -967,10 +967,11 @@ body{
 	.responsive-version .side-bar .content-side-bar .menu-list .item .list .drop-item{
 
 		width: 100%;
+		height:0px;
 		display: flex;
 		align-items: center;
 		justify-content: left;
-		padding: 6% 0;
+		padding: 6% 10%;
 		border-top: 1px solid #ffffff0d;
 		border-bottom: 1px solid #ffffff0d;
 		font-size: 1.8vw;
@@ -981,11 +982,7 @@ body{
 		height: 20%;
 	}
 
-	.responsive-version .side-bar .content-side-bar .menu-list .item input:focus ~ .list{
-
-		height: 207px;
-
-	}
+	
 
 	.responsive-version .side-bar .content-side-bar .menu-list .item input:focus ~ .item-title i{
 
@@ -1443,7 +1440,7 @@ body{
 		display: flex;
 		align-items: center;
 		justify-content: left;
-		padding: 6% 0;
+		padding: 6% 10%;
 		border-top: 1px solid #ffffff0d;
 		border-bottom: 1px solid #ffffff0d;
 		font-size: 2.5vw;
@@ -1456,11 +1453,7 @@ body{
 
 	}
 
-	.responsive-version .side-bar .content-side-bar .menu-list .item input:focus ~ .list{
-
-		height: 27%;
-
-	}
+	
 
 	.header-section-heart-of-chartage .content .search-container .search-content{
 

@@ -294,15 +294,19 @@
 .off-plan .footer-box .logo-devp p{
 
     margin: 0;
-    font-size: 2vw;
-    color: #c9a770;
-    text-shadow: 1px 2px 0px #000000;
+    font-size: 1.4vw;
+    color: orange;
+
     z-index: 0;
-    font-family: 'Cookie', cursive;
-    margin-left: 3%;
+    font-family: 'Manrope', sans-serif;
+    margin-left: 3% ;
 
 }
+.off-plan .footer-box .logo-devp p.priceHabib{
+    margin-left: 3% !important;
+    color: orange !important;
 
+}
 .off-plan .stars-rating{
 
     display: flex;
@@ -374,7 +378,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.1vw;
+    font-size: 0.8vw;
 
 }
 
@@ -394,12 +398,13 @@
 }
 .priceHabib{
     margin: 0;
-                  font-size: 2vw;
-                  color: #c9a770;
-                  text-shadow: 1px 2px 0px #000000;
-                  z-index: 0;
-                  font-family: 'Cookie', cursive;
-                  margin-left: 3%;
+    font-size: 2vw;
+    color: red;
+    text-shadow: 1px 2px 0px #000000;
+    z-index: 0;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 3% !important;
+
 }
 .ft-ctn .title{
 
@@ -541,13 +546,13 @@
 
 @media only screen and (max-width: 480px){
       .priceHabib{
- margin-left: 34%;
-                  font-size: 30px;
-                  color: #c9a770;
-                  text-shadow: 1px 2px 0px #000000;
-                  z-index: 0;
-                  font-family: 'Cookie', cursive;
-                  margin-left: 3%;
+margin-left: 34% !important;
+font-size: 30px;
+color: orange;
+
+z-index: 0;
+font-family: 'Quicksand', sans-serif;
+
       }
     .slider-devs .ctn-slider-devs .slider-dots{
 
@@ -623,6 +628,7 @@
 
         font-size: 16px;
         line-height: 34px;
+        height: 26%;
 
     }
 
@@ -667,7 +673,7 @@
 
     .off-plan .footer-box .logo-devp p{
 
-        font-size: 32px;
+        font-size: 18px;
 
     }
 

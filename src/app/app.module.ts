@@ -101,7 +101,7 @@ declarations: [
     ProductOffPlanComponent,
     Home1Component,
     LoginComponent,
-    HeaderComponent,
+   
     UpdateOffplanComponent,
     SurveyAppComponent,
     NotBoxArabeComponent,

@@ -11,9 +11,17 @@ export class CustomHeaderComponent implements OnInit {
   constructor( private route:Router ,private crud:CrudService) { }
 
   element:any
-  saa:any
+  saleId:any
+  propId:any
+  minId:any
+  maxId:any
+  saleIdPc:any
+  propIdPc:any
+  minIdPc:any
+  maxIdPc:any
   sale="Sale"
   prop="Property Type"
+
   nav(e){
     this.crud.isCustomNavBar = true
     this.route.navigate([e])
@@ -33,24 +41,26 @@ export class CustomHeaderComponent implements OnInit {
     maxArea:"Max budjet"
   }
 
-  selectItemSale(dp:any,key:any,value:any){
+  selectItemSale(db:any,key:any,value:any){
 
     this.formSearch[key] = value
    this.sale=value
-    this.saa.value= value
+    this.saleId.value= value
     console.log(this.formSearch[key])
-
-    this.openCloseDrop(dp)
+    
+    this.openCloseDrop(db)
 
   }
-  selectItemP(dp:any,key:any,value:any){
+  selectItemP(db:any, key:any,value:any){
 
     this.formSearch[key] = value
    this.prop=value
+   this.propId.value=value
     console.log(this.prop,5555)
+
     console.log(this.formSearch[key])
 
-    this.openCloseDrop(dp)
+    this.openCloseDrop(db)
 
   }
 
@@ -61,6 +71,24 @@ export class CustomHeaderComponent implements OnInit {
     console.log(this.formSearch[key])
 
     this.openCloseDrop(dp)
+
+  }
+  selectItemMax(db:any,key:any,value:any){
+
+    this.formSearch[key] = value
+   this.maxId.value=value
+    console.log(this.formSearch[key])
+
+    this.openCloseDrop(this.maxId)
+
+  }
+  selectItemMin(db:any,key:any,value:any){
+
+    this.formSearch[key] = value
+   this.minId.value=value
+    console.log(this.formSearch[key])
+
+    this.openCloseDrop(this.minId)
 
   }
 search(){
@@ -97,7 +125,23 @@ search(){
     }
 
   }
+  openCloseDropSide(drop:any,drop2:any,drop3:any){
+    drop2.style.height="0px"
+    drop3.style.height="0px"
+    console.log(drop.style.height ,"height")
+    if( drop.style.height == "0px" ){
 
+      drop.style.height="auto"
+      console.log("height")
+
+    }
+    else{
+
+      drop.style.height="0px"
+
+    }
+
+  }
   openSide(){
     this.element = document.getElementById("sideBar")
     this.element.style.display = "flex"
@@ -112,7 +156,14 @@ search(){
 
   ngOnInit(): void {
     this.crud.isCustomNavBar=false
- this.saa= document.getElementById('sale')
+ this.saleId= document.getElementById('sale')
+ this.propId= document.getElementById('prop')
+ this.minId= document.getElementById('min')
+ this.maxId= document.getElementById('max')
+ this.saleIdPc= document.getElementById('salePc')
+ this.propIdPc= document.getElementById('propPc')
+ this.minIdPc= document.getElementById('minPc')
+ this.maxIdPc= document.getElementById('maxPc')
     window.addEventListener("scroll",()=>{
 
       if(window.scrollY > 70){
