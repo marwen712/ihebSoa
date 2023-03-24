@@ -182,6 +182,7 @@
       </div>
     </section>
     <!-- About us -->
+
     <div class="container" #adv >
       <div class="row" *ngIf="testChercheAv">
         <div class="col-md-12">
@@ -324,10 +325,16 @@
       </div>
     </div>
   </section>
-  
+  <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="crud.loadingVila && crud.loadingAppr && crud.loadingRent ">
+    <div class="col-12">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden"> Loading...</span>
+          </div>
+    </div>
+</div>
   <!-- / Latest property -->
 
-
+  <app-prod style="margin-top: 20px;margin-bottom: 20px;"  *ngIf="!crud.loadingVila && !crud.loadingAppr && !crud.loadingRent "></app-prod>
 
  
   <section id="aa-promo-banner">
@@ -410,6 +417,96 @@
     </div>
   </section> -->
  <app-header></app-header>
+ <section id="aa-promo-banner" class="promo-banner-section" style="margin-top: 10%;margin-bottom: 30px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="aa-promo-banner-area">
+          <h3>Other Services</h3>
+          <div class="main-banner" id="top">
+            <div class="container-fluid">
+                <div class="row">
+                   
+                    <div class="col-12">
+                        <div class="right-content" >
+                            
+                            <div class="row other-services-boxs">
+                               
+                                <div class="col-lg-4"   >
+                                    <div class="right-first-image">
+                                        <div class="thumb">
+                                            <div class="inner-content" style="opacity: 0.8!important;" >
+                                                <h4 style="color:#C9A770">Visas in Dubai</h4>
+                                                <span style="color:#C9A770" >The residency visas in Dubai vary in type,</span>
+                                            </div>
+                                            <div class="hover-content" style="opacity: 0.8 !important;">
+                                                <div class="inner" style="opacity: 3 !important;">
+                                                    <h4>
+                                                      Visas in Dubai</h4>
+                                                    <p> The residency visas in Dubai vary in type,</p>
+                                                    <div class="main-border-button">
+                                                        <a href="#" >Discover More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <img src="assets/images/visa.png" alt="heart-of-carthage-dubai">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4"   >
+                                  <div class="right-first-image">
+                                      <div class="thumb">
+                                          <div class="inner-content" style="opacity: 0.8!important;" >
+                                              <h4 style="color:#C9A770">Golden Visa</h4>
+                                              <span style="color:#C9A770" > entry and golden visas</span>
+                                          </div>
+                                          <div class="hover-content" style="opacity: 0.8 !important;">
+                                              <div class="inner" style="opacity: 3 !important;">
+                                                  <h4>
+                                                    Golden Visa</h4>
+                                                  <p> entry and golden visas</p>
+                                                  <div class="main-border-button">
+                                                      <a href="#" >Discover More</a>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <img src="assets/images/gold.png" alt="heart-of-carthage-dubai">
+                                      </div>
+                                  </div>
+                              </div> 
+                              <div class="col-lg-4"   >
+                                <div class="right-first-image">
+                                    <div class="thumb">
+                                        <div class="inner-content" style="opacity: 0.8!important;" >
+                                            <h4 style="color:#C9A770">accept cryptocurrency</h4>
+                                            <span style="color:#C9A770" > Advances in computing and cryptography</span>
+                                        </div>
+                                        <div class="hover-content" style="opacity: 0.8 !important;">
+                                            <div class="inner" style="opacity: 3 !important;">
+                                                <h4>
+                                                  accept cryptocurrency</h4>
+                                                <p> Advances in computing and cryptography</p>
+                                                <div class="main-border-button">
+                                                    <a href="#" >Discover More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="assets/images/bit.jpg" alt="heart-of-carthage-dubai">
+                                    </div>
+                                </div>
+                            </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   <!-- / Service section -->
  
   <!-- Promo Banner Section -->

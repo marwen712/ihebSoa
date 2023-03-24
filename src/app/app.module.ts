@@ -31,11 +31,7 @@ import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-go
 import { MatCarouselModule } from 'ng-mat-carousel';
 
 import { NgxWhastappButtonModule } from "ngx-whatsapp-button";
-import { DashComponent } from './admin/dash/dash.component';
-import { OffPlanComponent } from './admin/off-plan/off-plan.component';
-import { VilaComponent } from './admin/vila/vila.component';
-import { RentComponent } from './admin/rent/rent.component';
-import { AppartementComponent } from './admin/appartement/appartement.component';
+
 import { Lunding2Component } from './client/lunding2/lunding2.component';
 import { ProducVilaComponent } from './client/produc-vila/produc-vila.component';
 import { PrudcApparComponent } from './client/prudc-appar/prudc-appar.component';
@@ -43,21 +39,20 @@ import { Lund3Component } from './client/lund3/lund3.component';
 import { Lunding4Component } from './client/lunding4/lunding4.component';
 import { Form1Component } from './client/form1/form1.component';
 import { Form2Component } from './client/form2/form2.component';
-import { UserComponent } from './admin/user/user.component';
+
 import { AccordComponent } from './client/accord/accord.component';
 import { Map1Component } from './client/map1/map1.component';
 import { AgmCoreModule } from '@agm/core';
 import { Map4Component } from './client/map4/map4.component';
-import { Map3Component } from './admin/map3/map3.component';
+
 import { CarcComponent } from './client/carc/carc.component';
 import { ProductOffPlanComponent } from './client/product-off-plan/product-off-plan.component';
 import { Home1Component } from './client/home1/home1.component';
 import { NgxCarouselModule } from 'ngx-light-carousel';
-import { LoginComponent } from './admin/login/login.component';
+
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';;
-import { NgCircleProgressModule } from 'ng-circle-progress';
-import { UpdateOffplanComponent } from './admin/update-offplan/update-offplan.component';
+
 
 import { SurveyAppComponent } from './survey-app/survey-app.component';
 import { NotBoxArabeComponent } from './not-box-arabe/not-box-arabe.component';
@@ -65,6 +60,7 @@ import { NotBoxEnglishComponent } from './not-box-english/not-box-english.compon
 import { HomeModule } from './client/home/home.module';
 import { HeaderComponent } from './client/header/header.component';
 import { CustomNavBarComponent } from './custom-nav-bar/custom-nav-bar.component';
+import { ProdComponent } from './client/prod/prod.component';
 //import { CustomHeaderComponent } from './custom-header/custom-header.component';
 
 
@@ -80,11 +76,8 @@ declarations: [
     ProductsComponent,
     ContactUsComponent,
     SingleProductComponent,
-    DashComponent,
-    OffPlanComponent,
-    VilaComponent,
-    RentComponent,
-    AppartementComponent,
+ 
+  
     Lunding2Component,
     ProducVilaComponent,
     PrudcApparComponent,
@@ -92,21 +85,20 @@ declarations: [
     Lunding4Component,
     Form1Component,
     Form2Component,
-    UserComponent,
+ 
     AccordComponent,
     Map1Component,
-    Map3Component,
+  
     Map4Component,
     CarcComponent,
     ProductOffPlanComponent,
     Home1Component,
-    LoginComponent,
    
-    UpdateOffplanComponent,
     SurveyAppComponent,
     NotBoxArabeComponent,
     NotBoxEnglishComponent,
     CustomNavBarComponent,
+   
  
   ],
   imports: [
@@ -117,7 +109,7 @@ declarations: [
     AngularFireMessagingModule,
     AngularFireModule.initializeApp(environment.firebase),
     PixelModule.forRoot({ enabled: true, pixelId: '1339761106585275'}),
-
+    HomeModule,
     HttpClientModule,
     ModalModule, InputsModule, TooltipModule, PopoverModule, ButtonsModule,  MDBBootstrapModule.forRoot(),CarouselModule, WavesModule,
     IvyCarouselModule,
@@ -132,18 +124,8 @@ declarations: [
     MatCarouselModule.forRoot(),
     NgImageSliderModule,
     NgxCarouselModule ,
-    NgCircleProgressModule.forRoot({
-      // set defaults here
-      radius: 100,
-      outerStrokeWidth: 16,
-      innerStrokeWidth: 8,
-      outerStrokeColor: "#78C000",
-      innerStrokeColor: "#C7E596",
-      animationDuration: 300,
-      /*kkk*/ 
-     
-    }),
-    HomeModule
+
+   // HomeModule
   ],
   providers: [AsyncPipe,MessagingService],
   bootstrap: [AppComponent]

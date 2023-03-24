@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from '../services/crud.service';
 
 @Component({
   selector: 'app-survey-app',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SurveyAppComponent implements OnInit {
 
-  constructor() { }
+  constructor(private crud:CrudService) { }
 
   elementSurvey:any
   phoneScreen:any
@@ -148,6 +149,7 @@ export class SurveyAppComponent implements OnInit {
 
       if(this.choiceId != ""){
         this.answers.push({question:this.currentQuestion[0].question,answer:this.choiceId+""})
+        console.log(this.answers)
         checkAnswer = true
       }
 
@@ -197,7 +199,10 @@ export class SurveyAppComponent implements OnInit {
   }
 
   finishFormClient(){
-
+    this.crud.sendEmail({
+      email:"ha9.0bib90@gmail.com",
+      text:JSON.stringify( JSON.stringify( this.answers))
+    })
     this.elementSurvey = document.getElementById("formClient")
 
     this.elementSurvey.style.display="none"
@@ -205,7 +210,7 @@ export class SurveyAppComponent implements OnInit {
     this.elementSurvey = document.getElementById("finishedSurvey")
 
     this.elementSurvey.style.display="block"
-
+console.log(this.answers,"ee")
   }
 
   animationEleSurvey(){
@@ -371,7 +376,7 @@ export class SurveyAppComponent implements OnInit {
   }
 
   finishFormClientMobile(){
-
+    console.log(this.answers,'rr')
     this.elementSurvey = document.getElementById("formClientMobile")
     
     this.elementSurvey.style.display="none"

@@ -15,6 +15,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class SingleProductComponent implements OnInit {
   public imageProfil=""
   public  loadingOff=false
+  public img2=""
   public dev=""
   public title=""
   public stitle=""
@@ -131,6 +132,7 @@ export class SingleProductComponent implements OnInit {
          this.title=ob.title
          this.crud.project=ob.title
          this.imageProfil=ob.imgs[0]
+         this.img2=ob.imgs[1]
          this.desc=ob.desc
          this.stitle=ob.stitle
          this.video=ob.video

@@ -36,15 +36,19 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ChooseClientComponent } from '../choose-client/choose-client.component';
 
 import { CustomHeaderComponent } from 'src/app/custom-header/custom-header.component';
+import { ProdComponent } from '../prod/prod.component';
 @NgModule({
-  declarations: [ HomeComponent,ChooseClientComponent, CustomHeaderComponent ,HeaderComponent ],
+  declarations: [ HomeComponent,ChooseClientComponent, CustomHeaderComponent,HeaderComponent,ProdComponent ],
   imports: [
     CommonModule,
     HomeRoutingModule,
  FormsModule,
- ReactiveFormsModule 
+ ReactiveFormsModule ,
+ NgxWhastappButtonModule,
+
     
   ],
-  exports: [ChooseClientComponent,CustomHeaderComponent ]
+  exports: [ ChooseClientComponent,CustomHeaderComponent,HeaderComponent ]
+  /**/
 })
 export class HomeModule { }

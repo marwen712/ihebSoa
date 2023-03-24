@@ -38,7 +38,7 @@
             <div class="col-md-4"  *ngFor="let vila of tab; index as i">
               <article class="aa-properties-item">
                 <a  class="aa-properties-item-img">
-                  <img [src]="vila.imgs[0]" alt="img">
+                  <img [src]="vila.imgs[0]" alt="Villas for sale heart-of-carthage-dubai">
                 </a>                
                 <div class="aa-tag sold-out">
                Vila
@@ -55,8 +55,8 @@
                     <p>{{vila. stitle}} {{vila. prix}}</p>                      
                   </div>
                   <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      {{vila.prixFinal}} 
+                    <span class="aa-price" style="color: orange;font-weight: bold;">
+                      {{vila.prixFinal}}  AED
                     </span>
                     <a  class="aa-secondary-btn" (click)="nav2(i)">View Details</a>
                   </div>

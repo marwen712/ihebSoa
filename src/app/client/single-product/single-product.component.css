@@ -13,14 +13,13 @@
     position: absolute;
     z-index: 0;
     overflow: hidden;
-    animation: bgOffPlan 5s infinite alternate;
-    background-attachment: fixed;
+  /* animation: bgOffPlan 5s infinite alternate;*/
     background-size: cover;
     background-position: center;
 
 }
 
-
+/* 
 @keyframes bgOffPlan{
 
     from{
@@ -29,7 +28,7 @@
     to{
         transform: scale(1.2);
     }
-}
+} */
 
 .video-responsive { 
     overflow:hidden; 

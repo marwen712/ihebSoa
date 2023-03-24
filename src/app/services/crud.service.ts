@@ -13,6 +13,9 @@ export class CrudService {
   affNoteEnglish=true
    affForm=false
   affChoose=true
+  tabApprProd:any[]=[]
+  tabVilaProd:any[]=[]
+  tabRentProd:any[]=[]
 //affiche Global
 public  lat: number = 51.673858;
   public lng: number = 7.815982;
@@ -105,5 +108,9 @@ loadingDelete=false
   funcAff(){
    this.ac=true
    this.aj=false
+  }
+  public sendEmail(form:any){
+    this.http.post('https://heart-of-carthage-dubai.com/backend/email/send-mail-ichkel/',form).subscribe(res=>{
+      console.log(res)})
   }
 }

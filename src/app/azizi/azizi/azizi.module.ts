@@ -16,6 +16,8 @@ import { NgxCarouselModule } from 'ngx-light-carousel';
 import { LundingAziziModule } from '../lunding-azizi/lunding-azizi.module';
 import { LundingPageAziziComponent } from '../lunding-page-azizi/lunding-page-azizi.component';
 import {Ng2TelInputModule} from 'ng2-tel-input';
+
+
 @NgModule({
   declarations: [
    LundingPageAziziComponent,

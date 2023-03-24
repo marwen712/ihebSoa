@@ -12,7 +12,9 @@ export class CustomNavBarComponent implements OnInit {
 
   navBarScroll:any
 
-
+  nav(e:any){
+    this.route.navigate([e])
+  }
   openSide(){
     this.element = document.getElementById("sideBar")
     this.element.style.display = "flex"
@@ -21,6 +23,26 @@ export class CustomNavBarComponent implements OnInit {
   closeSide(){
     this.element = document.getElementById("sideBar")
     this.element.style.display = "none"
+  }
+  openCloseDropSide(drop:any,drop2:any,drop3:any,drop4,drop5){
+    drop2.style.height="0px"
+    drop3.style.height="0px"
+    drop4.style.height="0px"
+    drop5.style.height="0px"
+  
+    console.log(drop.style.height ,"height")
+    if( drop.style.height == "0px" ){
+
+      drop.style.height="auto"
+      console.log("height")
+
+    }
+    else{
+
+      drop.style.height="0px"
+
+    }
+
   }
 
   ngOnInit(): void {

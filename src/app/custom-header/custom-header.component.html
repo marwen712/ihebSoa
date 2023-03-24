@@ -2,14 +2,14 @@
 	<div class="nav-bar-on-scroll-event">
 		<div class="logo"><img src="assets/images/logoHOCD.png" style="width: 20%;" alt="logo"></div>
 		<div class="menu-list">
-			<div class="item"><span>Home</span>
+			<div class="item"  (click)="nav('/')"  ><span>Home</span>
 				
 			</div>
 			<div class="item"><span>Buy</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item" (click)="nav('/appr')" >Appartements for sale</div>
-						<div class="drop-item"  (click)="nav('/vila')">Villas for sale</div>
+						<div class="drop-item"  ><a routerLink="/appr">Appartements for sale</a></div>
+						<div class="drop-item"  ><a routerLink="/vila"> Villas for sale</a></div>
 						
 						<div class="drop-item">Townhouses for sale</div>
 								<div class="drop-item">Retail for sale</div>
@@ -19,10 +19,11 @@
 			<div class="item"><span>Rent</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item" (click)="nav('/rent')">Appartements for rent</div>
-						<div class="drop-item" (click)="nav('/rent')">Villas for rent</div>
-						<div class="drop-item">Townhouses for sale</div>
-								<div class="drop-item">Retail for sale</div>
+						<div class="drop-item"  ><a routerLink="/rent">Appartements for rent</a></div>
+						<div class="drop-item"  ><a routerLink="/rent"> Villas for rent</a></div>
+						
+						<div class="drop-item">Townhouses for rent</div>
+								<div class="drop-item">Retail for  rent</div>
 						
 					</div>
 				</div>
@@ -30,11 +31,12 @@
 			<div class="item"><span>Off plan</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item">THE SANCTUARY</div>
-						<div class="drop-item">SPORTS CITY</div>
+						<div class="drop-item"><a routerLink="/Off-Plan/6408f8f7a29a570c73f5265f">THE SANCTUARY</a></div>
+						<div class="drop-item" ><a routerLink="/Off-Plan/63df155dd46a615cf44e7498">SPORTS CITY</a></div>
 						
-						<div class="drop-item">Germany Villas</div>
-						<div class="drop-item">STARZ By Danube</div>
+						<div class="drop-item"><a routerLink="/Off-Plan/63df075ed46a615cf44e73ce">Germany Villas</a></div>
+						<div class="drop-item"><a routerLink="/Off-Plan/63df0007d46a615cf44e73ae">STARZ By Danube</a></div>
+						<div class="drop-item"><a routerLink="/offs">Veiw more</a></div>
 					</div>
 				</div>
 			</div>
@@ -64,7 +66,7 @@
 	<div class="header-section-heart-of-chartage" style="background-image:url('https://www.que-faire-en-voyage.com/wp-content/uploads/2017/07/Vue-depuis-le-Burj-Khalifa-de-nuit-Attraction-Dubai.jpg');">
 		<div class="content">
 			<div class="header">
-				<div class="item"><i class="fa-solid fa-phone"></i><span>+1234567894</span></div>
+				<div class="item"><i class="fa-solid fa-phone"></i><span>+971582189263</span></div>
 				<div class="item"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></div>
 				<div class="item end"><i class="fa-solid fa-blog"></i><span>Blog</span></div>
 			</div>
@@ -74,8 +76,8 @@
 					<div class="item"><span>Buy</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item" (click)="nav('/appr')" >Appartements for sale</div>
-						<div class="drop-item"  (click)="nav('/vila')">Villas for sale</div>
+								<div class="drop-item" ><a routerLink="/appr" >Appartements for sale</a></div>
+						<div class="drop-item" ><a routerLink="/vila">Villas for sale</a></div>
 						
 						<div class="drop-item">Townhouses for sale</div>
 								<div class="drop-item">Retail for sale</div>
@@ -86,8 +88,8 @@
 					<div class="item"><span>Rent</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item" (click)="nav('/rent')" >Appartements for rent</div>
-						<div class="drop-item"  (click)="nav('/rent')">Villas for rent</div>
+								<div class="drop-item"  ><a routerLink="/rent" > Appartements for rent</a></div>
+						<div class="drop-item"  > <a routerLink="/rent"></a>Villas for rent</div>
 						
 						<div class="drop-item">Townhouses for rent</div>
 								<div class="drop-item">Retail for rent</div>
@@ -97,11 +99,12 @@
 					<div class="item"><span>Off plan</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item">THE SANCTUARY</div>
-						<div class="drop-item">SPORTS CITY</div>
+								<div class="drop-item"><a routerLink="/Off-Plan/6408f8f7a29a570c73f5265f">THE SANCTUARY</a></div>
+						<div class="drop-item" ><a routerLink="/Off-Plan/63df155dd46a615cf44e7498">SPORTS CITY</a></div>
 						
-						<div class="drop-item">Germany Villas</div>
-						<div class="drop-item">STARZ By Danube</div>
+						<div class="drop-item"><a routerLink="/Off-Plan/63df075ed46a615cf44e73ce">Germany Villas</a></div>
+						<div class="drop-item"><a routerLink="/Off-Plan/63df0007d46a615cf44e73ae">STARZ By Danube</a></div>
+						<div class="drop-item"><a routerLink="/offs">Veiw more</a></div>
 							</div>
 						</div>
 					</div>
@@ -140,7 +143,7 @@
 								<input type="text"  readonly (click)="openCloseDrop(dropSale)">
 								<i class="fa-solid fa-angle-down"></i>
 								<div class="drop-input" #dropSale>
-									<div class="item" *ngFor="let item of searchAllDropList.sale" (click)="selectItemSale(dropSaleMb,'saleRent',item)">{{item}}</div>
+                                    <div class="item" *ngFor="let item of searchAllDropList.sale" (click)=" selectItemSale(dropSale,item)" >{{item}}</div>
 								</div>
 							</div>
 						</div>
@@ -150,7 +153,7 @@
 								<input type="text" readonly (click)="openCloseDrop(dropProp)">
 								<i class="fa-solid fa-angle-down"></i>
 								<div class="drop-input" #dropProp>
-									<div class="item"*ngFor="let item of searchAllDropList.propertyType" (click)="selectItemP(dropProp,'propertyType',item)">{{item}}</div>
+                                    <div class="item"*ngFor="let item of searchAllDropList.propertyType"  (click)="selectItemP(dropProp,item)" >{{item}}</div>
 								</div>
 							</div>
 						</div>
@@ -161,7 +164,7 @@
 									<input type="text" readonly (click)="openCloseDrop(dropMinArea)">
 									<i class="fa-solid fa-angle-down"></i>
 									<div class="drop-input" #dropMinArea>
-										<div class="item" *ngFor="let item of searchAllDropList.minArea" (click)="selectItem(dropMinArea,'minArea',item)">{{item}}</div>
+                                        <div class="item" *ngFor="let item of searchAllDropList.minArea"  (click)="selectItemMin(dropMinArea,item)">{{item}}</div>
 									</div>
 								</div>
 							</div>
@@ -171,7 +174,7 @@
 									<input type="text" id="max" readonly (click)="openCloseDrop(dropMaxArea)">
 									<i class="fa-solid fa-angle-down"></i>
 									<div class="drop-input" #dropMaxArea>
-										<div class="item" *ngFor="let item of searchAllDropList.maxArea" (click)="selectItem(dropMaxArea,'maxArea',item)">{{item}}</div>
+										<div class="item" *ngFor="let item of searchAllDropList.maxArea"  (click)="selectItemMax(dropMaxArea,item)">{{item}}</div>
 									</div>
 								</div>
 							</div>
@@ -211,10 +214,10 @@
 			<div class="menu-list">
 				<div class="item" >
 					
-					<div class="item-title" (click)="openCloseDropSide(BuyListe,RentListe,off)" ><div >Buy</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="item-title" (click)="openCloseDropSide(BuyListe,RentListe,off,ser,dev,ab)" ><div >Buy</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #BuyListe>
-						<div class="drop-item" (click)="nav('/appr')" >Appartements for sale</div>
-						<div class="drop-item"  (click)="nav('/vila')">Villas for sale</div>
+						<div class="drop-item"  ><a routerLink="/appr">Appartements for sale</a></div>
+						<div class="drop-item"  ><a routerLink="/vila"> Villas for sale</a></div>
 						
 						<div class="drop-item">Townhouses for sale</div>
 								<div class="drop-item">Retail for sale</div>
@@ -222,30 +225,31 @@
 				</div>
 				<div class="item" >
 					
-					<div class="item-title" (click)="openCloseDropSide(RentListe,BuyListe,off)"><div >Rent</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="item-title" (click)="openCloseDropSide(RentListe,BuyListe,off,ser,dev,ab)"><div >Rent</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #RentListe>
-						<div class="drop-item" (click)="nav('/rent')" >Appartements for rent</div>
-						<div class="drop-item"  (click)="nav('/rent')">Villas forrent</div>
+						<div class="drop-item"  ><a routerLink="/rent">Appartements for rent</a></div>
+						<div class="drop-item"  ><a routerLink="/rent"> Villas for rent</a></div>
 						
 						<div class="drop-item">Townhouses for rent</div>
-								<div class="drop-item">Retail for rent</div>
+								<div class="drop-item">Retail for  rent</div>
 					</div>
 				</div>
 				<div class="item">
 					
-					<div class="item-title"  (click)="openCloseDropSide(off,RentListe,BuyListe)"><div>Off Plan</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="item-title"  (click)="openCloseDropSide(off,RentListe,BuyListe,ser,dev,ab)"><div>Off Plan</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #off >
-						<div class="drop-item">THE SANCTUARY</div>
-						<div class="drop-item">SPORTS CITY</div>
+						<div class="drop-item"><a routerLink="/Off-Plan/6408f8f7a29a570c73f5265f">THE SANCTUARY</a></div>
+						<div class="drop-item" ><a routerLink="/Off-Plan/63df155dd46a615cf44e7498">SPORTS CITY</a></div>
 						
-						<div class="drop-item">Germany Villas</div>
-						<div class="drop-item">STARZ By Danube</div>
+						<div class="drop-item"><a routerLink="/Off-Plan/63df075ed46a615cf44e73ce">Germany Villas</a></div>
+						<div class="drop-item"><a routerLink="/Off-Plan/63df0007d46a615cf44e73ae">STARZ By Danube</a></div>
+						<div class="drop-item"><a routerLink="/offs">Veiw more</a></div>
 					</div>
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
-					<div class="item-title"><div>devloppers</div><i class="fa-solid fa-angle-down"></i></div>
-					<div class="list">
+					<div class="item-title"  (click)="openCloseDropSide(dev,RentListe,BuyListe,ser,off,ab)"><div>devloppers</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="list" #dev>
 						<div class="drop-item"><div>Azizi</div></div>
 						<div class="drop-item"><div>Damac</div></div>
 						<div class="drop-item"><div>Danube</div></div>
@@ -254,8 +258,8 @@
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
-					<div class="item-title"><div>Services</div><i class="fa-solid fa-angle-down"></i></div>
-					<div class="list">
+					<div class="item-title"  (click)="openCloseDropSide(ser,RentListe,BuyListe,off,dev,ab)"><div>Services</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="list"#ser>
 						<div class="drop-item"><div>Sales</div></div>
 						<div class="drop-item"><div>Rent</div></div>
 						<div class="drop-item"><div>Cryptocurrency</div></div>
@@ -264,8 +268,8 @@
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
-					<div class="item-title"><div>Who we are</div><i class="fa-solid fa-angle-down"></i></div>
-					<div class="list">
+					<div class="item-title"  (click)="openCloseDropSide(ab,RentListe,BuyListe,ser,dev,off)"><div>Who we are</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="list" #ab>
 						<div class="drop-item"><div>About us </div></div>
 						<div class="drop-item"><div>Contact us </div></div>
 						<div class="drop-item"><div>Blog</div></div>
@@ -278,7 +282,7 @@
 	<div class="header-section-heart-of-chartage" style="background-image:url('https://www.que-faire-en-voyage.com/wp-content/uploads/2017/07/Vue-depuis-le-Burj-Khalifa-de-nuit-Attraction-Dubai.jpg');">
 		<div class="content">
 			<div class="header">
-				<div class="item"><i class="fa-solid fa-phone"></i><span>+1234567894</span></div>
+				<div class="item"><i class="fa-solid fa-phone"></i><span>+971582189263</span></div>
 				<div class="item"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></div>
 				<div class="item end"><i class="fa-solid fa-blog"></i><span>Blog</span></div>
 			</div>
@@ -296,7 +300,7 @@
 								<input type="text" readonly (click)="openCloseDrop(dropSaleMb)">
 								<i class="fa-solid fa-angle-down"></i>
 								<div class="drop-input" #dropSaleMb>
-									<div class="item" *ngFor="let item of searchAllDropList.sale" (click)="selectItemSale(dropSaleMb,'saleRent',item)">{{item}}</div>
+									<div class="item" *ngFor="let item of searchAllDropList.sale" (click)=" selectItemSale(dropSaleMb,item)" >{{item}}</div>
 								</div>
 							</div>
 						</div>
@@ -306,7 +310,7 @@
 								<input type="text"  readonly (click)="openCloseDrop(dropPropMb)">
 								<i class="fa-solid fa-angle-down"></i>
 								<div class="drop-input" #dropPropMb>
-									<div class="item"*ngFor="let item of searchAllDropList.propertyType" (click)="selectItemP(dropPropMb,'propertyType',item)">{{item}}</div>
+									<div class="item"*ngFor="let item of searchAllDropList.propertyType"  (click)="selectItemP(dropPropMb,item)" >{{item}}</div>
 								</div>
 							</div>
 						</div>
@@ -317,7 +321,7 @@
 									<input type="text" readonly (click)="openCloseDrop(dropMinAreaMb)">
 									<i class="fa-solid fa-angle-down"></i>
 									<div class="drop-input" #dropMinAreaMb>
-										<div class="item" *ngFor="let item of searchAllDropList.minArea" (click)="selectItemMin(dropMinAreaMb,'minArea',item)">{{item}}</div>
+										<div class="item" *ngFor="let item of searchAllDropList.minArea"  (click)="selectItemMin(dropMinAreaMb,item)">{{item}}</div>
 									</div>
 								</div>
 							</div>
@@ -327,7 +331,7 @@
 									<input type="text" readonly (click)="openCloseDrop(dropMaxAreaMb)" >
 									<i class="fa-solid fa-angle-down"></i>
 									<div class="drop-input" #dropMaxAreaMb>
-										<div class="item" *ngFor="let item of searchAllDropList.maxArea" (click)="selectItemMax(dropMaxAreaMb,'maxArea',item)">{{item}}</div>
+										<div class="item" *ngFor="let item of searchAllDropList.maxArea"  (click)="selectItemMax(dropMaxAreaMb,item)">{{item}}</div>
 									</div>
 								</div>
 							</div>

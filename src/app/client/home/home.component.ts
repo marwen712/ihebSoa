@@ -326,6 +326,7 @@ export class HomeComponent implements OnInit {
   
         this.tabVila=ob
         this.tabVila= this.tabVila.reverse().slice(0,3)
+        this.crud.tabVilaProd=this.tabVila
         this.crud.loadingVila=false
        
         console.log(this.tabVila)
@@ -340,6 +341,7 @@ export class HomeComponent implements OnInit {
 
       this.tabRent=ob
       this.tabRent= this.tabRent.reverse().slice(0,3)
+      this.crud.tabRentProd=this.tabRent
       this.crud.loadingRent=false
      
       console.log(this.tabRent)
@@ -354,6 +356,7 @@ export class HomeComponent implements OnInit {
 
       this.tabAppr=ob
       this.tabAppr=this.tabAppr.reverse().slice(0,3)
+      this.crud.tabApprProd=this.tabAppr
       this.crud.loadingAppr=false
      
       console.log(this.tabAppr)

@@ -9,13 +9,19 @@
 	position: fixed;
 	top: -100%;
 	z-index: 1000;
+	
 	box-shadow: 0 0 .5vw 0 	#00000059;
 	opacity: 0;
 	pointer-events: none;
 	transition: all .8s;
 
 }
-
+a{
+	color:#26374f
+}
+a:hover{
+	color:orange
+}
 .nav-bar-on-scroll-event .logo{
 
 	padding-left: 3%;
@@ -1413,7 +1419,12 @@ body{
 
 
 	}
-
+	a{
+		color:#fff
+	}
+	a:hover{
+		color:orange
+	}
 	.responsive-version .side-bar .content-side-bar .header-title .title{
 
 		width: 65%;

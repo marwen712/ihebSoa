@@ -26,13 +26,14 @@ const routes: Routes = [
  
   { path:"" , loadChildren:() => import('./client/home/home.module').then(x => x.HomeModule) },
   {path:'Azizi' , loadChildren:() => import('./azizi/azizi/azizi.module').then(x => x.AziziModule) },
+  {path:'admin' , loadChildren:() => import('./admin/admin/admin.module').then(x => x.AdminModule) },
   { path:"about", component:AboutComponent },
   { path:"vila", component:ProductsComponent },
   { path:"rent", component:ProducVilaComponent },
   { path:"appr", component:PrudcApparComponent },
   { path:"Off-Plan/:id", component:SingleProductComponent },
   { path:"contact-us", component:ContactUsComponent },
-  { path:"admin", component: DashComponent },
+ 
   { path:"off", component: OffPlanComponent },
   { path:"Vila/:id", component:Lunding2Component },
   { path:"Appr/:id", component:Lund3Component },

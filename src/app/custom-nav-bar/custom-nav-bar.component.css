@@ -1,3 +1,4 @@
+
 .nav-bar-on-scroll-event{
 
 	width: 100%;
@@ -15,7 +16,12 @@
 	transition: all .8s;
 
 }
-
+a{
+	color:#26374f
+}
+a:hover{
+	color:orange
+}
 .nav-bar-on-scroll-event .logo{
 
 	padding-left: 3%;
@@ -289,6 +295,12 @@
 		display: flex;
 		align-items: center;
 
+	}
+	a{
+		color: #fff
+	}
+	a:hover{
+		color:orange
 	}
 
 	.laptop-version{
@@ -597,10 +609,6 @@
 
 	}
 
-	.responsive-version .side-bar .content-side-bar .menu-list .item input:focus ~ .list{
-
-		height: 244px;
-
-	}
+	
 
 }

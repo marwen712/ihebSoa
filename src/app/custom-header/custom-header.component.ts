@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { CrudService } from '../services/crud.service';
+import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, NgForm, FormArray } from '@angular/forms';
 @Component({
   selector: 'app-custom-header',
   templateUrl: './custom-header.component.html',
   styleUrls: ['./custom-header.component.css']
 })
-export class CustomHeaderComponent implements OnInit {
+export class CustomHeaderComponent implements OnInit,OnDestroy {
 
   constructor( private route:Router ,private crud:CrudService) { }
 
@@ -21,7 +22,7 @@ export class CustomHeaderComponent implements OnInit {
   maxIdPc:any
   sale="Sale"
   prop="Property Type"
-
+ minn="hhhhh"
   nav(e){
     this.crud.isCustomNavBar = true
     this.route.navigate([e])
@@ -40,55 +41,78 @@ export class CustomHeaderComponent implements OnInit {
     minArea:"Min budget",
     maxArea:"Max budjet"
   }
+   open(){
 
-  selectItemSale(db:any,key:any,value:any){
+    console.log(this.saleId.style.height ,"height")
+    if( this.saleId.style.height == "0px" ){
 
-    this.formSearch[key] = value
+      this.saleId.style.height="auto"
+      console.log("height")
+
+    }
+    else{
+
+      this.saleId.style.height="0px"
+
+    }
+   }
+  selectItemSale(db:any,value:any){
+
+   // this.formSearch[key] = value
    this.sale=value
-    this.saleId.value= value
-    console.log(this.formSearch[key])
-    
-    this.openCloseDrop(db)
+    // this.saleId.value= value
+    //console.log(this.formSearch[key])
+    this.formSearch.saleRent=value
+    db.style.display="none" 
+   // this.openCloseDrop(db)
 
   }
-  selectItemP(db:any, key:any,value:any){
+  selectItemP(db:any,value:any){
 
-    this.formSearch[key] = value
+   // this.formSearch[key] = value
    this.prop=value
-   this.propId.value=value
+  //  this.propId.value=value
+   this.formSearch.propertyType=value
+  db.style.display="none" 
+
     console.log(this.prop,5555)
 
-    console.log(this.formSearch[key])
+   // console.log(this.formSearch[key])
 
-    this.openCloseDrop(db)
+    // this.openCloseDrop(db)
 
   }
 
-  selectItem(dp:any,key:any,value:any){
+  // selectItem(dp:any,key:any,value:any){
 
-    this.formSearch[key] = value
+  //   // this.formSearch[key] = value
    
-    console.log(this.formSearch[key])
+  //   // console.log(this.formSearch[key])
 
-    this.openCloseDrop(dp)
+  //   this.openCloseDrop(dp)
+
+  // }
+  selectItemMax(db:any,value:any){
+       
+    // this.formSearch[key] = value
+  // this.maxId.value=value
+  console.log( db.style.display,"display")
+   this.formSearch.maxArea=value
+   console.log( this.formSearch.maxArea,"value")
+    // console.log(this.formSearch[key])
+    db.style.display="none" 
+    // this.openCloseDrop(this.maxId)
 
   }
-  selectItemMax(db:any,key:any,value:any){
+  selectItemMin(db:any,value:any){
 
-    this.formSearch[key] = value
-   this.maxId.value=value
-    console.log(this.formSearch[key])
+    // this.formSearch[key] = value
+    this.formSearch.minArea=value
+  //  this.minId.value=value
+   db.style.display="none" 
+    // console.log(this.formSearch[key])
 
-    this.openCloseDrop(this.maxId)
-
-  }
-  selectItemMin(db:any,key:any,value:any){
-
-    this.formSearch[key] = value
-   this.minId.value=value
-    console.log(this.formSearch[key])
-
-    this.openCloseDrop(this.minId)
+    // this.openCloseDrop(this.minId)
 
   }
 search(){
@@ -106,6 +130,17 @@ search(){
     console.log("eee")
     this.route.navigate(["/rent"])
   }
+}
+affArea(){
+this.propId.style.display="block"
+console.log(55)
+}
+AffValueArea(item:any){
+  console.log(item)
+  this.formSearch.minArea=item
+  this.minId.value=item
+  this.minn=item
+  this.propId.style.display="none"
 }
   dropOpen = false
 
@@ -125,9 +160,12 @@ search(){
     }
 
   }
-  openCloseDropSide(drop:any,drop2:any,drop3:any){
+  openCloseDropSide(drop:any,drop2:any,drop3:any,drop4,drop5,drop6){
     drop2.style.height="0px"
     drop3.style.height="0px"
+    drop4.style.height="0px"
+    drop5.style.height="0px"
+    drop6.style.height="0px"
     console.log(drop.style.height ,"height")
     if( drop.style.height == "0px" ){
 
@@ -157,7 +195,7 @@ search(){
   ngOnInit(): void {
     this.crud.isCustomNavBar=false
  this.saleId= document.getElementById('sale')
- this.propId= document.getElementById('prop')
+ this.propId= document.getElementById('min2')
  this.minId= document.getElementById('min')
  this.maxId= document.getElementById('max')
  this.saleIdPc= document.getElementById('salePc')
@@ -180,6 +218,8 @@ search(){
     })
 
 }
-
+ngOnDestroy():void {
+  this.crud.isCustomNavBar=true
+}
 }
 
