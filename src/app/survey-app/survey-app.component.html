@@ -96,17 +96,17 @@
 			<div class="survey-form-client" id="formClientMobile">
 				<div class="form-content">
 					<div class="input">
-						<input type="text" placeholder="Full name"/>
+						<input type="text" placeholder="Full name" [(ngModel)]="user.name"/>
 						<br>
 						<label>First name</label>
 					</div>
 					<div class="input">
-						<input type="text" placeholder="Email"/>
+						<input type="text" placeholder="Email" [(ngModel)]="user.email"/>
 						<br>
 						<label>Email</label>
 					</div>
 					<div class="input">
-						<input   id="form3Example4c"  type="text" placeholder="Phone +971"/>
+						<input type="text" placeholder="Phone +971" [(ngModel)]="user.phone"/>
 						<br>
 						<label>Mobile</label>
 					</div>
@@ -238,17 +238,17 @@
 		<div class="survey-form-client" id="formClient">
 			<div class="form-content">
 				<div class="input">
-					<input type="text" placeholder="Full name"/>
+					<input type="text" placeholder="Full name" [(ngModel)]="user.name"/>
 					<br>
 					<label>First name</label>
 				</div>
 				<div class="input">
-					<input type="text" placeholder="Email"/>
+					<input type="text" placeholder="Email" [(ngModel)]="user.email"/>
 					<br>
 					<label>Email</label>
 				</div>
 				<div class="input">
-					<input type="text" placeholder="Phone +971"/>
+					<input type="text" placeholder="Phone +971" [(ngModel)]="user.phone"/>
 					<br>
 					<label>Mobile</label>
 				</div>

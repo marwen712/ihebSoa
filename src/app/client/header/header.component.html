@@ -155,7 +155,7 @@
           <div class="row">
               <div class="col-lg-12 text-center">
                   <h2 class="section-heading">ADVANTAGES OF INVESTING IN DUBAt</h2>
-                  <h3 class="section-subheading text-muted">Ajmal, I need help to learn how to tweak this part. I don't want this timeline crap. Haha.</h3>
+                  <h3 class="section-subheading text-muted">AWhy invest in Dubai's real estate market in 2023</h3>
               </div>
           </div>
           <div class="row">
@@ -168,11 +168,11 @@
                           <div class="timeline-panel">
                               <div class="timeline-heading">
                                   <h4>No property tax</h4>
-                                  <h4 class="subheading">Our Humble Beginnings</h4>
+                                  <h4 class="subheading">Real estate investment in Dubai </h4>
                               </div>
-                              <!-- <div class="timeline-body">
-                                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                              </div> -->
+                              <div class="timeline-body">
+                                  <p class="text-muted">Expats from around the world have always been drawn to Dubai for its tax-free lifestyle. Dubai is an attractive place to work because it provides the opportunity to grow your wealth without paying taxes. Think about it. How many countries in the world don’t levy any personal tax against your income</p>
+                              </div>
                           </div>
                       </li>
                       <li class="timeline-inverted">
@@ -182,11 +182,11 @@
                           <div class="timeline-panel">
                               <div class="timeline-heading">
                                   <h4>obtaining an investor visa</h4>
-                                  <h4 class="subheading">An Agency is Born</h4>
+                                  <h4 class="subheading">The UAE's 'Golden visa'</h4>
                               </div>
-                              <!-- <div class="timeline-body">
-                                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                              </div> -->
+                              <div class="timeline-body">
+                                  <p class="text-muted" >The golden Visa  is a long-term residence visa which enables foreign talents to live, work or study in the UAE while enjoying exclusive benefits </p>
+                              </div>
                           </div>
                       </li>
                       <li>
@@ -196,11 +196,11 @@
                           <div class="timeline-panel">
                               <div class="timeline-heading">
                                   <h4>public safety</h4>
-                                  <h4 class="subheading">Transition to Full Service</h4>
+                                  <h4 class="subheading">In addition to being one of the best places to live</h4>
                               </div>
-                              <!-- <div class="timeline-body">
-                                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                              </div> -->
+                               <div class="timeline-body">
+                                  <p class="text-muted"> Dubai is also one of the best places to raise a family due to its safe and secure surroundings. The crime rate is really low, and violent crimes are almost nonexistent</p>
+                              </div>
                           </div>
                       </li>
                       <li class="timeline-inverted">
@@ -212,9 +212,9 @@
                                   <h4>Gross annual income from 5 to 10%</h4>
                                   <h4 class="subheading">Phase Two Expansion</h4>
                               </div>
-                              <!-- <div class="timeline-body">
-                                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                              </div> -->
+                              <div class="timeline-body">
+                                  <p class="text-muted">We use innovative tools to capture value for investors and ensure excellence in returns, safety and service.</p>
+                              </div> 
                           </div>
                       </li>
                      
@@ -311,17 +311,17 @@
                               <div class="form-group">
                                   <input type="email" class="form-control" placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address." formControlName='email'>
                                   <p class="help-block text-danger" *ngIf="user.controls.email.hasError('required') && this.user.controls.email.touched" >emaile is require</p>
-                                  <p class="help-block text-danger"></p>
+                                  <p class="help-block text-danger" *ngIf="user.controls.email.hasError('email') && this.user.controls.email.touched"> email no exactly</p>
                               </div>
                               <div class="form-group">
                                 <input type="number" class="form-control" placeholder="Your phone *" id="phone" required="" data-validation-required-message="Please enter your email address." formControlName='phone'>
-                                <p class="help-block text-danger" *ngIf="user.controls.email.hasError('email') && this.user.controls.email.touched"> email no exactly</p>
+                                <p class="help-block text-danger" *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched"> phone is require</p>
                             </div>
                           </div>
                           <div class="col-md-6">
                               <div class="form-group">
                                   <textarea class="form-control" placeholder="Your Message *" id="message" required="" data-validation-required-message="Please enter a message." formControlName='project'></textarea>
-                                  <p class="help-block text-danger" *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched"> phone is require</p>
+                                 
                               </div>
                           </div>
                           <div class="clearfix"></div>
@@ -329,6 +329,9 @@
                               <div id="success"></div>
                               <button type="submit" class="btn btn-xl" [disabled]="!user.valid" (click)="envoyer()" >Send Message</button>
                           </div>
+                          <div class="alert alert-success" role="alert" *ngIf="al">
+                            <h4 style="font-weight: bold; ">  Successfully registered</h4>
+                               </div>
                       </div>
                   </form>
               </div>

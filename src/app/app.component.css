@@ -18,11 +18,11 @@
 }
 
 .feedback {
-	background-color : orange;
+	background-color : #C9A770;
 	color: white;
 	padding: 10px 20px;
 	border-radius: 4px;
-	border-color: orange;
+	border-color: #C9A770;
   }
   
   #mybutton {

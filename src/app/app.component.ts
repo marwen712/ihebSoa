@@ -17,7 +17,7 @@ export class AppComponent {
   public phone = "+971 58 218 9263"
  public messg = "ارسل الآن طلبك";
  
-  constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public crud:CrudService, private pixel: PixelService ){
+  constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public titl:Title, public crud:CrudService, private pixel: PixelService ){
 
   }
   openForm(){
@@ -40,13 +40,14 @@ export class AppComponent {
     this.meta.addTags([
       {
         name: 'keywords',
-        content:'estate dubai ,real estate, vila dubai, real estate developers dubai, azizi,عقارات  دبي,منازل  في دبي, ابراج دبي' // Keywords
+        content:'estate dubai ,real estate, villas dubai, real estate developers dubai, azizi,estate dubai ,property buy dubai,properties for sale in dubai,real estate, villas dubai, real estate developers dubai, azizi,luxury villas in dubai,luxury villas for sale in dubai,luxury villas for sale in dubai,houses for sale in dubai,apartments for sale in dubai,apartments for rent in dubai  عقارات  دبي,منازل  في دبي, ابراج دبي' // Keywords
 
       },
       { name: 'robots', content: 'index, follow' },
-      { name: 'description', content: 'Pick your Property with heartofcarthage and enjoy with our best offer   Find your Perfect Property in dubai with us.  Luxuary Properties, Wonderful Views , the comfortable life in waiting for you ' },
+      { name: 'description', content: 'Pick your Property with heartofcarthage and enjoy with our best offer   Find your Perfect Property in dubai with us.  Luxuary Properties, Wonderful Views , the comfortable life in waiting for you ,property buy dubai,properties for sale in dubai,luxury villas in dubail,uxury villas for sale in dubai,luxury villas for sale in dubai,houses for sale in dubai,apartments for sale in dubai,apartments for rent in dubai' },
 
     ]);
+    this.titl.setTitle( this.title);
     this.messagingService.requestPermission()
     this.messagingService.receiveMessage()
     this.message = this.messagingService.currentMessage

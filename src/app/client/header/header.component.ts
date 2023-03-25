@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit { 
+  al=false
   baseUrl=environment.baseURL 
   user= new FormGroup({
    
@@ -31,12 +32,19 @@ export class HeaderComponent implements OnInit {
 })
 
 envoyer(){
-  console.log(this.user.value)
+  this.al=false
+  console.log(this.user.value ,"ee")
   this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
          
     console.log(res.valueOf())
-    alert('Secessfull Registre')
+   this.al=true
   })
+ 
+  this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
+    console.log(res)})
+  
+    this.al=true
+
 }
  aff(value){
   console.log(value)

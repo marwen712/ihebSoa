@@ -59,8 +59,8 @@
 			<div class="item"><span>Who we are</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item end">
 					<div class="drop-content">
-						<div class="drop-item">About us</div>
-						<div class="drop-item">Contact us</div>
+						<div class="drop-item" ><a routerLink="/about">About us</a></div>
+						<div class="drop-item"><a routerLink="/contact-us">Contact us</a></div>
 						<div class="drop-item">Blog</div>
 						
 					</div>
@@ -187,10 +187,10 @@
 				</div>
 				<div class="item">
 					<input type="text" readonly name="">
-					<div class="item-title"  (click)="openCloseDropSide(ser,RentListe,BuyListe,off,dev)"><div>Services</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="item-title"  (click)="openCloseDropSide(ser,RentListe,BuyListe,off,dev)"><div>About</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list"#ser>
-						<div class="drop-item"><div>Sales</div></div>
-						<div class="drop-item"><div>Rent</div></div>
+						<div class="drop-item" ><a routerLink="/about">About us</a></div>
+						<div class="drop-item"><a routerLink="/contact-us">Contact us</a></div>
 						<div class="drop-item"><div>Cryptocurrency</div></div>
 						<div class="drop-item"><div>Golden visa</div></div>
 					</div>

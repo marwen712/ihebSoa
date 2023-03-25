@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../services/crud.service';
-
+import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, NgForm, FormArray } from '@angular/forms';
 @Component({
   selector: 'app-survey-app',
   templateUrl: './survey-app.component.html',
@@ -13,7 +13,7 @@ export class SurveyAppComponent implements OnInit {
   elementSurvey:any
   phoneScreen:any
   step = 0
-
+  user:any
   questions = [
 
     {
@@ -200,8 +200,8 @@ export class SurveyAppComponent implements OnInit {
 
   finishFormClient(){
     this.crud.sendEmail({
-      email:"ha9.0bib90@gmail.com",
-      text:JSON.stringify( JSON.stringify( this.answers))
+      email:"heartofcarthagedubai@gmail.com",
+      text:JSON.stringify( JSON.stringify( this.answers)) + " " +JSON.stringify( JSON.stringify( this.user)) 
     })
     this.elementSurvey = document.getElementById("formClient")
 
@@ -376,7 +376,10 @@ console.log(this.answers,"ee")
   }
 
   finishFormClientMobile(){
-    console.log(this.answers,'rr')
+    this.crud.sendEmail({
+      email:"heartofcarthagedubai@gmail.com",
+      text:JSON.stringify( JSON.stringify( this.answers)) + " " +JSON.stringify( JSON.stringify( this.user)) 
+    })
     this.elementSurvey = document.getElementById("formClientMobile")
     
     this.elementSurvey.style.display="none"
@@ -404,6 +407,11 @@ console.log(this.answers,"ee")
   ngOnInit(): void {
 
     this.phoneScreen = window.matchMedia('(max-width: 700px)')
+    this.user={
+      name:"",
+      email:"",
+      phone:""
+    }
 
     if(this.phoneScreen.matches){  
       setTimeout(()=>{
