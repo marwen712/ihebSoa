@@ -1,16 +1,5 @@
  <!-- ***** Main Banner Area Start ***** -->
- <div class="page-heading" id="top">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="inner-content">
-                    <h2>Villas & Townhouses</h2>
-                    <span>Awesome &amp; The Evolution of Luxury Starts Here</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+ 
 <!-- ***** Main Banner Area End ***** -->
 
 
@@ -32,41 +21,7 @@
       </div>
      
  
-        <div class="aa-latest-properties-content">
-         <div class="row" *ngIf="!loading">
-         
-            <div class="col-md-4"  *ngFor="let vila of tab; index as i">
-              <article class="aa-properties-item">
-                <a  class="aa-properties-item-img">
-                  <img [src]="vila.imgs[0]" alt="Villas for sale heart-of-carthage-dubai">
-                </a>                
-                <div class="aa-tag sold-out">
-               Vila
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>{{vila.room}} Rooms</span>
-                    <span>{{vila.bed}} Beds</span>
-                    <span>{{vila.bath}} Baths</span>
-                    <span>{{vila.surface}} SQ FT</span>
-                  </div>
-                  <div class="aa-properties-about">
-                    <h3><a style="color: #C9A770;">{{vila.title}}</a></h3>
-                    <p>{{vila. stitle}} {{vila. prix}}</p>                      
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price" style="color: orange;font-weight: bold;">
-                      {{vila.prixFinal}}  AED
-                    </span>
-                    <a  class="aa-secondary-btn" (click)="nav2(i)">View Details</a>
-                  </div>
-                </div>
-              </article>
-            
-          </div>
-          </div>
-        
-        </div>
+    
         <!--2-->
         
         <!--fin 2-->
@@ -74,3 +29,44 @@
     </div>
   </section>
 <!-- ***** Products Area Ends ***** -->
+<div class="container"   *ngIf="!loading">
+  <div class="row">
+    <div class="box col-md-4  col-sm-12 " style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
+      <div class="top" (click)="nav2(i)">
+        <img [src]="vila.imgs[0]" (click)="nav2(i)" alt="villa heart of carthage" />
+        <span (click)="nav2(i)"
+          ><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i
+        ></span>
+      </div>
+      <div class="bottom" (click)="nav2(i)">
+        <h3 >{{vila.title}}</h3>
+        <p>
+          {{vila. stitle}} 
+        </p>
+        <div class="advants">
+          <div>
+            <span>Bedrooms</span>
+            <div><i class="fas fa-th-large"></i><span>{{vila.bed}}</span></div>
+          </div>
+          <div>
+            <span>Bathrooms</span>
+            <div><i class="fas fa-shower"></i><span>{{vila.bath}} </span></div>
+          </div>
+          <div>
+            <span>Area</span>
+            <div>
+              <i class="fas fa-vector-square"></i
+              ><span>{{vila.surface}}<span>Sq Ft</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="price">
+          <span>For Sale</span>
+          <span>{{vila.prixFinal}} AED</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

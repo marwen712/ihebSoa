@@ -183,12 +183,17 @@
 					<div class="section right">
 						<div class="search-header">
 							<div class="input">
-								<input type="text"  placeholder="City / Community / Building">
+								<input type="text"  placeholder="code Project" >
+								
 							</div>
+							
 							<button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
 						</div>
 						<div class="input-search">
-							<input type="text" placeholder="Amenities" />
+							<input type="text" placeholder="City / Community / Building" (click)="openC()"  (input)="funcSearchCity($event)" [(ngModel)]="city"/>
+							<div class="drop-input" id="ee" style="background-color: aliceblue;display: none;">
+								<div class="item" *ngFor="let item of searchCty"  (click)="selectItemCity(item)">{{item}}</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -340,12 +345,18 @@
 					<div class="section right">
 						<div class="search-header">
 							<div class="input">
-								<input type="text" placeholder="City / Community / Building">
+								<input type="text" placeholder="code project" (click)="openCloseDrop(dropMaxAreaMb)">
+								<div class="drop-input" #dropMinArMb>
+									<div class="item" *ngFor="let item of searchAllDropList.minArea"  (click)="selectItemMin(dropMinAreaMb,item)">{{item}}</div>
+								</div>
 							</div>
 							<button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
 						</div>
 						<div class="input-search">
-							<input type="text" placeholder="Amenities" />
+							<input type="text" placeholder="City / Community / Building"   (input)="funcSearchCity($event)" [(ngModel)]="city"/>
+							<div class="drop-input" id="uu" style="background-color: aliceblue;display: none;">
+								<div class="item" *ngFor="let item of searchCty"  (click)="selectItemCity(item)">{{item}}</div>
+							</div>
 						</div>
 					</div>
 				</div>

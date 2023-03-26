@@ -18,12 +18,18 @@ export class Lunding2Component implements OnInit {
   public desc=""
   public imgs:any[]=[]
   public prix=""
+  public imgUpdate=""
+  public tabImageUpdate:any[]=[]
+  testWith=false
   video: any;
-
+  dublex:any
+  affichDesc=false
   public prixFinal=""
 
 
-
+  affImage(img){
+    this.imgUpdate=img
+  }
 
   tabim:any[]=[]
   customOptions: OwlOptions = {
@@ -35,7 +41,7 @@ export class Lunding2Component implements OnInit {
     autoWidth: true,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
       },
       600: {
         items: 2,
@@ -56,34 +62,35 @@ export class Lunding2Component implements OnInit {
       this.http.get(environment.baseURL+"/vila/"+this.route.snapshot.paramMap.get('id')+"/").subscribe(res=>{
        if(res.valueOf()){
           var ob:any         
-           ob=res.valueOf()  
+           ob=res.valueOf() 
+            this.dublex=ob 
            this.title=ob.title
            this.crud.project=ob.title
-          
            this.desc=ob.desc
            this.stitle=ob.stitle
            this.video=ob.video
            this.prix=ob.prix
-
            this.crud.lat=ob.lat
            this.crud.lng=ob.lng
            this.prixFinal=ob.prixFinal
-            this.crud.tabCarc=ob.carc
-            for (let i = 0; i < ob.imgs.length; i++) {
-              var img ={
-              
-                image: ob.imgs[i],
-                thumbImage: ob.imgs[i],
-                title: this.crud.project
-              }
-              this.imgs.push(img)
-              this.imgs.push( this.imgs[0])
-              }
-           this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
+           this.crud.tabCarc=ob.carc
+           this.tabImageUpdate=ob.imgs.slice(0,4)
+           for (let i = 0; i < ob.imgs.length; i++) {
+            var img ={
+            
+              image: ob.imgs[i],
+              thumbImage: ob.imgs[i],
+              title: this.crud.project
+            }
+            this.imgs.push(img)
+            this.imgs.push( this.imgs[0])
+
+            }
+            this.imgUpdate=this.imgs[0]. image
+                      this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
         //     this.off=ob          
         ////console.log(imgs)
-        console.log(ob)
-      
+        console.log(this.video)
         // this.tabim=this.off.imgs
          this.loadingOff=false
        }
@@ -91,8 +98,10 @@ export class Lunding2Component implements OnInit {
   }
 
   ngOnInit(): void {
-    
-  
+    console.log(window.innerWidth ,"witdh");
+    if(window.innerWidth>799){
+      this.testWith=true
+    }
   }
 
 }

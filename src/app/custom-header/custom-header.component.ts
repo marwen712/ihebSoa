@@ -1,5 +1,5 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, TitleStrategy } from '@angular/router';
 import { CrudService } from '../services/crud.service';
 import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, NgForm, FormArray } from '@angular/forms';
 @Component({
@@ -23,10 +23,39 @@ export class CustomHeaderComponent implements OnInit,OnDestroy {
   sale="Sale"
   prop="Property Type"
  minn="hhhhh"
+city=""
+ searchCty:string[]=["Sharjah",
+  "Al Ain",
+  "Ajman",
+  "Ras Al Khaimah",
+ "Fujairah",
+  "Umm Al Quwain"]
+  tabCity2:string[]=["Sharjah",
+  "Al Ain",
+  "Ajman",
+  "Ras Al Khaimah",
+ "Fujairah",
+  "Umm Al Quwain"]
+ selectItemCity(item){
+ 
+   this.city=item
+   this.propId.style.display="none"
+   this.propIdPc.style.display="none"
+ }
+ funcSearchCity(e:any){
+  this.searchCty=this.tabCity2
+  console.log(e.target.value,this.searchCty)
+  this.propIdPc.style.display="block"
+  this.propId.style.display="block"
+  this.searchCty=this.searchCty.filter(ele=>ele.includes(e.target.value )==true)
+ }
   nav(e){
     this.crud.isCustomNavBar = true
     this.route.navigate([e])
     console.log(5)
+  }
+  openC(){
+   this.propIdPc.style.display="block"
   }
   searchAllDropList = {
     sale:["Sale","Rent"],
@@ -195,13 +224,14 @@ AffValueArea(item:any){
   ngOnInit(): void {
     this.crud.isCustomNavBar=false
  this.saleId= document.getElementById('sale')
- this.propId= document.getElementById('min2')
+ this.propId= document.getElementById('uu')
  this.minId= document.getElementById('min')
  this.maxId= document.getElementById('max')
  this.saleIdPc= document.getElementById('salePc')
- this.propIdPc= document.getElementById('propPc')
+ this.propIdPc= document.getElementById('ee')
  this.minIdPc= document.getElementById('minPc')
  this.maxIdPc= document.getElementById('maxPc')
+ this.propIdPc.style.display="none"
     window.addEventListener("scroll",()=>{
 
       if(window.scrollY > 70){

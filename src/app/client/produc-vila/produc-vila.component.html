@@ -1,17 +1,5 @@
  <!-- ***** Main Banner Area Start ***** -->
- <div class="page-heading" id="top">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="inner-content">
-                    <h2>Rent</h2>
-                    <span>Awesome &amp; The Evolution of Luxury Starts Here</span>
-                  
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <!-- ***** Main Banner Area End ***** -->
 
 
@@ -35,44 +23,51 @@
       </div>
      
  
-        <div class="aa-latest-properties-content" style="margin-bottom: 20px;">
-         <div class="row" *ngIf="!loading">
-         
-            <div class="col-md-4"  *ngFor="let vila of tab; index as i">
-              <article class="aa-properties-item">
-                <a  class="aa-properties-item-img">
-                  <img [src]="vila.imgs[0]" alt="img">
-                </a>                
-                <div class="aa-tag for-rent">
-                Rent
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>{{vila.room}} Rooms</span>
-                    <span>{{vila.bed}} Beds</span>
-                    <span>{{vila.bath}} Baths</span>
-                    <span>{{vila.surface}} SQ FT</span>
-                  </div>
-                  <div class="aa-properties-about">
-                    <h3><a style="color: #C9A770;">{{vila.title}}</a></h3>
-                    <p>{{vila. stitle}} {{vila. prix}}</p>                      
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price" style="font-weight: blod;color: orange;">
-                      {{vila.prixFinal}} AED
-                    </span>
-                    <a  class="aa-secondary-btn" (click)="navRent(i)">View Details</a>
-                  </div>
-                </div>
-              </article>
-            
-          </div>
-          </div>
-        
-        </div>
+       
         <!--2-->
         
         <!--fin 2-->
       </div>
     </div>
   </section>
+  <div class="container"   *ngIf="!loading">
+    <div class="row">
+      <div class="box col-md-4  col-sm-12 " style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
+        <div class="top" (click)="navRent(i)">
+          <img [src]="vila.imgs[0]" (click)="navRent(i)" alt="villa heart of carthage" />
+          <span (click)="navRent(i)"
+            ><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i
+          ></span>
+        </div>
+        <div class="bottom" (click)="navRent(i)">
+          <h3 >{{vila.title}}</h3>
+          <p>
+            {{vila. stitle}} 
+          </p>
+          <div class="advants">
+            <div>
+              <span>Bedrooms</span>
+              <div><i class="fas fa-th-large"></i><span>{{vila.bed}}</span></div>
+            </div>
+            <div>
+              <span>Bathrooms</span>
+              <div><i class="fas fa-shower"></i><span>{{vila.bath}} </span></div>
+            </div>
+            <div>
+              <span>Area</span>
+              <div>
+                <i class="fas fa-vector-square"></i
+                ><span>{{vila.surface}}<span>Sq Ft</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="price">
+            <span>For Sale</span>
+            <span>{{vila.prixFinal}} AED</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  </div>
