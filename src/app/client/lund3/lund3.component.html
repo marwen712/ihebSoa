@@ -71,21 +71,47 @@
             </div>
             <div class="col-md-7">
                 <div class="main-description px-2">
-                    <div class="category text-bold">
+                    <div class="category text-bold ">
                         Category:Apartemments
                     </div>
-                    <div class="product-title text-bold my-3">
+                    <div class="product-title text-bold my-3 fontSize">
                         {{title}}
                     </div>
     
     
                     <div class="price-area my-4">
-                        <p class="old-price mb-1"><span class="old-price-discount text-danger">(20% off)</span></p>
-                        <p class="new-price text-bold mb-1">{{prixFinal}} AED</p>
-                        <p class="text-secondary mb-1">(Additional tax may apply on checkout)</p>
+                        <p class="old-price mb-1"><span class="old-price-discount text-danger">(-20% off)</span></p>
+                        <p class="new-price text-bold mb-1 fontSize">{{prixFinal}} AED</p>
+                        <p class="text-secondary mb-1">(0% commition/accept cryptocurrency)</p>
     
                     </div>
-    
+                    <ul class="list-group list-group-light" *ngIf="!testWith">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div>
+                            <div class="fw-bold"><i class="fas fa-shower"></i> </div>
+                            <div class="text-muted"> bathRoom</div>
+                         
+                          </div>
+                          <span class="badge rounded-pill badge-success">{{dublex.bath}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div>
+                            <div class="fw-bold"><i class="fas fa-th-large"></i> </div>
+                            <div class="text-muted"> bedRoom</div>
+                           
+                          </div>
+                          <span class="badge rounded-pill badge-success">{{dublex.bed}}</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                          <div>
+                            <div class="fw-bold"> <i class="fas fa-vector-square"></i
+                                ></div>
+                                <div class="text-muted">Area</div>
+                            
+                          </div>
+                          <span class="badge rounded-pill badge-success">{{dublex.surface}} Sq Ft</span>
+                        </li>
+                      </ul>
     
                     <div class="buttons d-flex my-5">
                         <div class="block">
@@ -134,33 +160,7 @@
              
             </div>
         </div>
-        <div class="row" *ngIf="!testWith">
-            <div class="col-md-5">
-                <ul class="list-group list-group-light">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                      <div>
-                        <div class="fw-bold">John Doe</div>
-                        <div class="text-muted">john.doe@gmail.com</div>
-                      </div>
-                      <span class="badge rounded-pill badge-success">Active</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                      <div>
-                        <div class="fw-bold">Alex Ray</div>
-                        <div class="text-muted">alex.ray@gmail.com</div>
-                      </div>
-                      <span class="badge rounded-pill badge-primary">Onboarding</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                      <div>
-                        <div class="fw-bold">Kate Hunington</div>
-                        <div class="text-muted">kate.hunington@gmail.com</div>
-                      </div>
-                      <span class="badge rounded-pill badge-warning">Awaiting</span>
-                    </li>
-                  </ul>
-            </div>
-        </div>
+       
     </div>
     
     

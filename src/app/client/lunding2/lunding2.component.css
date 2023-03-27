@@ -120,5 +120,13 @@ margin: 0;
             width: 100%;
             height: auto;
         }
-
+        .fontSize{
+            font-size: 20px;
+          }
+          .text-bold {
+            font-weight: 500;
+        }
+        .main-description .product-title {
+            font-size: 1.5rem;
+        }
     }

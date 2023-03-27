@@ -28,7 +28,7 @@ export class AppComponent {
   ngOnInit() {
 
 
-    if(!(window.location.pathname === "/")){
+    if(!(window.location.pathname === "/" || window.location.pathname === "/project" )){
 
       this.crud.isCustomNavBar = true
 

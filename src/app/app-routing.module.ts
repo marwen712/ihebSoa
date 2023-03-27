@@ -19,14 +19,16 @@ import { ProductOffPlanComponent } from './client/product-off-plan/product-off-p
 import { Home1Component } from './client/home1/home1.component';
 import { LoginComponent } from './admin/login/login.component';
 import { LundingPageAziziComponent } from './azizi/lunding-page-azizi/lunding-page-azizi.component';
-
+import { AccordComponent } from './client/accord/accord.component';
 import { HomeModule } from './client/home/home.module';
 import { AziziModule } from './azizi/azizi/azizi.module';
+import { LundProjectModule } from './client/lund-project/lund-project.module';
 const routes: Routes = [
  
   { path:"" , loadChildren:() => import('./client/home/home.module').then(x => x.HomeModule) },
   {path:'Azizi' , loadChildren:() => import('./azizi/azizi/azizi.module').then(x => x.AziziModule) },
   {path:'admin' , loadChildren:() => import('./admin/admin/admin.module').then(x => x.AdminModule) },
+  {path:'project' , loadChildren:() => import('./client/lund-project/lund-project.module').then(x => x.LundProjectModule) },
   { path:"about", component:AboutComponent },
   { path:"vila", component:ProductsComponent },
   { path:"rent", component:ProducVilaComponent },
@@ -42,7 +44,8 @@ const routes: Routes = [
   { path:"offs", component:ProductOffPlanComponent },
   { path:"home1", component:Home1Component },
   { path:"login", component: LoginComponent },
-  { path:"l", component:HeaderComponent },
+ 
+  
 ]
 
 @NgModule({
