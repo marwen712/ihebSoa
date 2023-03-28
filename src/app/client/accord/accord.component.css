@@ -8,6 +8,7 @@ body {
 	font-family: 'Open Sans', sans-serif !important;
     background: #fff;
     color: #222;
+     z-index: 500; 
 }
 
 .navbar-shrink{
@@ -22,7 +23,7 @@ header.masthead {
     position: relative;
     height: 100vh;
     background-color: #343a40;
-    background: url('https://images.pexels.com/photos/167480/pexels-photo-167480.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center;
+    background: url('https://www.que-faire-en-voyage.com/wp-content/uploads/2017/07/Vue-depuis-le-Burj-Khalifa-de-nuit-Attraction-Dubai.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -152,21 +153,21 @@ section#about {
 }
 
 .card:hover .my-social-btn.fb {
-    background: #205b9f;
+    background: #c38f3c;
 }
 .card:hover .my-social-btn.twitter {
-    background: #00ace3;
+    background: #c38f3c;
 }
 .card:hover .my-social-btn.google {
     background: #ff3921;
 }
 /*
 a.btn.btn-circle.my-social-btn.fb:hover {
-    background: #205b9f;
+    background: #c38f3c;
 }
 
 a.btn.btn-circle.my-social-btn.twitter:hover {
-    background: #00ace3;
+    background: #c38f3c;
 }
 
 a.btn.btn-circle.my-social-btn.google:hover {
@@ -187,21 +188,21 @@ a.btn.btn-circle.my-social-btn {
 .inner-section h3:after {
     content: '';
     position: absolute;
-    border-bottom: 4px solid #008ba3;
+    border-bottom: 4px solid #c38f3c;
     width: 100%;
     max-width: 10%;
     top: 37px;
     left: 0;
 }
 span.bg-main {
-    color: #008ba3;
+    color: #c38f3c;
 }
 
 hr.my-border {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border: 0;
-    border-top: 2px solid #008ba3;
+    border-top: 2px solid #c38f3c;
     width: 117px;
 }
 
@@ -212,7 +213,7 @@ hr.my-border {
 }
 
 .mybg-events {
-    background: url('https://images.pexels.com/photos/167491/pexels-photo-167491.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center fixed;
+    background: url('https://www.que-faire-en-voyage.com/wp-content/uploads/2017/07/Vue-depuis-le-Burj-Khalifa-de-nuit-Attraction-Dubai.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -330,7 +331,7 @@ section#group {
 }
 
 .mybg-music {
-    background: url('https://images.pexels.com/photos/1267317/pexels-photo-1267317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940') no-repeat center center fixed;
+    background: url('https://www.que-faire-en-voyage.com/wp-content/uploads/2017/07/Vue-depuis-le-Burj-Khalifa-de-nuit-Attraction-Dubai.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -360,7 +361,7 @@ section#artist {
 }
 
 a.link-color {
-    color: #008ba3;
+    color: #c38f3c;
     font-weight: bold;
 }
 
@@ -407,7 +408,7 @@ transform: scale(1.4);
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     right: 0;
     background-color: #111;
@@ -464,11 +465,11 @@ a.openNav {
     text-transform: uppercase;
 }
 .sidenav ul li:hover .nav-link {
-    color: #008ba3;
+    color: #c38f3c;
 }
 
 li.nav-item a:hover {
-    background: #008ba3;
+    background: #c38f3c;
     color: #ffffff !important;
 }
 

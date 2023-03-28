@@ -28,7 +28,7 @@ const routes: Routes = [
   { path:"" , loadChildren:() => import('./client/home/home.module').then(x => x.HomeModule) },
   {path:'Azizi' , loadChildren:() => import('./azizi/azizi/azizi.module').then(x => x.AziziModule) },
   {path:'admin' , loadChildren:() => import('./admin/admin/admin.module').then(x => x.AdminModule) },
-  {path:'project' , loadChildren:() => import('./client/lund-project/lund-project.module').then(x => x.LundProjectModule) },
+  {path:'Revera' , loadChildren:() => import('./client/lund-project/lund-project.module').then(x => x.LundProjectModule) },
   { path:"about", component:AboutComponent },
   { path:"vila", component:ProductsComponent },
   { path:"rent", component:ProducVilaComponent },

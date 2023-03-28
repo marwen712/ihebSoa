@@ -11,28 +11,35 @@ body {
 }
 
 #myVideo {
-  position: fixed;
+ 
   right: 0;
   bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+  width: 100%;
+  height: auto;
+  min-height:500px ;
 }
 
 .content {
   position: fixed;
   bottom: 0;
+  top: 200px;
+ max-height: 300px;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
+  z-index: 1;
+  text-align: center;
+ 
   padding: 20px;
 }
 
 #myBtn {
-  width: 200px;
+  width: 300px;
   font-size: 18px;
   padding: 10px;
+  margin-top: 30px;
   border: none;
-  background: #000;
+  background: #c38f3c;
   color: #fff;
   cursor: pointer;
 }
@@ -44,17 +51,22 @@ body {
 </style>
 
 <body>
-	<iframe  id="myVideo" src="https://www.youtube.com/embed/pxEWiz40xBo"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+	<iframe   id="myVideo" src="https://www.youtube.com/embed/pxEWiz40xBo?autoplay=1&mute=1"  ></iframe>
 <!-- <video autoplay muted loop id="myVideo">
   <iframe src="https://www.youtube.com/embed/pxEWiz40xBo" type="video/mp4">
   Your browser does not support HTML5 video.
 </video> -->
 
-<!-- <div class="content">
-  <h1>Heart OF Carthage</h1>
-  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
-  <button id="myBtn" >contact</button>
-</div> -->
+ <div class="content"  *ngIf="affBut">
+ <img src="assets/images/logoPh.png" alt="Azizi Revera" height="auto" width="10%">
+  <h2 style="color:#c38f3c">Get your apartment in revera Azizi</h2>
+ 
+  <button id="myBtn" (click)=" Navigate(Form )">ADD NOW</button>
+  
+</div> 
+<section >
+  <app-accord  ></app-accord>
+</section>
 
 <!-- <script>
 // var video = document.getElementById("myVideo");
@@ -70,6 +82,9 @@ body {
 //   if (video.paused) {
 /
 </script> -->
-
+<section  style="background: url('assets/images/img/2.png') center center;
+background-size: cover;background-attachment: fixed ;margin-bottom: 0px;" #Form>
+<app-form3></app-form3>
+</section>
 </body>
 

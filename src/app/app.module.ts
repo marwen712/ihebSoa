@@ -62,6 +62,7 @@ import { HeaderComponent } from './client/header/header.component';
 import { CustomNavBarComponent } from './custom-nav-bar/custom-nav-bar.component';
 import { ProdComponent } from './client/prod/prod.component';
 import { VideoComponent } from './client/video/video.component';
+import { Form3Component } from './client/form3/form3.component';
 //import { CustomHeaderComponent } from './custom-header/custom-header.component';
 
 
@@ -99,6 +100,7 @@ declarations: [
     NotBoxArabeComponent,
     NotBoxEnglishComponent,
     CustomNavBarComponent,
+  
    
    
  
