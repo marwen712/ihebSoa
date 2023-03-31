@@ -57,9 +57,9 @@ body {
   Your browser does not support HTML5 video.
 </video> -->
 
- <div class="content"  *ngIf="affBut">
+ <div class="content"   [class.selected]="scroll > 10">
  <img src="assets/images/logoPh.png" alt="Azizi Revera" height="auto" width="10%">
-  <h2 style="color:#c38f3c">Get your apartment in revera Azizi</h2>
+  <h2 style="color:#c38f3c;font-family:font-italic">Get your apartment in revera Azizi</h2>
  
   <button id="myBtn" (click)=" Navigate(Form )">ADD NOW</button>
   

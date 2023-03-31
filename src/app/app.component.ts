@@ -16,7 +16,7 @@ export class AppComponent {
   message:any
   public phone = "+971 58 218 9263"
  public messg = "ارسل الآن طلبك";
- 
+
   constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public titl:Title, public crud:CrudService, private pixel: PixelService ){
 
   }
@@ -27,7 +27,8 @@ export class AppComponent {
 
   ngOnInit() {
 
-
+   
+  
     if(!(window.location.pathname === "/" || window.location.pathname === "/Revera" )){
 
       this.crud.isCustomNavBar = true
