@@ -29,7 +29,7 @@ export class AppComponent {
 
    
   
-    if(!(window.location.pathname === "/" || window.location.pathname === "/Revera" )){
+    if(!(window.location.pathname === "/" || window.location.pathname === "/rev" )){
 
       this.crud.isCustomNavBar = true
 

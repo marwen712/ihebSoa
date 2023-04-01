@@ -22,15 +22,15 @@ body {
 .content {
   position: fixed;
   bottom: 0;
-  top: 200px;
- max-height: 300px;
+  top: 0px;
+
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
   z-index: 1;
   text-align: center;
  
-  padding: 20px;
+  padding: 50px;
 }
 
 #myBtn {
@@ -43,7 +43,15 @@ body {
   color: #fff;
   cursor: pointer;
 }
-
+.card {
+	border: 1px solid black;
+  background-color: transparent;
+	margin: 1em auto 0;
+	max-width: 100%;
+	padding: 1em;
+	width: 100%;
+  transform: scale(0.6);
+}
 #myBtn:hover {
   background: #ddd;
   color: black;
@@ -57,10 +65,15 @@ body {
   Your browser does not support HTML5 video.
 </video> -->
 
- <div class="content"   [class.selected]="scroll > 10">
+ <div class="content" id="cot"  [class.selected]="scroll > 10">
  <img src="assets/images/logoPh.png" alt="Azizi Revera" height="auto" width="10%">
   <h2 style="color:#c38f3c;font-family:font-italic">Get your apartment in revera Azizi</h2>
- 
+  <div class="card">
+    <h3><i class="fas fa-bullhorn"></i> 10%  Booking Amount</h3>
+    <h3>0% Interest Rate  For Paymen</h3>
+    <h3> $ Payment With
+      Cryptocurrency</h3>
+  </div>
   <button id="myBtn" (click)=" Navigate(Form )">ADD NOW</button>
   
 </div> 
