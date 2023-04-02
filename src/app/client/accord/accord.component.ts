@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CarouselSlideDirective, OwlOptions } from 'ngx-owl-carousel-o';
+import { CrudService } from 'src/app/services/crud.service';
 @Component({
   selector: 'app-accord',
   templateUrl: './accord.component.html',
@@ -27,9 +28,10 @@ export class AccordComponent implements OnInit {
       }
     }
   }
-  constructor() { }
+  constructor(private crud:CrudService) { }
 
   ngOnInit(): void {
+    this.crud.isCustomNavBar = false
   }
   
 }

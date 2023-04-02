@@ -65,7 +65,7 @@ city=""
   }
 
   formSearch = {
-    saleRent:"Sale",
+    saleRent:"Rent Or Sale",
     propertyType:"Property Type",
     minArea:"Min budget",
     maxArea:"Max budjet"
@@ -158,6 +158,9 @@ search(){
   if(this.sale =="Rent"){
     console.log("eee")
     this.route.navigate(["/rent"])
+  }
+  if(this.sale=="Rent Or Sale"){
+    alert ("choose sale or rent")
   }
 }
 affArea(){

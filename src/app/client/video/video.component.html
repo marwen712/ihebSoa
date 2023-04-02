@@ -1,5 +1,6 @@
 
 <style>
+
 * {
   box-sizing: border-box;
 }
@@ -43,18 +44,40 @@ body {
   color: #fff;
   cursor: pointer;
 }
+
 .card {
-	border: 1px solid black;
+	border: 1px solid transparent !important;
   background-color: transparent;
-	margin: 1em auto 0;
+	margin: 0.6 em auto 0;
 	max-width: 100%;
 	padding: 1em;
 	width: 100%;
-  transform: scale(0.6);
+  transform: scale(0.8);
+ text-align: left;
+    margin-left: 27%;
+   
 }
+
 #myBtn:hover {
   background: #ddd;
   color: black;
+
+}
+@media only screen and (max-width: 700px){
+  .content {
+    margin-top:30% ;
+  }
+  .card{
+    transform: scale(0.9);
+   text-align: left;
+    margin-left: 3%;
+  }
+ .hh{
+    font-size: 15px !important;
+  }
+  .h22{
+    font-size: 1.5rem;
+  }
 }
 </style>
 
@@ -67,12 +90,11 @@ body {
 
  <div class="content" id="cot"  [class.selected]="scroll > 10">
  <img src="assets/images/logoPh.png" alt="Azizi Revera" height="auto" width="10%">
-  <h2 style="color:#c38f3c;font-family:font-italic">Get your apartment in revera Azizi</h2>
-  <div class="card">
-    <h3><i class="fas fa-bullhorn"></i> 10%  Booking Amount</h3>
-    <h3>0% Interest Rate  For Paymen</h3>
-    <h3> $ Payment With
-      Cryptocurrency</h3>
+  <h2  class="h22" style="color:#c38f3c;font-family:font-italic">Get your apartment in revera Azizi</h2>
+  <div class="card wow bounceInUp" data-wow-duration="2s">
+    <h3 class="hh"><i class="fas fa-check" style="color: orange;"></i> 10%  Booking Amount</h3>
+    <h3 class="hh"><i class="fas fa-check" style="color: orange;"></i> 0% Interest Rate  For Paymen</h3>
+    <h3 class="hh"> <i class="fas fa-check" style="color: orange;"></i> Payment With Cryptocurrency</h3>
   </div>
   <button id="myBtn" (click)=" Navigate(Form )">ADD NOW</button>
   
@@ -81,20 +103,7 @@ body {
   <app-accord  ></app-accord>
 </section>
 
-<!-- <script>
-// var video = document.getElementById("myVideo");
-// var btn = document.getElementById("myBtn");
 
-// function myFunction() {/     video.play();
-//     btn.innerHTML = "Pause";
-//   } else {
-//     video.pause();
-//     btn.innerHTML = "Play";
-//   }
-// }
-//   if (video.paused) {
-/
-</script> -->
 <section  style="background: url('assets/images/img/2.png') center center;
 background-size: cover;background-attachment: fixed ;margin-bottom: 0px;" #Form>
 <app-form3></app-form3>
