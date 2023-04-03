@@ -9,6 +9,8 @@ import { CrudService } from 'src/app/services/crud.service';
 export class AccordComponent implements OnInit {
   pass=""
   log=""
+tabImages:any=[]
+images:any=[]
  public  customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -28,9 +30,11 @@ export class AccordComponent implements OnInit {
       }
     }
   }
-  constructor(private crud:CrudService) { }
+  constructor(public crud:CrudService) { }
 
   ngOnInit(): void {
+   this.tabImages=this.crud.rev[this.crud.id2].images
+   this.images=this.crud.rev[this.crud.id2].images.slice(0,4)
     this.crud.isCustomNavBar = false
   }
   

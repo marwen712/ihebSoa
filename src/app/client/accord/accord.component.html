@@ -80,30 +80,22 @@
             <div class="row">
                 <div class="col-md-4 mb-3 wow bounceInUp" data-wow-duration="1.4s">
                     <div class="big-img">
-                        <img src="https://riviera-meydan.ae/wp-content/uploads/2020/10/azizi-riviera-10383-768x513.jpg" class="img-fluid">
+                        <img [src]="images[0]" class="img-fluid">
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="inner-section wow fadeInUp">
-                        <h3>RIVIERA, <span class="bg-main"> VILLE MBR</span></h3>
+                        <h3>{{this.crud.rev[this.crud.id2].titleHtml1}}<span class='bg-main'> {{this.crud.rev[this.crud.id2].titleHtml2}}</span></h3> 
                         <br>
                         <p class="text-justify">
-                            The concept of Azizi Riviera is borrowed from the French Riviera. The buildings and spaces around them have been designed to emulate Mediterranean contemporary living. The open spaces and public areas offer ‘several conveniences’, while the clean lines and modern glass and wood facades combine to remind you that this is not really France.</p>
+                            {{this.crud.rev[this.crud.id2].desc}}</p>
 
                         <div class="linear-grid">
                             <div class="row">
-                                <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s" >
-                                    <img src="https://riviera-meydan.ae/wp-content/uploads/2020/10/15543660971390344841-768x384.jpg" class="img-thumbnail">
+                                <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s" *ngFor="let img of images" >
+                                    <img [src]='img' class="img-thumbnail">
                                 </div>
-                                <div class=" col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s">
-                                    <img src="https://riviera-meydan.ae/wp-content/uploads/2020/10/15543660971571898630-768x384.jpg" class="img-thumbnail">
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s">
-                                    <img src="https://riviera-meydan.ae/wp-content/uploads/2020/10/1579530258517307613-768x384.jpg" class="img-thumbnail">
-                                </div>
-                                <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s">
-                                    <img src="https://riviera-meydan.ae/wp-content/uploads/2020/10/1583822440816180962-768x384.jpg" class="img-thumbnail">
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -118,11 +110,11 @@
                     <table class="table table-striped text-successtable-border border-ligh" >
                         <tbody>
                           <tr>
-                            <th >Proprytes types</th>
+                            <th ><i class="fas fa-building"> </i>Proprytes types</th>
                         
-                            <th>Unit types</th>
+                            <th><i class="fas fa-bed"> </i>Unit types</th>
                           
-                            <th >Price</th>
+                            <th ><i class="far fa-money-bill-alt"></i>Price</th>
                    
                             
                           </tr>
@@ -210,14 +202,14 @@
             
             <div class="row">
                 <div class="col-md-12 wow fadeInUp">
-                    <h3 class="title-heading text-center">Revera Azizi</h3>
+                    <h3 class="title-heading text-center">{{this.crud.rev[this.crud.id2].title}}</h3>
                     <p class="myp text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 </div>
             </div>
             <div class="row wow slideInLeft" data-wow-duration="3s">
                 <div class="col-md-4 mb-3">
                     <div class="big-img2">
-                        <img src="https://dubai-property.investments/uploads/images/2022-02/hbtrthb.jpg" class="img-fluid">
+                        <img [src]="tabImages[5]" class="img-fluid">
                     </div>
                     
                 </div>
@@ -227,12 +219,12 @@
                             <div class="row">
                                 <div class="col-sm-6 col-md-4 mb-3">
                                    
-                                    <img src="https://dubai-property.investments/uploads/images/2022-02/hgrthbrtfg.jpg" class="img-fluid">
+                                    <img [src]="tabImages[6]"class="img-fluid">
                                     
                                 </div>
                                 <div class="col-sm-6 col-md-8 mb-3 ">
                                     
-                                    <img src="https://dubai-property.investments/uploads/images/2022-02/ftg4regver.jpg" class="img-fluid">
+                                    <img [src]="tabImages[7]" class="img-fluid">
                                 
                                 </div>
 
@@ -251,7 +243,7 @@
                                 </div>
                                 <div class=" col-md-4 ">
                                      
-                                    <img src="https://dubai-property.investments/uploads/images/2022-05/Riviera2.jpg" class="img-fluid">
+                                    <img [src]="tabImages[8]" class="img-fluid">
                                 
                                 </div>
                             </div>
@@ -268,95 +260,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 wow fadeInUp">
-                    <h3 class="title-heading text-center font-weight-bold">Revera Azizi</h3>
-                    <p class="myp text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <h3 class="title-heading text-center font-weight-bold">{{this.crud.rev[this.crud.id2].title}}</h3>
+                    <p class="myp text-center">We go beyond traditional investment and offer only
+the best customized solutions to our investors.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
+                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s" *ngFor="let img of tabImages">
                     <div class="music-gal item box">
-                        <a href="https://dubai-property.investments/uploads/images/2022-06/caa6c4204ca1d1019f8de5583f5c8a7b_1364x768.jpg" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-06/caa6c4204ca1d1019f8de5583f5c8a7b_1364x768.jpg">
+                        <a [href]="img" class="fancybox" rel="ligthbox">
+                        <img class="img-fluid" [src]="img" alt="heart of carthage dubai ">
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://dubai-property.investments/uploads/images/2021-08/Azizi-Riviera-Meydan-Dubai-UAE-4.jpgg" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2021-08/Azizi-Riviera-Meydan-Dubai-UAE-4.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://dubai-property.investments/uploads/images/2022-05/Riviera3.jpg" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-05/Riviera3.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://dubai-property.investments/uploads/images/2022-02/hgrthbrtfg.jpg" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-02/hgrthbrtfg.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://images.pexels.com/photos/876713/pexels-photo-876713.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-02/tg45regyer.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://images.pexels.com/photos/258732/pexels-photo-258732.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2021-08/Azizi-Riviera-Meydan-Dubai-UAE-4.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://images.pexels.com/photos/210887/pexels-photo-210887.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2021-08/Azizi-Riviera-Meydan-Dubai-UAE-4.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://images.pexels.com/photos/210922/pexels-photo-210922.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-05/Riviera1.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://images.pexels.com/photos/756242/pexels-photo-756242.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-05/Riviera1.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://images.pexels.com/photos/167589/pexels-photo-167589.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-06/caa6c4204ca1d1019f8de5583f5c8a7b_1364x768.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://images.pexels.com/photos/167626/pexels-photo-167626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-02/hbtrthb.jpg">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-2 mt-4 gal-item wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="music-gal item box">
-                        <a href="https://images.pexels.com/photos/167527/pexels-photo-167527.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" class="fancybox" rel="ligthbox">
-                        <img class="img-fluid" src="https://dubai-property.investments/uploads/images/2022-02/tg45regyer.jpg">
-                        </a>
-                    </div>
-                </div>
+              
 
             </div>
         </div>
@@ -366,65 +283,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto wow fadeInUp">
-                    <h3 class="text-center font-weight-bold">Revera <span class="bg-main">Place</span>Azizi</h3>
-                    <p class=" text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <h3 class="text-center font-weight-bold">Owning in Dubai <span class="bg-main">is an </span>Investment</h3>
+                    <p class=" text-center">We go beyond traditional investment and offer only
+                        the best customized solutions to our investors.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-4 mt-4 wow bounceInUp" data-wow-duration="1.4s">
+                <div class="col-sm-6 col-md-4 col-lg-4 mt-4 wow bounceInUp" data-wow-duration="1.4s" *ngFor="let project of crud.rev">
                     <div class="card">
-                        <img class="card-img-top h-262" src="https://riviera-meydan.ae/wp-content/uploads/2020/10/2-1.jpg">
+                        <img class="card-img-top h-262" [src]="project.images[0]">
                         <div class="card-block">
-
-                            <h4 class="card-title">Revera phase 1</h4>
-
+    
+                            <h4 class="card-title">{{project.title}}</h4>
+    
                             <div class="card-text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+                                <p>{{project.sTitle}}</p>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <small>$ 170</small>
-                            <a href="#" class="pull-right">More Info</a>
+                            <small> {{project.price}}</small>
+                            <a routerLink="/real-estate/{{project.id}}" style="color: orange;" class="pull-right">More Info</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 mt-4 wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="card">
-                        <img class="card-img-top h-262" src="https://riviera-meydan.ae/wp-content/uploads/2020/10/3-1.jpg">
-                        <div class="card-block">
-
-                            <h4 class="card-title">Revera phase 2</h4>
-
-                            <div class="card-text">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <small>$ 170</small>
-                            <a href="#" class="pull-right">More Info</a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4 col-lg-4 mt-4 wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="card">
-                        <img class="card-img-top h-262" src="https://riviera-meydan.ae/wp-content/uploads/2020/10/1-1.jpg">
-                        <div class="card-block">
-
-                            <h4 class="card-title ">Revera phase 3</h4>
-
-                            <div class="card-text ">
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <small>$ 170</small>
-                            <a href="#" class="pull-right">More Info</a>
-
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -433,23 +315,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 mx-auto wow fadeInUp">
-                    <h3 class="text-center font-weight-bold">FEATURED <span class="bg-main">PROPERTIES</span> Revera</h3>
+                    <h3 class="text-center font-weight-bold">FEATURED <span class="bg-main">PROPERTIES</span> Dubai</h3>
                     <p class=" text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-6 mt-4 wow bounceInUp" data-wow-duration="1.4s">
                     <div class="big-img-3">
-                        <img src="https://riviera-meydan.ae/wp-content/uploads/2020/10/3-1.jpg" class="img-fluid">
+                        <img [src]='tabImages[4]' class="img-fluid">
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-6 mt-4">
                     <div class="my-right-text wow fadeInUp">
 
-                        <p class="text-justify font-italic">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets. remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+                        <p class="text-justify font-italic">{{crud.rev[crud.id2].descFinale}}</p>
 
-                        <a href="#" class="link-color">Revera</a>
-                        <p class="text-muted">Lorem Ipsum Dolor Sit Amet</p>
+                        <a href="#" class="link-color">Dubai</a>
+                        <p class="text-muted">The Evolution of Luxury Starts Here</p>
                     </div>
                 </div>
 

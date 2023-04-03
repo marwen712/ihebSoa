@@ -38,8 +38,9 @@ import { ChooseClientComponent } from '../choose-client/choose-client.component'
 import { CustomHeaderComponent } from 'src/app/custom-header/custom-header.component';
 import { ProdComponent } from '../prod/prod.component';
 import { CardComponent } from '../card/card.component';
+import { SectionAnimationComponent  } from '../section-animation/section-animation.component';
 @NgModule({
-  declarations: [ HomeComponent,ChooseClientComponent, CustomHeaderComponent,HeaderComponent,ProdComponent,CardComponent ],
+  declarations: [ HomeComponent,ChooseClientComponent, CustomHeaderComponent,HeaderComponent,ProdComponent,CardComponent, SectionAnimationComponent ],
   imports: [
     CommonModule,
     HomeRoutingModule,

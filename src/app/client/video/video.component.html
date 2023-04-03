@@ -82,7 +82,7 @@ body {
 </style>
 
 <body>
-	<iframe   id="myVideo" src="https://www.youtube.com/embed/pxEWiz40xBo?autoplay=1&mute=1"  ></iframe>
+	<iframe   id="myVideo" [src]=video ></iframe>
 <!-- <video autoplay muted loop id="myVideo">
   <iframe src="https://www.youtube.com/embed/pxEWiz40xBo" type="video/mp4">
   Your browser does not support HTML5 video.
@@ -90,7 +90,7 @@ body {
 
  <div class="content" id="cot"  [class.selected]="scroll > 10">
  <img src="assets/images/logoPh.png" alt="Azizi Revera" height="auto" width="10%">
-  <h2  class="h22" style="color:#c38f3c;font-family:font-italic">Get your apartment in revera Azizi</h2>
+  <h2  class="h22" style="color:#c38f3c;font-family:font-italic">Get your apartment in {{crud.rev[id].title}}</h2>
   <div class="card wow bounceInUp" data-wow-duration="2s">
     <h3 class="hh"><i class="fas fa-check" style="color: orange;"></i> 10%  Booking Amount</h3>
     <h3 class="hh"><i class="fas fa-check" style="color: orange;"></i> 0% Interest Rate  For Paymen</h3>

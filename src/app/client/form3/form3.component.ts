@@ -12,7 +12,6 @@ import * as  AOS from 'aos';
 })
 export class Form3Component implements OnInit {
 
-
   baseUrl=environment.baseURL
   
   images = [
@@ -66,6 +65,7 @@ export class Form3Component implements OnInit {
   constructor(private http:HttpClient , public crud:CrudService) {  AOS.init();}
     
       ngOnInit(): void {
+        this.crud.project=this.crud.rev[this.crud.id2].title
   //       const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8',"aut":""});
     
   // const requestOptions = { headers: headers };

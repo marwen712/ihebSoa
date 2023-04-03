@@ -7,6 +7,118 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CrudService {
+  id2:any
+  rev:any[]=[
+    
+    { id:0,
+      price:"for 300k AED",
+      title:"RIVIERA",
+      video:"https://www.youtube.com/embed/pxEWiz40xBo?autoplay=1&mute=1" ,
+      titleHtml1:"RIVIERA",
+      titleHtml2: "VILLE MBR",
+      sTitle:"The concept of Azizi Riviera is borrowed from the French Riviera. The buildings and spaces around them have been designed to emulate Mediterranean contemporary living",
+      desc:"The concept of Azizi Riviera is borrowed from the French Riviera. The buildings and spaces around them have been designed to emulate Mediterranean contemporary living. The open spaces and public areas offer ‘several conveniences’, while the clean lines and modern glass and wood facades combine to remind you that this is not really France.",
+      descFinale:"Riviera is one of Azizi’s flagship developments located in Meydan at the heart of Mohammed Bin Rashid City (MBR City) in Dubai. In a prime location, close to Meydan Racecourse, the home of The Dubai World Cup and a variety of sports and leisure facilities, Riviera offers a desirable address and is within close proximity to Downtown Dubai and Dubai International Airport. Inspired by the French Riviera, the iconic mixed-use community will be home to residential apartments, retail outlets and a variety of onsite amenities. Riviera comprises of various mid-rise residential buildings with a variety of retail outlets at ground floor level. Each individual building will benefit from a swimming pool, landscaped gardens and a gym. Key attractions will include a beautiful crystal lagoon and beach spanning 2km, a beautiful palm tree lined boulevard and numerous community parks. Residential properties include studios, one, two and three bedroom apartments offering a variety of different views ranging from orientation towards Downtown Dubai and Burj Khalifa to community pool and canal views. Riviera will also feature a wide variety of cafes and restaurants, convenience stores and shops.",
+      images:[
+        "https://heart-of-carthage-dubai.com/backend/uploads/16755625067961668403583.jpg",
+        "https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
+        "https://heart-of-carthage-dubai.com/backend/uploads/167556250311316462266821501584749.jpg",
+      "https://heart-of-carthage-dubai.com/backend/uploads/16755625067961668403583.jpg",
+      "https://riviera-meydan.ae/wp-content/uploads/2020/10/2-1.jpg",
+      "https://riviera-meydan.ae/wp-content/uploads/2020/10/1579530258517307613.jpg",
+      "https://riviera-meydan.ae/wp-content/uploads/2020/10/1583822440816180962.jpg",
+      "https://riviera-meydan.ae/wp-content/uploads/2020/10/1554366097545239867.jpg",
+      "https://riviera-meydan.ae/wp-content/uploads/2020/10/15543660971850878787.jpg",
+      "https://riviera-meydan.ae/wp-content/uploads/2020/10/1579530258434495137.jpg",
+      "https://riviera-meydan.ae/wp-content/uploads/2020/10/15838224401319217530.jpg",
+      "https://riviera-meydan.ae/wp-content/uploads/2020/10/4-768x513.jpg",
+      "https://heart-of-carthage-dubai.com/backend/uploads/16755625067961668403583.jpg",
+
+
+
+    ]
+  
+  
+  },
+  { id:1,
+    video: "https://www.youtube.com/embed/6rr0-a5AOnw?autoplay=1&mute=1",
+    sTitle:" Shape your happy life in this collection of five tastefully constructed buildings encircling a busy inner courtyard just yards from a 700-meter stretch of Creek Beach beach",
+    price:"for 350k AED",
+    title:"Germany Villas",
+  titleHtml1:"Germany",
+  titleHtml2:'Villas',   
+  descFinale:"Shape your happy life in this collection of five tastefully constructed buildings encircling a busy inner courtyard just yards from a 700-meter stretch of Creek Beach beach. With its length along the shimmering canal that connects the island to the mainland, Creek Beach was designed to provide you with the best getaway for your family. This is paradise reborn, from the 700 meters of immaculate white sand to the infinity pool and breathtaking sunset views. At Grove, a residential property is created by skillfully fusing a superb location, great design, and a diverse lifestyle. Grove, which consists of five exquisite buildings, provides the ideal homes away from the hustle and bustle of the city while taking advantage of Creek Beach's distinctively pedestrian-friendly atmosphere. With a wide range of amenities and areas where you can relax, rest, reconnect, and indulge, Grove offers you an unrivaled lifestyle. The distinction is completely made by an infinity pool and easy access to the 700-meter beach! You'll learn more about what matters most at Dubai Creek Harbour. more jokes told among pals. Making more memories. a thriving neighborhood where people may live, work, play, and record special moments. a house with breathtaking views from every window.",
+  desc:"The exclusive domains of buyers with an eye for great and grand places. These modern and sleek villas are equipped with high technology and sustainable features with panoramic views and commanding details, such as floor to ceiling windows and suspended staircases, designed to make staycations and holidays unforgettable.",
+
+
+  images:[
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560670063Germany-Villas-Gallery-1.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560672089Germany-Villas-Gallery-2.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560689835Germany-Villas-Gallery-8.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560717608Germany-Villas-Gallery-10.jpg",
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560670063Germany-Villas-Gallery-1.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560672089Germany-Villas-Gallery-2.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560689835Germany-Villas-Gallery-8.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560717608Germany-Villas-Gallery-10.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560670063Germany-Villas-Gallery-1.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560672089Germany-Villas-Gallery-2.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560689835Germany-Villas-Gallery-8.jpg",
+
+"https://heart-of-carthage-dubai.com/backend/uploads/1675560717608Germany-Villas-Gallery-10.jpg",
+
+
+
+
+]
+
+
+},
+{ id:2,
+  video: "https://www.youtube.com/embed/WOY1Fnw2R0I",
+  sTitle:"Beach oasis in dubai STUDIO CITY Dubai Studio City is not only the hub for cutting-edge facilities and services to companies across the media and entertainment",
+  price:"for 299k AED",
+  title:"Studio City",
+titleHtml1:"Studio",
+titleHtml2:" City",
+descFinale:"Dubai Studio City is not only the hub for cutting-edge facilities and services to companies across the media and entertainment sector but is also in vicinity to some of the emirate’s most sensational leisure and lifestyle options. Beach Oasis is a stylish address destined for the free-spirited seeking thrilling outdoor experiences and memories. Connect, innovate, and re-energise in your space of maximised comfort, convenience, and possibilities.",
+desc:"Dubai Studio City is not only the hub for cutting-edge facilities and services to companies across the media and entertainment sector but is also in vicinity to some of the emirate’s most sensational leisure and lifestyle options.",
+
+
+images:[
+
+"https://azizidevelopments.com/assets/images/properties/beach-oasis/1665579700748337076.jpg",
+
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcodO8Jx9ppT20QXF7V0mnNdAlHxpe5NRLJHutvduDlEuvBlKOsvMWO2Z7yqRD6UmTpRE&usqp=CAU",
+
+"https://manage.tanamiproperties.com/Gallery/1126/Thumb/7859.webp",
+
+"https://cms.propjunction.com/Gallery/772/Thumb/5769.webp",
+"https://riviera-meydan.ae/wp-content/uploads/2020/10/1579530258517307613.jpg",
+"https://riviera-meydan.ae/wp-content/uploads/2020/10/1583822440816180962.jpg",
+"https://riviera-meydan.ae/wp-content/uploads/2020/10/1554366097545239867.jpg",
+"https://riviera-meydan.ae/wp-content/uploads/2020/10/15543660971850878787.jpg",
+"https://riviera-meydan.ae/wp-content/uploads/2020/10/1579530258434495137.jpg",
+"https://riviera-meydan.ae/wp-content/uploads/2020/10/15838224401319217530.jpg",
+"https://riviera-meydan.ae/wp-content/uploads/2020/10/4-768x513.jpg",
+"https://heart-of-carthage-dubai.com/backend/uploads/16755625067961668403583.jpg",
+
+
+
+]
+
+
+}
+  ]
   isCustomNavBar = false
   testUpdate=""
   affNoteArabe=false

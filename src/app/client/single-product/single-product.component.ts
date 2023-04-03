@@ -128,7 +128,8 @@ export class SingleProductComponent implements OnInit {
     this.http.get(environment.baseURL+"/off/"+this.route.snapshot.paramMap.get('id')+"/").subscribe(res=>{
     if(res.valueOf()){
         var ob:any         
-         ob=res.valueOf()  
+         ob=res.valueOf() 
+         console.log(ob,"nn") 
          this.title=ob.title
          this.crud.project=ob.title
          this.imageProfil=ob.imgs[0]

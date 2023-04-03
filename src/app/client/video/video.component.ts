@@ -1,5 +1,9 @@
 import { Component, OnInit,Renderer2} from '@angular/core';
 import { HostListener } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CrudService } from 'src/app/services/crud.service';
+
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
@@ -7,11 +11,13 @@ import { HostListener } from '@angular/core';
 })
 export class VideoComponent implements OnInit {
 affBut=true
+id:any
+video:any
 public sections = 4;
 myVideo:any
 cot:any
 scroll:any
-  constructor(private render:Renderer2) { }
+  constructor(private render:Renderer2 ,public crud:CrudService, private  route:ActivatedRoute,private sanitizer: DomSanitizer) { }
   Navigate(elem: HTMLElement ) {
     elem.scrollIntoView({ behavior: 'smooth' });
     this.affBut=false
@@ -24,7 +30,11 @@ scroll:any
       this.scroll = (window.scrollY / this.sections);
       console.log(this.scroll,"pp")
    })
- 
+  this.crud.id2=Number(this.route.snapshot.paramMap.get('id'))
+  this.id=Number(this.route.snapshot.paramMap.get('id'))
+
+  this.video= this.sanitizer.bypassSecurityTrustResourceUrl(this.crud.rev[this.id].video);
+  console.log(this.video,"video")
   }
   // @HostListener('window:scroll', ['$event'])
   // track(event) {
