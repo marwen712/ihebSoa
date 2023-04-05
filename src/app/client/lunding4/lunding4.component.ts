@@ -4,6 +4,7 @@ import { Router,ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { CrudService } from 'src/app/services/crud.service';
+import { Meta, Title } from '@angular/platform-browser';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-lunding4',
@@ -56,7 +57,7 @@ export class Lunding4Component implements OnInit {
     {path: 'assets/images/IMG-20221107-WA0016.jpg'},
     {path: 'assets/images/IMG-20221107-WA0015.jpg'},
   ]
-  constructor(private route:ActivatedRoute,private http:HttpClient,public crud:CrudService , private sanitizer: DomSanitizer) { 
+  constructor(private route:ActivatedRoute,private http:HttpClient,public crud:CrudService ,private titl:Title, private sanitizer: DomSanitizer) { 
     this.crud.loadingOff=true  
       this.http.get(environment.baseURL+"/rent/"+this.route.snapshot.paramMap.get('id')+"/").subscribe(res=>{
        if(res.valueOf()){
@@ -65,6 +66,7 @@ export class Lunding4Component implements OnInit {
             this.dublex=ob 
            this.title=ob.title
            this.crud.project=ob.title
+           this.titl.setTitle( this.crud.project);
            this.desc=ob.desc
            this.stitle=ob.stitle
            this.video=ob.video

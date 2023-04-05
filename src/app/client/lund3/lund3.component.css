@@ -17,6 +17,9 @@ margin: 0;
                 font-family: 'Cookie', cursive;
                 margin-left: 3%;
     }} */
+   
+
+    
     .text-bold {
         font-weight: 800;
     }
@@ -97,7 +100,7 @@ margin: 0;
     .similar-product .title {
         margin: 17px 0px 4px 0px;
     }
-
+  
     .similar-product .price {
         font-weight: bold;
     }

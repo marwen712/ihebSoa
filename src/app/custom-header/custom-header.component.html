@@ -187,14 +187,15 @@
 								
 							</div>
 							
-							<button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
+						
 						</div>
 						<div class="input-search">
 							<input type="text" placeholder="City / Community / Building" (click)="openC()"  (input)="funcSearchCity($event)" [(ngModel)]="city"/>
-							<div class="drop-input" id="ee" style="background-color: aliceblue;display: none;">
+							<div class="drop-input" id="ee" style="background-color: aliceblue;display: none;z-index:300;position:absolute;width:100%">
 								<div class="item" *ngFor="let item of searchCty"  (click)="selectItemCity(item)">{{item}}</div>
 							</div>
 						</div>
+						<button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
 					</div>
 				</div>
 			</div>
@@ -202,7 +203,7 @@
 				<img src="assets/images/logo-header.png" alt="">
 				<div class="details">
 					<span style="font-family:font-italic"> We go beyond traditional investment and offer only</span>
-					<div style="font-family:font-italic"> the best customized solutions to our investors.</div>
+					<div style="font-family:font-italic ;color: orange;"> 10%  Booking Amouns.</div>
 				</div>
 			</div>
 		</div>
@@ -350,14 +351,15 @@
 									<div class="item" *ngFor="let item of searchAllDropList.minArea"  (click)="selectItemMin(dropMinAreaMb,item)">{{item}}</div>
 								</div>
 							</div>
-							<button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
+							
 						</div>
 						<div class="input-search">
 							<input type="text" placeholder="City / Community / Building"   (input)="funcSearchCity($event)" [(ngModel)]="city"/>
-							<div class="drop-input" id="uu" style="background-color: aliceblue;display: none;">
+							<div class="drop-input" id="uu" style="background-color: aliceblue;display: none;z-index:300;position:absolute;width:100%">
 								<div class="item" *ngFor="let item of searchCty"  (click)="selectItemCity(item)">{{item}}</div>
 							</div>
 						</div>
+						<button (click)="search()"><i class="fa-solid fa-magnifying-glass"></i><span>search</span></button>
 					</div>
 				</div>
 			</div>

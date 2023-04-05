@@ -125,14 +125,14 @@
                             <td style="background-color: #fff;">Apartements</td>
                             <td style="background-color: #fff;"><small class="fw-bold" style="color: orange;">1,2,3,4</small></td>
                             
-                            <td style="background-color: #fff;"><strong class="fw-bold" style="color: orange;">for 170k AED</strong></td>
+                            <td style="background-color: #fff;"><strong class="fw-bold" style="color: orange;">from 185k AED</strong></td>
                           </tr>
                           <tr>
                            
                             <td>Villas</td>
-                            <td><small class="fw-bold" style="color: orange;">1,2,3,4</small></td>
+                            <td><small class="fw-bold" style="color: orange;">1,2,3,4,...</small></td>
                           
-                            <td><strong class="fw-bold" style="color: orange;"> for 170K AED </strong></td>
+                            <td><strong class="fw-bold" style="color: orange;"> from 250K AED </strong></td>
                           </tr>
                         
                         </tbody>
@@ -203,7 +203,8 @@
             <div class="row">
                 <div class="col-md-12 wow fadeInUp">
                     <h3 class="title-heading text-center">{{this.crud.rev[this.crud.id2].title}}</h3>
-                    <p class="myp text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p class="myp text-center">We go beyond traditional investment and offer only
+                        the best customized solutions to our investors.</p>
                 </div>
             </div>
             <div class="row wow slideInLeft" data-wow-duration="3s">
@@ -228,14 +229,14 @@
                                 
                                 </div>
 
-                                <div class="col-md-8 mb-3">
-                                    <div class="text-block">
-                                        <h5 class="events-heading">Avantage inviste in Dubai.</h5>
+                                <div class="col-md-8 mb-3" >
+                                    <div class="text-block wow zoomIn" data-wow-duration="2s">
+                                        <h5 class="events-heading">{{this.crud.rev[this.crud.id2].title}} </h5>
                                         <p class="myp-font">. Downpayment from
                                             10% </p>
                                         <p class="myp-font">. 
                                             Completion date
-                                            Q3-2021</p>
+                                            Q3-2023</p>
                                         <p class="myp-font">. Type of buildings
                                             Premium</p>
                                             <p class="myp-font">. 70% after commissioning of the property</p>
@@ -302,7 +303,7 @@ the best customized solutions to our investors.</p>
                         </div>
                         <div class="card-footer">
                             <small> {{project.price}}</small>
-                            <a routerLink="/real-estate/{{project.id}}" style="color: orange;" class="pull-right">More Info</a>
+                            <a  href="/real-estate/{{project.title}}" style="color: orange;" class="pull-right">More Info</a>
                         </div>
                     </div>
                 </div>

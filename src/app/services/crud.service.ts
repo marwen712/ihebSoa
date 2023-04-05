@@ -11,7 +11,7 @@ export class CrudService {
   rev:any[]=[
     
     { id:0,
-      price:"for 300k AED",
+      price:"from 185k AED",
       title:"RIVIERA",
       video:"https://www.youtube.com/embed/pxEWiz40xBo?autoplay=1&mute=1" ,
       titleHtml1:"RIVIERA",
@@ -41,9 +41,9 @@ export class CrudService {
   
   },
   { id:1,
-    video: "https://www.youtube.com/embed/6rr0-a5AOnw?autoplay=1&mute=1",
+    video: "https://www.youtube.com/embed/6rr0-a5AOnw?autoplay=1&mute=2",
     sTitle:" Shape your happy life in this collection of five tastefully constructed buildings encircling a busy inner courtyard just yards from a 700-meter stretch of Creek Beach beach",
-    price:"for 350k AED",
+    price:"from 500k AED",
     title:"Germany Villas",
   titleHtml1:"Germany",
   titleHtml2:'Villas',   
@@ -84,9 +84,9 @@ export class CrudService {
 
 },
 { id:2,
-  video: "https://www.youtube.com/embed/WOY1Fnw2R0I",
+  video: "https://www.youtube.com/embed/WOY1Fnw2R0I?autoplay=1&mute=2",
   sTitle:"Beach oasis in dubai STUDIO CITY Dubai Studio City is not only the hub for cutting-edge facilities and services to companies across the media and entertainment",
-  price:"for 299k AED",
+  price:"from 185k AED",
   title:"Studio City",
 titleHtml1:"Studio",
 titleHtml2:" City",

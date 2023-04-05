@@ -84,7 +84,7 @@
                     <div class="price-area my-4">
                         <p class="old-price mb-1"><span class="old-price-discount text-danger">(20% off)</span></p>
                         <p class="new-price text-bold mb-1 fontSize">{{prixFinal}} AED</p>
-                        <p class="text-secondary mb-1">(0% commition/accept cryptocurrency)</p>
+                        <p class="text-secondary mb-1">(10%  Booking Amount/accept cryptocurrency)</p>
                         <ul class="list-group list-group-light" *ngIf="!testWith">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                               <div>
@@ -121,7 +121,7 @@
                             <a  class="shadow btn custom-btn " (click)="affichDesc=true">Veiw more</a>
                         </div>
                         <div class="block">
-                            <button typ="href"  routerLink="/form"  class="shadow btn custom-btn" >Add Now</button>
+                            <button typ="href"  routerLink="/form"  class="shadow btn custom-btn" >Book Now</button>
                         </div>
     
                         <div class="block quantity">
@@ -149,21 +149,33 @@
                     </div>
                 </div>
     
+                <div class="delivery-options my-4" >
+                   
+                    <p class="font-weight-bold mb-0"  ><span><i  style="color:orange" class="fas fa-comment-dollar"></i></span> <b>10% Booking Amount.</b> </p>
+                    <p class="text-secondary">See more </p>
+                </div>
                 <div class="delivery my-4">
-                    <p class="font-weight-bold mb-0"><span><i class="fa-solid fa-truck"></i></span> <b>You can own a property in Dubai from</b>  $30,000</p>
-                    <p class="text-secondary">with a free visa + 3 days in a 5 star hotel </p>
-               
+                    <p class="font-weight-bold mb-0"><span><i  style="color:orange" class="fab fa-cc-visa"></i></span> <b>You can own a property in Dubai from</b> 10%</p>
+                    <p class="text-secondary">with a free visa Golden + 3 days in a 5 star hotel </p>
+                  
                 </div>
                 <div class="delivery-options my-4">
-                    <p class="font-weight-bold mb-0"><span><i class="fa-solid fa-filter"></i></span> <b>the possibility to pay in digital currency.</b> </p>
+                    <p class="font-weight-bold mb-0"  ><span><i  style="color:orange" class="fas fa-bitcoin-sign"></i></span> <b>the possibility to pay in digital currency.</b> </p>
                     <p class="text-secondary">View options here</p>
                 </div>
+                
                 
              
             </div>
         </div>
        
     </div>
+                <ng-image-slider #nav   *ngIf="testWith"
+                    [images]="imgs"
+                    [infinite]="true"
+                    [autoSlide]="1"
+                    [imageSize]="{width: '100%', height: 500}"
+                    slideImage="1"></ng-image-slider>
     
     
     

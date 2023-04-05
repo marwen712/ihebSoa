@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
 export class ProductsComponent implements OnInit {
   loading=false
   tab:any=[]=[]
-  title="Villas & Townhouses<  "
+  title="Villas & Townhouses"
 
   constructor(private http:HttpClient , private route:Router,private meta:Meta,private titl:Title) { }
 

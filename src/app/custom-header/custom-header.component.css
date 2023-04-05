@@ -493,7 +493,7 @@ body{
 
 .header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header{
 
-	width: 100%;
+	width: 100% ;
 	height: 26%;
 	display: flex;
 	align-items: center;
@@ -502,7 +502,7 @@ body{
 
 .header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header .input{
 
-	width: 78%;
+	width: 100%;
 	height: 100%;
 	background-color: white;
 	border-radius: 0;
@@ -523,16 +523,15 @@ body{
 
 }
 
+.header-section-heart-of-chartage .content .search-container .search-content .section.right button{
 
-.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button{
-
-	width: 23%;
-	height: 100%;
+	width: 100%;
+	padding: 1% 0;
+	margin-top: 3%;
 	background-color: #f37233;
 	border: none;
 	outline: none;
-	border-top-right-radius: .3vw;
-	border-bottom-right-radius: .3vw;
+	border-radius: .3vw;
 	cursor: pointer;
 	font-size: 1.2vw;
 	color: white;
@@ -550,19 +549,21 @@ body{
 	font-size: 1vw;
 
 }
+.header-section-heart-of-chartage .content .search-container .search-content .section.right button i{
+	transition: .4s;
+}
 
-
-.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button:hover{
+.header-section-heart-of-chartage .content .search-container .search-content .section.right button:hover{
 
 	background-color: #26374f;
 
 }
+.header-section-heart-of-chartage .content .search-container .search-content .section.right button:hover i{
 
-.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button:hover i{
-
-	margin-right: 10%;
+	margin-right: 2%;
 
 }
+
 
 
 
@@ -1188,7 +1189,7 @@ body{
 
 	.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header .input{
 
-		width: 78%;
+		width: 100%;
 		height: 100%;
 		background-color: white;
 		border-radius: 0;
@@ -1210,21 +1211,25 @@ body{
 	}
 
 
-	.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button{
+	.header-section-heart-of-chartage .content .search-container .search-content .section.right button{
 
-		width: 23%;
-		height: 100%;
+		width: 100%;
+		padding: 2% 0;
+		margin-top: 3%;
 		background-color: #f37233;
 		border: none;
 		outline: none;
-		border-top-right-radius: .3vw;
-		border-bottom-right-radius: .3vw;
+		border-radius: .3vw;
 		cursor: pointer;
-		font-size: 1.6vw;
-		color: white;
+		font-size: 16px;
+		color: #fff;
 		text-transform: uppercase;
 		transition: .4s;
 
+	}
+
+	.header-section-heart-of-chartage .content .search-container .search-content .section.right button i{
+		transition: .4s;
 	}
 
 	.header-section-heart-of-chartage .content .search-container .search-content .section.right .input .header-input .item-selected{
@@ -1238,21 +1243,21 @@ body{
 	}
 
 
-	.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button:hover{
+	.header-section-heart-of-chartage .content .search-container .search-content .section.right  button:hover{
 
 		background-color: #26374f;
 
 	}
 
-	.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button:hover i{
+	.header-section-heart-of-chartage .content .search-container .search-content .section.right button:hover i{
 
-		margin-right: 10%;
+		margin-right: 2%;
 
 	}
 
 
 
-	.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button i{
+	.header-section-heart-of-chartage .content .search-container .search-content .section.right button i{
 
 		font-size: 1.5vw;
 		margin-right: 3%;
@@ -1525,14 +1530,16 @@ body{
 
 	}
 
-	.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button{
+	.header-section-heart-of-chartage .content .search-container .search-content .section.right button{
 
 		font-size: 3.2vw;
-		width: 29%;
+		width: 100%;
+		padding: 4% 0;
+
 
 	}
 
-	.header-section-heart-of-chartage .content .search-container .search-content .section.right .search-header button i{
+	.header-section-heart-of-chartage .content .search-container .search-content .section.right button i{
 
 		font-size: 2.5vw;
 
