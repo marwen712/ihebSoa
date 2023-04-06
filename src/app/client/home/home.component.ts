@@ -154,7 +154,7 @@ export class HomeComponent implements OnInit {
     container.setAttribute("class","sd-img")
 
     content.src = "/assets/images/developers/"+devp
-
+     content.alt="hearrt of carthage real estate"
     content.style.width = "85%"
 
     container.appendChild(content)
