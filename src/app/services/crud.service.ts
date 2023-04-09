@@ -11,7 +11,8 @@ export class CrudService {
   rev:any[]=[
     
     { id:0,
-      price:"from $30.000 USD",
+      price:"from $49.000 USD",
+      catigorie:"Studio & Apartments",
       title:"RIVIERA",
       video:"https://www.youtube.com/embed/pxEWiz40xBo?autoplay=1&mute=1" ,
       titleHtml1:"RIVIERA",
@@ -42,13 +43,14 @@ export class CrudService {
   },
   { id:1,
     video: "https://www.youtube.com/embed/6rr0-a5AOnw?autoplay=1&mute=2",
+    catigorie:"Villas",
     sTitle:" Shape your happy life in this collection of five tastefully constructed buildings encircling a busy inner courtyard just yards from a 700-meter stretch of Creek Beach beach",
-    price:"from $45.000 USD ",
+    price:"from $148.000 USD",
     title:"Germany Villas",
   titleHtml1:"Germany",
   titleHtml2:'Villas',   
   descFinale:"Shape your happy life in this collection of five tastefully constructed buildings encircling a busy inner courtyard just yards from a 700-meter stretch of Creek Beach beach. With its length along the shimmering canal that connects the island to the mainland, Creek Beach was designed to provide you with the best getaway for your family. This is paradise reborn, from the 700 meters of immaculate white sand to the infinity pool and breathtaking sunset views. At Grove, a residential property is created by skillfully fusing a superb location, great design, and a diverse lifestyle. Grove, which consists of five exquisite buildings, provides the ideal homes away from the hustle and bustle of the city while taking advantage of Creek Beach's distinctively pedestrian-friendly atmosphere. With a wide range of amenities and areas where you can relax, rest, reconnect, and indulge, Grove offers you an unrivaled lifestyle. The distinction is completely made by an infinity pool and easy access to the 700-meter beach! You'll learn more about what matters most at Dubai Creek Harbour. more jokes told among pals. Making more memories. a thriving neighborhood where people may live, work, play, and record special moments. a house with breathtaking views from every window.",
-  desc:"The exclusive domains of buyers with an eye for great and grand places. These modern and sleek villas are equipped with high technology and sustainable features with panoramic views and commanding details, such as floor to ceiling windows and suspended staircases, designed to make staycations and holidays unforgettable.",
+  desc:"The exclusive domans of buyers with an eye for great and grand places. These modern and sleek villas are equipped with high technology and sustainable features with panoramic views and commanding details, such as floor to ceiling windows and suspended staircases, designed to make staycations and holidays unforgettable.",
 
 
   images:[
@@ -85,8 +87,9 @@ export class CrudService {
 },
 { id:2,
   video: "https://www.youtube.com/embed/WOY1Fnw2R0I?autoplay=1&mute=2",
+  catigorie: "STUDIO",
   sTitle:"Beach oasis in dubai STUDIO CITY Dubai Studio City is not only the hub for cutting-edge facilities and services to companies across the media and entertainment",
-  price:"from $30.000 USD",
+  price:"from $13.000 USD",
   title:"Studio City",
 titleHtml1:"Studio",
 titleHtml2:" City",
