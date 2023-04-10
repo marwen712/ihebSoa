@@ -340,7 +340,7 @@ export class HomeComponent implements OnInit {
       ob=res.valueOf()
 
       this.tabRent=ob
-      this.tabRent= this.tabRent.slice(0,3)
+      this.tabRent= this.tabRent.reverse().slice(0,3)
       this.crud.tabRentProd=this.tabRent
       this.crud.loadingRent=false
      

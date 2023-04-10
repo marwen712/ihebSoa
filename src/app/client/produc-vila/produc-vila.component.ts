@@ -35,7 +35,7 @@ export class ProducVilaComponent implements OnInit {
         ob=res.valueOf()
   
         this.tab=ob
-        this.tab= this.tab.slice(0,3)
+        this.tab= this.tab.reverse()
         this.loading=false
        
         console.log(this.tab)
