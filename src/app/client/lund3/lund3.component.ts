@@ -69,7 +69,7 @@ export class Lund3Component implements OnInit {
            this.titl.setTitle( this.crud.project);
            this.desc=ob.desc
            this.stitle=ob.stitle
-           this.video=ob.video
+           this.video= this.video =  this.sanitizer.bypassSecurityTrustResourceUrl(ob.video);
            this.prix=ob.prix
            this.crud.lat=ob.lat
            this.crud.lng=ob.lng
