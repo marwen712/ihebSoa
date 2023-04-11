@@ -116,6 +116,7 @@ export class OffPlanComponent implements OnInit {
 
   this.crud.testUpdate=""
   this.crud.offPlanModif =this.tabOff[i]
+  this.serIm.tabImages=this.crud.offPlanModif.imgs
   this.affModif=true
  }
 

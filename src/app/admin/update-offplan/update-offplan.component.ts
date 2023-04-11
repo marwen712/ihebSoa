@@ -14,7 +14,7 @@ export class UpdateOffplanComponent implements OnInit {
   constructor(public crud:CrudService,public http: HttpClient,public image:ImgService) { }
 
   ngOnInit(): void {
-    this.image.tabImages=this.crud.offPlanModif.imgs
+   
   }
   modifier(){
     this.crud.offPlanModif.imgs=this.image.tabImages

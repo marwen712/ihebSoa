@@ -112,6 +112,7 @@ export class AppartementComponent implements OnInit {
  modif(i:any){
   this.crud.testUpdate="appr"
   this.crud.offPlanModif =this.tabappr[i]
+  this.serIm.tabImages=this.crud.offPlanModif.imgs
   this.affModif=true
  }
 }

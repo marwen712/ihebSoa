@@ -112,6 +112,7 @@ export class RentComponent implements OnInit {
  modif(i:any){
   this.crud.testUpdate="rent"
   this.crud.offPlanModif =this.tabrent[i]
+  this.serIm.tabImages=this.crud.offPlanModif.imgs
   this.affModif=true
  }
 
