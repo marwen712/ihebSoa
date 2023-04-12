@@ -349,6 +349,8 @@ console.log(this.answers,"ee")
         this.elementSurvey.style.display="none"
 
         if(this.step==this.questions.length){
+          this.crud.textButton="Consult now"
+          this.crud.affConsultation=false
           this.crud.project="complete the form to proceed to consultation"
           this.crud.affForm=false
           

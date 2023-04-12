@@ -8,6 +8,8 @@ import { environment } from 'src/environments/environment';
 })
 export class CrudService {
   id2:any
+  affConsultation=true
+  textButton="Book now"
   rev:any[]=[
     
     { id:0,
