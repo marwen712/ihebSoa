@@ -76,7 +76,8 @@
                   </ul>
                   
                 <div class="left-images" *ngIf="!testWith">
-                    <ng-image-slider #nav
+                    <ng-image-slider #nav 
+                    style="font-family: font-italic"
                     [images]="imgs"
                     [infinite]="true"
                     [autoSlide]="1"
@@ -201,6 +202,7 @@
        
     </div>
     <ng-image-slider #nav   *ngIf="testWith"
+    style="font-family: font-italic"
     [images]="imgs"
     [infinite]="true"
     [autoSlide]="1"

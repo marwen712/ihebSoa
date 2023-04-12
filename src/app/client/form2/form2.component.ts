@@ -48,7 +48,7 @@ export class Form2Component implements OnInit {
       affDat=false
       
   
-  constructor(private http:HttpClient,private crud:CrudService ) { }
+  constructor(private http:HttpClient, public crud:CrudService ) { }
     
       ngOnInit(): void {}
   //       const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8',"aut":""});

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../services/crud.service';
 import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, NgForm, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-survey-app',
   templateUrl: './survey-app.component.html',
@@ -8,7 +9,7 @@ import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, Ng
 })
 export class SurveyAppComponent implements OnInit {
 
-  constructor(private crud:CrudService) { }
+  constructor(private crud:CrudService , private route:Router ) { }
 
   elementSurvey:any
   phoneScreen:any
@@ -17,13 +18,33 @@ export class SurveyAppComponent implements OnInit {
   questions = [
 
     {
-      question:"Do you want to own a property in Dubai from $30,000 with a free visa + 3 days in a 5 star hotel + the possibility to pay in digital currency?",
+      question:"Heart of Carthage Real Estate is an award-winning full-service boutique brokerage and advisory firm in the UAE  since 2015 Would you like a free estimate? ",
       type:"default",
       choices:[],
     },
     {
-      question:"What type of property do you want?",
+      question:"What is the subject of the consultation?",
       type:"plans",
+      choices:[
+
+        {
+          image:"https://cdn-icons-png.flaticon.com/512/4660/4660757.png",
+          title:"Sale",
+        },
+        {
+          image:"https://cdn-icons-png.flaticon.com/512/1040/1040986.png",
+          title:"Rent",
+        },
+        {
+          image:"https://cdn-icons-png.flaticon.com/512/3749/3749977.png",
+          title:"Investment",
+        }
+
+      ],
+    },
+    {
+      question:"What type of property do you want?",
+      type:"budget",
       choices:[
 
         {
@@ -41,51 +62,28 @@ export class SurveyAppComponent implements OnInit {
 
       ],
     },
+ 
     {
-      question:"What's the right amount for you?",
-      type:"budget",
-      choices:[
-
-        {
-          image:"assets/images/images-survey/cash.png",
-          title:"30,000",
-        },
-        {
-          image:"assets/images/images-survey/cash.png",
-          title:"50,000",
-        },
-        {
-          image:"assets/images/images-survey/cash.png",
-          title:"100,000 or more",
-        }
-
-      ],
-    },
-    {
-      question:"What is your preferred payment method?",
+      question:"type of consultation?",
       type:"payment",
       choices:[
 
         {
-          image:"assets/images/images-survey/cash.png",
-          title:"Cash",
+          image:"https://w7.pngwing.com/pngs/551/579/png-transparent-whats-app-logo-whatsapp-logo-whatsapp-cdr-leaf-text-thumbnail.png",
+          title:"Whatsapp ",
         },
         {
-          image:"assets/images/images-survey/virement.png",
-          title:"Bank Transfert",
+          image:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Circle-icons-phone.svg/800px-Circle-icons-phone.svg.png",
+          title:"Phone",
         },
         {
-          image:"assets/images/images-survey/crypto.png",
-          title:"Cryptocurrency",
+          image:"https://cdn-icons-png.flaticon.com/512/3003/3003075.png",
+          title:"Videoconference",
         }
 
       ],
     },
-    {
-      question:"Would you like a free estimate?",
-      type:"estimate",
-      choices:[],
-    }
+   
 
   ]
 
@@ -121,16 +119,16 @@ export class SurveyAppComponent implements OnInit {
 
   surveyCLClose(){
 
-    this.elementSurvey = document.getElementById("surveyCtnCL")
-    this.elementSurvey.style.display="none"
-
+    // this.elementSurvey = document.getElementById("surveyCtnCL")
+    // this.elementSurvey.style.display="none"
+this.crud.affForm=false
   }
 
   choices = "default"
   plans:any = [this.questions[1]]
   payment:any = [this.questions[3]]
   budget:any = [this.questions[2]]
-  estimate:any = [this.questions[4]]
+  // estimate:any = [this.questions[4]]
 
 
   nextQuestionCL(ans:any){
@@ -176,11 +174,11 @@ export class SurveyAppComponent implements OnInit {
 
         this.elementSurvey.style.display="none"
 
-        if(formOpen === "yes-form"){
+        if(this.questions.length === this.step){
+          this.crud.project="complete the form to proceed to consultation"
+          this.crud.affForm=false
 
-          this.elementSurvey = document.getElementById("formClient")
-
-          this.elementSurvey.style.display="flex"
+           this.route.navigate(["/form"])
 
         }else{
 
@@ -350,11 +348,16 @@ console.log(this.answers,"ee")
 
         this.elementSurvey.style.display="none"
 
-        if(formOpen === "yes-form"){
+        if(this.step==this.questions.length){
+          this.crud.project="complete the form to proceed to consultation"
+          this.crud.affForm=false
+          
+           this.route.navigate(["/form"])
+          
+          // this.elementSurvey = document.getElementById("formClientMobile")
 
-          this.elementSurvey = document.getElementById("formClientMobile")
+          // this.elementSurvey.style.display="flex"
 
-          this.elementSurvey.style.display="flex"
 
         }else{
 
@@ -398,10 +401,11 @@ console.log(this.answers,"ee")
 
   backFromSurvey(){
 
-    this.elementSurvey = document.getElementById("surveyContainer")
+    // this.elementSurvey = document.getElementById("surveyContainer")
     
-    this.elementSurvey.style.display="none"   
+    // this.elementSurvey.style.display="none"   
 
+    this.crud.affForm=false
   }
 
   ngOnInit(): void {

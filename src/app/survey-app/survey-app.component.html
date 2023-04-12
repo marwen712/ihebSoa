@@ -21,7 +21,7 @@
 				</div>
 			</div>
 
-			<div class="ctn" *ngIf="choices === 'estimate'">
+			<!-- <div class="ctn" *ngIf="choices === 'estimate'">
 				<div class="content-ctn" *ngFor="let item of estimate" >
 					<div id="questionSurvey" class="question">{{item.question}}</div>
 					<div class="action-buttons">
@@ -29,7 +29,7 @@
 						<button id="btnNo" (click)="nextQuestion('no',false)">No</button>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 			<div class="ctn" *ngIf="choices === 'plans'">
 				<div class="content-ctn" *ngFor="let item of plans" >
@@ -88,6 +88,9 @@
 
 			<div class="survey-form-client" id="formClientMobile">
 				<div class="form-content">
+					<div class="input" style="border-color: #ffff;">
+						<h5 style="text-align: center;font-size: 20px;">nbjksbqdsfrujkhbjhgbzegb</h5>
+					</div>
 					<div class="input">
 						<input type="text" placeholder="Full name" [(ngModel)]="user.name"/>
 						<br>
@@ -116,7 +119,7 @@
 	<div class="content-survey-container">
 		<div class="progress-bar-steps" id="progressBarSteps"></div>
 		<div class="header-survey">
-			<img src="../assets/images/logoHOCD.png">
+			<img src="../assets/images/logoHOCD.png" >
 			<div class="name">Heart Of Carthage Dubai</div>
 		</div>
 		<div class="content-questions" id="contentQuestions">
@@ -135,7 +138,7 @@
 				<div class="skip-btn" (click)="surveyCLClose()">skip</div>
 			</div>
 
-			<div class="qst-ctn" *ngIf="choices === 'estimate'">
+			<!-- <div class="qst-ctn" *ngIf="choices === 'estimate'">
 				<div class="question" *ngFor="let item of estimate">
 					
 					<span> {{item.question}} </span>
@@ -145,7 +148,7 @@
 					<button (click)="nextQuestionCL('no')" >no</button>
 				</div>
 				<div class="skip-btn" (click)="surveyCLClose()">skip</div>
-			</div>
+			</div> -->
 
 
 			<div class="qst-ctn" *ngIf="choices === 'payment'">
@@ -224,20 +227,22 @@
 		</div>
 		<div class="survey-form-client" id="formClient">
 			<div class="form-content">
+				<div class="input" style="border-color: #ffff;margin-bottom: 5px;  ">
+					<h5 style="text-align: center;font-family: font-italic;" >shgqdfdkgnhlkt,j skldjfdtgyinh sdbsfujk hesvgdfrdtgbvh</h5>
+				</div>
 				<div class="input">
 					<input type="text" placeholder="Full name" [(ngModel)]="user.name"/>
-					<br>
-					<label>First name</label>
+					
+					
 				</div>
 				<div class="input">
 					<input type="text" placeholder="Email" [(ngModel)]="user.email"/>
-					<br>
-					<label>Email</label>
+				
+					
 				</div>
 				<div class="input">
 					<input type="text" placeholder="Phone +971" [(ngModel)]="user.phone"/>
-					<br>
-					<label>Mobile</label>
+					
 				</div>
 				<button (click)="finishFormClient()" >send</button>
 			</div>

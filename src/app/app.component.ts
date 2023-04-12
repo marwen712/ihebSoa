@@ -21,6 +21,7 @@ export class AppComponent {
 
   }
   openForm(){
+    this.crud.affForm=false
     this.crud.affForm=true
   }
   customNavBar:any
