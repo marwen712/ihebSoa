@@ -65,6 +65,7 @@ import { VideoComponent } from './client/video/video.component';
 import { Form3Component } from './client/form3/form3.component';
 import { CardComponent } from './client/card/card.component';
 import { SectionAnimationComponent } from './client/section-animation/section-animation.component';
+import { FormConslutationComponent } from './client/form-conslutation/form-conslutation.component';
 //import { CustomHeaderComponent } from './custom-header/custom-header.component';
 
 
@@ -102,6 +103,7 @@ declarations: [
     NotBoxArabeComponent,
     NotBoxEnglishComponent,
     CustomNavBarComponent,
+    FormConslutationComponent,
    
     
   

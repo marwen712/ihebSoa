@@ -7,9 +7,18 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CrudService {
+  userConsultation={
+    name:"",
+    email:"",
+   phone:"",
+   q1:"", 
+   q2:"",
+   q3:"",
+   dateMeet:"",
+   project:'',
+   timeMeet:''
+  }
   id2:any
-  affConsultation=true
-  textButton="Book now"
   rev:any[]=[
     
     { id:0,
@@ -126,6 +135,7 @@ images:[
   ]
   isCustomNavBar = false
   testUpdate=""
+  affConst=true
   affNoteArabe=false
   affNoteEnglish=true
    affForm=false

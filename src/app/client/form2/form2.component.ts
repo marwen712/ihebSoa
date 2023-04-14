@@ -9,7 +9,7 @@ import { CrudService } from 'src/app/services/crud.service';
   styleUrls: ['./form2.component.css']
 })
 export class Form2Component implements OnInit {
-  
+
   baseUrl=environment.baseURL
   
   images = [
@@ -50,9 +50,7 @@ export class Form2Component implements OnInit {
   
   constructor(private http:HttpClient, public crud:CrudService ) { }
     
-      ngOnInit(): void {
-       
-      }
+      ngOnInit(): void {}
   //       const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8',"aut":""});
     
   // const requestOptions = { headers: headers };

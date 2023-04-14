@@ -23,6 +23,7 @@ import { AccordComponent } from './client/accord/accord.component';
 import { HomeModule } from './client/home/home.module';
 import { AziziModule } from './azizi/azizi/azizi.module';
 import { LundProjectModule } from './client/lund-project/lund-project.module';
+import { FormConslutationComponent } from './client/form-conslutation/form-conslutation.component';
 const routes: Routes = [
  
   { path:"" , loadChildren:() => import('./client/home/home.module').then(x => x.HomeModule) },
@@ -44,7 +45,7 @@ const routes: Routes = [
   { path:"offs", component:ProductOffPlanComponent },
   { path:"home1", component:Home1Component },
   { path:"login", component: LoginComponent },
- 
+  { path:"consultation", component: FormConslutationComponent },
   
 ]
 

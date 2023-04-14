@@ -18,7 +18,7 @@ export class SurveyAppComponent implements OnInit {
   questions = [
 
     {
-      question:"Heart of Carthage Real Estate is an award-winning full-service boutique brokerage and advisory firm in the UAE  since 2015 Would you like a free estimate? ",
+      question:"Ask for a free consultation provided by the best certified real estate consultants?",
       type:"default",
       choices:[],
     },
@@ -146,8 +146,8 @@ this.crud.affForm=false
     else{
 
       if(this.choiceId != ""){
-        this.answers.push({question:this.currentQuestion[0].question,answer:this.choiceId+""})
-        console.log(this.answers)
+        this.answers.push({question:this.choiceId+""})
+        console.log(this.answers ,"aze")
         checkAnswer = true
       }
 
@@ -175,10 +175,13 @@ this.crud.affForm=false
         this.elementSurvey.style.display="none"
 
         if(this.questions.length === this.step){
-          this.crud.project="complete the form to proceed to consultation"
+          this.crud.project="consultation"
+          this.crud.userConsultation.q1=this.answers[1].question
+          this.crud.userConsultation.q2=this.answers[2].question
+          this.crud.userConsultation.q3=this.answers[3].question
           this.crud.affForm=false
 
-           this.route.navigate(["/form"])
+           this.route.navigate(["/consultation"])
 
         }else{
 
@@ -349,12 +352,10 @@ console.log(this.answers,"ee")
         this.elementSurvey.style.display="none"
 
         if(this.step==this.questions.length){
-          this.crud.textButton="Consult now"
-          this.crud.affConsultation=false
           this.crud.project="complete the form to proceed to consultation"
           this.crud.affForm=false
           
-           this.route.navigate(["/form"])
+           this.route.navigate(["/consultation"])
           
           // this.elementSurvey = document.getElementById("formClientMobile")
 
