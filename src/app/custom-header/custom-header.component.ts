@@ -192,12 +192,12 @@ AffValueArea(item:any){
     }
 
   }
-  openCloseDropSide(drop:any,drop2:any,drop3:any,drop4,drop5,drop6){
+  openCloseDropSide(drop:any,drop2:any,drop3:any,drop4,drop5){
     drop2.style.height="0px"
     drop3.style.height="0px"
     drop4.style.height="0px"
     drop5.style.height="0px"
-    drop6.style.height="0px"
+   
     console.log(drop.style.height ,"height")
     if( drop.style.height == "0px" ){
 

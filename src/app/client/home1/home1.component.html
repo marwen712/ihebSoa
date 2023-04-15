@@ -1,4 +1,4 @@
-<div class="container" style=" place-items: center;" >
+<!-- <div class="container" style=" place-items: center;" >
     <h2 class="section-heading" style="text-align: center;color:#C9A770; margin-bottom: 10px;">  AMENITIES   
 
     </h2>
@@ -44,4 +44,61 @@
        
       </div>
      
-  </div>
+  </div> -->
+  <mdb-carousel   >
+    <mdb-carousel-item>
+      <img
+        src="https://ellingtonproperties.ae/wp-content/uploads/A-Beginners-Guide-to-Dubais-Real-Estate-Investing.jpg"
+        class="d-block w-100"
+        style="max-height: 500px;"
+        alt="heart of carthage real estate"
+      />
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <img
+        src="https://image.khaleejtimes.com/?uuid=b991604b-85ed-58db-974e-b292913fedc5&function=cropresize&type=preview&source=false&q=75&crop_w=0.99999&crop_h=0.8427&width=1200&height=675&x=1.0E-5&y=0.09738"
+        class="d-block w-100"
+        style="max-height: 500px;"
+        alt="heart of carthage real estate"
+      />
+    </mdb-carousel-item>
+    <mdb-carousel-item>
+      <img
+        src="https://www.geminipropertydevelopers.com/wp-content/uploads/2018/12/UAE-Central-Bank-removes-20.png"
+        class="d-block w-100"
+        style="max-height: 500px;"
+        alt="heart of carthage real estate"
+      />
+    </mdb-carousel-item>
+  </mdb-carousel>
+  <section class="testimonials bg-light" id="marketplace">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto wow fadeInUp">
+                <h3 class="text-center font-weight-bold" style="font-family:font-italic" >New Off-Plan of <span class="bg-main" style="font-family:font-italic" > {{devlopper}} </span></h3>
+                <p class=" text-center">We go beyond traditional investment and offer only
+                    the best customized solutions to our investors.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4 wow bounceInUp" data-wow-duration="1.4s" *ngFor="let project of tab">
+                <div class="card">
+                    <img class="card-img-top h-262" [src]="project.imgs[0]" alt="heart-of-carthage-dubai">
+                    <div class="card-block">
+
+                        <h4 class="card-title">{{project.title}}</h4>
+
+                        <div class="card-text">
+                            <p>{{project.stitle}}</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small style="color: orange;"> {{project.dev}}</small>
+                        <a  style="color: orange;" class="pull-right"(click)='this.crud.affForm=true' >consult Now</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>

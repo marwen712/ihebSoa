@@ -43,7 +43,7 @@ const routes: Routes = [
   { path:"Rent/:id", component:Lunding4Component },
   { path:"form", component:Form2Component },
   { path:"offs", component:ProductOffPlanComponent },
-  { path:"home1", component:Home1Component },
+  { path:"devlopper/:id", component:Home1Component },
   { path:"login", component: LoginComponent },
   { path:"consultation", component: FormConslutationComponent },
   

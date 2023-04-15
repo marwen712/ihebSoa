@@ -52,7 +52,7 @@ import { NgxCarouselModule } from 'ngx-light-carousel';
 
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { CarouselModule } from 'ngx-owl-carousel-o';;
-
+import { QRCodeModule } from 'angularx-qrcode';
 
 import { SurveyAppComponent } from './survey-app/survey-app.component';
 import { NotBoxArabeComponent } from './not-box-arabe/not-box-arabe.component';
@@ -134,6 +134,7 @@ declarations: [
     MatCarouselModule.forRoot(),
     NgImageSliderModule,
     NgxCarouselModule ,
+    QRCodeModule
 
    // HomeModule
   ],

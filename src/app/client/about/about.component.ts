@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-  constructor() { }
+  public myAngularxQrCode: string = "";
+  public qrCodeDownloadLink: any = "";
+  constructor() {
+    this.myAngularxQrCode = 'heart of carthage dubai';
+   }
+   onChangeURL(url:any) {
+    this.qrCodeDownloadLink = url;
+  }
 
   ngOnInit(): void {
+    
   }
 
 }

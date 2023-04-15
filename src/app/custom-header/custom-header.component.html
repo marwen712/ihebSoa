@@ -43,10 +43,10 @@
 			<div class="item"><span>devloppers</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item">Azizi</div>
-						<div class="drop-item">Danube</div>
-						<div class="drop-item">Dammac</div>
-						<div class="drop-item">Heart of europe</div>
+						
+						<div class="drop-item"> <a href="/devlopper/Azizi">Azizi</a></div>
+						<div class="drop-item"><a href="/devlopper/Damac">Damac</a></div>
+						<div class="drop-item"><a href="/devlopper/Emaar">Emaar</a></div>
 					</div>
 				</div>
 			</div>
@@ -111,10 +111,9 @@
 					<div class="item"><span>devloppers</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item">Azizi</div>
-						<div class="drop-item">Danube</div>
-						<div class="drop-item">Dammac</div>
-						<div class="drop-item">Heart of europe</div>
+								<div class="drop-item"> <a href="/devlopper/Azizi">Azizi</a></div>
+								<div class="drop-item"><a href="/devlopper/Damac">Damac</a></div>
+								<div class="drop-item"><a href="/devlopper/Emaar">Emaar</a></div>
 							</div>
 						</div>
 					</div>
@@ -218,9 +217,18 @@
 				<i class="fa-solid fa-xmark" (click)="closeSide()"></i>
 			</div>
 			<div class="menu-list">
+				<div class="item">
+					
+					<div class="item-title"  (click)="openCloseDropSide(ab,RentListe,BuyListe,dev,off)"><div>Who we are</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="list" #ab >
+					<div class="drop-item"><a routerLink="/contact-us">Contact-us</a></div>
+						<div class="drop-item" ><a routerLink="/about">About-us</a></div>
+						
+					</div>
+				</div>
 				<div class="item" >
 					
-					<div class="item-title" (click)="openCloseDropSide(BuyListe,RentListe,off,ser,dev,ab)" ><div >Buy</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="item-title" (click)="openCloseDropSide(BuyListe,RentListe,off,dev,ab)" ><div >Buy</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #BuyListe>
 						<div class="drop-item"  ><a routerLink="/appr">Appartements for sale</a></div>
 						<div class="drop-item"  ><a routerLink="/vila"> Villas for sale</a></div>
@@ -231,7 +239,7 @@
 				</div>
 				<div class="item" >
 					
-					<div class="item-title" (click)="openCloseDropSide(RentListe,BuyListe,off,ser,dev,ab)"><div >Rent</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="item-title" (click)="openCloseDropSide(RentListe,BuyListe,off,dev,ab)"><div >Rent</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #RentListe>
 						<div class="drop-item"  ><a routerLink="/rent">Appartements for rent</a></div>
 						<div class="drop-item"  ><a routerLink="/rent"> Villas for rent</a></div>
@@ -242,7 +250,7 @@
 				</div>
 				<div class="item">
 					
-					<div class="item-title"  (click)="openCloseDropSide(off,RentListe,BuyListe,ser,dev,ab)"><div>Off Plan</div><i class="fa-solid fa-angle-down"></i></div>
+					<div class="item-title"  (click)="openCloseDropSide(off,RentListe,BuyListe,dev,ab)"><div>Off Plan</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #off >
 						<div class="drop-item"><a routerLink="/Off-Plan/6408f8f7a29a570c73f5265f">THE SANCTUARY</a></div>
 						<div class="drop-item" ><a routerLink="/Off-Plan/63df155dd46a615cf44e7498">SPORTS CITY</a></div>
@@ -252,37 +260,21 @@
 						<div class="drop-item"><a routerLink="/offs">Veiw more</a></div>
 					</div>
 				</div>
+				
 				<div class="item">
-					<input type="text" readonly name="">
-					<div class="item-title"  (click)="openCloseDropSide(dev,RentListe,BuyListe,ser,off,ab)"><div>devloppers</div><i class="fa-solid fa-angle-down"></i></div>
+					
+					<div class="item-title"  (click)="openCloseDropSide(dev,RentListe,BuyListe,dev,ab)"><div>devloppers</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #dev>
-						<div class="drop-item"><div>Azizi</div></div>
-						<div class="drop-item"><div>Damac</div></div>
-						<div class="drop-item"><div>Danube</div></div>
-						<div class="drop-item"><div>Heart of europe</div></div>
+						<div class="drop-item"><div> <a href="/devlopper/Azizi">Azizi</a></div></div>
+						<div class="drop-item"><div><a href="/devlopper/Damac">Damac</a></div></div>
+						<div class="drop-item"><div><a href="/devlopper/Emaar">Emaar</a></div></div>
 					</div>
+						
+					
 				</div>
-				<div class="item">
-					<input type="text" readonly name="">
-					<div class="item-title"  (click)="openCloseDropSide(ser,RentListe,BuyListe,off,dev,ab)"><div>About</div><i class="fa-solid fa-angle-down"></i></div>
-					<div class="list"#ser>
-						<div class="drop-item" ><a routerLink="/about">About us</a></div>
-						<div class="drop-item"><a routerLink="/contact-us">Contact us</a></div>
-						<div class="drop-item"><div>Cryptocurrency</div></div>
-						<div class="drop-item"><div>Golden visa</div></div>
-					</div>
-				</div>
-				<div class="item">
-					<input type="text" readonly name="">
-					<div class="item-title"  (click)="openCloseDropSide(ab,RentListe,BuyListe,ser,dev,off)"><div>Who we are</div><i class="fa-solid fa-angle-down"></i></div>
-					<div class="list" #ab>
-						<div class="drop-item"><div>About us </div></div>
-						<div class="drop-item"><div>Contact us </div></div>
-						<div class="drop-item"><div>Blog</div></div>
-						<div class="drop-item"><div>Meeting</div></div>
-					</div>
-				</div>
+			
 			</div>
+			
 		</div>
 	</div>
 	<div class="header-section-heart-of-chartage" style="background-image:url('https://www.que-faire-en-voyage.com/wp-content/uploads/2017/07/Vue-depuis-le-Burj-Khalifa-de-nuit-Attraction-Dubai.jpg');">

@@ -15,13 +15,15 @@ export class FormConslutationComponent implements OnInit {
   affCodeEmail=true
   affDateRendevous=false
   baseUrl=environment.baseURL
-  
+  public myAngularxQrCode: string = "";
+  public qrCodeDownloadLink: any = "";
   images = [
     {path: 'assets/img/IMG-20221117-WA0012.jpg'},
     {path: 'assets/img/IMG-20221117-WA0014.jpg'},
     {path: 'assets/img/IMG-20221107-WA0016.jpg'},
     {path: 'assets/img/IMG-20221107-WA0015.jpg'},
   ]
+  affQr=false
   //agm
   funTime(e:any){
     this.timeId=e.target.value
@@ -29,6 +31,7 @@ export class FormConslutationComponent implements OnInit {
   funDate(e:any){
     this.dateId=e.target.value
   }
+
     user= new FormGroup({
    
       name: new FormControl('',[Validators.required ]),
@@ -71,7 +74,9 @@ export class FormConslutationComponent implements OnInit {
       tabDate:string[]=["When do you want to buy",'now ','after 1 month',"after 3 months","after 3 months"]
   
   constructor(private http:HttpClient , public crud:CrudService) {  AOS.init();}
-    
+       onChangeURL(url:any) {
+    this.qrCodeDownloadLink = url;
+  }
       ngOnInit(): void {
        
   //       const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8',"aut":""});
@@ -138,17 +143,18 @@ export class FormConslutationComponent implements OnInit {
   this.crud.userConsultation.dateMeet=this.dateId
   this.crud.userConsultation.timeMeet=this.timeId
   // this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
-   
-  //   console.log(res.valueOf())
+ 
+  this.myAngularxQrCode= " " +this.user.get("name")?.value + " " +this.user.get("phone")?.value + " " +this.user.get("email")?.value + " " + this.dateId + " " + this.timeId
   // })
 
 this.al=true
- 
+ console.log(this.crud.userConsultation,'rt')
  
   this.http.post(this.baseUrl +'/email/send-mail1/',this.crud.userConsultation).subscribe(res=>{
     console.log(res)})
     this.http.post(this.baseUrl +'/email/send-mailRendevous/',this.crud.userConsultation).subscribe(res=>{
       console.log(res)})
+    this.affQr=true
 }  else{
   alert("choose date meet !")
 }     

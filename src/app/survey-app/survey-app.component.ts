@@ -18,7 +18,7 @@ export class SurveyAppComponent implements OnInit {
   questions = [
 
     {
-      question:"Ask for a free consultation provided by the best certified real estate consultants?",
+      question:"Heart Of Carthage Real Estate is an award winning full service Brokerage in Rent and Sale since 2015 in Dubai.Whatever Your Real Estate Needs, Our team Can Help You source the Land You Need.",
       type:"default",
       choices:[],
     },
@@ -135,8 +135,10 @@ this.crud.affForm=false
 
     var checkAnswer = false
     var formOpen = ""
-
-    if(ans === "yes" || ans === "no" || ans === "yes-form"){
+  if(ans == "no"){
+    this.crud.affForm=false
+  }
+    if(ans === "yes" ||  ans === "yes-form"){
       
       this.answers.push({question:this.currentQuestion[0].question,answer:ans+""})
       checkAnswer = true
@@ -273,8 +275,10 @@ console.log(this.answers,"ee")
     var checkAnswer = false
 
     var formOpen = ""
-
-    if(ans === "yes" || ans === "no" || ans === "yes-form"){
+  if(ans === "no"){
+   this.crud.affForm=false
+  }
+    if(ans === "yes"  || ans === "yes-form"){
       
       this.answers.push({question:this.currentQuestion[0].question,answer:ans+""})
       checkAnswer = true
@@ -352,7 +356,10 @@ console.log(this.answers,"ee")
         this.elementSurvey.style.display="none"
 
         if(this.step==this.questions.length){
-          this.crud.project="complete the form to proceed to consultation"
+          this.crud.project="consultation"
+          this.crud.userConsultation.q1=this.answers[1].question
+          this.crud.userConsultation.q2=this.answers[2].question
+          this.crud.userConsultation.q3=this.answers[3].question
           this.crud.affForm=false
           
            this.route.navigate(["/consultation"])
