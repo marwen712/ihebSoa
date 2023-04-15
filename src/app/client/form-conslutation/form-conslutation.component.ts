@@ -161,7 +161,7 @@ this.al=true
     }
  funStep1(){
   if(this.user.value.phone?.split("")[0]!="+"){
-    alert("code country of phone not exacly")
+    alert("! code country of phone not exacly example phone:+971 xxxx")
   }
   else{
     this.http.post(this.baseUrl +'/email/send-mail/',{email:this.user.value.email,
