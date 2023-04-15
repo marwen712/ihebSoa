@@ -840,14 +840,20 @@ body{
 	}
 
 	.header-section-heart-of-chartage .content .nav-bar .logo{
-
+        width:30%;
 		padding-left: 3%;
 		font-size: 8vw;
 		color: #26374f;
 	}
-
+	.header-section-heart-of-chartage .content .nav-bar .text1{
+        width:30%;
+		padding-left: 0%;
+		font-size:12px;
+		font-family: font-italic;
+		color: #caac7b;
+	}
 	.header-section-heart-of-chartage .content .nav-bar .menu-btn{
-		width: 5%;
+		width: 7%;
 		background: #caac7b;
 		padding: 1.2% 0;
 		text-align: center;
@@ -1507,7 +1513,7 @@ body{
 
 	.header-section-heart-of-chartage .content .nav-bar .menu-btn{
 
-		width: 15%;
+		width: 10%;
 		padding: 1% 0;
 
 	}
