@@ -93,7 +93,7 @@
               
                             <button type="button" class="btn btn-primary btn-lg"   [disabled]="!user.valid" (click)="funStep1()" style="background-color: #C9A770;" *ngIf="affCodeEmail" > Setp1</button>
                             <button type="button" class="btn btn-primary btn-lg"   [disabled]="!user.valid" (click)="enregisterClient()" style="background-color: #C9A770;" *ngIf="!affCodeEmail && affDateRendevous && !affQr">send Now</button>
-                            <a type="button" *ngIf="affQr" class="btn btn-primary btn-lg" style="background-color:orange ;" [href]="qrCodeDownloadLink" download="qrcode">Download information consultation</a>
+                            <a type="button" *ngIf="affQr" class="btn btn-primary btn-lg" style="background-color:orange ;" [href]="qrCodeDownloadLink" download="Information consultation ">Download information consultation</a>
                           </div>
         
                         </form>
