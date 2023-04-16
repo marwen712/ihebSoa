@@ -358,14 +358,14 @@ a:hover{
 	}
 
 	.header-section-heart-of-chartage .content .nav-bar .logo{
-
+       
 		padding-left: 3%;
 		font-size: 8vw;
 		color: #26374f;
 	}
-
+	
 	.header-section-heart-of-chartage .content .nav-bar .menu-btn{
-		width: 5%;
+		width: 7%;
 		background: #caac7b;
 		padding: 1.2% 0;
 		text-align: center;
@@ -529,14 +529,22 @@ a:hover{
 	}
 
 	.responsive-version .nav-bar .logo{
-
+       width: 20%;
 		padding-left: 3%;
 		font-size: 8vw;
 		color: #26374f;
 	}
+	.responsive-version .nav-bar.text1{
+        width:30% !important;
+		padding-left: 0% !important;
+		font-size:12px !important;
+		font-family: font-italic!important;
+		font-weight: 800;
+		color: #caac7b;
+	}
 
 	.responsive-version .nav-bar .menu-btn{
-		width: 15%;
+		width: 10%;
 		background: #caac7b;
 		padding: 1.2% 0;
 		text-align: center;

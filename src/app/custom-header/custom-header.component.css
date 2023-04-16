@@ -840,16 +840,17 @@ body{
 	}
 
 	.header-section-heart-of-chartage .content .nav-bar .logo{
-        width:30%;
+        width:20%;
 		padding-left: 3%;
 		font-size: 8vw;
 		color: #26374f;
 	}
-	.header-section-heart-of-chartage .content .nav-bar .text1{
+	.header-section-heart-of-chartage .content .nav-bar .tex{
         width:30%;
 		padding-left: 0%;
 		font-size:12px;
 		font-family: font-italic;
+		font-weight: 800;
 		color: #caac7b;
 	}
 	.header-section-heart-of-chartage .content .nav-bar .menu-btn{

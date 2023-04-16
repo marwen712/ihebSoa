@@ -28,7 +28,7 @@ export class NotBoxEnglishComponent implements OnInit {
 
     setTimeout(()=>{
       this.animationNotifArabe()
-    },3000)
+    },30000)
 
   }
 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 .logo-broker-design{
 
-  font-size: 1.4vw;
+  font-size: 1.1vw;
   color: #ffffff;
   position: absolute;
   top: 0.5%;
@@ -193,7 +193,7 @@
   }
   
   .logo-broker-design{
-    font-size: 11px;
+    font-size: 9px;
     color: #c9a770;
     position: absolute;
     top: 1.7%;

@@ -18,7 +18,7 @@ export class SurveyAppComponent implements OnInit {
   questions = [
 
     {
-      question:"Heart Of Carthage Real Estate is an award winning full service Brokerage in Rent and Sale since 2015 in Dubai.Whatever Your Real Estate Needs, Our team Can Help You source the Land You Need.",
+      question:"Heart Of Carthage Real Estate is an award winning full service  in Rent and Sale since 2015 in Dubai.Whatever Your Real Estate Needs, Our team Can Help You source the Land You Need.",
       type:"default",
       choices:[],
     },
@@ -436,7 +436,7 @@ console.log(this.answers,"ee")
 
       setTimeout(()=>{
         this.surveyCLOpen()   
-      },20)
+      },10)
 
     }
   }

@@ -138,7 +138,7 @@ images:[
   affConst=true
   affNoteArabe=false
   affNoteEnglish=true
-   affForm=false
+   affForm=true
   affChoose=true
   tabApprProd:any[]=[]
   tabVilaProd:any[]=[]
