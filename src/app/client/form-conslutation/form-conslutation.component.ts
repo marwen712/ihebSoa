@@ -4,12 +4,15 @@ import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { CrudService } from 'src/app/services/crud.service';
 import * as  AOS from 'aos';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-form-conslutation',
   templateUrl: './form-conslutation.component.html',
   styleUrls: ['./form-conslutation.component.css']
 })
 export class FormConslutationComponent implements OnInit {
+  changeCont=""
+  public phone_number_standard :any
   dateId=""
   timeId=""
   affCodeEmail=true
@@ -31,7 +34,27 @@ export class FormConslutationComponent implements OnInit {
   funDate(e:any){
     this.dateId=e.target.value
   }
+  countryChange(country: any) {
+    this.changeCont=country.dialCode
+   console.log(country.dialCode,"ee");
+  //  if(country.dialCode === undefined){
+  //   console.log(5)
+  //   this.user.get("phone")?.setValue( "+" )
+  //  }
+  //  else{
+  //   this.user.get("phone")?.setValue( "+"+country.dialCode)
+  //  }
+  
+  }
+  getNumber(event:any){
+    console.log(event.target.value);
+    console.log(this.phone_number_standard )
+  }
+   getNumber2(event:any){
+    console.log(event.target.value);
+   
 
+  }
     user= new FormGroup({
    
       name: new FormControl('',[Validators.required ]),
@@ -73,9 +96,10 @@ export class FormConslutationComponent implements OnInit {
       tabBudjet:string[]=["your budget","AED 500000-> AED 1000000","AED 1000000 -> AED 2000000","more than AED 2000000"]
       tabDate:string[]=["When do you want to buy",'now ','after 1 month',"after 3 months","after 3 months"]
   
-  constructor(private http:HttpClient , public crud:CrudService) {  AOS.init();}
+  constructor(private http:HttpClient , public crud:CrudService ,private route:Router) {  AOS.init();}
        onChangeURL(url:any) {
     this.qrCodeDownloadLink = url;
+    this.route.navigate([this.crud.rootingUrl])
   }
       ngOnInit(): void {
        
@@ -144,7 +168,7 @@ export class FormConslutationComponent implements OnInit {
   this.crud.userConsultation.timeMeet=this.timeId
   // this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
  
-  this.myAngularxQrCode= " " +this.user.get("name")?.value + " " +this.user.get("phone")?.value + " " +this.user.get("email")?.value + " " + this.dateId + " " + this.timeId
+  this.myAngularxQrCode= "Heart Of carthage Real Estate   Main license N 889868  in Real Estate Buying&selling From Dubai Land Department with  ID 46079" +this.user.get("name")?.value + " " +this.user.get("phone")?.value + " " +this.user.get("email")?.value + " " + this.dateId + " " + this.timeId
   // })
 
 this.al=true
@@ -160,19 +184,34 @@ this.al=true
 }     
     }
  funStep1(){
-  if(this.user.value.phone?.split("")[0]!="+"){
-    alert("! code country of phone not exacly example phone:+971 xxxx")
-  }
-  else{
+if( this.changeCont === undefined ){
+  alert("! code country of phone not exacly example phone:+971 xxxx")
+}
+else {
+  if(this.changeCont !=""){
+    if(this.user.value.phone?.split("")[0] !="+"){
+     var phone= this.user.get("phone")?.value
+       this.user.get("phone")?.setValue( "+"+this.changeCont+phone)
+    }
+ }
+ if(this.changeCont ==""){
+
+var phone= this.user.get("phone")?.value
+       this.user.get("phone")?.setValue( "+"+"971"+phone)
+ }
+ 
     this.http.post(this.baseUrl +'/email/send-mail/',{email:this.user.value.email,
      code:"G9p8"}).subscribe(res=>{
       console.log(res)
       this.affCodeEmail=false
       alert("Open your email and find the verification code.  enter the verification code")
     })
+}  
+  
+ console.log(this.user.get("phone")?.value,"valeur")
 
    
-  }
+
  }
 
   step_counter = 1

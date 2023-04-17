@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class CrudService {
+  rootingUrl=""
   userConsultation={
     name:"",
     email:"",
@@ -17,6 +18,7 @@ export class CrudService {
    dateMeet:"",
    project:'',
    timeMeet:''
+
   }
   id2:any
   rev:any[]=[

@@ -39,7 +39,7 @@
                                 <div class="d-flex flex-row align-items-center mb-4">
                                    <i class="fas fa-phone fa-lg me-3 fa-fw" style="color:  #C9A770;"></i>
                                   <div class="form-outline flex-fill mb-0">
-                                    <input type="text" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'AE'}" style="width:100% !important" id="form3Example4c" class="form-control" placeholder="example:+971"  formControlName='phone'/>
+                                    <input type="text" ng2TelInput  (countryChange)="countryChange($event)"  [ng2TelInputOptions]="{initialCountry: 'AE'}" style="width:100% !important" id="form3Example4c" class="form-control" placeholder="example:+971" formControlName='phone' />
                                     <label class="form-label"  *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched" style="color: red;" for="form3Example1c">phone is require</label>
                                   </div>
                                 </div>
@@ -60,7 +60,7 @@
                                     <label class="form-label" for="form3Example4cd">code send by  Email</label>
                                   </div>
                                 </div>
-                                <div class="d-flex flex-row align-items-center mb-4" *ngIf="affDateRendevous">
+                                <div class="d-flex flex-row align-items-center mb-4" *ngIf="affDateRendevous && !affQr ">
                                  
                                   <div class="form-outline flex-fill mb-0">
                                     <input type="date" id="Date" class="form-control"  name="birthday"  (change)="funDate($event)"  >
@@ -93,7 +93,7 @@
               
                             <button type="button" class="btn btn-primary btn-lg"   [disabled]="!user.valid" (click)="funStep1()" style="background-color: #C9A770;" *ngIf="affCodeEmail" > Setp1</button>
                             <button type="button" class="btn btn-primary btn-lg"   [disabled]="!user.valid" (click)="enregisterClient()" style="background-color: #C9A770;" *ngIf="!affCodeEmail && affDateRendevous && !affQr">send Now</button>
-                            <a type="button" *ngIf="affQr" class="btn btn-primary btn-lg" style="background-color:orange ;" [href]="qrCodeDownloadLink" download="Information consultation ">Download information consultation</a>
+                            <a type="button" *ngIf="affQr" class="btn btn-primary btn-lg" style="background-color:orange ;" [href]="qrCodeDownloadLink" download="Information consultation ">Download Now</a>
                           </div>
         
                         </form>

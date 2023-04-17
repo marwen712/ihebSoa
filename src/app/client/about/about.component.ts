@@ -9,7 +9,9 @@ export class AboutComponent implements OnInit {
   public myAngularxQrCode: string = "";
   public qrCodeDownloadLink: any = "";
   constructor() {
-    this.myAngularxQrCode = 'heart of carthage dubai';
+    this.myAngularxQrCode = 'Heart Of carthage Real Estate   Main license N 889868  in Real Estate Buying&selling From Dubai Land Department with  ID 46079'
+ 
+   
    }
    onChangeURL(url:any) {
     this.qrCodeDownloadLink = url;

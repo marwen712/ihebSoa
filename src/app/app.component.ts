@@ -15,7 +15,7 @@ export class AppComponent {
   title = 'Heart Of Carthage Real Estate Dubai';
   message:any
   public phone = "+971 58 218 9263"
- public messg = "ارسل الآن طلبك";
+ public messg = "My Real Estate Needs";
 
   constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public titl:Title, public crud:CrudService, private pixel: PixelService ){
 
@@ -28,7 +28,7 @@ export class AppComponent {
 
   ngOnInit() {
 
-   
+   this.crud.rootingUrl= window.location.pathname
   
     if(!(window.location.pathname === "/" || window.location.pathname === "/rev" )){
 
