@@ -27,7 +27,7 @@ export class CrudService {
       price:"from $49.000 USD",
       catigorie:"Studio & Apartments",
       title:"RIVIERA",
-      video:"https://www.youtube.com/embed/pxEWiz40xBo?autoplay=1&mute=1" ,
+      video:"https://www.youtube.com/embed/pxEWiz40xBo?autoplay=1&muted=1" ,
       titleHtml1:"RIVIERA",
       titleHtml2: "VILLE MBR",
       sTitle:"The concept of Azizi Riviera is borrowed from the French Riviera. The buildings and spaces around them have been designed to emulate Mediterranean contemporary living",
@@ -55,7 +55,7 @@ export class CrudService {
   
   },
   { id:1,
-    video: "https://www.youtube.com/embed/6rr0-a5AOnw?autoplay=1&mute=2",
+    video: "https://www.youtube.com/embed/6rr0-a5AOnw?autoplay=1&muted=1",
     catigorie:"Villas",
     sTitle:" Shape your happy life in this collection of five tastefully constructed buildings encircling a busy inner courtyard just yards from a 700-meter stretch of Creek Beach beach",
     price:"from $148.000 USD",
@@ -99,7 +99,7 @@ export class CrudService {
 
 },
 { id:2,
-  video: "https://www.youtube.com/embed/WOY1Fnw2R0I?autoplay=1&mute=2",
+  video: "https://www.youtube.com/embed/WOY1Fnw2R0I?autoplay=1&muted=1",
   catigorie: "STUDIO",
   sTitle:"Beach oasis in dubai STUDIO CITY Dubai Studio City is not only the hub for cutting-edge facilities and services to companies across the media and entertainment",
   price:"from $13.000 USD",
