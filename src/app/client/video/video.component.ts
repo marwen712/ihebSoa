@@ -4,12 +4,16 @@ import { ActivatedRoute } from '@angular/router';
 import { CrudService } from 'src/app/services/crud.service';
 import { Meta, Title } from '@angular/platform-browser';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
 @Component({
   selector: 'app-video',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.css']
 })
 export class VideoComponent implements OnInit {
+  YT: any;
+  private player: any;
+  private videoId: string = 'VIDEO_ID_HERE';
 affBut=true
 
 id:any
@@ -21,27 +25,55 @@ scroll:any
   constructor(private render:Renderer2 ,public crud:CrudService,private titl:Title , private  route:ActivatedRoute,private sanitizer: DomSanitizer) { }
   Navigate(elem: HTMLElement ) {
     elem.scrollIntoView({ behavior: 'smooth' });
+   
     this.affBut=false
     }
   ngOnInit(): void {
    
     this.myVideo=document.getElementById("myVideo")
     this.cot=document.getElementById("cot")
+    
     this.cot.style.height=this.myVideo.style.height
     this.render.listen(window, 'scroll', ($event) => {
       this.scroll = (window.scrollY / this.sections);
-      console.log(this.scroll,"pp")
+   console.log(this.scroll,"pp")
+   
+     
    })
    console.log(this.route.snapshot.paramMap.get('id'))
   this.crud.id2=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
   this.titl.setTitle( this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).title);
   this.id=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
 
-  this.video= this.sanitizer.bypassSecurityTrustResourceUrl(this.crud.rev[this.id].video);
-  console.log(this.video,"video")
-  }
-  // @HostListener('window:scroll', ['$event'])
-  // track(event) {
-   
+  this.fun()
+  //  var vid=this.myVideo as HTMLIFrameElement
+  //  vid.contentWindow?.postMessage('play','*')
+  // console.log(this.crud.rev[this.id].video)
+  // console.log(this.video,"video")
+  // this.player = new YT.Player('videoFrame', {
+  //   videoId: this.crud.rev[this.id].video,
+  //   playerVars: {
+  //     autoplay: 1,
+  //     controls: 0,
+  //     showinfo: 0
+  //   },
+  //   events: {
+  //     'onReady': this.onPlayerReady.bind(this)
+  //   }
+  // });
   // }
+  // // @HostListener('window:scroll', ['$event'])
+  // // track(event) {
+   
+  // // }
+  // onPlayerReady(event) {
+  //   event.target.playVideo();
+  // }
+  }
+ async fun(){
+  this.video= await this.sanitizer.bypassSecurityTrustResourceUrl(this.crud.rev[this.id].video);
+  var vid=this.myVideo as HTMLIFrameElement
+  vid.contentWindow?.postMessage('play','*')
+
+ }
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from 'src/app/services/crud.service';
+import { environment } from 'src/environments/environment';
+import { HttpClient ,HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-about',
@@ -6,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  user:any
   public myAngularxQrCode: string = "";
   public qrCodeDownloadLink: any = "";
-  constructor() {
+  constructor(private crud:CrudService ,private http:HttpClient ) {
     this.myAngularxQrCode = 'Heart Of carthage Real Estate   Main license N 889868  in Real Estate Buying&selling From Dubai Land Department with  ID 46079'
  
    
@@ -16,8 +20,18 @@ export class AboutComponent implements OnInit {
    onChangeURL(url:any) {
     this.qrCodeDownloadLink = url;
   }
-
+   registre(){
+    this.http.post(environment.baseURL +'/todo/c/',this.user).subscribe(res=>{
+          
+      console.log(res.valueOf())
+    })
+   }
   ngOnInit(): void {
+    this.user={
+      email:"",
+      name:''
+    }
+    this.crud.consulAff=true
     
   }
 

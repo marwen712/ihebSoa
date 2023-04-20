@@ -11,9 +11,19 @@ import * as  AOS from 'aos';
   styleUrls: ['./form3.component.css']
 })
 export class Form3Component implements OnInit {
-
+  changeCont=""
   baseUrl=environment.baseURL
-  
+  countryChange(country: any) {
+    this.changeCont=country.dialCode
+   console.log(country.dialCode,"ee");
+  //  if(country.dialCode === undefined){
+  //   console.log(5)
+  //   this.user.get("phone")?.setValue( "+" )
+  //  }
+  //  else{
+  //   this.user.get("phone")?.setValue( "+"+country.dialCode)
+  //  }
+  }
   images = [
     {path: 'assets/img/IMG-20221117-WA0012.jpg'},
     {path: 'assets/img/IMG-20221117-WA0014.jpg'},
@@ -114,21 +124,40 @@ export class Form3Component implements OnInit {
         this.affForm=true
       }
       enregisterClient(){
-        this.user.get("typB")?.setValue(this.typB)
-        this.user.get("typRef")?.setValue(this.typRef)
-        this.user.get("DateN")?.setValue(Date())
-        this.user.get("country")?.setValue(this.countrySelcted)
-        this.user.get("typM")?.setValue(this.typM)
-        this.user.get("project")?.setValue(this.crud.project)
-        console.log(this.user.value)
-        this.al=true
-        this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
+        if( this.changeCont === undefined ){
+          alert("! code country of phone not exacly example phone:+971 xxxx")
+        }
+        else {
+          if(this.changeCont !=""){
+            if(this.user.value.phone?.split("")[0] !="+"){
+             var phone= this.user.get("phone")?.value
+               this.user.get("phone")?.setValue( "+"+this.changeCont+phone)
+            }
+         }
+         if(this.changeCont ==""){
+        
+        var phone= this.user.get("phone")?.value
+               this.user.get("phone")?.setValue( "+"+"971"+phone)
+         }
+         this.user.get("DateN")?.setValue(Date())
+         this.user.get("country")?.setValue(this.countrySelcted)
+ 
+         this.user.get('project')?.setValue(this.crud.project)
+         console.log(this.user.value)
+         this.al=true
+         this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
+          
+           console.log(res.valueOf())
+         })
+        
+         this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
+           console.log(res)})
+           
+         this.http.post(this.baseUrl +'/email/send-mail/',this.user.value).subscribe(res=>{
+           console.log(res)})
          
-          console.log(res.valueOf())
-        })
-       
-        this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
-          console.log(res)})
+           
+        }  
         
     }
 

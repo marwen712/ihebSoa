@@ -223,7 +223,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
    
     
-
+    this.crud.consulAff=true
     //slider developers : scrolling auto
 
     this.phoneScreen = window.matchMedia('(max-width: 480px)')

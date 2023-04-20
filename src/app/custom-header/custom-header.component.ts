@@ -21,7 +21,7 @@ export class CustomHeaderComponent implements OnInit,OnDestroy {
   minIdPc:any
   maxIdPc:any
   sale="Sale"
-  prop="Property Type"
+  prop="Apartement"
  minn="hhhhh"
 city=""
  searchCty:string[]=["Sharjah",
@@ -59,9 +59,9 @@ city=""
   }
   searchAllDropList = {
     sale:["Sale","Rent"],
-    propertyType:["Property Type","Appartment","Villa","Townhouse","Penthouse","Office space","Shop"],
-    minArea: ["Max budget","300k AED","500K AED","1M AED","2M AED","3M+ AED"],
-    maxArea:["Max budget","300k AED","500K AED","1M AED","2M AED","3M+ AED"]
+    propertyType:["Property Type","Apartement","Villa","Townhouse","Penthouse"],
+    minArea: ["Max budget","$30.000","$50.000","$1M","$2M ","$3M+ usd"],
+    maxArea:["Max budget","$30.000","$50.000","$1M","$2M ","$3M+ usd"]
   }
 
   formSearch = {
@@ -148,10 +148,10 @@ search(){
   console.log(this.sale ,"aaaa")
   this.crud.isCustomNavBar = true
   if(this.sale=="Sale"){
-    if(this.prop=="Appartment" || this.prop=="Property Type"){
+    if(this.prop=="Apartement" || this.prop=="Property Type"){
       this.route.navigate(['/appr'])
     }
-    if(this.prop=="Villa" || this.prop=="Property Type"){
+    if(this.prop=="Villa" ){
       this.route.navigate(['/vila'])
     }
   }

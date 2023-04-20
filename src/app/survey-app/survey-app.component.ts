@@ -107,6 +107,19 @@ export class SurveyAppComponent implements OnInit {
 
     this.choiceId = title
 
+    var i=0
+    i=i+1
+    console.log(title,i,"ee")
+    if(i==1){
+     this.crud.userConsultation.q1= title
+    }
+    if(i==2){
+      this.crud.userConsultation.q2=title
+    }
+    if(i==3){
+      this.crud.userConsultation.q3=title
+    }
+
   }
 
     
@@ -178,9 +191,9 @@ this.crud.affForm=false
 
         if(this.questions.length === this.step){
           this.crud.project="consultation"
-          this.crud.userConsultation.q1=this.answers[1].question
-          this.crud.userConsultation.q2=this.answers[2].question
-          this.crud.userConsultation.q3=this.answers[3].question
+          // this.crud.userConsultation.q1=this.answers[1].question
+          // this.crud.userConsultation.q2=this.answers[2].question
+          // this.crud.userConsultation.q3=this.answers[3].question
           this.crud.affForm=false
 
            this.route.navigate(["/consultation"])
@@ -357,9 +370,9 @@ console.log(this.answers,"ee")
 
         if(this.step==this.questions.length){
           this.crud.project="consultation"
-          this.crud.userConsultation.q1=this.answers[1].question
-          this.crud.userConsultation.q2=this.answers[2].question
-          this.crud.userConsultation.q3=this.answers[3].question
+          // this.crud.userConsultation.q1=this.answers[1].question
+          // this.crud.userConsultation.q2=this.answers[2].question
+          // this.crud.userConsultation.q3=this.answers[3].question
           this.crud.affForm=false
           
            this.route.navigate(["/consultation"])
@@ -430,13 +443,13 @@ console.log(this.answers,"ee")
     if(this.phoneScreen.matches){  
       setTimeout(()=>{
         this.animationEleSurvey()
-      },10)
+      },3000)
 
     }else{
 
       setTimeout(()=>{
         this.surveyCLOpen()   
-      },10)
+      },3000)
 
     }
   }

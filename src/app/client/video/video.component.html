@@ -20,6 +20,14 @@ body {
   min-height:500px ;
 }
 
+#myVideo2 {
+ 
+ right: 0;
+ bottom: 0;
+ width: 100%;
+ height: auto;
+ min-height:500px ;
+}
 .content {
   position: fixed;
   bottom: 0;
@@ -82,17 +90,20 @@ body {
 </style>
 
 <body>
-	<iframe   id="myVideo" [src]=video title="heart-of-carthage-dubai-real-estate"></iframe>
+
+    <iframe  id="myVideo" width="100%" height="auto" [src]=video title="heart-of-carthage-dubai-real-estate"  allow="autoplay; encrypted-media"></iframe> 
+
 <!-- <video autoplay muted loop id="myVideo">
   <iframe src="https://www.youtube.com/embed/pxEWiz40xBo" type="video/mp4">
   Your browser does not support HTML5 video.
 </video> -->
+<!-- <iframe #videoFrame class="myVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe> -->
 
  <div class="content" id="cot"  [class.selected]="scroll > 10">
  <img src="assets/images/logoPh.png" alt="Azizi Revera" height="auto" width="10%">
   <h2  class="h22" style="color:#c38f3c;font-family:font-italic">Get your apartment in {{crud.rev[id].title}}</h2>
   <div class="card wow bounceInUp" data-wow-duration="2s">
-    <h3 class="hh"><i class="fas fa-check" style="color: orange;"></i> 10%  Booking Amount</h3>
+    <h3 class="hh"><i class="fas fa-check" style="color: orange;"></i> {{crud.rev[id].prencentage}} Booking Amount</h3>
     <h3 class="hh"><i class="fas fa-check" style="color: orange;"></i> Golden Visa</h3>
     <h3 class="hh"> <i class="fas fa-check" style="color: orange;"></i> Payment With Cryptocurrency</h3>
   </div>

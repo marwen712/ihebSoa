@@ -8,7 +8,7 @@
 			<div class="item"><span>Buy</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item"  ><a routerLink="/appr">Appartements for sale</a></div>
+						<div class="drop-item"  ><a routerLink="/appr">Apartements for sale</a></div>
 						<div class="drop-item"  ><a routerLink="/vila"> Villas for sale</a></div>
 						
 						<div class="drop-item">Townhouses for sale</div>
@@ -19,7 +19,7 @@
 			<div class="item"><span>Rent</span><i class="fa-solid fa-angle-down"></i>
 				<div class="drop-down-item">
 					<div class="drop-content">
-						<div class="drop-item"  ><a routerLink="/rent">Appartements for rent</a></div>
+						<div class="drop-item"  ><a routerLink="/rent">Apartements for rent</a></div>
 						<div class="drop-item"  ><a routerLink="/rent"> Villas for rent</a></div>
 						
 						<div class="drop-item">Townhouses for rent</div>
@@ -76,7 +76,7 @@
 					<div class="item"><span>Buy</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item" ><a routerLink="/appr" >Appartements for sale</a></div>
+								<div class="drop-item" ><a routerLink="/appr" >Apartements for sale</a></div>
 						<div class="drop-item" ><a routerLink="/vila">Villas for sale</a></div>
 						
 						<div class="drop-item">Townhouses for sale</div>
@@ -88,7 +88,7 @@
 					<div class="item"><span>Rent</span><i class="fa-solid fa-angle-down"></i>
 						<div class="drop-down-item">
 							<div class="drop-content">
-								<div class="drop-item"  ><a routerLink="/rent" > Appartements for rent</a></div>
+								<div class="drop-item"  ><a routerLink="/rent" > Apartements for rent</a></div>
 						<div class="drop-item"  > <a routerLink="/rent"></a>Villas for rent</div>
 						
 						<div class="drop-item">Townhouses for rent</div>
@@ -182,7 +182,7 @@
 					<div class="section right">
 						<div class="search-header">
 							<div class="input">
-								<input type="text"  placeholder="code Project" >
+								<input type="text"  placeholder="Area" >
 								
 							</div>
 							
@@ -201,7 +201,7 @@
 			<div class="footer-section">
 				<img src="assets/images/logo-header.png" alt="">
 				<div class="details">
-					<span style="font-family:font-italic"> We go beyond traditional investment and offer only</span>
+					<span style="font-family:font-italic"> RENT-SALE-BUY</span>
 					<div style="font-family:font-italic ;color: orange;"> 10%  Booking Amouns.</div>
 				</div>
 			</div>
@@ -221,8 +221,9 @@
 					
 					<div class="item-title"  (click)="openCloseDropSide(ab,RentListe,BuyListe,dev,off)"><div>Who we are</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #ab >
-					<div class="drop-item"><a routerLink="/contact-us">Contact-us</a></div>
 						<div class="drop-item" ><a routerLink="/about">About-us</a></div>
+					<div class="drop-item"><a routerLink="/contact-us">Contact-us</a></div>
+						
 						
 					</div>
 				</div>
@@ -230,7 +231,7 @@
 					
 					<div class="item-title" (click)="openCloseDropSide(BuyListe,RentListe,off,dev,ab)" ><div >Buy</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #BuyListe>
-						<div class="drop-item"  ><a routerLink="/appr">Appartements for sale</a></div>
+						<div class="drop-item"  ><a routerLink="/appr">Apartements for sale</a></div>
 						<div class="drop-item"  ><a routerLink="/vila"> Villas for sale</a></div>
 						
 						<div class="drop-item">Townhouses for sale</div>
@@ -241,7 +242,7 @@
 					
 					<div class="item-title" (click)="openCloseDropSide(RentListe,BuyListe,off,dev,ab)"><div >Rent</div><i class="fa-solid fa-angle-down"></i></div>
 					<div class="list" #RentListe>
-						<div class="drop-item"  ><a routerLink="/rent">Appartements for rent</a></div>
+						<div class="drop-item"  ><a routerLink="/rent">Apartements for rent</a></div>
 						<div class="drop-item"  ><a routerLink="/rent"> Villas for rent</a></div>
 						
 						<div class="drop-item">Townhouses for rent</div>
@@ -345,7 +346,7 @@
 					<div class="section right">
 						<div class="search-header">
 							<div class="input">
-								<input type="text" placeholder="code project" (click)="openCloseDrop(dropMaxAreaMb)">
+								<input type="text" placeholder="Area" (click)="openCloseDrop(dropMaxAreaMb)">
 								<div class="drop-input" #dropMinArMb>
 									<div class="item" *ngFor="let item of searchAllDropList.minArea"  (click)="selectItemMin(dropMinAreaMb,item)">{{item}}</div>
 								</div>

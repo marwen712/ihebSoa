@@ -72,6 +72,7 @@ export class FormConslutationComponent implements OnInit {
       
     
     })
+    affValid=false
     Title_off=''
     disable=false
     affichEtape2=false
@@ -99,6 +100,10 @@ export class FormConslutationComponent implements OnInit {
   constructor(private http:HttpClient , public crud:CrudService ,private route:Router) {  AOS.init();}
        onChangeURL(url:any) {
     this.qrCodeDownloadLink = url;
+    
+    this.affValid=true
+  }
+  back(){
     this.route.navigate([this.crud.rootingUrl])
   }
       ngOnInit(): void {
@@ -166,7 +171,7 @@ export class FormConslutationComponent implements OnInit {
   this.crud.userConsultation.project=this.crud.project
   this.crud.userConsultation.dateMeet=this.dateId
   this.crud.userConsultation.timeMeet=this.timeId
-  // this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
+  console.log(this.crud.userConsultation,"message") // this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
  
   this.myAngularxQrCode= "Heart Of carthage Real Estate   Main license N 889868  in Real Estate Buying&selling From Dubai Land Department with  ID 46079" +this.user.get("name")?.value + " " +this.user.get("phone")?.value + " " +this.user.get("email")?.value + " " + this.dateId + " " + this.timeId
   // })
@@ -188,6 +193,7 @@ if( this.changeCont === undefined ){
   alert("! code country of phone not exacly example phone:+971 xxxx")
 }
 else {
+  console.log(this.crud.userConsultation,"message2")
   if(this.changeCont !=""){
     if(this.user.value.phone?.split("")[0] !="+"){
      var phone= this.user.get("phone")?.value

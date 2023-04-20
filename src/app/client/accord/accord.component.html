@@ -147,8 +147,8 @@
                           </tr>
                           <tr>
                            
-                            <td><strong class="fw-bold" style="color: orange;">4 Yrs</strong></td>
-                            <td><small class="fw-bold" style="color: orange;"><i class="fas fa-location-dot"></i> DUBAÏ  MEYDAN ONE.</small></td>
+                            <td><strong class="fw-bold" style="color: orange;">{{this.crud.rev[this.crud.id2]. pyement}}</strong></td>
+                            <td><small class="fw-bold" style="color: orange;"><i class="fas fa-location-dot"></i> {{this.crud.rev[this.crud.id2].location}} .</small></td>
                           
                           </tr>
                         
@@ -225,15 +225,7 @@
 
                                 <div class="col-md-8 mb-3" >
                                     <div class="text-block wow zoomIn" data-wow-duration="2s">
-                                        <h5 class="events-heading">{{this.crud.rev[this.crud.id2].title}} </h5>
-                                        <p class="myp-font">. Downpayment from
-                                            10% </p>
-                                        <p class="myp-font">. 
-                                            Completion date
-                                            Q3-2023</p>
-                                        <p class="myp-font">. Type of buildings
-                                            Premium</p>
-                                            <p class="myp-font">. 70% after commissioning of the property</p>
+                                        <img [src]="this.crud.rev[this.crud.id2]. plan" style="width:100%;height:auto" alt="heart of carthage dubai real estate">
                                     </div>
                                 </div>
                                 <div class=" col-md-4 ">

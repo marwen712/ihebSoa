@@ -9,7 +9,7 @@ import { CrudService } from 'src/app/services/crud.service';
   styleUrls: ['./form2.component.css']
 })
 export class Form2Component implements OnInit {
-
+  changeCont=""
   baseUrl=environment.baseURL
   
   images = [
@@ -18,6 +18,17 @@ export class Form2Component implements OnInit {
     {path: 'assets/img/IMG-20221107-WA0016.jpg'},
     {path: 'assets/img/IMG-20221107-WA0015.jpg'},
   ]
+  countryChange(country: any) {
+    this.changeCont=country.dialCode
+   console.log(country.dialCode,"ee");
+  //  if(country.dialCode === undefined){
+  //   console.log(5)
+  //   this.user.get("phone")?.setValue( "+" )
+  //  }
+  //  else{
+  //   this.user.get("phone")?.setValue( "+"+country.dialCode)
+  //  }
+  }
   //agm
     user= new FormGroup({
    
@@ -72,23 +83,42 @@ export class Form2Component implements OnInit {
      
       enregisterClient(){
      
-        this.user.get("DateN")?.setValue(Date())
-        this.user.get("country")?.setValue(this.countrySelcted)
-
-        this.user.get('project')?.setValue(this.crud.project)
-        console.log(this.user.value)
-        this.al=true
-        this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
-         
-          console.log(res.valueOf())
-        })
-       
-        this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
-          console.log(res)})
-          
-        this.http.post(this.baseUrl +'/email/send-mail/',this.user.value).subscribe(res=>{
-          console.log(res)})
+     
+        ////
+        if( this.changeCont === undefined ){
+          alert("! code country of phone not exacly example phone:+971 xxxx")
+        }
+        else {
+          if(this.changeCont !=""){
+            if(this.user.value.phone?.split("")[0] !="+"){
+             var phone= this.user.get("phone")?.value
+               this.user.get("phone")?.setValue( "+"+this.changeCont+phone)
+            }
+         }
+         if(this.changeCont ==""){
         
+        var phone= this.user.get("phone")?.value
+               this.user.get("phone")?.setValue( "+"+"971"+phone)
+         }
+         this.user.get("DateN")?.setValue(Date())
+         this.user.get("country")?.setValue(this.countrySelcted)
+ 
+         this.user.get('project')?.setValue(this.crud.project)
+         console.log(this.user.value)
+         this.al=true
+         this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
+          
+           console.log(res.valueOf())
+         })
+        
+         this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
+           console.log(res)})
+           
+         this.http.post(this.baseUrl +'/email/send-mail/',this.user.value).subscribe(res=>{
+           console.log(res)})
+         
+           
+        }  
     }
    
     country(e:any){

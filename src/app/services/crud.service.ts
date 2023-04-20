@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CrudService {
   rootingUrl=""
+ consulAff=true
   userConsultation={
     name:"",
     email:"",
@@ -26,10 +27,14 @@ export class CrudService {
     { id:0,
       price:"from $49.000 USD",
       catigorie:"Studio & Apartments",
+      prencentage:"10%",
+      plan:"https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
       title:"RIVIERA",
-      video:"https://www.youtube.com/embed/pxEWiz40xBo?autoplay=1&muted=1" ,
+      video:"https://www.youtube.com/embed/pxEWiz40xBo?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" ,
       titleHtml1:"RIVIERA",
       titleHtml2: "VILLE MBR",
+      location:"DUBAÏ  MEYDAN ONE",
+      pyement:"4 yrs",
       sTitle:"The concept of Azizi Riviera is borrowed from the French Riviera. The buildings and spaces around them have been designed to emulate Mediterranean contemporary living",
       desc:"azizi riviera is a residential development consisting of 69 mid-rise residential buildings and two hotels situated alongside the dubai canal in meydan one. the residential blocks will contain a total of 16,000 studios and one- and two-bedroom apartments.",
       descFinale:"Riviera is one of Azizi’s flagship developments located in Meydan at the heart of Mohammed Bin Rashid City (MBR City) in Dubai. In a prime location, close to Meydan Racecourse, the home of The Dubai World Cup and a variety of sports and leisure facilities, Riviera offers a desirable address and is within close proximity to Downtown Dubai and Dubai International Airport. Inspired by the French Riviera, the iconic mixed-use community will be home to residential apartments, retail outlets and a variety of onsite amenities. Riviera comprises of various mid-rise residential buildings with a variety of retail outlets at ground floor level. Each individual building will benefit from a swimming pool, landscaped gardens and a gym. Key attractions will include a beautiful crystal lagoon and beach spanning 2km, a beautiful palm tree lined boulevard and numerous community parks. Residential properties include studios, one, two and three bedroom apartments offering a variety of different views ranging from orientation towards Downtown Dubai and Burj Khalifa to community pool and canal views. Riviera will also feature a wide variety of cafes and restaurants, convenience stores and shops.",
@@ -55,41 +60,46 @@ export class CrudService {
   
   },
   { id:1,
-    video: "https://www.youtube.com/embed/6rr0-a5AOnw?autoplay=1&muted=1",
-    catigorie:"Villas",
-    sTitle:" Shape your happy life in this collection of five tastefully constructed buildings encircling a busy inner courtyard just yards from a 700-meter stretch of Creek Beach beach",
-    price:"from $148.000 USD",
-    title:"Germany Villas",
-  titleHtml1:"Germany",
-  titleHtml2:'Villas',   
-  descFinale:"Shape your happy life in this collection of five tastefully constructed buildings encircling a busy inner courtyard just yards from a 700-meter stretch of Creek Beach beach. With its length along the shimmering canal that connects the island to the mainland, Creek Beach was designed to provide you with the best getaway for your family. This is paradise reborn, from the 700 meters of immaculate white sand to the infinity pool and breathtaking sunset views. At Grove, a residential property is created by skillfully fusing a superb location, great design, and a diverse lifestyle. Grove, which consists of five exquisite buildings, provides the ideal homes away from the hustle and bustle of the city while taking advantage of Creek Beach's distinctively pedestrian-friendly atmosphere. With a wide range of amenities and areas where you can relax, rest, reconnect, and indulge, Grove offers you an unrivaled lifestyle. The distinction is completely made by an infinity pool and easy access to the 700-meter beach! You'll learn more about what matters most at Dubai Creek Harbour. more jokes told among pals. Making more memories. a thriving neighborhood where people may live, work, play, and record special moments. a house with breathtaking views from every window.",
-  desc:"The exclusive domans of buyers with an eye for great and grand places. These modern and sleek villas are equipped with high technology and sustainable features with panoramic views and commanding details, such as floor to ceiling windows and suspended staircases, designed to make staycations and holidays unforgettable.",
+    video: "https://www.youtube.com/embed/XMygk9inR6w?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
+    catigorie:"Villas",  
+    prencentage:"20%",
+    plan:"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery2.jpg", 
+    sTitle:"Let life begin at Jouri Hills, the latest phase in the hugely popular Jumeirah Golf Estates mega community.A stylish enclave of 294 luxury home",
+    price:"from $54.000 USD",
+    pyement:"7 yrs",
+    location:"ARADA JOURI HILLS",
+    title:"Jumeriah Golf Estates, Dubai",
+ 
+  titleHtml1:"ARADA",
+  titleHtml2:'JOURI HILLS',   
+  descFinale:"Launched in 2017 and headquartered in the UAE, Arada is the region’s fastest-growing and most progressive developer. Arada was created to build communities and experiences that enrich, engage and inspire people Our homes are exceptionally designed and are complemented with bestin-class amenities, all provided at an accessible price point. Our prime focuses are on the intersection of community, technology and sustainability – all critical and fastmoving issues in the world today - and how these three themes can improve the lives of residents, workers and visitors in Arada’s developments.",
+  desc:"Our homes are exceptionally designed and are complemented with bestin-class amenities, all provided at an accessible price point. Our prime focuses are on the intersection of community, technology and sustainability – all critical and fastmoving issues in the world today - and how these three themes can improve the lives of residents, workers and visitors in Arada’s developments..",
 
 
   images:[
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560670063Germany-Villas-Gallery-1.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery4.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560672089Germany-Villas-Gallery-2.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery5.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560689835Germany-Villas-Gallery-8.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery8.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560717608Germany-Villas-Gallery-10.jpg",
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560670063Germany-Villas-Gallery-1.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery9.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery1.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560672089Germany-Villas-Gallery-2.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery2.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560689835Germany-Villas-Gallery-8.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery3.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560717608Germany-Villas-Gallery-10.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery7.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560670063Germany-Villas-Gallery-1.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery9.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560672089Germany-Villas-Gallery-2.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery1.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560689835Germany-Villas-Gallery-8.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery3.jpg",
 
-"https://heart-of-carthage-dubai.com/backend/uploads/1675560717608Germany-Villas-Gallery-10.jpg",
+"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery1.jpg",
 
 
 
@@ -99,8 +109,12 @@ export class CrudService {
 
 },
 { id:2,
-  video: "https://www.youtube.com/embed/WOY1Fnw2R0I?autoplay=1&muted=1",
+  video: "https://www.youtube.com/embed/WOY1Fnw2R0I?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
+  prencentage:"10%",
+  plan:"https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
   catigorie: "STUDIO",
+  location:"DUBAÏ  MEYDAN ONE",
+  pyement:"4 yrs",
   sTitle:"Beach oasis in dubai STUDIO CITY Dubai Studio City is not only the hub for cutting-edge facilities and services to companies across the media and entertainment",
   price:"from $13.000 USD",
   title:"Studio City",
