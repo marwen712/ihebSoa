@@ -12,6 +12,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class VideoComponent implements OnInit {
   YT: any;
+  video2:any
   private player: any;
   private videoId: string = 'VIDEO_ID_HERE';
 affBut=true
@@ -46,6 +47,8 @@ scroll:any
   this.id=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
 
   this.fun()
+  this.video2=document.querySelector("video")
+ this.video2.play()
   //  var vid=this.myVideo as HTMLIFrameElement
   //  vid.contentWindow?.postMessage('play','*')
   // console.log(this.crud.rev[this.id].video)
