@@ -1,4 +1,4 @@
-import { Component, OnInit,Renderer2} from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef,Renderer2} from '@angular/core';
 import { HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CrudService } from 'src/app/services/crud.service';
@@ -11,6 +11,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrls: ['./video.component.css']
 })
 export class VideoComponent implements OnInit {
+   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef;
   YT: any;
   video2:any
   private player: any;
@@ -23,30 +24,17 @@ public sections = 4;
 myVideo:any
 cot:any
 scroll:any
-  constructor(private render:Renderer2 ,public crud:CrudService,private titl:Title , private  route:ActivatedRoute,private sanitizer: DomSanitizer) { 
-  
-  
-  }
+  constructor(private render:Renderer2 ,public crud:CrudService,private titl:Title , private  route:ActivatedRoute,private sanitizer: DomSanitizer) { }
   Navigate(elem: HTMLElement ) {
     elem.scrollIntoView({ behavior: 'smooth' });
    
     this.affBut=false
     }
   ngOnInit(): void {
+   this.crud.timeForm=20000
     this.myVideo=document.getElementById("myVideo")
     this.cot=document.getElementById("cot")
-      console.log(this.route.snapshot.paramMap.get('id'))
-    this.crud.id2=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
-    this.titl.setTitle( this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).title);
-    this.id=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
-    this.video2=document.querySelector("video")
-    this.crud.project=this.crud.rev[this.id].title
-
-    this.video2.play()
-    this.fun
-  //  this.crud.affForm=false
   
-    
     this.cot.style.height=this.myVideo.style.height
     this.render.listen(window, 'scroll', ($event) => {
       this.scroll = (window.scrollY / this.sections);
@@ -54,9 +42,20 @@ scroll:any
    
      
    })
-
-
+   console.log(this.route.snapshot.paramMap.get('id'))
+  this.crud.id2=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
+  this.titl.setTitle( this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).title);
+  this.id=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
+this.crud.project=this.crud.rev[this.id].title
+  this.fun()
  
+   const videoPlayer = this.videoPlayerRef.nativeElement as HTMLVideoElement;
+    
+    setTimeout(()=>{
+      //vid.contentWindow?.postMessage('play','*')
+      videoPlayer.load();
+    },3000)
+ this.crud.isCustomNavBar=false
   //  var vid=this.myVideo as HTMLIFrameElement
   //  vid.contentWindow?.postMessage('play','*')
   // console.log(this.crud.rev[this.id].video)
@@ -83,8 +82,13 @@ scroll:any
   }
  async fun(){
   this.video= await this.sanitizer.bypassSecurityTrustResourceUrl(this.crud.rev[this.id].video);
-  var vid=this.myVideo as HTMLIFrameElement
-  vid.contentWindow?.postMessage('play','*')
-
+  
+   this.video2= document.querySelector("video")
+ //  var vid=this.myVideo as HTMLIFrameElement
+  
+ setTimeout(()=>{
+  //vid.contentWindow?.postMessage('play','*')
+ this.video2.play()
+},2000)
  }
 }

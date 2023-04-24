@@ -37,10 +37,10 @@ export class AppComponent {
     // }else{
     //   this.crud.isCustomNavBar = false
     // }
-    this.video2=document.querySelector("video")
+    // this.video2=document.querySelector("video")
 
 
-    this.video2.play()
+    // this.video2.play()
 
    this.crud.rootingUrl= window.location.pathname
   

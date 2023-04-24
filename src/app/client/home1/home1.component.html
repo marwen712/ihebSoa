@@ -75,6 +75,38 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto wow fadeInUp">
+                <h3 class="text-center font-weight-bold" style="font-family:font-italic" >New Off-Plan of  <span class="bg-main" style="font-family:font-italic" >Dubai Investment </span></h3>
+                <p class=" text-center">We go beyond traditional investment and offer only
+                    the best customized solutions to our investors.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4 mt-4 wow bounceInUp" data-wow-duration="1.4s" *ngFor="let project of crud.rev">
+                <div class="card">
+                    <img class="card-img-top h-262" [src]="project.images[0]" alt="heart-of-carthage-dubai">
+                    <div class="card-block">
+
+                        <h4 class="card-title">{{project.title}}</h4>
+
+                        <div class="card-text">
+                            <p>{{project.sTitle}}</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small style="color: orange;"> {{project.price}}</small>
+                        <a routerLink="/real-estate/{{project.title}}" style="color: orange;" class="pull-right">More Info</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+  <section class="testimonials bg-light" id="marketplace">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto wow fadeInUp">
                 <h3 class="text-center font-weight-bold" style="font-family:font-italic" >New Off-Plan of <span class="bg-main" style="font-family:font-italic" > {{devlopper}} </span></h3>
                 <p class=" text-center">We go beyond traditional investment and offer only
                     the best customized solutions to our investors.</p>
