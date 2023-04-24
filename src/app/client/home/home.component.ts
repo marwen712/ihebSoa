@@ -222,7 +222,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
    
-    
+    this.crud.isCustomNavBar=false
     this.crud.consulAff=true
     //slider developers : scrolling auto
 

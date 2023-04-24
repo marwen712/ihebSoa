@@ -106,10 +106,10 @@ export class Form2Component implements OnInit {
          this.user.get('project')?.setValue(this.crud.project)
          console.log(this.user.value)
          this.al=true
-         this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
+        //  this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
           
-           console.log(res.valueOf())
-         })
+        //    console.log(res.valueOf())
+        //  })
         
          this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
            console.log(res)})

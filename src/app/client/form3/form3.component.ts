@@ -13,6 +13,13 @@ import * as  AOS from 'aos';
 export class Form3Component implements OnInit {
   changeCont=""
   baseUrl=environment.baseURL
+  
+  images = [
+    {path: 'assets/img/IMG-20221117-WA0012.jpg'},
+    {path: 'assets/img/IMG-20221117-WA0014.jpg'},
+    {path: 'assets/img/IMG-20221107-WA0016.jpg'},
+    {path: 'assets/img/IMG-20221107-WA0015.jpg'},
+  ]
   countryChange(country: any) {
     this.changeCont=country.dialCode
    console.log(country.dialCode,"ee");
@@ -24,12 +31,6 @@ export class Form3Component implements OnInit {
   //   this.user.get("phone")?.setValue( "+"+country.dialCode)
   //  }
   }
-  images = [
-    {path: 'assets/img/IMG-20221117-WA0012.jpg'},
-    {path: 'assets/img/IMG-20221117-WA0014.jpg'},
-    {path: 'assets/img/IMG-20221107-WA0016.jpg'},
-    {path: 'assets/img/IMG-20221107-WA0015.jpg'},
-  ]
   //agm
     user= new FormGroup({
    
@@ -38,17 +39,13 @@ export class Form3Component implements OnInit {
       lastName: new FormControl(''),
       phone: new FormControl('',Validators.required),
       email: new FormControl('',[Validators.required,Validators.email]),
-      typRef:new FormControl(""),
+     
       project:new FormControl(""),
-      typM:new FormControl(""),
-      typB:new FormControl(""),
       date:new FormControl(""),
       DateN:new FormControl(""),
       country:new FormControl(""),
-      
     
     })
-    Title_off=''
     disable=false
     affichEtape2=false
     countrySelcted="dubai"
@@ -63,19 +60,10 @@ export class Form3Component implements OnInit {
       affForm=false
       affDat=false
       
-      typRef='صالة وغرفة'
-      typM='كاش' 
-      typB="AED 1000000 -> AED 2000000"
-      tabMony:string[]=["Payment method ",'Cash ','Financement bancaire',"cryptocurrency"]
-      tabsaken:string[]=["Property Type ","bedroom with living room ","2 bedroom with living room","3 bedroom with living room ","sales office"] 
-      //tabIsthmar:string[]=["محل تجاري","شركة","عمارة " ] 
-      tabBudjet:string[]=["your budget","AED 500000-> AED 1000000","AED 1000000 -> AED 2000000","more than AED 2000000"]
-      tabDate:string[]=["When do you want to buy",'now ','after 1 month',"after 3 months","after 3 months"]
   
-  constructor(private http:HttpClient , public crud:CrudService) {  AOS.init();}
+  constructor(private http:HttpClient, public crud:CrudService ) { }
     
-      ngOnInit(): void {
-        this.crud.project=this.crud.rev[this.crud.id2].title
+      ngOnInit(): void {}
   //       const headers = new HttpHeaders({'Content-Type':'application/json; charset=utf-8',"aut":""});
     
   // const requestOptions = { headers: headers };
@@ -89,117 +77,44 @@ export class Form3Component implements OnInit {
       //   this.cokis.set('Test', 'Hello World');
   
       //  console.log(this.cokis.getAll(),"fff") 
-      }
+     
       // Navigate(elem: HTMLElement ) {
       //   elem.scrollIntoView({ behavior: 'smooth' });
       //   }
    
-      selectS(i:any){
-        
-        this.typRef=this.tabsaken[i.target.value]
+     
+  
+    enregisterClient(){
+      this.user.get('project')?.setValue(this.crud.rev[this.crud.id2].title)
+      if( this.changeCont === undefined ){
+        alert("! code country of phone not exacly example phone:+971 xxxx")
+      }
+      else {
+        console.log(this.crud.userConsultation,"message2")
+        if(this.changeCont !=""){
+          if(this.user.value.phone?.split("")[0] !="+"){
+           var phone= this.user.get("phone")?.value
+             this.user.get("phone")?.setValue( "+"+this.changeCont+phone)
+          }
+       }
+       if(this.changeCont ==""){
       
-        console.log(5)
-        this.budj=true
-      }
-      selectB(i:any){
+      var phone= this.user.get("phone")?.value
+             this.user.get("phone")?.setValue( "+"+"971"+phone)
+       }
+       this.al=true
+       this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
+        console.log(res)})
         
-        this.typB =this.tabBudjet[i.target.value]
-       
-        console.log(5)
-        this.crid=true
-      }
-      selectM(i:any){
+      this.http.post(this.baseUrl +'/email/send-mail/',this.user.value).subscribe(res=>{
+        console.log(res)})
+      }  
         
-        this.typM=this.tabMony[i.target.value]
-       
-        
-        console.log(5)
-        this.affDate=true
-      }
-      selectD(i:any){
-        
-        this.date=this.tabDate[i.target.value]
-       
-        console.log(5)
-        this.affForm=true
-      }
-      enregisterClient(){
-        if( this.changeCont === undefined ){
-          alert("! code country of phone not exacly example phone:+971 xxxx")
-        }
-        else {
-          if(this.changeCont !=""){
-            if(this.user.value.phone?.split("")[0] !="+"){
-             var phone= this.user.get("phone")?.value
-               this.user.get("phone")?.setValue( "+"+this.changeCont+phone)
-            }
-         }
-         if(this.changeCont ==""){
-        
-        var phone= this.user.get("phone")?.value
-               this.user.get("phone")?.setValue( "+"+"971"+phone)
-         }
-         this.user.get("DateN")?.setValue(Date())
-         this.user.get("country")?.setValue(this.countrySelcted)
- 
-         this.user.get('project')?.setValue(this.crud.project)
-         console.log(this.user.value)
-         this.al=true
-         this.http.post(this.baseUrl +'/todo/c/',this.user.value).subscribe(res=>{
-          
-           console.log(res.valueOf())
-         })
-        
-         this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
-           console.log(res)})
-           
-         this.http.post(this.baseUrl +'/email/send-mail/',this.user.value).subscribe(res=>{
-           console.log(res)})
+       console.log(this.user.get("phone")?.value,"valeur")
+      
          
-           
-        }  
-        
-    }
-
-
-  step_counter = 1
-
-  btnSteps:any
-  step1:any
-  step2:any
-  step3:any
-  
-  nextStep(){
-
-    this.btnSteps = document.getElementById("btn-next-step")
-    this.step1 = document.getElementById("step-1")
-    this.step2 = document.getElementById("step-2")
-    this.step3 = document.getElementById("step-3")
-
-    if(this.step_counter === 3){
-      alert("saved")
-    }
-
-    if(this.step_counter === 2){
-      this.btnSteps.style.innerText = "submit"
-      this.step2.style.transform = "translateX(-200%)"
-      this.step3.style.transform = "translateX(-200%)"
-      this.step_counter++
-    }
-
-    if(this.step_counter === 1){
-      this.step1.style.transform = "translateX(-100%)"
-      this.step2.style.transform = "translateX(-100%)"
-      this.step_counter++
-    }
-  
-
-  }
-
-
-    funcaffichEtape2(){
-      this.affichEtape2=true
-    }
+      
+       }
     country(e:any){
       this.countrySelcted=e.target.value
     }

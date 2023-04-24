@@ -23,16 +23,29 @@ public sections = 4;
 myVideo:any
 cot:any
 scroll:any
-  constructor(private render:Renderer2 ,public crud:CrudService,private titl:Title , private  route:ActivatedRoute,private sanitizer: DomSanitizer) { }
+  constructor(private render:Renderer2 ,public crud:CrudService,private titl:Title , private  route:ActivatedRoute,private sanitizer: DomSanitizer) { 
+  
+  
+  }
   Navigate(elem: HTMLElement ) {
     elem.scrollIntoView({ behavior: 'smooth' });
    
     this.affBut=false
     }
   ngOnInit(): void {
-   
     this.myVideo=document.getElementById("myVideo")
     this.cot=document.getElementById("cot")
+      console.log(this.route.snapshot.paramMap.get('id'))
+    this.crud.id2=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
+    this.titl.setTitle( this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).title);
+    this.id=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
+    this.video2=document.querySelector("video")
+    this.crud.project=this.crud.rev[this.id].title
+
+    this.video2.play()
+    this.fun
+  //  this.crud.affForm=false
+  
     
     this.cot.style.height=this.myVideo.style.height
     this.render.listen(window, 'scroll', ($event) => {
@@ -41,14 +54,9 @@ scroll:any
    
      
    })
-   console.log(this.route.snapshot.paramMap.get('id'))
-  this.crud.id2=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
-  this.titl.setTitle( this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).title);
-  this.id=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
 
-  this.fun()
-  this.video2=document.querySelector("video")
- this.video2.play()
+
+ 
   //  var vid=this.myVideo as HTMLIFrameElement
   //  vid.contentWindow?.postMessage('play','*')
   // console.log(this.crud.rev[this.id].video)

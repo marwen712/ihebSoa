@@ -14,6 +14,7 @@ export class SurveyAppComponent implements OnInit {
   elementSurvey:any
   phoneScreen:any
   step = 0
+  index=0
   user:any
   questions = [
 
@@ -53,7 +54,7 @@ export class SurveyAppComponent implements OnInit {
         },
         {
           image:"assets/images/images-survey/apprt.png",
-          title:"Appartement",
+          title:"Apartement",
         },
         {
           image:"assets/images/images-survey/market-place.png",
@@ -70,7 +71,7 @@ export class SurveyAppComponent implements OnInit {
 
         {
           image:"https://w7.pngwing.com/pngs/551/579/png-transparent-whats-app-logo-whatsapp-logo-whatsapp-cdr-leaf-text-thumbnail.png",
-          title:"Whatsapp ",
+          title:"Whatsapp",
         },
         {
           image:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Circle-icons-phone.svg/800px-Circle-icons-phone.svg.png",
@@ -107,18 +108,23 @@ export class SurveyAppComponent implements OnInit {
 
     this.choiceId = title
 
-    var i=0
-    i=i+1
-    console.log(title,i,"ee")
-    if(i==1){
+  
+   
+   
+    if( title=="Sale" ||title=="Rent"   || title=="Investment" ){
      this.crud.userConsultation.q1= title
+     console.log(this.crud.userConsultation.q1,'q1')
     }
-    if(i==2){
+    if(title=="Villa" ||title=="Apartement"   || title=="Market Place"){
       this.crud.userConsultation.q2=title
+      console.log(this.crud.userConsultation.q2,'q2')
     }
-    if(i==3){
+    if(title=="Whatsapp" ||title=="Phone"   || title=="Videoconference"){
       this.crud.userConsultation.q3=title
+      console.log(this.crud.userConsultation.q3,'q3')
     }
+
+  
 
   }
 
@@ -191,9 +197,9 @@ this.crud.affForm=false
 
         if(this.questions.length === this.step){
           this.crud.project="consultation"
-          // this.crud.userConsultation.q1=this.answers[1].question
-          // this.crud.userConsultation.q2=this.answers[2].question
-          // this.crud.userConsultation.q3=this.answers[3].question
+          // this.crud.userConsultation.q1=this.answers[1].answer
+          // this.crud.userConsultation.q2=this.answers[2].answer
+          // this.crud.userConsultation.q3=this.answers[3].answer
           this.crud.affForm=false
 
            this.route.navigate(["/consultation"])
@@ -443,13 +449,13 @@ console.log(this.answers,"ee")
     if(this.phoneScreen.matches){  
       setTimeout(()=>{
         this.animationEleSurvey()
-      },3000)
+      },this.crud.timeForm)
 
     }else{
 
       setTimeout(()=>{
         this.surveyCLOpen()   
-      },3000)
+      },this.crud.timeForm)
 
     }
   }

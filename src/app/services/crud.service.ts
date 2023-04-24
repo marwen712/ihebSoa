@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 export class CrudService {
   rootingUrl=""
  consulAff=true
+ timeForm=10000
   userConsultation={
     name:"",
     email:"",
@@ -19,7 +20,7 @@ export class CrudService {
    dateMeet:"",
    project:'',
    timeMeet:''
-
+  
   }
   id2:any
   rev:any[]=[
@@ -149,7 +150,7 @@ images:[
 
 }
   ]
-  isCustomNavBar = false
+  isCustomNavBar = true
   testUpdate=""
   affConst=true
   affNoteArabe=false

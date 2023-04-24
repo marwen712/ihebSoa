@@ -33,6 +33,7 @@ images:any=[]
   constructor(public crud:CrudService) { }
 
   ngOnInit(): void {
+    this.crud.affForm=false
    this.tabImages=this.crud.rev[this.crud.id2].images
    this.images=this.crud.rev[this.crud.id2].images.slice(0,4)
     this.crud.isCustomNavBar = false

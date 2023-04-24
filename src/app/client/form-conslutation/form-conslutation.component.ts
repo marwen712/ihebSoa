@@ -100,10 +100,14 @@ export class FormConslutationComponent implements OnInit {
   constructor(private http:HttpClient , public crud:CrudService ,private route:Router) {  AOS.init();}
        onChangeURL(url:any) {
     this.qrCodeDownloadLink = url;
-    
+
+   
+  }
+  step33(){
     this.affValid=true
   }
   back(){
+    this.crud.affForm=false
     this.route.navigate([this.crud.rootingUrl])
   }
       ngOnInit(): void {
@@ -210,7 +214,8 @@ var phone= this.user.get("phone")?.value
      code:"G9p8"}).subscribe(res=>{
       console.log(res)
       this.affCodeEmail=false
-      alert("Open your email and find the verification code.  enter the verification code")
+      // alert("Open your email and find the verification code.  enter the verification code")
+      this.affDateRendevous=true
     })
 }  
   

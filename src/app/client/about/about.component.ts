@@ -21,10 +21,11 @@ export class AboutComponent implements OnInit {
     this.qrCodeDownloadLink = url;
   }
    registre(){
-    this.http.post(environment.baseURL +'/todo/c/',this.user).subscribe(res=>{
+    this.http.post(environment.baseURL +'/email/send-mail1/',this.user).subscribe(res=>{
           
       console.log(res.valueOf())
     })
+  
    }
   ngOnInit(): void {
     this.user={

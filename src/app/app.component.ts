@@ -16,27 +16,35 @@ export class AppComponent {
   message:any
   public phone = "+971 58 218 9263"
  public messg = "My Real Estate Needs";
+ video2:any
 
   constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public titl:Title, public crud:CrudService, private pixel: PixelService ){
 
   }
   openForm(){
+    this.crud.timeForm=10
     this.crud.affForm=false
     this.crud.affForm=true
+
   }
   customNavBar:any
 
   ngOnInit() {
+    // if(!(window.location.pathname === "/" || window.location.pathname === "/rev" )){
+
+    //   this.crud.isCustomNavBar = true
+
+    // }else{
+    //   this.crud.isCustomNavBar = false
+    // }
+    this.video2=document.querySelector("video")
+
+
+    this.video2.play()
 
    this.crud.rootingUrl= window.location.pathname
   
-    if(!(window.location.pathname === "/" || window.location.pathname === "/rev" )){
-
-      this.crud.isCustomNavBar = true
-
-    }else{
-      this.crud.isCustomNavBar = false
-    }
+   
  
     this.pixel.initialize();
     this.meta.addTags([

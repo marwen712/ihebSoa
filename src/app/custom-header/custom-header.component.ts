@@ -148,14 +148,14 @@ search(){
   console.log(this.sale ,"aaaa")
   this.crud.isCustomNavBar = true
   if(this.sale=="Sale"){
-    if(this.prop=="Apartement" || this.prop=="Property Type"){
+    if(this.prop=="Apartement" || this.prop=="Property Type" ){
       this.route.navigate(['/appr'])
     }
-    if(this.prop=="Villa" ){
+    if(this.prop=="Villa" || this.prop=="Townhouse" ||  this.prop=="Penthouse" ){
       this.route.navigate(['/vila'])
     }
   }
-  if(this.sale =="Rent"){
+  if(this.sale =="Rent" ){
     console.log("eee")
     this.route.navigate(["/rent"])
   }
