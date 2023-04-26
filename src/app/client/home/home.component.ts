@@ -221,8 +221,7 @@ export class HomeComponent implements OnInit {
   slideWidth:any
 
   ngOnInit(): void {
-   
-    this.crud.isCustomNavBar=false
+   this.crud.timeForm=3000
     this.crud.consulAff=true
     //slider developers : scrolling auto
 

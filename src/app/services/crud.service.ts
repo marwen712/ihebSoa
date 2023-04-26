@@ -31,7 +31,7 @@ export class CrudService {
       prencentage:"10%",
       plan:"https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
       title:"RIVIERA",
-      video: "/assets/video/rev.mp4",//"https://www.youtube.com/embed/pxEWiz40xBo?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" ,
+      video: "/assets/video/rev2.mp4",//"https://www.youtube.com/embed/pxEWiz40xBo?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" ,
       titleHtml1:"RIVIERA",
       titleHtml2: "VILLE MBR",
       location:"DUBAÏ  MEYDAN ONE",
@@ -41,8 +41,12 @@ export class CrudService {
       descFinale:"Riviera is one of Azizi’s flagship developments located in Meydan at the heart of Mohammed Bin Rashid City (MBR City) in Dubai. In a prime location, close to Meydan Racecourse, the home of The Dubai World Cup and a variety of sports and leisure facilities, Riviera offers a desirable address and is within close proximity to Downtown Dubai and Dubai International Airport. Inspired by the French Riviera, the iconic mixed-use community will be home to residential apartments, retail outlets and a variety of onsite amenities. Riviera comprises of various mid-rise residential buildings with a variety of retail outlets at ground floor level. Each individual building will benefit from a swimming pool, landscaped gardens and a gym. Key attractions will include a beautiful crystal lagoon and beach spanning 2km, a beautiful palm tree lined boulevard and numerous community parks. Residential properties include studios, one, two and three bedroom apartments offering a variety of different views ranging from orientation towards Downtown Dubai and Burj Khalifa to community pool and canal views. Riviera will also feature a wide variety of cafes and restaurants, convenience stores and shops.",
       images:[
         "https://heart-of-carthage-dubai.com/backend/uploads/16755625067961668403583.jpg",
-        "https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
-        "https://heart-of-carthage-dubai.com/backend/uploads/167556250311316462266821501584749.jpg",
+        "https://azizidevelopments.com/assets/images/properties/beach-oasis/1665579700748337076.jpg",
+
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcodO8Jx9ppT20QXF7V0mnNdAlHxpe5NRLJHutvduDlEuvBlKOsvMWO2Z7yqRD6UmTpRE&usqp=CAU",
+"https://heart-of-carthage-dubai.com/backend/uploads/167556250311316462266821501584749.jpg",       
+"https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
+       
       "https://heart-of-carthage-dubai.com/backend/uploads/16755625067961668403583.jpg",
       "https://riviera-meydan.ae/wp-content/uploads/2020/10/2-1.jpg",
       "https://riviera-meydan.ae/wp-content/uploads/2020/10/1579530258517307613.jpg",
