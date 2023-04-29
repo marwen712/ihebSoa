@@ -90,7 +90,10 @@ body {
 </style>
 
 <body>
-
+  <section  style="background: url('https://dubaiimmobilier.fr/wp-content/uploads/2017/07/Azizi-Riviera-8.jpg') center center;
+  background-size: cover;background-attachment: fixed ;margin-bottom: 0px;" #Form>
+  <app-form3></app-form3>
+  </section>
   <video  id="myVideo"  loop  muted autoplay  playsinline  oncanplay="this.play()" onloadedmetadata="this.muted=true"     >
     <source [src]="video"  type="video/mp4">
    
@@ -105,7 +108,7 @@ body {
 </video> -->
 <!-- <iframe #videoFrame class="myVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe> -->
 
- <div class="content" id="cot"  [class.selected]="scroll > 10">
+ <!-- <div class="content" id="cot"  [class.selected]="scroll > 10">
  <img src="assets/images/logoPh.png" alt="Azizi Revera" height="auto" width="10%">
   <h2  class="h22" style="color:#c38f3c;font-family:font-italic">Get your apartment in {{crud.rev[id].title}}</h2>
   <div class="card wow bounceInUp" data-wow-duration="2s">
@@ -115,15 +118,12 @@ body {
   </div>
   <button id="myBtn" (click)=" Navigate(Form )">Book now</button>
   
-</div> 
+</div>  -->
 <section >
   <app-accord  ></app-accord>
 </section>
 
 
-<section  style="background: url('assets/images/img/2.png') center center;
-background-size: cover;background-attachment: fixed ;margin-bottom: 0px;" #Form>
-<app-form3></app-form3>
-</section>
+
 </body>
 
