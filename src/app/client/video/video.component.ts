@@ -14,6 +14,7 @@ export class VideoComponent implements OnInit {
    @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef;
   YT: any;
   video2:any
+  images:any[]=[]
   private player: any;
   private videoId: string = 'VIDEO_ID_HERE';
 affBut=true
@@ -38,6 +39,7 @@ scroll:any
   this.titl.setTitle( this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).title);
   this.id=Number(this.crud.rev.find(ele=>ele.title == this.route.snapshot.paramMap.get('id')).id)
 this.crud.project=this.crud.rev[this.id].title
+this.images=this.crud.rev[this.crud.id2].images.slice(0,4)
 this.video= this.sanitizer.bypassSecurityTrustResourceUrl(this.crud.rev[this.id].video);
   // this.fun()
  

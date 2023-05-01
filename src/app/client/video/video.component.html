@@ -7,17 +7,17 @@
 
 body {
   margin: 0;
-  font-family: Arial;
-  font-size: 17px;
-}
-
+  /* font-family: Arial;
+  font-size: 17px; */
+} 
+ 
 #myVideo {
  
   right: 0;
   bottom: 0;
   width: 100%;
   height: auto;
-  min-height:500px ;
+  /* min-height:500px ; */
 }
 
 #myVideo2 {
@@ -70,8 +70,7 @@ body {
   background: #ddd;
   color: black;
 
-}
-@media only screen and (max-width: 700px){
+}  @media only screen and (max-width: 700px){
   .content {
     margin-top:30% ;
   }
@@ -94,11 +93,98 @@ body {
   background-size: cover;background-attachment: fixed ;margin-bottom: 0px;" #Form>
   <app-form3></app-form3>
   </section>
+  <section class="testimonials" id="gobottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3 wow bounceInUp" data-wow-duration="1.4s">
+                <div class="big-img">
+                    <img [src]="images[0]" class="img-fluid" alt="heart-of-carthage-dubai">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="inner-section wow fadeInUp">
+                    <h3>{{this.crud.rev[this.crud.id2].titleHtml1}}<span class='bg-main'> {{this.crud.rev[this.crud.id2].titleHtml2}}</span></h3> 
+                    <br>
+                    <p class="text-justify">
+                        {{this.crud.rev[this.crud.id2].desc}}</p>
+
+                    <div class="linear-grid">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s" *ngFor="let img of images" >
+                                <img [src]='img' class="img-thumbnail" alt="heart-of-carthage-dubai">
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="wow zoomIn" data-wow-duration="2s" style="text-align: center;">
+                  <a  [href]="crud.rev[id].brochure" download="file.pdf" style="width: 80%;height: auto;" class="btn btn-warning btn-rounded"><span style="font-family: font-italic;font-weight: 800;color:#fff">Download Brochure</span> </a></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+  
   <video  id="myVideo"  loop  muted autoplay  playsinline  oncanplay="this.play()" onloadedmetadata="this.muted=true"     >
     <source [src]="video"  type="video/mp4">
    
    
   </video>
+  <div class="container" style="margin-top: 20px ;">
+    <div class="row" >
+        <div class="col-md-8 col-sm-12 wow bounceInUp" data-wow-duration="2s">
+            <div class="table-responsive">
+                <table class="table table-striped text-successtable-border border-ligh" >
+                    <tbody>
+                      <tr>
+                        <th ><i class="fas fa-building"> </i>Proprytes types</th>
+                    
+                        <th><i class="fas fa-bed"> </i>Unit types</th>
+                      
+                        <th ><i class="far fa-money-bill-alt"></i>Price</th>
+               
+                        
+                      </tr>
+                    </tbody >
+                    <tbody style="background-color: #fff;" >
+                      <tr style="background-color: #fff;">
+                       
+                        <td style="background-color: #fff;">{{this.crud.rev[this.crud.id2].catigorie}}</td>
+                        <td style="background-color: #fff;"><small class="fw-bold" style="color: orange;">1,2,3,4</small></td>
+                        
+                        <td style="background-color: #fff;"><strong class="fw-bold" style="color: orange;">{{this.crud.rev[this.crud.id2].price}}</strong></td>
+                      </tr>
+                     
+                    
+                    </tbody>
+                  </table>
+            </div>
+           
+        </div>
+        <div class="col-md-4 col-sm-12 wow bounceInUp" data-wow-duration="2s">
+            <div class="table-responsive" >
+                <table class="table table-striped text-successtable-border border-ligh" >
+                   
+                    <tbody>
+                      <tr>
+                       
+                        <th>PAYMENT PLAN</th>
+                        <th>Location</th>
+                       
+                      </tr>
+                      <tr>
+                       
+                        <td><strong class="fw-bold" style="color: orange;">{{this.crud.rev[this.crud.id2]. pyement}}</strong></td>
+                        <td><small class="fw-bold" style="color: orange;"><i class="fas fa-location-dot"></i> {{this.crud.rev[this.crud.id2].location}} .</small></td>
+                      
+                      </tr>
+                    
+                    </tbody>
+                  </table>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- <iframe  id="myVideo" width="100%" height="auto" [src]=video title="heart-of-carthage-dubai-real-estate"  allow="autoplay; encrypted-media"></iframe>  -->
 

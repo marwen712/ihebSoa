@@ -27,6 +27,7 @@ export class CrudService {
     
     { id:0,
       price:"from $49.000 USD",
+      brochure:'/assets/brochure/rivPdf.pdf',
       catigorie:"Studio & Apartments",
       prencentage:"10%",
       plan:"https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
@@ -65,6 +66,7 @@ export class CrudService {
   
   },
   { id:1,
+    brochure:'/assets/brochure/arada.pdf',
     video: "/assets/video/arada.mp4",//"https://www.youtube.com/embed/XMygk9inR6w?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
     catigorie:"Villas",  
     prencentage:"20%",
@@ -114,6 +116,7 @@ export class CrudService {
 
 },
 { id:2,
+  brochure:'/assets/brochure/studio.pdf',
   video: "/assets/video/sport.mp4",//"https://www.youtube.com/embed/WOY1Fnw2R0I?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1",
   prencentage:"10%",
   plan:"https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
