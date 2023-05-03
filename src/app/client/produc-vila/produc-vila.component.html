@@ -32,7 +32,46 @@
   </section>
   <div class="container"   *ngIf="!loading">
     <div class="row">
-      <div class="box col-md-4  col-sm-12 " style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
+      <div  *ngIf="testWidth" class="box col-4 " style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
+        <div class="top" (click)="navRent(i)">
+          <img [src]="vila.imgs[0]" (click)="navRent(i)" alt="villa heart of carthage" />
+          <span (click)="navRent(i)"
+            ><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i
+          ></span>
+        </div>
+        <div class="bottom" (click)="navRent(i)">
+          <h3 style="font-family: font-italic;">{{vila.title}}</h3>
+          <p >
+            {{vila. stitle}} 
+          </p>
+        
+          <p style="color: orange;">
+             Accept Payment With Cryptocurrency
+          </p>
+          <div class="advants">
+            <div>
+              <span>Bedrooms</span>
+              <div><i class="fas fa-th-large"></i><span>{{vila.bed}}</span></div>
+            </div>
+            <div>
+              <span>Bathrooms</span>
+              <div><i class="fas fa-shower"></i><span>{{vila.bath}} </span></div>
+            </div>
+            <div>
+              <span>Area</span>
+              <div>
+                <i class="fas fa-vector-square"></i
+                ><span>{{vila.surface}}<span>Sq Ft</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="price">
+            <span>For Rent</span>
+            <span>{{vila.prixFinal}} USD</span>
+          </div>
+        </div>
+      </div>
+      <div  *ngIf="!testWidth" class="box col-12 " style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
         <div class="top" (click)="navRent(i)">
           <img [src]="vila.imgs[0]" (click)="navRent(i)" alt="villa heart of carthage" />
           <span (click)="navRent(i)"
