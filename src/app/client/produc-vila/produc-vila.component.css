@@ -132,11 +132,11 @@ body {
   line-height: 1.4;
   color: #777;
   -webkit-box-orient: vertical;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 .container .box .bottom .advants {
