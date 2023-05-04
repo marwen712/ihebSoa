@@ -13,14 +13,12 @@ export class ProducVilaComponent implements OnInit {
   loading=false
   tab:any=[]=[]
   title="Rent in dubai  "
-  testWidth:any
+  testWidth=false
   constructor(private http:HttpClient , private route:Router,private meta:Meta,private titl:Title) { }
 
   ngOnInit(): void {
     if(window.innerWidth > 700){ 
       this.testWidth=true 
-    }else{
-      this.testWidth=false  
     }
     this.meta.addTags([
       {
@@ -35,10 +33,12 @@ export class ProducVilaComponent implements OnInit {
     this.titl.setTitle( this.title);
     this.loading=true
     this.http.get(environment.baseURL+"/rent/").subscribe(res=>{
+      console.log(res.valueOf()
+      )
       if (res.valueOf()){
         var   ob:any
         ob=res.valueOf()
-  
+              
         this.tab=ob
         this.tab= this.tab.reverse()
         this.loading=false

@@ -31,8 +31,8 @@
     </div>
   </section>
   <div class="container"   *ngIf="!loading">
-    <div class="row">
-      <div  *ngIf="testWidth" class="box col-4 " style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
+    <div class="row" *ngIf="testWidth">
+      <div   class="box" style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
         <div class="top" (click)="navRent(i)">
           <img [src]="vila.imgs[0]" (click)="navRent(i)" alt="villa heart of carthage" />
           <span (click)="navRent(i)"
@@ -71,7 +71,10 @@
           </div>
         </div>
       </div>
-      <div  *ngIf="!testWidth" class="box col-12 " style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
+     
+    </div>
+    <div class="row" *ngIf="!testWidth">
+      <div   class="box col-12 " style="margin-top: 30px;"  *ngFor="let vila of tab; index as i">
         <div class="top" (click)="navRent(i)">
           <img [src]="vila.imgs[0]" (click)="navRent(i)" alt="villa heart of carthage" />
           <span (click)="navRent(i)"
@@ -111,6 +114,5 @@
         </div>
       </div>
     </div>
-  
   
   </div>

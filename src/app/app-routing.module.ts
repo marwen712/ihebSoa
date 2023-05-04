@@ -24,6 +24,7 @@ import { HomeModule } from './client/home/home.module';
 import { AziziModule } from './azizi/azizi/azizi.module';
 import { LundProjectModule } from './client/lund-project/lund-project.module';
 import { FormConslutationComponent } from './client/form-conslutation/form-conslutation.component';
+import { PolitiqueComponent } from './client/politique/politique.component';
 const routes: Routes = [
  
   { path:"" , loadChildren:() => import('./client/home/home.module').then(x => x.HomeModule) },
@@ -36,7 +37,7 @@ const routes: Routes = [
   { path:"appr", component:PrudcApparComponent },
   { path:"Off-Plan/:id", component:SingleProductComponent },
   { path:"contact-us", component:ContactUsComponent },
- 
+  { path:"politique", component:PolitiqueComponent},
   { path:"off", component: OffPlanComponent },
   { path:"Vila/:id", component:Lunding2Component },
   { path:"Appr/:id", component:Lund3Component },

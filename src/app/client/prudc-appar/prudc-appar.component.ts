@@ -14,15 +14,13 @@ export class PrudcApparComponent implements OnInit {
   tab:any=[]=[]
   title="Apartments &  Retails "
  
-  testWidth:any
+  testWidth =false
   constructor(private http:HttpClient , private route:Router,private meta:Meta,private titl:Title) { }
 
   ngOnInit(): void {
-  
+      
     if(window.innerWidth > 700){ 
       this.testWidth=true 
-    }else{
-      this.testWidth=false  
     }
 
        this.meta.addTags([
