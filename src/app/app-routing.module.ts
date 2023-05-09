@@ -25,6 +25,7 @@ import { AziziModule } from './azizi/azizi/azizi.module';
 import { LundProjectModule } from './client/lund-project/lund-project.module';
 import { FormConslutationComponent } from './client/form-conslutation/form-conslutation.component';
 import { PolitiqueComponent } from './client/politique/politique.component';
+import { Blog3Component } from './client/blog3/blog3.component';
 const routes: Routes = [
  
   { path:"" , loadChildren:() => import('./client/home/home.module').then(x => x.HomeModule) },
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path:'admin' , loadChildren:() => import('./admin/admin/admin.module').then(x => x.AdminModule) },
   {path:'real-estate/:id' , loadChildren:() => import('./client/lund-project/lund-project.module').then(x => x.LundProjectModule) },
   { path:"about", component:AboutComponent },
+   { path:"blog", component:Blog3Component },
   { path:"vila", component:ProductsComponent },
   { path:"rent", component:ProducVilaComponent },
   { path:"appr", component:PrudcApparComponent },
