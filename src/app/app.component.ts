@@ -5,7 +5,7 @@ import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import { Meta, Title } from '@angular/platform-browser';
 import { CrudService } from './services/crud.service';
 import { PixelService } from 'ngx-pixel';
-
+declare var FB: any; // Déclarer la variable FB pour éviter les erreurs de compilation
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -41,7 +41,12 @@ export class AppComponent {
 
 
     // this.video2.play()
-
+    FB.init({
+      appId: '107347981003473',
+      autoLogAppEvents: true,
+      xfbml: true,
+      version: 'v12.0'
+    });
    this.crud.rootingUrl= window.location.pathname
   
    
