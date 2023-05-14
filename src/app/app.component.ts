@@ -17,7 +17,9 @@ export class AppComponent {
   public phone = "+971 58 218 9263"
  public messg = "My Real Estate Needs";
  video2:any
+//hubspot//
 
+///
   constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public titl:Title, public crud:CrudService, private pixel: PixelService ){
 
   }
