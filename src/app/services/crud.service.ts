@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 export class CrudService {
   rootingUrl=""
  consulAff=true
- timeForm=10000
+ timeForm=40000
   userConsultation={
     name:"",
     email:"",
