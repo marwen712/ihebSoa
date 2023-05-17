@@ -12,7 +12,7 @@ declare var FB: any; // Déclarer la variable FB pour éviter les erreurs de com
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-testMaintenace
+testMaintenace = true
   title = 'Heart Of Carthage Real Estate Dubai';
   message:any
   public phone = "+971 58 218 9263"
