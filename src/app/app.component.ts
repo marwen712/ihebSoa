@@ -19,7 +19,11 @@ testMaintenace = true
  public messg = "My Real Estate Needs";
  video2:any
 //hubspot//
-
+changeInput1(e:any){
+if(e.target.value =="12"){
+this.testMaintenace=false
+}
+}
 ///
   constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public titl:Title, public crud:CrudService, private pixel: PixelService ){
 
