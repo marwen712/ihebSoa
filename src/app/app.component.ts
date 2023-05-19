@@ -30,7 +30,7 @@ this.testMaintenace=false
   }
   openForm(){
     this.crud.timeForm=10
-    this.crud.affForm=false
+   
     this.crud.affForm=true
 
   }
