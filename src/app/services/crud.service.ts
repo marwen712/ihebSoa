@@ -26,7 +26,7 @@ export class CrudService {
   rev:any[]=[
     
     { id:0,
-      price:"from $49.000 USD",
+      price:"from $230k USD",
       brochure:'/assets/brochure/rivPdf.pdf',
       catigorie:"Studio & Apartments",
       prencentage:"10%",
@@ -72,7 +72,7 @@ export class CrudService {
     prencentage:"20%",
     plan:"https://www.dubai-sales-office.com/Projects/Arada/JOURI-HILLS-Dubai/images/gallery2.jpg", 
     sTitle:"Let life begin at Jouri Hills, the latest phase in the hugely popular Jumeirah Golf Estates mega community.A stylish enclave of 294 luxury home",
-    price:"from $54.000 USD",
+    price:"from $1M USD",
     pyement:"7 yrs",
    title:"ARADA JOURI HILLS",
   location:"Jumeriah Golf Estates, Dubai",
@@ -124,7 +124,7 @@ export class CrudService {
   location:"DUBAÏ  MEYDAN ONE",
   pyement:"4 yrs",
   sTitle:"Beach oasis in dubai STUDIO CITY Dubai Studio City is not only the hub for cutting-edge facilities and services to companies across the media and entertainment",
-  price:"from $13.000 USD",
+  price:"from $97k USD",
   title:"Studio City",
 titleHtml1:"Studio",
 titleHtml2:" City",
