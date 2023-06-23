@@ -9,7 +9,7 @@ import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, Ng
 })
 export class CustomHeaderComponent implements OnInit,OnDestroy {
 
-  constructor( private route:Router ,private crud:CrudService) { }
+  constructor( private route:Router ,public crud:CrudService) { }
 
   element:any
   saleId:any
@@ -59,7 +59,11 @@ city=""
   }
   searchAllDropList = {
     sale:["Sale","Rent"],
+    saleFrensh:["Vendre","Louer"],
+    saleArabe:['بيع', 'تأجير'],
     propertyType:["Property Type","Apartement","Villa","Townhouse","Penthouse"],
+    propertyTypeFrensh:["Type de propriété", "Appartement", "Villa", "Maison de ville", "Penthouse"],
+    propertyTypeArabe:["تصنيف العقارات", "شقة", "فيلا", "بيت متلاصق", "بنتهاوس"],
     minArea: ["Max budget","$30.000","$50.000","$1M","$2M ","$3M+ usd"],
     maxArea:["Max budget","$30.000","$50.000","$1M","$2M ","$3M+ usd"]
   }
@@ -68,8 +72,13 @@ city=""
     saleRent:"Rent Or Sale",
     propertyType:"Property Type",
     minArea:"Min budget",
-    maxArea:"Max budjet"
+    maxArea:"Max budjet",
+    saleRentFrensh:"Vendre ou louer",
+    propertyTypeFrensh:"Type de propriété",
+    saleRentArabe:" شراء او كراء",
+    propertyTypeArabe:"صنف العقار"
   }
+ 
    open(){
 
     console.log(this.saleId.style.height ,"height")
@@ -88,10 +97,13 @@ city=""
   selectItemSale(db:any,value:any){
 
    // this.formSearch[key] = value
+
    this.sale=value
     // this.saleId.value= value
     //console.log(this.formSearch[key])
     this.formSearch.saleRent=value
+    this.formSearch.saleRentFrensh=value
+    this.formSearch.saleRentArabe=value
     db.style.display="none" 
    // this.openCloseDrop(db)
 
@@ -102,6 +114,8 @@ city=""
    this.prop=value
   //  this.propId.value=value
    this.formSearch.propertyType=value
+   this.formSearch.propertyTypeFrensh=value
+   this.formSearch.propertyTypeArabe=value
   db.style.display="none" 
 
     console.log(this.prop,5555)

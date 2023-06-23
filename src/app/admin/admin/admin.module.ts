@@ -14,14 +14,16 @@ import { UpdateOffplanComponent } from '../update-offplan/update-offplan.compone
 import { UserComponent } from '../user/user.component';
 import { VilaComponent } from '../vila/vila.component';
 import { OffPlanComponent } from '../off-plan/off-plan.component';
+import { ProjectOneComponent } from '../project-one/project-one.component';
 
 @NgModule({
-  declarations: [AppartementComponent , DashComponent, LoginComponent,Map3Component,RentComponent,UpdateOffplanComponent,UserComponent,VilaComponent,OffPlanComponent],
+  declarations: [AppartementComponent , ProjectOneComponent, DashComponent, LoginComponent,Map3Component,RentComponent,UpdateOffplanComponent,UserComponent,VilaComponent,OffPlanComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
     FormsModule,ReactiveFormsModule,
     AgmCoreModule.forRoot({ apiKey:""  }),
+   
   ]
 })
 export class AdminModule { }

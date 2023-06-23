@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CrudService {
   rootingUrl=""
+  affProjectOne=false
  consulAff=true
  timeForm=80000
   userConsultation={
@@ -23,9 +24,7 @@ export class CrudService {
   
   }
   id2:any
-  rev:any[]=[
-    
-    { id:0,
+  rev:any[]=[{ id:0,
       price:"from $230k USD",
       brochure:'/assets/brochure/rivPdf.pdf',
       catigorie:"Studio & Apartments",
@@ -155,8 +154,7 @@ images:[
 ]
 
 
-}
-  ]
+}]
   isCustomNavBar = true
   testUpdate=""
   affConst=true
@@ -192,13 +190,15 @@ aj=false
 ac=false
 loadingDelete=false
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+  
+   }
   ajout(obj:any,url:string){
     this.http.post(this.baseUrl+url,obj).subscribe(res=>{
       this.loading=true
     if(res.valueOf()){
     this.loading=false
-    alert("secssful registre !")
+    alert("secssful registre !!")
     }
     })
 
@@ -223,6 +223,7 @@ loadingDelete=false
     this.affVila=false
    this.affAppr=false
    this.affUser=false
+   this.affProjectOne=false
   } 
   afficheVila(){
     this.affOff=false
@@ -230,6 +231,7 @@ loadingDelete=false
     this.affVila=true
    this.affAppr=false
    this.affUser=false
+   this.affProjectOne=false
   } 
   afficheApp(){
     this.affOff=false
@@ -237,6 +239,8 @@ loadingDelete=false
     this.affVila=false
    this.affAppr=true
    this.affUser=false
+   this.affProjectOne=false
+   this.affProjectOne=false
   }
   afficheRent(){
     this.affOff=false
@@ -244,14 +248,26 @@ loadingDelete=false
     this.affVila=false
    this.affAppr=false
    this.affUser=false
+   this.affProjectOne=false
+   this.affProjectOne=false
   } 
+  affProject(){
+    this.affOff=false
+    this.affRent=false
+    this.affVila=false
+   this.affAppr=false
+   this.affUser=false 
+   this.affProjectOne=true
+  }
   afficheUser(){
     this.affOff=false
     this.affRent=false
     this.affVila=false
    this.affAppr=false
    this.affUser=true
+   this.affProjectOne=false
   } 
+ 
   funcAj(){
  this.ac=false
  this.aj=true

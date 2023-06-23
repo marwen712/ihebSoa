@@ -70,6 +70,7 @@ import { PolitiqueComponent } from './client/politique/politique.component';
 
 import { Blog3Component } from './client/blog3/blog3.component';
 import { Blog4Component } from './client/blog4/blog4.component';
+
 //import { CustomHeaderComponent } from './custom-header/custom-header.component';
 
 
@@ -112,6 +113,7 @@ declarations: [
   
     Blog3Component,
         Blog4Component,
+       
    
     
   

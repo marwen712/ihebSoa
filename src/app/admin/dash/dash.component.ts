@@ -38,6 +38,9 @@ export class DashComponent implements OnInit {
    
     this.crud.funcAff()
   }
+  funcAffAjProject(){
+    this.crud.affProject()
+  }
   affiheTab(){
     this.affSp=true
   this.ht.get(environment.baseURL+"/todo/").subscribe(res=>{
