@@ -52,4 +52,16 @@ registreImageSingle(file:any){
 
   
 }
+registreImageSingleProject(file:any){
+  this.loadingImagSingle=true
+  var fd=new FormData
+  console.log(this.loadingImag)
+
+
+  fd.append('image',file,file.name)
+  return this.ht.post(this.baseurl1+'/upload/',fd)
+
+
+  
+}
 }

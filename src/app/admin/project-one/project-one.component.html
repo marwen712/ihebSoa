@@ -1,6 +1,9 @@
 <section >
     <h1>affiche Project</h1>
-    
+    <button class="btn btn-primary" type="button" (click)="add()" >
+      <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
+     add
+    </button>
     <table class="table table-striped"  >
       <thead>
         <tr>
@@ -22,10 +25,11 @@
             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
            modifier
           </button></td>
-          <!-- <td (click)="sup(i)"><button class="btn btn-primary" type="button"  >
+          <td (click)="sup(i)"><button class="btn btn-primary" type="button"  >
             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
-           modifier
-          </button></td> -->
+          supprimer
+          </button></td>
+         
         </tr>
         
       </tbody>
@@ -62,36 +66,22 @@
       <input type="text" class="form-control" placeholder="video" [(ngModel)]="project.video">
     </div>
     <div class="col">
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        <input type="file" (change)="selectVideo($event)" class="form-control-file" id="exampleFormControlFile1">
     </div>
-    <div class="col">
-        <button type="submit" class="btn btn-primary">change video</button>
-    </div>
+  
   </div>
 
 <div class="form-row" style="margin-top: 5px;">
     <div class="col-7">
       <input type="text" class="form-control" placeholder="brochure" [(ngModel)]="project.brochure">
     </div>
-    <div class="col">
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <div class="col-5">
+        <input type="file" (change)="selectBrochure($event)" class="form-control-file" id="exampleFormControlFile1">
     </div>
-    <div class="col">
-        <button type="submit" class="btn btn-primary">change brochure</button>
-    </div>
+   
   </div>
 
-<div class="form-row" style="margin-top: 5px;">
-    <div class="col-7">
-      <input type="text" class="form-control" placeholder="plan" [(ngModel)]="project.plan">
-    </div>
-    <div class="col">
-        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-    </div>
-    <div class="col">
-        <button type="submit" class="btn btn-primary">change brochure</button>
-    </div>
-  </div>
+
   <div class="form-row">
     <h6 class="mb-0">images off plan</h6>
     <table class="table table-striped" style="width: 100%;" >
@@ -104,11 +94,13 @@
           
   
           <td><img [src]="item" style="height:100px ;width: 100px;" alt=""></td>
-          
-          <td ><button class="btn btn-primary" type="button"  >
+          <td > <input type="file" (change)="selectImage($event,i)" class="form-control-file" id="exampleFormControlFile1">
+          </td>
+          <!-- <td ><button (click)="supImage(i)" class="btn btn-primary" type="button"  >
             <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" >  </span>
            suprimer
-          </button></td>
+          </button></td> -->
+         
         </tr>
         
       </tbody>
@@ -130,7 +122,7 @@
   <textarea class="form-control" id="textAreaExample6" rows="3" [(ngModel)]="project.descFinale"></textarea>
   <label class="form-label" for="textAreaExample6">descreption3</label>
 </div>
-<button type="button" class="btn btn-primary btn-lg btn-block">Modfier Project</button>
+<button type="button" (click)="modifierProject()" class="btn btn-primary btn-lg btn-block">Modfier Project</button>
 </section>
 <!-- 
   id:0,

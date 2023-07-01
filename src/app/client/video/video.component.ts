@@ -12,6 +12,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class VideoComponent implements OnInit {
    @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef;
+   load="false"
   YT: any;
   video2:any
   images:any[]=[]
