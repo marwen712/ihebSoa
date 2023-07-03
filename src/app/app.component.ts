@@ -5,6 +5,7 @@ import { HttpClient ,HttpHeaders} from '@angular/common/http';
 import { Meta, Title } from '@angular/platform-browser';
 import { CrudService } from './services/crud.service';
 import { PixelService } from 'ngx-pixel';
+import { NavigationEnd, Router } from '@angular/router';
 declare var FB: any; // Déclarer la variable FB pour éviter les erreurs de compilation
 @Component({
   selector: 'app-root',
@@ -25,8 +26,12 @@ this.testMaintenace=false
 
 }
 ///
-  constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public titl:Title, public crud:CrudService, private pixel: PixelService ){
-
+  constructor(private  messagingService:MessagingService ,private http:HttpClient,private meta:Meta ,public titl:Title, public crud:CrudService, private pixel: PixelService ,public router: Router ){
+    // this.router.events.subscribe((event) => {
+    //   if (event instanceof NavigationEnd) {
+    //     gtag('config', 'MEASUREMENT-ID', { 'page_path': event.urlAfterRedirects });
+    //   }      
+    // })
   }
   openForm(){
     this.crud.timeForm=10
