@@ -309,7 +309,7 @@ export class HomeComponent implements OnInit {
         ob=res.valueOf()
 
         this.tabOff=ob
-        this.tabOff= this.tabOff.filter(ele=>ele.dev=="Azizi").slice(0,3)
+        this.tabOff= this.tabOff.filter(ele=>ele.dev=="Azizi").reverse().slice(0,3)
 
         this.crud.loadingOff=false
        
