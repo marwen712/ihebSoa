@@ -135,7 +135,7 @@ declarations: [
     IvyCarouselModule,
     CarouselModule,
     BrowserAnimationsModule,
-    NgxGoogleAnalyticsModule.forRoot('G-9EXYDLJTX4'),
+    NgxGoogleAnalyticsModule.forRoot('G-QP9B6YSFVC'),
     NgxGoogleAnalyticsRouterModule,
     FormsModule,ReactiveFormsModule ,
     AgmCoreModule.forRoot({ apiKey:""  }),

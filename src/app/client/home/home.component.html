@@ -8,6 +8,74 @@
   <app-section-animation>
     
   </app-section-animation>
+  <section id="aa-latest-property" style="margin-top:6%;margin-bottom: 4%;">
+    <div class="container">
+      <div class="aa-latest-property-area">
+        <div class="aa-title">
+          <h2>New Off-Plan of Azizi</h2>
+          <span></span>   
+        </div>
+        <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="crud.loadingOff">
+          <div class="col-12">
+              <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                  <span class="visually-hidden"> Loading...</span>
+                </div>
+          </div>
+      </div>
+        <div class="aa-latest-properties-content">
+         <div class="row" *ngIf="!crud.loadingOff">
+
+          <div class="off-plan" *ngFor="let off of tabOff ; index as i">
+            <img class="logo-site" src="assets/images/logoPh.png" alt="logo">
+            <div class="title-box">OFF PLAN</div>
+            <div class="cover-image">
+              <img [src]="off.imgs[0]" alt="off-plan" />
+            </div>
+            <div class="stars-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="title">{{off.title}}</p>
+            <div class="description">
+              {{off.stitle}} {{off.prix}}
+            </div>
+            <div class="footer-box">
+              <div class="logo-devp"><p> {{off.dev}} </p></div>
+              <p class="view-btn" (click)="nav1(i)"><i class="fa-regular fa-eye"></i></p>
+            </div>
+          </div>
+
+
+
+         div class="col-md-4" *ngFor="let off of tabOff ; index as i">
+            <article class="aa-properties-item">
+              <a  class="aa-properties-item-img" >
+                <img [src]="off.imgs[0]" alt="off-plan">
+              </a>
+              <div class="aa-tag for-sale">
+                {{off.dev}}
+              </div>
+              <div class="aa-properties-item-content">
+              
+                <div class="aa-properties-about">
+                  <h3><a href="#" style="color:#C9A770">{{off.title}}</a></h3>
+                  <p>{{off.stitle}} {{off.prix}}</p>                      
+                </div>
+                <div class="aa-properties-detial">
+                 
+                  <a (click)="nav1(i)" class="aa-secondary-btn">View Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Start menu section -->
  
   <!-- End menu section -->
@@ -261,74 +329,7 @@ We are not alone in the market, but really we are unique
   <app-header></app-header>
 
   <!-- Latest property -->
-  <!-- <section id="aa-latest-property" style="margin-top:6%;margin-bottom: 4%;">
-    <div class="container">
-      <div class="aa-latest-property-area">
-        <div class="aa-title">
-          <h2>Off-Plan</h2>
-          <span></span>   
-        </div>
-        <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="crud.loadingOff">
-          <div class="col-12">
-              <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-                  <span class="visually-hidden"> Loading...</span>
-                </div>
-          </div>
-      </div>
-        <div class="aa-latest-properties-content">
-         <div class="row" *ngIf="!crud.loadingOff">
 
-          <div class="off-plan" *ngFor="let off of tabOff ; index as i">
-            <img class="logo-site" src="assets/images/logoPh.png" alt="logo">
-            <div class="title-box">OFF PLAN</div>
-            <div class="cover-image">
-              <img [src]="off.imgs[0]" alt="off-plan" />
-            </div>
-            <div class="stars-rating">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <p class="title">{{off.title}}</p>
-            <div class="description">
-              {{off.stitle}} {{off.prix}}
-            </div>
-            <div class="footer-box">
-              <div class="logo-devp"><p> {{off.dev}} </p></div>
-              <p class="view-btn" (click)="nav1(i)"><i class="fa-regular fa-eye"></i></p>
-            </div>
-          </div>
-
-
-
-         div class="col-md-4" *ngFor="let off of tabOff ; index as i">
-            <article class="aa-properties-item">
-              <a  class="aa-properties-item-img" >
-                <img [src]="off.imgs[0]" alt="off-plan">
-              </a>
-              <div class="aa-tag for-sale">
-                {{off.dev}}
-              </div>
-              <div class="aa-properties-item-content">
-              
-                <div class="aa-properties-about">
-                  <h3><a href="#" style="color:#C9A770">{{off.title}}</a></h3>
-                  <p>{{off.stitle}} {{off.prix}}</p>                      
-                </div>
-                <div class="aa-properties-detial">
-                 
-                  <a (click)="nav1(i)" class="aa-secondary-btn">View Details</a>
-                </div>
-              </div>
-            </article>
-          </div
-         </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="crud.loadingVila && crud.loadingAppr && crud.loadingRent ">
     <div class="col-12">
         <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
