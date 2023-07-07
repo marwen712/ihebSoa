@@ -5,9 +5,6 @@
  
   <!-- End header section -->
   <app-card></app-card>
-  <app-section-animation>
-    
-  </app-section-animation>
   <section id="aa-latest-property" style="margin-top:6%;margin-bottom: 4%;">
     <div class="container">
       <div class="aa-latest-property-area">
@@ -50,32 +47,16 @@
 
 
 
-        <div class="col-md-4" *ngFor="let off of tabOff ; index as i">
-            <article class="aa-properties-item">
-              <a  class="aa-properties-item-img" >
-                <img [src]="off.imgs[0]" alt="off-plan">
-              </a>
-              <div class="aa-tag for-sale">
-                {{off.dev}}
-              </div>
-              <div class="aa-properties-item-content">
-              
-                <div class="aa-properties-about">
-                  <h3><a href="#" style="color:#C9A770">{{off.title}}</a></h3>
-                  <p>{{off.stitle}} {{off.prix}}</p>                      
-                </div>
-                <div class="aa-properties-detial">
-                 
-                  <a (click)="nav1(i)" class="aa-secondary-btn">View Details</a>
-                </div>
-              </div>
-            </article>
-          </div>
+       
          </div>
         </div>
       </div>
     </div>
   </section>
+  <app-section-animation>
+    
+  </app-section-animation>
+ 
   <!-- Start menu section -->
  
   <!-- End menu section -->
