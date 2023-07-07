@@ -24,7 +24,7 @@
 
           <div class="off-plan" *ngFor="let off of tabOff ; index as i">
             <img class="logo-site" src="assets/images/logoPh.png" alt="logo">
-            <div class="title-box">OFF PLAN</div>
+            <div class="title-box">{{off.dev}}</div>
             <div class="cover-image">
               <img [src]="off.imgs[0]" alt="off-plan" />
             </div>
