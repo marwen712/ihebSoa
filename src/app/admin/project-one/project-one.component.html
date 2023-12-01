@@ -1,0 +1,143 @@
+<section >
+    <h1>affiche Project</h1>
+    <button class="btn btn-primary" type="button" (click)="add()" >
+      <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
+     add
+    </button>
+    <table class="table table-striped"  >
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">title</th>
+         
+         
+        
+          <th scope="col">modifier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let off of rev; index as i">
+          <th scope="row">{{i+1}}</th>
+          <td>{{off.title}}</td>
+         
+         
+          <td (click)="modif(i)"><button class="btn btn-primary" type="button"  >
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
+           modifier
+          </button></td>
+          <td (click)="sup(i)"><button class="btn btn-primary" type="button"  >
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" ></span>
+          supprimer
+          </button></td>
+         
+        </tr>
+        
+      </tbody>
+    </table>
+</section>
+
+<section *ngIf="affModif">
+  <h3>Modifier Project</h3>
+    <div class="form-row" style="margin-top: 5px;">
+      <div class="col-7">
+        <input type="text" class="form-control" placeholder="title" [(ngModel)]="project.title">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="title1" [(ngModel)]="project.titleHtml1">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="title2"  [(ngModel)]="project.titleHtml2">
+      </div>
+    </div>
+
+    <div class="form-row" style="margin-top: 5px;">
+      <div class="col-7">
+        <input type="text" class="form-control" placeholder="catigorie" [(ngModel)]="project.catigorie">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="price" [(ngModel)]="project.price">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="pyemment"  [(ngModel)]="project.pyement">
+      </div>
+    </div>
+  <div class="form-row" style="margin-top: 5px;">
+    <div class="col-7">
+      <input type="text" class="form-control" placeholder="video" [(ngModel)]="project.video">
+    </div>
+    <div class="col">
+        <input type="file" (change)="selectVideo($event)" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+  
+  </div>
+
+<div class="form-row" style="margin-top: 5px;">
+    <div class="col-7">
+      <input type="text" class="form-control" placeholder="brochure" [(ngModel)]="project.brochure">
+    </div>
+    <div class="col-5">
+        <input type="file" (change)="selectBrochure($event)" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+   
+  </div>
+
+
+  <div class="form-row">
+    <h6 class="mb-0">images off plan</h6>
+    <table class="table table-striped" style="width: 100%;" >
+      <thead>
+       
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of project.images ; index as i">
+          
+          
+  
+          <td><img [src]="item" style="height:100px ;width: 100px;" alt=""></td>
+          <td > <input type="file" (change)="selectImage($event,i)" class="form-control-file" id="exampleFormControlFile1">
+          </td>
+          <!-- <td ><button (click)="supImage(i)" class="btn btn-primary" type="button"  >
+            <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true" >  </span>
+           suprimer
+          </button></td> -->
+         
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+ <!-- Textarea with class .w-25 -->
+
+
+<!-- Textarea without sizing class -->
+<div class="form-outline mb-4">
+  <textarea class="form-control" id="textAreaExample6" rows="3" [(ngModel)]="project.sTitle"></textarea>
+  <label class="form-label" for="textAreaExample6">descreption 1</label>
+</div>
+<div class="form-outline mb-4">
+  <textarea class="form-control" id="textAreaExample6" rows="3" [(ngModel)]="project.desc"></textarea>
+  <label class="form-label" for="textAreaExample6">descreption2</label>
+</div>
+<div class="form-outline mb-4">
+  <textarea class="form-control" id="textAreaExample6" rows="3" [(ngModel)]="project.descFinale"></textarea>
+  <label class="form-label" for="textAreaExample6">descreption3</label>
+</div>
+<button type="button" (click)="modifierProject()" class="btn btn-primary btn-lg btn-block">Modfier Project</button>
+</section>
+<!-- 
+  id:0,
+  price:"from $230k USD",
+  brochure:'/assets/brochure/rivPdf.pdf',
+  catigorie:"Studio & Apartments",
+  prencentage:"10%",
+  plan:"https://riviera-meydan.ae/wp-content/uploads/2020/10/5-300x200.jpg",
+  title:"RIVIERA",
+  video: "/assets/video/rev2.mp4",//"https://www.youtube.com/embed/pxEWiz40xBo?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1" ,
+  titleHtml1:"RIVIERA",
+  titleHtml2: "VILLE MBR",
+  location:"DUBAÏ  MEYDAN ONE",
+  pyement:"4 yrs",
+  sTitle:"The concept of Azizi Riviera is borrowed from the French Riviera. The buildings and spaces around them have been designed to emulate Mediterranean contemporary living",
+  desc:"azizi riviera is a residential development consisting of 69 mid-rise residential buildings and two hotels situated alongside the dubai canal in meydan one. the residential blocks will contain a total of 16,000 studios and one- and two-bedroom apartments.",
+  descFinale:"Riviera is one of Azizi’s flagship developments located in Meydan at the heart of Mohammed Bin Rashid City (MBR City) in Dubai. In a prime location, close to Meydan Racecourse, the home of The Dubai World Cup and a variety of sports and leisure facilities, Riviera offers a desirable address and is within close proximity to Downtown Dubai and Dubai International Airport. Inspired by the French Riviera, the iconic mixed-use community will be home to residential apartments, retail outlets and a variety of onsite amenities. Riviera comprises of various mid-rise residential buildings with a variety of retail outlets at ground floor level. Each individual building will benefit from a swimming pool, landscaped gardens and a gym. Key attractions will include a beautiful crystal lagoon and beach spanning 2km, a beautiful palm tree lined boulevard and numerous community parks. Residential properties include studios, one, two and three bedroom apartments offering a variety of different views ranging from orientation towards Downtown Dubai and Burj Khalifa to community pool and canal views. Riviera will also feature a wide variety of cafes and restaurants, convenience stores and shops.",
+  images:[ -->
