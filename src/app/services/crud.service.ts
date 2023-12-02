@@ -10,7 +10,7 @@ export class CrudService {
   rootingUrl=""
   affProjectOne=false
  consulAff=true
- timeForm=80000
+ timeForm=10
   userConsultation={
     name:"",
     email:"",
@@ -161,7 +161,7 @@ rev:any[]=[]
   affConst=true
   affNoteArabe=false
   affNoteEnglish=true
-   affForm=true
+   affForm=false
   affChoose=true
   tabApprProd:any[]=[]
   tabVilaProd:any[]=[]

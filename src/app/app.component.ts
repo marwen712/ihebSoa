@@ -34,9 +34,10 @@ this.testMaintenace=false
     // })
   }
   openForm(){
+    this.crud.affForm=true
     this.crud.timeForm=10
    
-    this.crud.affForm=true
+   
 
   }
   customNavBar:any

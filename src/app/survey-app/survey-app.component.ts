@@ -424,7 +424,7 @@ console.log(this.answers,"ee")
       this.elementSurvey = document.getElementById("backBtn")
       this.elementSurvey.style.display="block"
 
-    },800)    
+    },50)    
 
   }
 

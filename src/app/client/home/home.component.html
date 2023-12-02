@@ -5,7 +5,7 @@
  
   <!-- End header section -->
   <app-card></app-card>
-  <section id="aa-latest-property" style="margin-top:6%;margin-bottom: 4%;">
+  <!-- <section id="aa-latest-property" style="margin-top:6%;margin-bottom: 4%;">
     <div class="container">
       <div class="aa-latest-property-area">
         <div class="aa-title">
@@ -52,10 +52,10 @@
         </div>
       </div>
     </div>
-  </section>
-  <app-section-animation>
+  </section> -->
+  <!-- <app-section-animation>
     
-  </app-section-animation>
+  </app-section-animation> -->
  
   <!-- Start menu section -->
  
@@ -71,188 +71,13 @@
   <!-- / Advance Search -->
   <!-- <section >
     <app-header style="margin-bottom:20px ;margin-top:20px" *ngIf="crud.affChoose"></app-header>
-    <app-choose-client *ngIf="!crud.affChoose"></app-choose-client>
-  </section>-->
-  <section id="aa-latest-property" >
-      <div class="container" #adv>
-        <div class="aa-latest-property-area" *ngIf="testChercher">
-          <div class="aa-title">
-            <h2>Resultat Search</h2>
-            <span></span>
-                   
-          </div>
-        
-   
-          <div class="aa-latest-properties-content">
-           <div class="row" *ngIf="!crud.loadingVila">
-              
+    <app-choose-client *ngIf="!crud.affChoose"></app-choose-client>-->
 
-              <div class="ft-ctn" *ngFor="let vila of tabVilaChercher; index as i">
-                <div class="title-box" style="background-color: red;">Villa</div>
-                <div class="cover-image">
-                  <img [src]="vila.imgs[0]" />
-                </div>
-                <div class="details-ctn">
-                  <p class="item-details-ctn"><i class="fa-solid fa-sink"></i> {{vila.bath}} Baths</p>
-                  <p class="item-details-ctn"><i class="fa-solid fa-bed"></i> {{vila.bed}} Beds</p>
-                  <p class="item-details-ctn"><i class="fa-regular fa-square"></i> {{vila.surface}} SQ FT</p>
-                </div>
-                <p class="title">{{vila.title}}</p>
-                <div class="description">
-                  {{vila. stitle}} {{vila. prix}}
-                </div>
-                <div class="footer-box">
-                  <div class="price"><span>AED</span><p>{{vila.prixFinal}}</p></div>
-                  <p class="view-btn" (click)="nav2(i)"><i class="fa-regular fa-eye"></i></p>
-                </div>
-              </div>
-
-
-              <!--div class="col-md-4"  *ngFor="let vila of tabVilaChercher; index as i">
-                <article class="aa-properties-item">
-                  <a  class="aa-properties-item-img">
-                    <img [src]="vila.imgs[0]" alt="img">
-                  </a>                
-                  <div class="aa-tag sold-out">
-                    Vila
-                  </div>
-                  <div class="aa-properties-item-content">
-                    <div class="aa-properties-info">
-                      <span>{{vila.room}} Rooms</span>
-                      <span>{{vila.bed}} Beds</span>
-                      <span>{{vila.bath}} Baths</span>
-                      <span>{{vila.surface}} SQ FT</span>
-                    </div>
-                    <div class="aa-properties-about">
-                      <h3><a style="color: #C9A770;">{{vila.title}}</a></h3>
-                      <p>{{vila. stitle}} {{vila. prix}}</p>                      
-                    </div>
-                    <div class="aa-properties-detial">
-                      <span class="aa-price">
-                        {{vila.prixFinal}} <img src="assets/images/2857905-200.png" style="height: 30px;width: 50px;" alt="Heart of carthage Dubai">  
-                      </span>
-                      <a  class="aa-secondary-btn" (click)="nav2(i)">View Details</a>
-                    </div>
-                  </div>
-                </article>
-              
-              </div-->
-            </div>
-          
-          </div>
-          <!--2-->
-          <div class="aa-latest-properties-content">
-            
-             <div class="row">
-
-              <div class="ft-ctn" *ngFor="let vila of tabApprChercher ;index as i">
-                <div class="title-box" style="background-color: rgb(32, 206, 179);">Apartement</div>
-                <div class="cover-image">
-                  <img [src]="vila.imgs[0]" />
-                </div>
-                <div class="details-ctn">
-                  <p class="item-details-ctn"><i class="fa-solid fa-sink"></i> {{vila.bath}} Baths</p>
-                  <p class="item-details-ctn"><i class="fa-solid fa-bed"></i> {{vila.bed}} Beds</p>
-                  <p class="item-details-ctn"><i class="fa-regular fa-square"></i> {{vila.surface}} SQ FT</p>
-                </div>
-                <p class="title">{{vila.title}}</p>
-                <div class="description">
-                  {{vila. stitle}} {{vila. prix}}
-                </div>
-                <div class="footer-box">
-                  <div class="price"><span>AED</span><p>{{vila.prixFinal}}</p></div>
-                  <p class="view-btn" (click)="nav2(i)"><i class="fa-regular fa-eye"></i></p>
-                </div>
-              </div>
-             <!--div class="col-md-4" *ngFor="let vila of tabApprChercher ;index as i">
-               <article class="aa-properties-item">
-                 <a class="aa-properties-item-img">
-                   <img [src]="vila.imgs[0]" alt="img">
-                 </a>
-                 <div class="aa-tag for-rent">
-                  Apartement
-                 </div>
-                 <div class="aa-properties-item-content">
-                   <div class="aa-properties-info">
-                     <span>{{vila.room}} Room</span>
-                     <span>{{vila.bed}} Beds</span>
-                     <span>{{vila.bath}} Baths</span>
-                     <span>{{vila.surface}} SQ FT</span>
-                   </div>
-                   <div class="aa-properties-about">
-                     <h3><a style="color: #C9A770;">{{vila.title}}</a></h3>
-                     <p>{{vila. stitle}} {{vila. prix}}</p>                      
-                   </div>
-                   <div class="aa-properties-detial">
-                     <span class="aa-price">
-                       {{vila.prixFinal}} <img src="assets/images/2857905-200.png" style="height: 30px;width: 50px;" alt="Heart of carthage Dubai">
-                     </span>
-                     <a  class="aa-secondary-btn" (click)="nav3(i)">View Details</a>
-                   </div>
-                 </div>
-               </article>
-             </div-->
-            </div>
-           </div>
-          <!--fin 2-->
-          <!--3-->
-          <div class="aa-latest-properties-content">
-            
-            <div class="row">
-            <div class="col-md-4" *ngFor="let vila of tabRentChercher ;index as i">
-              <article class="aa-properties-item">
-                <a class="aa-properties-item-img">
-                  <img [src]="vila.imgs[0]" alt="img">
-                </a>
-                <div class="aa-tag for-rent">
-                Rent
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                    <span>{{vila.room}} Room</span>
-                    <span>{{vila.bed}} Beds</span>
-                    <span>{{vila.bath}} Baths</span>
-                    <span>{{vila.surface}} SQ FT</span>
-                  </div>
-                  <div class="aa-properties-about">
-                    <h3><a style="color: #C9A770;">{{vila.title}}</a></h3>
-                    <p>{{vila. stitle}} {{vila. prix}}</p>                      
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      {{vila.prixFinal}} <img src="assets/images/2857905-200.png" style="height: 30px;width: 50px;" alt="Heart of carthage Dubai">
-                    </span>
-                    <a  class="aa-secondary-btn" (click)="nav3(i)">View Details</a>
-                  </div>
-                </div>
-              </article>
-            </div>
-           </div>
-          </div>
-          <!--fin 3-->
-        </div>
-      </div>
-    </section>
     <!-- About us -->
 
-    <div class="container" #adv >
-      <div class="row" *ngIf="testChercheAv">
-        <div class="col-md-12">
-          <div class="aa-promo-banner-area">
-           
-            <div class="alert alert-success"  role="alert" style="text-align: center;">
-              <span style="text-align: center;" class="fa fa-check"></span>
-              fill out your form to find your need in 24 hours
-              
-              <a routerLink="/form" class="btn btn-outline-success active" role="button" aria-pressed="true">Form</a>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
+   
   
-  <section class="section">
+  <!-- <section class="section">
     <div class="aa-title" style="margin-bottom: 22px;margin-top: 22px;">
         <h2>About</h2>
         <span></span>   
@@ -290,10 +115,10 @@ We are not alone in the market, but really we are unique
 
         </div>
     </div>
-  </section>  
+  </section>   -->
 
 
-  <div class="slider-devs">
+  <!-- <div class="slider-devs">
     <div class="ctn-slider-devs">
       <p class="title">AWARD WINNING REAL ESTATE & BROKERAGE FIRM</p>
       <div class="slider-images">
@@ -306,24 +131,24 @@ We are not alone in the market, but really we are unique
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <app-header></app-header>
 
   <!-- Latest property -->
 
-  <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="crud.loadingVila && crud.loadingAppr && crud.loadingRent ">
+  <!-- <div class="row" style="text-align: center;margin-top: 20%; " *ngIf="crud.loadingVila && crud.loadingAppr && crud.loadingRent ">
     <div class="col-12">
         <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
             <span class="visually-hidden"> Loading...</span>
           </div>
     </div>
-</div>
+</div> -->
   <!-- / Latest property -->
 
-  <app-prod style="margin-top: 20px;margin-bottom: 20px;"  *ngIf="!crud.loadingVila && !crud.loadingAppr && !crud.loadingRent "></app-prod>
+  <!-- <app-prod style="margin-top: 20px;margin-bottom: 20px;"  *ngIf="!crud.loadingVila && !crud.loadingAppr && !crud.loadingRent "></app-prod> -->
 
  
-  <section id="aa-promo-banner">
+  <!-- <section id="aa-promo-banner">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -337,7 +162,7 @@ We are not alone in the market, but really we are unique
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
   
   <!-- Service section -->
   <!-- <section id="aa-service" >
@@ -408,7 +233,7 @@ We are not alone in the market, but really we are unique
    
 
 
- <section id="aa-promo-banner" class="promo-banner-section" style="margin-top: 10%;margin-bottom: 30px;">
+ <!-- <section id="aa-promo-banner" class="promo-banner-section" style="margin-top: 10%;margin-bottom: 30px;">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -496,7 +321,7 @@ We are not alone in the market, but really we are unique
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
   <!-- / Service section -->
  

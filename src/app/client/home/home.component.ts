@@ -303,66 +303,66 @@ export class HomeComponent implements OnInit {
     this.crud.loadingAppr=true
     this.crud.loadingVila=true
    var u  =environment.baseURL+'/off/'
-    this.http.get(u.trim()).subscribe(res=>{
-      if (res.valueOf()){
-        var   ob:any
-        ob=res.valueOf()
+    // this.http.get(u.trim()).subscribe(res=>{
+    //   if (res.valueOf()){
+    //     var   ob:any
+    //     ob=res.valueOf()
 
-        this.tabOff=ob
-        this.tabOff= this.tabOff.filter(ele=>ele.dev=="Azizi").reverse().slice(0,3)
+    //     this.tabOff=ob
+    //     this.tabOff= this.tabOff.filter(ele=>ele.dev=="Azizi").reverse().slice(0,3)
 
-        this.crud.loadingOff=false
+    //     this.crud.loadingOff=false
        
-        console.log(this.tabOff)
+    //     console.log(this.tabOff)
        
-      }
+    //   }
      
-    })
-    this.http.get(environment.baseURL+this.urlVila).subscribe(res=>{
-      if (res.valueOf()){
-        var   ob:any
-        ob=res.valueOf()
+    // })
+    // this.http.get(environment.baseURL+this.urlVila).subscribe(res=>{
+    //   if (res.valueOf()){
+    //     var   ob:any
+    //     ob=res.valueOf()
   
-        this.tabVila=ob
-        this.tabVila= this.tabVila.reverse().slice(0,3)
-        this.crud.tabVilaProd=this.tabVila
-        this.crud.loadingVila=false
+    //     this.tabVila=ob
+    //     this.tabVila= this.tabVila.reverse().slice(0,3)
+    //     this.crud.tabVilaProd=this.tabVila
+    //     this.crud.loadingVila=false
        
-        console.log(this.tabVila)
+    //     console.log(this.tabVila)
        
-      }
+    //   }
      
-    })
-    this.http.get(environment.baseURL+this.urlRent).subscribe(res=>{
-    if (res.valueOf()){
-      var   ob:any
-      ob=res.valueOf()
+    // })
+  //   this.http.get(environment.baseURL+this.urlRent).subscribe(res=>{
+  //   if (res.valueOf()){
+  //     var   ob:any
+  //     ob=res.valueOf()
 
-      this.tabRent=ob
-      this.tabRent= this.tabRent.reverse().slice(0,3)
-      this.crud.tabRentProd=this.tabRent
-      this.crud.loadingRent=false
+  //     this.tabRent=ob
+  //     this.tabRent= this.tabRent.reverse().slice(0,3)
+  //     this.crud.tabRentProd=this.tabRent
+  //     this.crud.loadingRent=false
      
-      console.log(this.tabRent)
+  //     console.log(this.tabRent)
      
-    }
+  //   }
    
-  })
-  this.http.get(environment.baseURL+this.urlAppr).subscribe(res=>{
-    if (res.valueOf()){
-      var   ob:any
-      ob=res.valueOf()
+  // })
+  // this.http.get(environment.baseURL+this.urlAppr).subscribe(res=>{
+  //   if (res.valueOf()){
+  //     var   ob:any
+  //     ob=res.valueOf()
 
-      this.tabAppr=ob
-      this.tabAppr=this.tabAppr.reverse().slice(0,3)
-      this.crud.tabApprProd=this.tabAppr
-      this.crud.loadingAppr=false
+  //     this.tabAppr=ob
+  //     this.tabAppr=this.tabAppr.reverse().slice(0,3)
+  //     this.crud.tabApprProd=this.tabAppr
+  //     this.crud.loadingAppr=false
      
-      console.log(this.tabAppr)
+  //     console.log(this.tabAppr)
      
-    }
+  //   }
    
-  })
+  // })
   }
  nav1(i:any){
  this.route.navigate(["/Off-Plan",this.tabOff[i]._id])
