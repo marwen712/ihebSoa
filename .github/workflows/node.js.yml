@@ -23,7 +23,7 @@ jobs:
       run: npm install --force
 
     - name: Build Project ⛏
-      run: npm run build
+      run: npm run build --aot
 
     - name: Sync Files 🚀
       uses: wlixcc/SFTP-Deploy-Action@v1.2.1
