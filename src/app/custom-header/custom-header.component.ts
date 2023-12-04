@@ -1,6 +1,9 @@
 import { Component, OnInit,OnDestroy } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Router, TitleStrategy } from '@angular/router';
 import { CrudService } from '../services/crud.service';
+import { environment } from 'src/environments/environment';
+
 import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, NgForm, FormArray } from '@angular/forms';
 @Component({
   selector: 'app-custom-header',
@@ -9,8 +12,8 @@ import { FormBuilder, FormControl, Validators, FormGroup, FormGroupDirective, Ng
 })
 export class CustomHeaderComponent implements OnInit,OnDestroy {
 
-  constructor( private route:Router ,public crud:CrudService) { }
-
+  constructor( private route:Router ,public crud:CrudService,private http:HttpClient) { }
+  baseUrl=environment.baseURL
   element:any
   saleId:any
   propId:any
@@ -20,16 +23,14 @@ export class CustomHeaderComponent implements OnInit,OnDestroy {
   propIdPc:any
   minIdPc:any
   maxIdPc:any
+  name=""
+  phone=""
+  email=""
   sale="Sale"
   prop="Apartement"
  minn="hhhhh"
 city=""
- searchCty:string[]=["Sharjah",
-  "Al Ain",
-  "Ajman",
-  "Ras Al Khaimah",
- "Fujairah",
-  "Umm Al Quwain"]
+ searchCty:string[]=["Investment","Buy","Sale"]
   tabCity2:string[]=["Sharjah",
   "Al Ain",
   "Ajman",
@@ -64,15 +65,15 @@ city=""
     propertyType:["Property Type","Apartement","Villa","Townhouse","Penthouse"],
     propertyTypeFrensh:["Type de propriété", "Appartement", "Villa", "Maison de ville", "Penthouse"],
     propertyTypeArabe:["تصنيف العقارات", "شقة", "فيلا", "بيت متلاصق", "بنتهاوس"],
-    minArea: ["Max budget","$30.000","$50.000","$1M","$2M ","$3M+ usd"],
-    maxArea:["Max budget","$30.000","$50.000","$1M","$2M ","$3M+ usd"]
+    minArea: ["8%","10%","12%","14%","15% ","17+%"],
+    maxArea:["Max budget","$20.000","$30.000","$1M","$2M ","$3M+ usd"]
   }
 
   formSearch = {
     saleRent:"Rent Or Sale",
     propertyType:"Property Type",
-    minArea:"Min budget",
-    maxArea:"Max budjet",
+    minArea:"rental yield",
+    maxArea:"budjet",
     saleRentFrensh:"Vendre ou louer",
     propertyTypeFrensh:"Type de propriété",
     saleRentArabe:" شراء او كراء",
@@ -159,23 +160,39 @@ city=""
 
   }
 search(){
-  console.log(this.sale ,"aaaa")
-  this.crud.isCustomNavBar = true
-  if(this.sale=="Sale"){
-    if(this.prop=="Apartement" || this.prop=="Property Type" ){
-      this.route.navigate(['/appr'])
-    }
-    if(this.prop=="Villa" || this.prop=="Townhouse" ||  this.prop=="Penthouse" ){
-      this.route.navigate(['/vila'])
-    }
+  console.log(this.name,"aaaa")
+  var user={
+   name:this.name,
+   email:this.email,
+   phone:this.phone,
+   project:"invest"
   }
-  if(this.sale =="Rent" ){
-    console.log("eee")
-    this.route.navigate(["/rent"])
-  }
-  if(this.sale=="Rent Or Sale"){
-    alert ("choose sale or rent")
-  }
+
+     
+if(this.name=="" || this.email=='' || this.phone=='') {
+alert('All fields are required!')
+}
+else{
+  this.http.post(this.baseUrl +'/email/send-mail1/',user).subscribe(res=>{
+    console.log(res)
+  alert("successfully registered")})
+}
+  // this.crud.isCustomNavBar = true
+  // if(this.sale=="Sale"){
+  //   if(this.prop=="Apartement" || this.prop=="Property Type" ){
+  //     this.route.navigate(['/appr'])
+  //   }
+  //   if(this.prop=="Villa" || this.prop=="Townhouse" ||  this.prop=="Penthouse" ){
+  //     this.route.navigate(['/vila'])
+  //   }
+  // }
+  // if(this.sale =="Rent" ){
+  //   console.log("eee")
+  //   this.route.navigate(["/rent"])
+  // }
+  // if(this.sale=="Rent Or Sale"){
+  //   alert ("choose sale or rent")
+  // }
 }
 affArea(){
 this.propId.style.display="block"
