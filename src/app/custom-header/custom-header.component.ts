@@ -72,7 +72,7 @@ city=""
   formSearch = {
     saleRent:"Rent Or Sale",
     propertyType:"Property Type",
-    minArea:"rental yield",
+    minArea:"Return of investment",
     maxArea:"budjet",
     saleRentFrensh:"Vendre ou louer",
     propertyTypeFrensh:"Type de propriété",
