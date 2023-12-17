@@ -104,9 +104,11 @@ export class Form3Component implements OnInit {
        }
        this.al=true
        this.http.post(this.baseUrl +'/email/send-mail1/',this.user.value).subscribe(res=>{
+         this.user.get("phone")?.setValue('')
         console.log(res)})
         
       this.http.post(this.baseUrl +'/email/send-mail/',this.user.value).subscribe(res=>{
+        this.user.get("phone")?.setValue('')
         console.log(res)})
       }  
         
