@@ -192,12 +192,12 @@ ac=false
 loadingDelete=false
 
   constructor(private http:HttpClient) {
-    this.http.get(environment.baseURL+"/one/").subscribe(res=>{
-      console.log(res.valueOf(),"rev")
-    var ob:any
-    ob=res.valueOf()
-    this.rev=ob
-    })
+    // this.http.get(environment.baseURL+"/one/").subscribe(res=>{
+    //   console.log(res.valueOf(),"rev")
+    // var ob:any
+    // ob=res.valueOf()
+    // this.rev=ob
+    // })
    }
   ajout(obj:any,url:string){
     this.http.post(this.baseUrl+url,obj).subscribe(res=>{
