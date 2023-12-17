@@ -22,7 +22,7 @@ export class Form3Component implements OnInit {
   ]
   countryChange(country: any) {
     this.changeCont=country.dialCode
-   console.log(country.dialCode,"ee");
+   console.log(this.changeCont,"ee");
   //  if(country.dialCode === undefined){
   //   console.log(5)
   //   this.user.get("phone")?.setValue( "+" )
