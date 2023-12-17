@@ -90,12 +90,12 @@ export class Form3Component implements OnInit {
         alert("! code country of phone not exacly example phone:+971 xxxx")
       }
       else {
-        console.log(this.crud.userConsultation,"message2")
+     //  console.log(this.crud.userConsultation,"message2")
         if(this.changeCont !=""){
-          if(this.user.value.phone?.split("")[0] !="+"){
+        //  if(this.user.value.phone?.split("")[0] !="+"){
            var phone= this.user.get("phone")?.value
              this.user.get("phone")?.setValue( "+"+this.changeCont+phone)
-          }
+         // }
        }
        if(this.changeCont ==""){
       
