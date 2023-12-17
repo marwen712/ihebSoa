@@ -18,7 +18,7 @@
                             <i class="fas fa-user fa-lg me-3 fa-fw" style="color:  #C9A770;"></i>
                             <div class="form-outline flex-fill mb-0">
                               <input type="text" id="form3Example1c" class="form-control" placeholder="name  "  formControlName='name' />
-                              <label class="form-label" *ngIf="user.controls.name.hasError('required') && this.user.controls.name.touched" style="color: red;" for="form3Example1c"> name is  require</label>
+                              <label class="form-label" style"font-family: 'Cherry Swash' ;" *ngIf="user.controls.name.hasError('required') && this.user.controls.name.touched" style="color: red;" for="form3Example1c"> name is  require</label>
                             </div>
                           </div>
         
@@ -27,7 +27,7 @@
                           <div class="d-flex flex-row align-items-center mb-4">
                             <i class="fas fa-envelope fa-lg me-3 fa-fw" style="color:  #C9A770;"></i>
                             <div class="form-outline flex-fill mb-0">
-                              <input type="email" id="form3Example4c" class="form-control" placeholder="Email"  formControlName='email'/>
+                              <input type="email" style"font-family: 'Cherry Swash' ;"  id="form3Example4c" class="form-control" placeholder="Email"  formControlName='email'/>
                               <label class="form-label" *ngIf="user.controls.email.hasError('required') && this.user.controls.email.touched" style="color: red" for="form3Example1c">email is require </label>
                               <label class="form-label" *ngIf="user.controls.email.hasError('email') && this.user.controls.email.touched" style="color: red" for="form3Example1c">email not exactly</label>
                               </div>
@@ -37,7 +37,7 @@
                               <div class="d-flex flex-row align-items-center mb-4">
                                  <i class="fas fa-phone fa-lg me-3 fa-fw" style="color:  #C9A770;"></i>
                                 <div class="form-outline flex-fill mb-0">
-                                  <input type="text" (countryChange)="countryChange($event)" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'AE'}" style="width:100% !important" id="form3Example4c" class="form-control" placeholder=" your phone"  formControlName='phone'/>
+                                  <input type="text" style"font-family: 'Cherry Swash' ;"  (countryChange)="countryChange($event)" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'AE'}" style="width:100% !important" id="form3Example4c" class="form-control" placeholder=" your phone"  formControlName='phone'/>
                                   <label class="form-label"  *ngIf="user.controls.phone.hasError('required') && this.user.controls.phone.touched" style="color: red;" for="form3Example1c">phone is require</label>
                                 </div>
                               </div>
