@@ -100,7 +100,7 @@ body {
             <div class="col-md-4 mb-3 wow bounceInUp" data-wow-duration="1.4s">
                 <div class="big-img">
                 
-                        <img [src]="images[0]" class="img-fluid" alt="heart-of-carthage-dubai">
+                        <img [src]="images[0]" loading="lazy" class="img-fluid" alt="heart-of-carthage-dubai">
                 </div>
             </div>
             <div class="col-md-8">
@@ -113,7 +113,7 @@ body {
                     <div class="linear-grid">
                         <div class="row">
                             <div class="col-sm-6 col-md-3 mb-2 wow bounceInUp" data-wow-duration="1.4s" *ngFor="let img of images" >
-                                <img [src]='img' class="img-thumbnail" alt="heart-of-carthage-dubai">
+                                <img [src]='img' loading="lazy" class="img-thumbnail" alt="heart-of-carthage-dubai">
                             </div>
                             
                         </div>
