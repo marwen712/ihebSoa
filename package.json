@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
      "postbuild": "for i in $(find dist/my-application/ -type f -print); do brotli $i; done",
+    "build.prod": "ng build --environment=prod && tar -zcvf archive.tar.gz dist/prod/*",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
