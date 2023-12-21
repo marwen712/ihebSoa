@@ -30,7 +30,7 @@ const routes: Routes = [
  
   {path:'real-estate/:id' , loadChildren:() => import('./client/lund-project/lund-project.module').then(x => x.LundProjectModule) },
   { path:"about", component:AboutComponent },
-   { path:"event", component:Blog3Component },
+   { path:"blog", component:Blog3Component },
   { path:"vila", component:ProductsComponent },
   { path:"rent", component:ProducVilaComponent },
   { path:"appr", component:PrudcApparComponent },
